@@ -13,11 +13,10 @@ export default async function ChampionsPage() {
   return (
     <div className="mx-auto max-w-3xl pt-10">
       <h1 className="font-display text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl dark:text-neutral-50">
-        Champions
+        Debait Club Champions
       </h1>
       <p className="mt-2 text-[15px] text-neutral-500 dark:text-neutral-400">
-        Ranked by total d-coins — the sum of upvotes earned across every case,
-        comment, and topic submission a member has posted. Make strong cases,
+        Congratulations to our current thought leaders. Make strong cases,
         change minds, climb the board.
       </p>
 
@@ -56,12 +55,11 @@ export default async function ChampionsPage() {
                 </Link>
                 <p className="truncate text-sm text-neutral-500">@{c.username}</p>
               </div>
-              <span className="ml-auto flex items-center gap-1.5 text-right">
+              <span className="ml-auto flex shrink-0 items-center gap-1.5">
                 <CoinIcon className="h-5 w-5" />
-                <span className="font-display text-xl font-semibold text-neutral-900 dark:text-neutral-50">
+                <span className="w-24 text-right font-display text-xl font-semibold tabular-nums text-neutral-900 dark:text-neutral-50">
                   {c.points.toLocaleString()}
-                </span>{' '}
-                <span className="text-sm text-neutral-400">d-coins</span>
+                </span>
               </span>
             </li>
           ))}
