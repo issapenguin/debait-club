@@ -1,13 +1,16 @@
 import Link from 'next/link';
-import { fetchChampions } from '@/lib/data';
+import { fetchChampions, ensureChampionSnapshot } from '@/lib/data';
 import { CoinIcon } from '@/components/CoinIcon';
 import { Avatar } from '@/components/Avatar';
+import { ChampionBadge } from '@/components/ChampionBadge';
+import { TrophyIcon } from '@/components/TrophyIcon';
 
 export const dynamic = 'force-dynamic';
 
 const MEDALS = ['#d4af37', '#9aa0a6', '#b0793c'];
 
 export default async function ChampionsPage() {
+  await ensureChampionSnapshot();
   const champions = await fetchChampions(50);
 
   return (
@@ -19,6 +22,23 @@ export default async function ChampionsPage() {
         Congratulations to our current thought leaders. Make strong cases,
         change minds, climb the board.
       </p>
+      <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-xs text-neutral-500 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-400">
+        <span className="font-semibold uppercase tracking-wide text-neutral-400 dark:text-neutral-500">
+          Badges are forever
+        </span>
+        <span className="flex items-center gap-1.5">
+          <TrophyIcon tone="gold" className="h-4 w-4" /> has held #1
+        </span>
+        <span className="flex items-center gap-1.5">
+          <TrophyIcon tone="silver" className="h-4 w-4" /> has held #2
+        </span>
+        <span className="flex items-center gap-1.5">
+          <TrophyIcon tone="bronze" className="h-4 w-4" /> has held #3
+        </span>
+        <span className="flex items-center gap-1.5">
+          <TrophyIcon tone="muted" className="h-3.5 w-3.5 opacity-80" /> reached the top 100
+        </span>
+      </div>
 
       {champions.length === 0 ? (
         <p className="mt-10 text-center text-sm italic text-neutral-400">
@@ -52,6 +72,7 @@ export default async function ChampionsPage() {
                 >
                   <Avatar url={c.avatar_url} username={c.username} className="h-7 w-7 text-xs" />
                   {c.display_name ?? `@${c.username}`}
+                  <ChampionBadge badge={c.champion_badge} />
                 </Link>
                 <p className="truncate text-sm text-neutral-500">@{c.username}</p>
               </div>

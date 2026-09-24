@@ -10,6 +10,7 @@ export interface Profile {
   display_name: string | null;
   bio: string | null;
   avatar_url: string | null;
+  champion_badge: string | null;
   created_at: string;
 }
 
@@ -37,7 +38,7 @@ export interface CaseRow {
   body: string;
   score: number;
   created_at: string;
-  author: Pick<Profile, 'username' | 'display_name' | 'avatar_url'> | null;
+  author: Pick<Profile, 'username' | 'display_name' | 'avatar_url' | 'champion_badge'> | null;
   comment_count: number;
   voted: boolean;
   saved: boolean;
@@ -52,7 +53,7 @@ export interface CommentRow {
   stance: Stance;
   score: number;
   created_at: string;
-  author: Pick<Profile, 'username' | 'display_name' | 'avatar_url'> | null;
+  author: Pick<Profile, 'username' | 'display_name' | 'avatar_url' | 'champion_badge'> | null;
   voted: boolean;
   saved: boolean;
   replies: CommentRow[];
@@ -99,7 +100,7 @@ export interface TopicSubmission {
   score: number;
   view_count: number;
   created_at: string;
-  author: Pick<Profile, 'username' | 'display_name' | 'avatar_url'> | null;
+  author: Pick<Profile, 'username' | 'display_name' | 'avatar_url' | 'champion_badge'> | null;
   voted: boolean;
 }
 

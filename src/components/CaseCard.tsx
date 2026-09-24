@@ -7,6 +7,7 @@ import { renderRichText, timeAgo } from '@/lib/format';
 import { UpvoteButton } from './UpvoteButton';
 import { ItemMenu } from './ItemMenu';
 import { Avatar } from './Avatar';
+import { ChampionBadge } from './ChampionBadge';
 
 export function CaseCard({
   caseRow,
@@ -45,6 +46,7 @@ export function CaseCard({
           >
             <Avatar url={caseRow.author.avatar_url} username={caseRow.author.username} className="h-5 w-5 text-[10px]" />
             @{caseRow.author.username}
+            <ChampionBadge badge={caseRow.author.champion_badge} />
           </Link>
         ) : (
           <span className="text-sm text-neutral-400">deleted user</span>

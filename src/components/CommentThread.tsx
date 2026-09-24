@@ -11,6 +11,7 @@ import { ItemMenu } from './ItemMenu';
 import { CommentComposer } from './CommentComposer';
 import { SortControl, type SortMode } from './SortControl';
 import { Avatar } from './Avatar';
+import { ChampionBadge } from './ChampionBadge';
 
 function CommentNode({
   comment,
@@ -47,6 +48,7 @@ function CommentNode({
             >
               <Avatar url={comment.author.avatar_url} username={comment.author.username} className="h-5 w-5 text-[10px]" />
               @{comment.author.username}
+              <ChampionBadge badge={comment.author.champion_badge} />
             </Link>
           ) : (
             <span className="text-sm text-neutral-400">deleted user</span>

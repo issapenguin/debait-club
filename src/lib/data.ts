@@ -103,6 +103,8 @@ export function pickTabTopics(
 interface AuthorRef {
   username: string;
   display_name: string | null;
+  avatar_url: string | null;
+  champion_badge: string | null;
 }
 
 async function fetchVoteSaveSets(
@@ -142,7 +144,7 @@ export async function fetchCasesForTopic(
   if (!supabase) return [];
   const { data, error } = await supabase
     .from('cases')
-    .select('*, author:profiles(username, display_name, avatar_url)')
+    .select('*, author:profiles(username, display_name, avatar_url, champion_badge)')
     .eq('topic_id', topicId)
     .order('score', { ascending: false })
     .order('id', { ascending: false });
@@ -185,7 +187,7 @@ export async function fetchCaseDetail(
 
   const { data: caseData, error } = await supabase
     .from('cases')
-    .select('*, author:profiles(username, display_name, avatar_url)')
+    .select('*, author:profiles(username, display_name, avatar_url, champion_badge)')
     .eq('id', caseId)
     .single();
   if (error || !caseData) return null;
@@ -199,7 +201,7 @@ export async function fetchCaseDetail(
 
   const { data: commentData } = await supabase
     .from('comments')
-    .select('*, author:profiles(username, display_name, avatar_url)')
+    .select('*, author:profiles(username, display_name, avatar_url, champion_badge)')
     .eq('case_id', caseId)
     .order('score', { ascending: false })
     .order('id', { ascending: true });
@@ -240,9 +242,11 @@ export async function fetchCaseDetail(
 }
 
 export interface Champion {
+  id: string;
   username: string;
   display_name: string | null;
   avatar_url: string | null;
+  champion_badge: string | null;
   points: number;
 }
 
@@ -277,7 +281,7 @@ export async function fetchSubmissions(
   if (!supabase) return [];
   const { data, error } = await supabase
     .from('topic_submissions')
-    .select('*, author:profiles(username, display_name, avatar_url)')
+    .select('*, author:profiles(username, display_name, avatar_url, champion_badge)')
     .eq('week_of', query.week)
     .order('created_at', { ascending: false })
     .limit(query.limit ?? 500);
@@ -349,7 +353,7 @@ export async function fetchChampions(limit = 50): Promise<Champion[]> {
     supabase.from('cases').select('author_id, score'),
     supabase.from('comments').select('author_id, score'),
     supabase.from('topic_submissions').select('author_id, score'),
-    supabase.from('profiles').select('id, username, display_name'),
+    supabase.from('profiles').select('id, username, display_name, avatar_url, champion_badge'),
   ]);
   const points = new Map<string, number>();
   for (const row of [
@@ -362,15 +366,85 @@ export async function fetchChampions(limit = 50): Promise<Champion[]> {
     points.set(row.author_id, (points.get(row.author_id) ?? 0) + (row.score ?? 0));
   }
   const byId = new Map(
-    ((profiles ?? []) as Pick<Profile, 'id' | 'username' | 'display_name'>[]).map((p) => [p.id, p])
+    (
+      (profiles ?? []) as Pick<
+        Profile,
+        'id' | 'username' | 'display_name' | 'avatar_url' | 'champion_badge'
+      >[]
+    ).map((p) => [p.id, p])
   );
   return [...points.entries()]
     .map(([id, pts]) => {
       const p = byId.get(id);
-      return { username: p?.username ?? 'unknown', display_name: p?.display_name ?? null, points: pts };
+      return {
+        id,
+        username: p?.username ?? 'unknown',
+        display_name: p?.display_name ?? null,
+        avatar_url: p?.avatar_url ?? null,
+        champion_badge: p?.champion_badge ?? null,
+        points: pts,
+      };
     })
     .sort((a, b) => b.points - a.points)
     .slice(0, limit);
+}
+
+/**
+ * Weekly champion snapshot. Records the current top 100 in
+ * champion_history and upgrades permanent profile badges:
+ * gold (ever #1), silver (ever #2), bronze (ever #3),
+ * champion (ever top 100). Badges are never revoked.
+ *
+ * Runs lazily (at most ~weekly) whenever the champions board is viewed, so
+ * no cron infrastructure is needed. Safe to call often; failures are silent
+ * so a missing migration never breaks the page.
+ */
+export async function ensureChampionSnapshot(): Promise<void> {
+  const service = getServiceClient();
+  if (!service) return;
+  try {
+    const { data: latest } = await service
+      .from('champion_history')
+      .select('snapshot_at')
+      .order('snapshot_at', { ascending: false })
+      .limit(1)
+      .maybeSingle();
+    if (latest?.snapshot_at) {
+      const ageMs = Date.now() - new Date(latest.snapshot_at as string).getTime();
+      if (ageMs < 6.5 * 24 * 60 * 60 * 1000) return; // snapshotted within the last week
+    }
+
+    const standings = await fetchChampions(100);
+    if (standings.length === 0) return;
+
+    const rows = standings.map((c, i) => ({
+      user_id: c.id,
+      rank: i + 1,
+      points: c.points,
+    }));
+    const { error: insertError } = await service
+      .from('champion_history')
+      .insert(rows);
+    if (insertError) return;
+
+    const tierFor = (rank: number) =>
+      rank === 1 ? 'gold' : rank === 2 ? 'silver' : rank === 3 ? 'bronze' : 'champion';
+    const tierRank: Record<string, number> = {
+      champion: 1,
+      bronze: 2,
+      silver: 3,
+      gold: 4,
+    };
+    for (const [i, c] of standings.entries()) {
+      const tier = tierFor(i + 1);
+      const current = c.champion_badge;
+      if (!current || (tierRank[tier] ?? 0) > (tierRank[current] ?? 0)) {
+        await service.from('profiles').update({ champion_badge: tier }).eq('id', c.id);
+      }
+    }
+  } catch {
+    // The badges migration may not be applied yet; never break the page.
+  }
 }
 
 /** Ensures a profiles row exists for an auth user (used by API routes and OAuth). */

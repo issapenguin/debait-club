@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { CoinIcon } from './CoinIcon';
+import { ChampionBadge } from './ChampionBadge';
 import { timeAgo } from '@/lib/format';
 import type { TopicSubmission } from '@/lib/types';
 
@@ -78,12 +79,19 @@ export function SubmissionCard({
             <span className="text-xs text-neutral-400">
               by{' '}
               {submission.author ? (
-                <Link
-                  href={`/profile/${submission.author.username}`}
-                  className="font-semibold text-neutral-500 hover:text-sky-600 dark:text-neutral-400 dark:hover:text-sky-400"
-                >
-                  @{submission.author.username}
-                </Link>
+                <>
+                  <Link
+                    href={`/profile/${submission.author.username}`}
+                    className="font-semibold text-neutral-500 hover:text-sky-600 dark:text-neutral-400 dark:hover:text-sky-400"
+                  >
+                    @{submission.author.username}
+                  </Link>
+                  {submission.author.champion_badge && (
+                    <span className="ml-1 inline-flex align-middle">
+                      <ChampionBadge badge={submission.author.champion_badge} />
+                    </span>
+                  )}
+                </>
               ) : (
                 'a member'
               )}{' '}

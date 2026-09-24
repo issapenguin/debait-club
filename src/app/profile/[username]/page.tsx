@@ -7,6 +7,7 @@ import { AvatarEditor } from '@/components/AvatarEditor';
 import { EditBio } from '@/components/EditBio';
 import { StanceTag } from '@/components/StanceTag';
 import { CoinIcon } from '@/components/CoinIcon';
+import { ChampionBadge, championBadgeLabel } from '@/components/ChampionBadge';
 import { formatDate, renderRichText, timeAgo } from '@/lib/format';
 import type { Profile, Stance } from '@/lib/types';
 
@@ -108,10 +109,16 @@ export default async function ProfilePage({
           <Avatar url={profile.avatar_url} username={profile.username} className="h-16 w-16 text-2xl" />
         )}
         <div>
-          <h1 className="font-display text-2xl font-semibold text-neutral-900 dark:text-neutral-50">
+          <h1 className="flex items-center gap-2 font-display text-2xl font-semibold text-neutral-900 dark:text-neutral-50">
             {profile.display_name ?? `@${profile.username}`}
+            <ChampionBadge badge={profile.champion_badge} className="h-6 w-6" />
           </h1>
           <p className="text-sm text-neutral-500">@{profile.username}</p>
+          {profile.champion_badge && (
+            <p className="mt-1 text-xs font-medium text-amber-700 dark:text-amber-400">
+              {championBadgeLabel(profile.champion_badge)}
+            </p>
+          )}
         </div>
         <span className="ml-auto flex items-center gap-1.5 text-right">
           <CoinIcon className="h-6 w-6" />
