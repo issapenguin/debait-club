@@ -23,6 +23,7 @@ export async function POST(request: Request) {
     reason: typeof reason === 'string' ? reason.slice(0, 500) : null,
   });
   if (error) {
+    console.error('report insert failed', error);
     return NextResponse.json({ error: 'Could not file your report.' }, { status: 500 });
   }
   return NextResponse.json({ ok: true });

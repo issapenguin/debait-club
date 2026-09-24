@@ -48,6 +48,7 @@ export async function POST(request: Request) {
     .select('id')
     .single();
   if (error || !data) {
+    console.error('comments insert failed', error);
     return NextResponse.json({ error: 'Could not post your comment.' }, { status: 500 });
   }
   return NextResponse.json({ ok: true, id: data.id });

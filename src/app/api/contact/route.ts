@@ -82,6 +82,7 @@ export async function POST(request: Request) {
     .select('id')
     .single();
   if (error || !inserted) {
+    console.error('contact_messages insert failed', error);
     return NextResponse.json(
       { error: 'Could not send your message. Please try again.' },
       { status: 500 }

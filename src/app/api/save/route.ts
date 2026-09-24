@@ -29,7 +29,8 @@ export async function POST(request: Request) {
     await service.from('saved_items').delete().eq('id', existing.id);
     saved = false;
   } else {
-    await service.from('saved_items').insert({ user_id: userId, target_type, target_id: targetId });
+    const { error: saveError } = await service.from('saved_items').insert({ user_id: userId, target_type, target_id: targetId });
+    if (saveError) console.error('saved_items insert failed', saveError);
     saved = true;
   }
   return NextResponse.json({ ok: true, saved });

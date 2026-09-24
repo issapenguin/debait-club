@@ -33,7 +33,8 @@ export async function POST(request: Request) {
     await service.from('votes').delete().eq('id', existing.id);
     voted = false;
   } else {
-    await service.from('votes').insert({ voter_id: userId, target_type, target_id: targetId });
+    const { error: voteError } = await service.from('votes').insert({ voter_id: userId, target_type, target_id: targetId });
+    if (voteError) console.error('votes insert failed', voteError);
     voted = true;
   }
 

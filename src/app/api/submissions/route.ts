@@ -89,6 +89,7 @@ export async function POST(request: Request) {
     .select('id')
     .single();
   if (error || !data) {
+    console.error('topic_submissions insert failed', error);
     return NextResponse.json({ error: 'Could not save your submission.' }, { status: 500 });
   }
   return NextResponse.json({ ok: true, id: (data as { id: number }).id });
