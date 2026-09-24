@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { getBrowserClient } from '@/lib/supabase/client';
 import { Logo } from './Logo';
 import { ThemeToggle } from './ThemeToggle';
+import { Avatar } from './Avatar';
 
 const NAV = [
   { href: '/', label: 'Home' },
@@ -18,6 +19,7 @@ const NAV = [
 
 interface SessionInfo {
   username: string | null;
+  avatarUrl: string | null;
 }
 
 export function Header() {
@@ -40,10 +42,11 @@ export function Header() {
       } else {
         const { data: profile } = await supabase
           .from('profiles')
-          .select('username')
+          .select('username, avatar_url')
           .eq('id', user.id)
           .maybeSingle();
-        setSession({ username: (profile as { username?: string } | null)?.username ?? null });
+        const p = profile as { username?: string; avatar_url?: string | null } | null;
+        setSession({ username: p?.username ?? null, avatarUrl: p?.avatar_url ?? null });
       }
       setLoaded(true);
     };
@@ -94,11 +97,11 @@ export function Header() {
               {session.username ? (
                 <Link
                   href={`/profile/${session.username}`}
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-sky-600 text-sm font-bold text-white hover:bg-sky-700"
                   title="Your profile"
                   aria-label="Your profile"
+                  className="rounded-full transition hover:opacity-85"
                 >
-                  {session.username.charAt(0).toUpperCase()}
+                  <Avatar url={session.avatarUrl} username={session.username} className="h-9 w-9 text-sm" />
                 </Link>
               ) : null}
               <button

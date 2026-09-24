@@ -37,7 +37,7 @@ export interface CaseRow {
   body: string;
   score: number;
   created_at: string;
-  author: Pick<Profile, 'username' | 'display_name'> | null;
+  author: Pick<Profile, 'username' | 'display_name' | 'avatar_url'> | null;
   comment_count: number;
   voted: boolean;
   saved: boolean;
@@ -52,7 +52,7 @@ export interface CommentRow {
   stance: Stance;
   score: number;
   created_at: string;
-  author: Pick<Profile, 'username' | 'display_name'> | null;
+  author: Pick<Profile, 'username' | 'display_name' | 'avatar_url'> | null;
   voted: boolean;
   saved: boolean;
   replies: CommentRow[];
@@ -99,7 +99,7 @@ export interface TopicSubmission {
   score: number;
   view_count: number;
   created_at: string;
-  author: Pick<Profile, 'username' | 'display_name'> | null;
+  author: Pick<Profile, 'username' | 'display_name' | 'avatar_url'> | null;
   voted: boolean;
 }
 

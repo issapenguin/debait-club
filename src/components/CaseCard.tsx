@@ -6,6 +6,7 @@ import type { CaseRow } from '@/lib/types';
 import { renderRichText, timeAgo } from '@/lib/format';
 import { UpvoteButton } from './UpvoteButton';
 import { ItemMenu } from './ItemMenu';
+import { Avatar } from './Avatar';
 
 export function CaseCard({
   caseRow,
@@ -40,8 +41,9 @@ export function CaseCard({
           <Link
             href={`/profile/${caseRow.author.username}`}
             onClick={(e) => e.stopPropagation()}
-            className="text-sm font-medium text-neutral-500 hover:text-sky-600 dark:text-neutral-400 dark:hover:text-sky-400"
+            className="flex items-center gap-1.5 text-sm font-medium text-neutral-500 hover:text-sky-600 dark:text-neutral-400 dark:hover:text-sky-400"
           >
+            <Avatar url={caseRow.author.avatar_url} username={caseRow.author.username} className="h-5 w-5 text-[10px]" />
             @{caseRow.author.username}
           </Link>
         ) : (

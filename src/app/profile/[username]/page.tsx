@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getServerClient, getSessionUser } from '@/lib/supabase/server';
 import { isFounder } from '@/lib/founder';
+import { Avatar } from '@/components/Avatar';
+import { AvatarEditor } from '@/components/AvatarEditor';
 import { EditBio } from '@/components/EditBio';
 import { StanceTag } from '@/components/StanceTag';
 import { CoinIcon } from '@/components/CoinIcon';
@@ -100,9 +102,11 @@ export default async function ProfilePage({
   return (
     <div className="mx-auto max-w-3xl pt-10">
       <div className="flex items-center gap-4">
-        <span className="flex h-16 w-16 items-center justify-center rounded-full bg-sky-600 text-2xl font-bold text-white">
-          {profile.username.charAt(0).toUpperCase()}
-        </span>
+        {isOwner ? (
+          <AvatarEditor userId={profile.id} username={profile.username} initialUrl={profile.avatar_url} />
+        ) : (
+          <Avatar url={profile.avatar_url} username={profile.username} className="h-16 w-16 text-2xl" />
+        )}
         <div>
           <h1 className="font-display text-2xl font-semibold text-neutral-900 dark:text-neutral-50">
             {profile.display_name ?? `@${profile.username}`}

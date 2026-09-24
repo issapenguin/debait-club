@@ -10,6 +10,7 @@ import { UpvoteButton } from './UpvoteButton';
 import { ItemMenu } from './ItemMenu';
 import { CommentComposer } from './CommentComposer';
 import { SortControl, type SortMode } from './SortControl';
+import { Avatar } from './Avatar';
 
 function CommentNode({
   comment,
@@ -38,12 +39,13 @@ function CommentNode({
           {comment.author ? (
             <Link
               href={`/profile/${comment.author.username}`}
-              className={`text-sm font-semibold hover:text-sky-600 dark:hover:text-sky-400 ${
+              className={`flex items-center gap-1.5 text-sm font-semibold hover:text-sky-600 dark:hover:text-sky-400 ${
                 founder
                   ? 'text-amber-900 dark:text-amber-100'
                   : 'text-neutral-800 dark:text-neutral-100'
               }`}
             >
+              <Avatar url={comment.author.avatar_url} username={comment.author.username} className="h-5 w-5 text-[10px]" />
               @{comment.author.username}
             </Link>
           ) : (

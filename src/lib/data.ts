@@ -142,7 +142,7 @@ export async function fetchCasesForTopic(
   if (!supabase) return [];
   const { data, error } = await supabase
     .from('cases')
-    .select('*, author:profiles(username, display_name)')
+    .select('*, author:profiles(username, display_name, avatar_url)')
     .eq('topic_id', topicId)
     .order('score', { ascending: false })
     .order('id', { ascending: false });
@@ -185,7 +185,7 @@ export async function fetchCaseDetail(
 
   const { data: caseData, error } = await supabase
     .from('cases')
-    .select('*, author:profiles(username, display_name)')
+    .select('*, author:profiles(username, display_name, avatar_url)')
     .eq('id', caseId)
     .single();
   if (error || !caseData) return null;
@@ -199,7 +199,7 @@ export async function fetchCaseDetail(
 
   const { data: commentData } = await supabase
     .from('comments')
-    .select('*, author:profiles(username, display_name)')
+    .select('*, author:profiles(username, display_name, avatar_url)')
     .eq('case_id', caseId)
     .order('score', { ascending: false })
     .order('id', { ascending: true });
@@ -242,6 +242,7 @@ export async function fetchCaseDetail(
 export interface Champion {
   username: string;
   display_name: string | null;
+  avatar_url: string | null;
   points: number;
 }
 
@@ -276,7 +277,7 @@ export async function fetchSubmissions(
   if (!supabase) return [];
   const { data, error } = await supabase
     .from('topic_submissions')
-    .select('*, author:profiles(username, display_name)')
+    .select('*, author:profiles(username, display_name, avatar_url)')
     .eq('week_of', query.week)
     .order('created_at', { ascending: false })
     .limit(query.limit ?? 500);

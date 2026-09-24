@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { fetchChampions } from '@/lib/data';
 import { CoinIcon } from '@/components/CoinIcon';
+import { Avatar } from '@/components/Avatar';
 
 export const dynamic = 'force-dynamic';
 
@@ -48,8 +49,9 @@ export default async function ChampionsPage() {
               <div className="min-w-0">
                 <Link
                   href={`/profile/${c.username}`}
-                  className="font-semibold text-neutral-900 hover:text-sky-600 dark:text-neutral-50 dark:hover:text-sky-400"
+                  className="flex items-center gap-2 font-semibold text-neutral-900 hover:text-sky-600 dark:text-neutral-50 dark:hover:text-sky-400"
                 >
+                  <Avatar url={c.avatar_url} username={c.username} className="h-7 w-7 text-xs" />
                   {c.display_name ?? `@${c.username}`}
                 </Link>
                 <p className="truncate text-sm text-neutral-500">@{c.username}</p>

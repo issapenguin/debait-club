@@ -6,6 +6,7 @@ import { renderRichText, timeAgo } from '@/lib/format';
 import { StanceTag } from '@/components/StanceTag';
 import { UpvoteButton } from '@/components/UpvoteButton';
 import { ItemMenu } from '@/components/ItemMenu';
+import { Avatar } from '@/components/Avatar';
 import type { CaseRow, CommentRow } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
@@ -22,7 +23,8 @@ function HistoryCommentCard({ comment }: { comment: HistoryComment }) {
   return (
     <div className="rounded-2xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900">
       <div className="flex flex-wrap items-center gap-2">
-        <span className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">
+        <span className="flex items-center gap-1.5 text-sm font-semibold text-neutral-800 dark:text-neutral-100">
+          <Avatar url={comment.author?.avatar_url} username={comment.author?.username ?? 'user'} className="h-5 w-5 text-[10px]" />
           @{comment.author?.username ?? 'deleted user'}
         </span>
         <StanceTag stance={comment.stance} />
@@ -110,7 +112,7 @@ export default async function HistoryPage() {
     if (caseIds.length > 0) {
       const { data } = await supabase
         .from('cases')
-        .select('*, author:profiles(username, display_name), topic:topics(id, proposition, category, topic_date)')
+        .select('*, author:profiles(username, display_name, avatar_url), topic:topics(id, proposition, category, topic_date)')
         .in('id', caseIds);
       cases = ((data ?? []) as (CaseRow & {
         topic: { id: number; proposition: string; category: string; topic_date: string } | null;
@@ -125,7 +127,7 @@ export default async function HistoryPage() {
     if (commentIds.length > 0) {
       const { data } = await supabase
         .from('comments')
-        .select('*, author:profiles(username, display_name), case:cases(id, topic:topics(id, proposition, category, topic_date))')
+        .select('*, author:profiles(username, display_name, avatar_url), case:cases(id, topic:topics(id, proposition, category, topic_date))')
         .in('id', commentIds);
       comments = ((data ?? []) as unknown as HistoryComment[]).map((c) => ({
         ...c,
