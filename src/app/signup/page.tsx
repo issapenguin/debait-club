@@ -15,13 +15,12 @@ function SignupForm() {
   const [password, setPassword] = useState('');
   const [birthDate, setBirthDate] = useState('');
   const [error, setError] = useState('');
-  const [notice, setNotice] = useState('');
   const [busy, setBusy] = useState(false);
+  const [done, setDone] = useState(false);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
-    setNotice('');
     if (!displayName.trim()) {
       setError('Please enter a display name.');
       return;
@@ -48,12 +47,32 @@ function SignupForm() {
         router.push('/');
         router.refresh();
       } else {
-        setNotice('Account created — check your email to confirm, then log in.');
+        setDone(true);
       }
     } finally {
       setBusy(false);
     }
   };
+
+  if (done) {
+    return (
+      <div className="py-6 text-center">
+        <p className="font-display text-2xl font-semibold text-neutral-900 dark:text-neutral-50">
+          Welcome to the club!
+        </p>
+        <p className="mx-auto mt-3 max-w-sm text-[15px] text-neutral-600 dark:text-neutral-300">
+          Check your email to confirm your account, then log in to start
+          debating.
+        </p>
+        <Link
+          href="/login"
+          className="mt-6 inline-block rounded-full bg-neutral-900 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-neutral-700 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300"
+        >
+          Log in
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={submit} className="space-y-4">
@@ -136,7 +155,6 @@ function SignupForm() {
         <p className="mt-1 text-xs text-neutral-400">You must be at least 13 years old to join.</p>
       </div>
       {error && <p className="text-sm text-red-600">{error}</p>}
-      {notice && <p className="text-sm text-emerald-600">{notice}</p>}
       <button
         type="submit"
         disabled={busy}
