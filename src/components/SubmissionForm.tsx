@@ -22,7 +22,7 @@ export function SubmissionForm({ redirectTo }: { redirectTo?: string }) {
     setError('');
     setNotice('');
     if (!question.trim() || !context.trim() || !links.trim() || !category) {
-      setError('All four are required: question, context, links, and a category flair.');
+      setError('All four are required: question, context, links, and a category.');
       return;
     }
     setBusy(true);
@@ -100,7 +100,7 @@ export function SubmissionForm({ redirectTo }: { redirectTo?: string }) {
       </div>
       <div>
         <label htmlFor="sub-category" className="mb-1 block text-sm font-medium text-neutral-700 dark:text-neutral-300">
-          Category flair
+          Category
         </label>
         <select
           id="sub-category"

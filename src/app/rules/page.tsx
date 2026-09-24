@@ -32,7 +32,7 @@ const RULES: { title: string; body: string }[] = [
   },
   {
     title: 'Propose debates properly',
-    body: 'Topic submissions need all three: a real debate question, context for why it matters, and at least one relevant link — plus a category flair. The club votes all week with d-coins; the leaders are considered for next week\u2019s debates.',
+    body: 'Topic submissions need all three: a real debate question, context for why it matters, and at least one relevant link — plus a category. The club votes all week with d-coins; the leaders are considered for next week\u2019s debates.',
   },
   {
     title: 'Keep it clean',

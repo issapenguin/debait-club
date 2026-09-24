@@ -15,7 +15,7 @@ export interface ArchiveTopic {
   is_featured: boolean;
 }
 
-/** Searchable, flair-filterable archive of past debates. */
+/** Searchable, category-filterable archive of past debates. */
 export function ArchiveBrowser({
   topics,
   counts,
@@ -26,16 +26,20 @@ export function ArchiveBrowser({
   leanings: Record<number, string>;
 }) {
   const [query, setQuery] = useState('');
-  const [flair, setFlair] = useState('');
+  const [category, setCategory] = useState('');
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return topics.filter((t) => {
-      if (flair && t.category !== flair) return false;
+      if (category === 'Featured') {
+        if (!t.is_featured) return false;
+      } else if (category && t.category !== category) {
+        return false;
+      }
       if (q && !t.proposition.toLowerCase().includes(q)) return false;
       return true;
     });
-  }, [topics, query, flair]);
+  }, [topics, query, category]);
 
   return (
     <div>
@@ -63,25 +67,25 @@ export function ArchiveBrowser({
         </div>
       </div>
 
-      <div className="mt-3 flex flex-wrap gap-1.5" aria-label="Filter by flair">
+      <div className="mt-3 flex flex-wrap gap-1.5" aria-label="Filter by category">
         <button
           type="button"
-          onClick={() => setFlair('')}
+          onClick={() => setCategory('')}
           className={`rounded-full px-3 py-1 text-xs font-semibold transition ${
-            flair === ''
+            category === ''
               ? 'bg-sky-600 text-white'
               : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-700'
           }`}
         >
-          All flairs
+          All categories
         </button>
         {CATEGORIES.map((c) => (
           <button
             key={c}
             type="button"
-            onClick={() => setFlair(flair === c ? '' : c)}
+            onClick={() => setCategory(category === c ? '' : c)}
             className={`rounded-full px-3 py-1 text-xs font-semibold transition ${
-              flair === c
+              category === c
                 ? 'bg-sky-600 text-white'
                 : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-700'
             }`}
@@ -91,7 +95,7 @@ export function ArchiveBrowser({
         ))}
       </div>
 
-      {(query.trim() || flair) && (
+      {(query.trim() || category) && (
         <p className="mt-4 text-sm text-neutral-500 dark:text-neutral-400">
           {filtered.length === 0
             ? 'No debates match your search.'
@@ -100,7 +104,7 @@ export function ArchiveBrowser({
             type="button"
             onClick={() => {
               setQuery('');
-              setFlair('');
+              setCategory('');
             }}
             className="ml-2 font-semibold text-sky-600 hover:underline dark:text-sky-400"
           >
@@ -109,7 +113,7 @@ export function ArchiveBrowser({
         </p>
       )}
 
-      {filtered.length === 0 && !query.trim() && !flair ? (
+      {filtered.length === 0 && !query.trim() && !category ? (
         <p className="mt-10 text-center text-sm italic text-neutral-400">
           No debates yet. Check back soon.
         </p>

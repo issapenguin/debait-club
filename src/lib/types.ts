@@ -78,7 +78,7 @@ export const CATEGORIES = [
   'Sports',
 ] as const;
 
-/** Flairs allowed on member-submitted topics (Featured is curator-only). */
+/** Categories allowed on member-submitted topics (Featured is curator-only). */
 export const SUBMISSION_CATEGORIES = [
   'Business',
   'Entertainment',

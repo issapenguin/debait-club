@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const STEPS = [
   {
     title: 'Propose it',
-    body: 'Submit a debate question with context and at least one link — all three required — and flair it with a category.',
+    body: 'Submit a debate question with context and at least one link — all three required — and give it a category.',
   },
   {
     title: 'The club votes',

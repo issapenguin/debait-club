@@ -22,7 +22,7 @@ export default async function ArchivePage() {
         Archive
       </h1>
       <p className="mt-2 text-[15px] text-neutral-500 dark:text-neutral-400">
-        Every past debate, newest first. Search by keyword or filter by flair.
+        Every past debate, newest first. Search by keyword or filter by category.
         Archived topics stay fully interactive — you can still post cases,
         vote, and comment.
       </p>

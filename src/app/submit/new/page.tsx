@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
   title: 'Propose a debate — Debait Club',
   description:
-    'Propose a debate question with context and links, flair it with a category, and let the club vote with d-coins.',
+    'Propose a debate question with context and links, give it a category, and let the club vote with d-coins.',
 };
 
 export default async function SubmitNewPage() {
@@ -27,7 +27,7 @@ export default async function SubmitNewPage() {
       </h1>
       <p className="mt-2 text-[15px] text-neutral-500 dark:text-neutral-400">
         Submit a debate question with context and at least one link — all three
-        required — and flair it with a category. Members vote all week; the
+        required — and give it a category. Members vote all week; the
         top-voted submissions are considered for next week&apos;s debates.
       </p>
 
