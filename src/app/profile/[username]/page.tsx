@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getServerClient, getSessionUser } from '@/lib/supabase/server';
+import { isFounder } from '@/lib/founder';
 import { EditBio } from '@/components/EditBio';
 import { StanceTag } from '@/components/StanceTag';
 import { CoinIcon } from '@/components/CoinIcon';
@@ -111,13 +112,12 @@ export default async function ProfilePage({
         <span className="ml-auto flex items-center gap-1.5 text-right">
           <CoinIcon className="h-6 w-6" />
           <span className="font-display text-2xl font-semibold text-neutral-900 dark:text-neutral-50">
-            {points.toLocaleString()}
-          </span>{' '}
-          <span className="text-sm text-neutral-400">d-coins</span>
+            {isFounder(profile.id) ? '∞' : points.toLocaleString()}
+          </span>
         </span>
       </div>
 
-      {profile.bio && !isOwner && (
+      {profile.bio && (
         <p className="mt-4 max-w-md whitespace-pre-wrap text-[15px] text-neutral-600 dark:text-neutral-300">
           {profile.bio}
         </p>
@@ -127,6 +127,8 @@ export default async function ProfilePage({
         <p className="mt-2 text-sm italic text-neutral-400">No bio yet.</p>
       )}
 
+      {!isFounder(profile.id) && (
+      <>
       <section className="mt-10" aria-label="Cases by this user">
         <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-neutral-500">
           Cases ({cases.length})
@@ -247,6 +249,8 @@ export default async function ProfilePage({
           </div>
         )}
       </section>
+      </>
+      )}
     </div>
   );
 }

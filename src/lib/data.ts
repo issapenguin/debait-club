@@ -1,6 +1,7 @@
 // Shared server-side data fetching for pages and API routes.
 import { getServerClient, getSessionUser, getServiceClient } from './supabase/server';
 import { computeLeaning, type Leaning } from './leaning';
+import { isFounder } from './founder';
 import type {
   CaseRow,
   CommentRow,
@@ -356,6 +357,7 @@ export async function fetchChampions(limit = 50): Promise<Champion[]> {
     ...((submissionScores ?? []) as { author_id: string | null; score: number }[]),
   ]) {
     if (!row.author_id) continue;
+    if (isFounder(row.author_id)) continue; // the founder plays no part in the tally
     points.set(row.author_id, (points.get(row.author_id) ?? 0) + (row.score ?? 0));
   }
   const byId = new Map(

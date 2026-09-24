@@ -12,8 +12,8 @@ const NAV = [
   { href: '/champions', label: 'Champions' },
   { href: '/archive', label: 'Archive' },
   { href: '/rules', label: 'Rules' },
-  { href: '/saved', label: 'Saved' },
-  { href: '/submit', label: 'Submit' },
+  { href: '/submit', label: 'Got a topic?' },
+  { href: '/history', label: 'History' },
 ];
 
 interface SessionInfo {
