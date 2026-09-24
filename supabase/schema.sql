@@ -94,6 +94,13 @@ create table if not exists public.submission_votes (
   unique (voter_id, submission_id)
 );
 
+-- Admins: separate table so the permissive "users manage own profile" policy
+-- can never be used to self-grant admin. Only the service role writes here.
+create table if not exists public.admin_users (
+  user_id uuid primary key references public.profiles(id) on delete cascade,
+  created_at timestamptz default now()
+);
+
 -- ---------------------------------------------------------------- indexes --
 
 create index if not exists cases_topic_id_idx on public.cases (topic_id);
@@ -121,6 +128,7 @@ alter table public.reports enable row level security;
 alter table public.saved_items enable row level security;
 alter table public.topic_submissions enable row level security;
 alter table public.submission_votes enable row level security;
+alter table public.admin_users enable row level security;
 
 -- Public read on everything.
 drop policy if exists "public read" on public.profiles;
@@ -212,3 +220,10 @@ create policy "authenticated vote on submissions" on public.submission_votes
 drop policy if exists "voters retract own submission votes" on public.submission_votes;
 create policy "voters retract own submission votes" on public.submission_votes
   for delete using (voter_id = auth.uid());
+
+-- Admin users: a user can read only their own admin row, so the app can check
+-- admin status under RLS. No insert/update/delete policies: only the service
+-- role manages admin_users.
+drop policy if exists "users read own admin row" on public.admin_users;
+create policy "users read own admin row" on public.admin_users
+  for select using (user_id = auth.uid());
