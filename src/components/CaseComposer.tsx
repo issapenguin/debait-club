@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { MAX_BODY_LENGTH, type Side } from '@/lib/types';
+import { LinkInsertButton } from '@/components/LinkInsertButton';
 
 /** Auth-gated composer for posting a FOR or AGAINST case on a topic. */
 export function CaseComposer({
@@ -19,6 +20,7 @@ export function CaseComposer({
   const [body, setBody] = useState('');
   const [error, setError] = useState('');
   const [sending, setSending] = useState(false);
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null);
 
   if (!loggedIn && !open) {
     return (
@@ -77,21 +79,25 @@ export function CaseComposer({
   return (
     <div className="rounded-xl border border-neutral-200 bg-white p-3 dark:border-neutral-800 dark:bg-neutral-900">
       <textarea
+        ref={textareaRef}
         value={body}
         onChange={(e) => setBody(e.target.value)}
         rows={4}
         maxLength={MAX_BODY_LENGTH}
         autoFocus
-        placeholder={`State your ${side === 'for' ? 'FOR' : 'AGAINST'} case. Bring evidence — links in [text](url) format become clickable.`}
+        placeholder={`State your ${side === 'for' ? 'FOR' : 'AGAINST'} case. Bring evidence — highlight text and use the link icon to add sources.`}
         className="w-full resize-y rounded-lg bg-transparent text-sm text-neutral-900 outline-none placeholder:text-neutral-400 dark:text-neutral-100"
       />
       <div className="mt-2 flex items-center justify-between">
-        <span
-          className={`text-xs tabular-nums ${
-            body.length >= MAX_BODY_LENGTH ? 'font-semibold text-red-600' : 'text-neutral-400'
-          }`}
-        >
-          {body.length.toLocaleString()} / {MAX_BODY_LENGTH.toLocaleString()}
+        <span className="flex items-center gap-1">
+          <LinkInsertButton textareaRef={textareaRef} getValue={() => body} setValue={setBody} />
+          <span
+            className={`text-xs tabular-nums ${
+              body.length >= MAX_BODY_LENGTH ? 'font-semibold text-red-600' : 'text-neutral-400'
+            }`}
+          >
+            {body.length.toLocaleString()} / {MAX_BODY_LENGTH.toLocaleString()}
+          </span>
         </span>
         <div className="flex gap-2">
           <button

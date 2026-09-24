@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 /**
- * Renders markdown-style [text](url) links as real anchors.
+ * Renders [text](url) links as real anchors.
  * Safety: only http/https URLs become links; everything else is rendered as
  * plain text. No raw HTML is ever interpreted.
  */

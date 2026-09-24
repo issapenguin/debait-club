@@ -28,7 +28,7 @@ const RULES: { title: string; body: string }[] = [
   },
   {
     title: 'Bring something real',
-    body: 'Cases should make a claim and back it with reasoning or evidence. "You are wrong" is not a case. Links in [text](url) format are encouraged.',
+    body: 'Cases should make a claim and back it with reasoning or evidence. "You are wrong" is not a case. Links are encouraged — highlight text and use the link icon to attach a source.',
   },
   {
     title: 'Propose debates properly',

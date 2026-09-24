@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { STANCES, STANCE_LABELS, type Stance } from '@/lib/types';
+import { LinkInsertButton } from '@/components/LinkInsertButton';
 
 /** Comment composer with a stance picker and character counter. */
 export function CommentComposer({
@@ -25,6 +26,7 @@ export function CommentComposer({
   const [stance, setStance] = useState<Stance>('neutral');
   const [error, setError] = useState('');
   const [sending, setSending] = useState(false);
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null);
 
   if (!loggedIn) {
     return (
@@ -90,6 +92,7 @@ export function CommentComposer({
         ))}
       </div>
       <textarea
+        ref={textareaRef}
         value={body}
         onChange={(e) => setBody(e.target.value)}
         rows={3}
@@ -98,7 +101,8 @@ export function CommentComposer({
         className="w-full resize-y rounded-lg bg-transparent text-sm text-neutral-900 outline-none placeholder:text-neutral-400 dark:text-neutral-100"
       />
       <div className="mt-2 flex items-center justify-end gap-2">
-        <span className="mr-auto text-xs tabular-nums text-neutral-400">
+        <span className="mr-auto flex items-center gap-1 text-xs tabular-nums text-neutral-400">
+          <LinkInsertButton textareaRef={textareaRef} getValue={() => body} setValue={setBody} />
           {body.length.toLocaleString()} characters
         </span>
         <button
