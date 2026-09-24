@@ -22,8 +22,8 @@ function SignupForm() {
     e.preventDefault();
     setError('');
     setNotice('');
-    if (displayName.trim().toLowerCase() === username.trim().toLowerCase()) {
-      setError('Your display name and username need to be different.');
+    if (!displayName.trim()) {
+      setError('Please enter a display name.');
       return;
     }
     setBusy(true);
@@ -59,7 +59,7 @@ function SignupForm() {
     <form onSubmit={submit} className="space-y-4">
       <div>
         <label htmlFor="displayName" className="mb-1 block text-sm font-medium text-neutral-700 dark:text-neutral-300">
-          Display name
+          Display name <span className="font-normal text-neutral-400 dark:text-neutral-500">(your name)</span>
         </label>
         <input
           id="displayName"

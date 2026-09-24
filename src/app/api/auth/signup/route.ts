@@ -37,12 +37,6 @@ export async function POST(request: Request) {
     );
   }
   const cleanDisplay = display_name.trim().slice(0, 80);
-  if (cleanDisplay.toLowerCase() === cleanUsername) {
-    return NextResponse.json(
-      { error: 'Your display name and username need to be different.' },
-      { status: 400 }
-    );
-  }
   if (!email || typeof email !== 'string') {
     return NextResponse.json({ error: 'Please enter a valid email.' }, { status: 400 });
   }
