@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { getBrowserClient } from '@/lib/supabase/client';
 import { Avatar } from './Avatar';
@@ -46,6 +46,12 @@ function renderSquare(img: HTMLImageElement): Promise<Blob> {
   );
 }
 
+const PICTURE_RULES = [
+  'JPG, PNG, or WebP only, max 2 MB. Your picture is cropped to a square automatically.',
+  'Your picture is public — everyone in the club can see it.',
+  'House Rules apply: no offensive, hateful, or explicit imagery. Offending pictures are removed.',
+];
+
 export function AvatarEditor({
   userId,
   username,
@@ -58,9 +64,22 @@ export function AvatarEditor({
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
   const [url, setUrl] = useState<string | null>(initialUrl);
+  const [open, setOpen] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const [showRules, setShowRules] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setOpen(false);
+        setShowRules(false);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [open ]);
 
   const saveUrl = async (avatarUrl: string | null) => {
     const res = await fetch('/api/profile', {
@@ -97,6 +116,8 @@ export function AvatarEditor({
       const publicUrl = `${data.publicUrl}?v=${Date.now()}`;
       await saveUrl(publicUrl);
       setUrl(publicUrl);
+      setOpen(false);
+      setShowRules(false);
       router.refresh();
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Something went wrong.');
@@ -115,6 +136,7 @@ export function AvatarEditor({
       await supabase.storage.from('avatars').remove([`${userId}/avatar.jpg`]);
       await saveUrl(null);
       setUrl(null);
+      setShowRules(false);
       router.refresh();
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Something went wrong.');
@@ -124,22 +146,105 @@ export function AvatarEditor({
   };
 
   return (
-    <div className="flex items-center gap-4">
+    <>
       <button
         type="button"
-        onClick={() => inputRef.current?.click()}
-        disabled={busy}
-        className="relative shrink-0 rounded-full transition hover:opacity-90 disabled:opacity-60"
-        title={url ? 'Change your picture' : 'Add a profile picture'}
-        aria-label={url ? 'Change your profile picture' : 'Add a profile picture'}
+        onClick={() => {
+          setError('');
+          setOpen(true);
+        }}
+        className="relative shrink-0 rounded-full transition hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+        title={url ? 'Profile picture options' : 'Add a profile picture'}
+        aria-label={url ? 'Open profile picture options' : 'Add a profile picture'}
       >
-        <Avatar url={url} username={username} className="h-16 w-16 text-2xl" />
-        <span className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="h-3.5 w-3.5" aria-hidden="true">
-            <path d="M12 5v14M5 12h14" strokeLinecap="round" />
-          </svg>
-        </span>
+        <Avatar url={url} username={username} className="h-20 w-20 text-3xl" />
+        {!url && (
+          <span
+            className="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-neutral-900 text-white shadow-sm dark:bg-neutral-100 dark:text-neutral-900"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="h-4 w-4">
+              <path d="M12 5v14M5 12h14" strokeLinecap="round" />
+            </svg>
+          </span>
+        )}
       </button>
+
+      {open && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div
+            className="absolute inset-0 bg-black/50"
+            onClick={() => {
+              setOpen(false);
+              setShowRules(false);
+            }}
+            aria-hidden="true"
+          />
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label="Profile picture options"
+            className="relative w-full max-w-sm rounded-3xl border border-neutral-200 bg-white p-6 shadow-xl dark:border-neutral-700 dark:bg-neutral-900"
+          >
+            <div className="flex justify-center">
+              <Avatar url={url} username={username} className="h-24 w-24 text-4xl" />
+            </div>
+            <h2 className="mt-3 text-center font-display text-lg font-semibold text-neutral-900 dark:text-neutral-50">
+              Profile picture
+            </h2>
+
+            <div className="mt-4 flex flex-col gap-2">
+              <button
+                type="button"
+                onClick={() => inputRef.current?.click()}
+                disabled={busy}
+                className="rounded-full bg-neutral-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-neutral-700 disabled:opacity-50 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300"
+              >
+                {busy ? 'Uploading…' : url ? 'Change picture' : 'Add picture'}
+              </button>
+              {url && (
+                <button
+                  type="button"
+                  onClick={remove}
+                  disabled={busy}
+                  className="rounded-full border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-600 transition hover:border-red-400 hover:text-red-600 disabled:opacity-50 dark:border-neutral-700 dark:text-neutral-300 dark:hover:border-red-500 dark:hover:text-red-400"
+                >
+                  Remove picture
+                </button>
+              )}
+              <button
+                type="button"
+                onClick={() => setShowRules((s) => !s)}
+                className="rounded-full px-4 py-2 text-sm text-sky-600 transition hover:bg-sky-50 dark:text-sky-400 dark:hover:bg-sky-950/50"
+              >
+                {showRules ? 'Hide picture rules' : 'Picture rules'}
+              </button>
+            </div>
+
+            {error && <p className="mt-3 text-center text-sm text-red-600">{error}</p>}
+
+            {showRules && (
+              <ul className="mt-3 list-disc space-y-1 rounded-2xl bg-neutral-50 p-4 pl-9 text-[13px] leading-relaxed text-neutral-500 dark:bg-neutral-800/60 dark:text-neutral-400">
+                {PICTURE_RULES.map((rule) => (
+                  <li key={rule}>{rule}</li>
+                ))}
+              </ul>
+            )}
+
+            <button
+              type="button"
+              onClick={() => {
+                setOpen(false);
+                setShowRules(false);
+              }}
+              className="mt-4 w-full rounded-full px-4 py-2 text-sm text-neutral-400 transition hover:text-neutral-700 dark:hover:text-neutral-200"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
       <input
         ref={inputRef}
         type="file"
@@ -147,44 +252,6 @@ export function AvatarEditor({
         className="hidden"
         onChange={(e) => onPick(e.target.files?.[0])}
       />
-      <div>
-        <div className="flex flex-wrap items-center gap-2">
-          <button
-            type="button"
-            onClick={() => inputRef.current?.click()}
-            disabled={busy}
-            className="rounded-full border border-neutral-300 px-3 py-1 text-sm font-medium text-neutral-600 transition hover:border-neutral-500 hover:text-neutral-900 disabled:opacity-50 dark:border-neutral-700 dark:text-neutral-300 dark:hover:border-neutral-500 dark:hover:text-neutral-100"
-          >
-            {busy ? 'Uploading…' : url ? 'Change picture' : 'Add picture'}
-          </button>
-          {url && (
-            <button
-              type="button"
-              onClick={remove}
-              disabled={busy}
-              className="rounded-full px-3 py-1 text-sm text-neutral-500 hover:text-red-600 disabled:opacity-50 dark:hover:text-red-400"
-            >
-              Remove
-            </button>
-          )}
-          <button
-            type="button"
-            onClick={() => setShowRules((s) => !s)}
-            className="text-sm text-sky-600 hover:underline dark:text-sky-400"
-          >
-            {showRules ? 'Hide' : 'Picture rules'}
-          </button>
-        </div>
-        {error && <p className="mt-1 text-sm text-red-600">{error}</p>}
-        {showRules && (
-          <ul className="mt-2 max-w-md list-disc space-y-1 pl-5 text-[13px] leading-relaxed text-neutral-500 dark:text-neutral-400">
-            <li>JPG, PNG, or WebP only, max 2 MB. Your picture is cropped to a square automatically.</li>
-            <li>Your picture is public — everyone in the club can see it.</li>
-            <li>Only you can change or remove it; it lives in your private folder.</li>
-            <li>House Rules apply: no offensive, hateful, or explicit imagery. Offending pictures are removed.</li>
-          </ul>
-        )}
-      </div>
-    </div>
+    </>
   );
 }

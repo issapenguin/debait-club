@@ -102,41 +102,40 @@ export default async function ProfilePage({
 
   return (
     <div className="mx-auto max-w-3xl pt-10">
-      <div className="flex items-center gap-4">
+      <div className="flex items-start gap-5">
         {isOwner ? (
           <AvatarEditor userId={profile.id} username={profile.username} initialUrl={profile.avatar_url} />
         ) : (
-          <Avatar url={profile.avatar_url} username={profile.username} className="h-16 w-16 text-2xl" />
+          <Avatar url={profile.avatar_url} username={profile.username} className="h-20 w-20 text-3xl" />
         )}
-        <div>
-          <h1 className="flex items-center gap-2 font-display text-2xl font-semibold text-neutral-900 dark:text-neutral-50">
+        <div className="min-w-0 flex-1">
+          <h1 className="flex items-center gap-2 font-display text-[28px] font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
             {profile.display_name ?? `@${profile.username}`}
             <ChampionBadge badge={profile.champion_badge} className="h-6 w-6" />
           </h1>
-          <p className="text-sm text-neutral-500">@{profile.username}</p>
+          <p className="mt-0.5 text-[15px] text-neutral-500 dark:text-neutral-400">@{profile.username}</p>
           {profile.champion_badge && (
             <p className="mt-1 text-xs font-medium text-amber-700 dark:text-amber-400">
               {championBadgeLabel(profile.champion_badge)}
             </p>
           )}
+          {profile.bio && (
+            <p className="mt-3 max-w-md whitespace-pre-wrap text-[15px] leading-relaxed text-neutral-600 dark:text-neutral-300">
+              {profile.bio}
+            </p>
+          )}
+          {isOwner && !profile.bio && (
+            <p className="mt-3 text-sm italic text-neutral-400">No bio yet.</p>
+          )}
+          {isOwner && <EditBio initialBio={profile.bio ?? ''} />}
         </div>
-        <span className="ml-auto flex items-center gap-1.5 text-right">
+        <span className="ml-auto flex shrink-0 items-center gap-1.5 pt-1.5 text-right">
           <CoinIcon className="h-6 w-6" />
           <span className="font-display text-2xl font-semibold text-neutral-900 dark:text-neutral-50">
             {isFounder(profile.id) ? '∞' : points.toLocaleString()}
           </span>
         </span>
       </div>
-
-      {profile.bio && (
-        <p className="mt-4 max-w-md whitespace-pre-wrap text-[15px] text-neutral-600 dark:text-neutral-300">
-          {profile.bio}
-        </p>
-      )}
-      {isOwner && <EditBio initialBio={profile.bio ?? ''} />}
-      {isOwner && !profile.bio && (
-        <p className="mt-2 text-sm italic text-neutral-400">No bio yet.</p>
-      )}
 
       {!isFounder(profile.id) && (
       <>

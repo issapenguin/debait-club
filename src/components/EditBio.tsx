@@ -15,7 +15,7 @@ export function EditBio({ initialBio }: { initialBio: string }) {
       <button
         type="button"
         onClick={() => setEditing(true)}
-        className="mt-2 rounded-full border border-neutral-300 px-3 py-1 text-sm font-medium text-neutral-600 transition hover:border-neutral-500 hover:text-neutral-900 dark:border-neutral-700 dark:text-neutral-300 dark:hover:border-neutral-500 dark:hover:text-neutral-100"
+        className="mt-1.5 text-xs font-medium text-neutral-400 underline-offset-2 transition hover:text-neutral-700 hover:underline dark:text-neutral-500 dark:hover:text-neutral-300"
       >
         Edit bio
       </button>
