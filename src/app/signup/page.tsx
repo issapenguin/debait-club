@@ -22,6 +22,10 @@ function SignupForm() {
     e.preventDefault();
     setError('');
     setNotice('');
+    if (displayName.trim().toLowerCase() === username.trim().toLowerCase()) {
+      setError('Your display name and username need to be different.');
+      return;
+    }
     setBusy(true);
     try {
       const res = await fetch('/api/auth/signup', {

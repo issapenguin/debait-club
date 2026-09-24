@@ -1,0 +1,818 @@
+{
+  "topics": [
+    {
+      "id": 3,
+      "proposition": "Should people with felony convictions automatically regain voting rights after serving their sentences?",
+      "category": "Politics",
+      "context": "In 2018, Florida voters approved Amendment 4, restoring voting rights to most people with felony convictions after they complete their sentences. An estimated 4.4 million Americans remain disenfranchised under state laws, while Maine and Vermont allow voting even from prison.",
+      "sources": [
+        {
+          "title": "Sentencing Project: Locked Out 2022",
+          "url": "https://www.sentencingproject.org/publications/locked-out-2022-estimates-of-people-denied-voting-rights/"
+        },
+        {
+          "title": "Brennan Center: Voting Rights Restoration",
+          "url": "https://www.brennancenter.org/issues/ensure-every-american-can-vote/voting-rights-restoration"
+        },
+        {
+          "title": "AP: Voting Rights",
+          "url": "https://apnews.com/hub/voting-rights"
+        }
+      ],
+      "topic_date": "2026-09-22",
+      "is_featured": false
+    },
+    {
+      "id": 4,
+      "proposition": "Should unrealized capital gains be taxed?",
+      "category": "Business",
+      "context": "The White House has proposed a 25% minimum tax on households worth more than $100 million, applied to income including unrealized capital gains. Supporters say the wealthy borrow against stock to avoid taxes; critics call the idea unconstitutional and unworkable.",
+      "sources": [
+        {
+          "title": "White House: Billionaire Minimum Income Tax",
+          "url": "https://www.whitehouse.gov/briefing-room/statements-releases/"
+        },
+        {
+          "title": "Tax Policy Center",
+          "url": "https://www.taxpolicycenter.org/"
+        },
+        {
+          "title": "Reuters: Business News",
+          "url": "https://www.reuters.com/business/"
+        }
+      ],
+      "topic_date": "2026-09-21",
+      "is_featured": false
+    },
+    {
+      "id": 23,
+      "proposition": "Should AI-generated films be eligible for major awards like the Oscars?",
+      "category": "Entertainment",
+      "context": "In 2025, the Academy ruled that generative AI use neither helps nor harms a film's Oscar eligibility. The decision followed the 2023 actors' and writers' strikes, where AI was a central dispute, and the rise of tools like OpenAI's Sora and Runway.",
+      "sources": [
+        {
+          "title": "Academy of Motion Picture Arts and Sciences",
+          "url": "https://www.oscars.org/news"
+        },
+        {
+          "title": "SAG-AFTRA",
+          "url": "https://www.sagaftra.org/"
+        },
+        {
+          "title": "AP: Entertainment News",
+          "url": "https://apnews.com/hub/entertainment"
+        }
+      ],
+      "topic_date": "2026-09-24",
+      "is_featured": false
+    },
+    {
+      "id": 24,
+      "proposition": "Should smartphones be banned in K-12 schools nationwide?",
+      "category": "Lifestyle",
+      "context": "Florida banned phones during class time in 2023, and UNESCO called the same year for a global ban on smartphones in schools. Research links phone presence to lower test scores and weaker student well-being.",
+      "sources": [
+        {
+          "title": "UNESCO: Global Education Monitoring Report",
+          "url": "https://www.unesco.org/gem-report/en"
+        },
+        {
+          "title": "Common Sense Media: Research",
+          "url": "https://www.commonsensemedia.org/research"
+        },
+        {
+          "title": "Pew Research Center",
+          "url": "https://www.pewresearch.org/internet/"
+        }
+      ],
+      "topic_date": "2026-09-24",
+      "is_featured": false
+    }
+  ],
+  "cases": [
+    {
+      "id": 1061,
+      "topic_id": 3,
+      "side": "for",
+      "author_demo_id": "demo-061",
+      "body": "I work with people coming home from prison, and I watch the same pattern every month. A man gets a job, a bus pass, a place to sleep, and then asks me how to register to vote, because for the first time in years he wants a stake in something bigger than himself. Florida voters understood this in 2018, when [Amendment 4 passed with 64.5% of the vote](https://www.brennancenter.org/our-work/research-reports/voting-rights-restoration-efforts-florida), restoring rights to most people who had finished their sentences. Research keeps finding the same thing: people who vote after release are less likely to go back inside. The [Sentencing Project](https://www.sentencingproject.org/app/uploads/2024/03/Locked-Out-2022-Estimates-of-People-Denied-Voting.pdf) estimates 4.4 million Americans are still locked out of the ballot box, and in Florida alone hundreds of thousands remain barred because of unpaid fines and fees. If the goal is fewer victims and safer streets, handing someone a ballot beats handing them a permanent label."
+    },
+    {
+      "id": 1062,
+      "topic_id": 3,
+      "side": "for",
+      "author_demo_id": "demo-062",
+      "body": "My classroom has a poster that says every voice matters, and I hate knowing it is a lie for some of my students' parents. The [Sentencing Project](https://www.sentencingproject.org/app/uploads/2024/03/Locked-Out-2022-Estimates-of-People-Denied-Voting.pdf) reports that 1 in 19 Black adults of voting age is disenfranchised, a rate several times higher than for the rest of the population, because these laws land hardest on communities already over-policed. States like Alabama, Florida, Kentucky, Mississippi, Tennessee, and Virginia keep some of the harshest restrictions in the country, and the racial gap is not an accident of history, it is the predictable result of where enforcement falls. Automatic restoration would not erase those disparities, but it would stop extending them past the prison gate. A democracy that lectures teenagers about civic duty should not then tell their parents the duty ended at sentencing."
+    },
+    {
+      "id": 1063,
+      "topic_id": 3,
+      "side": "for",
+      "author_demo_id": "demo-063",
+      "body": "Maine and Vermont let people vote from prison, and neither state has suffered an election-integrity meltdown. That matters because the strongest argument against restoration is usually a vague fear that voting somehow cheapens punishment, yet the two states that go furthest have the least drama. The [European Court of Human Rights ruled in 2005](https://www.echr.coe.int/) that blanket bans on prisoner voting violate basic rights, and most European democracies allow it with no visible harm to public safety or the seriousness of sentences. We already count incarcerated people in the census for purposes of political representation, so we are happy to use their bodies for apportionment while denying them a voice. Drawing the line at the ballot box is a choice, not a necessity, and the evidence from the states and countries that chose differently is reassuringly boring."
+    },
+    {
+      "id": 1064,
+      "topic_id": 3,
+      "side": "against",
+      "author_demo_id": "demo-064",
+      "body": "My shop was robbed twice in three years, and the second time the man who did it had a record that filled a folder. I am not heartless, but I watched the court order restitution my insurance never fully covered, and I think finishing a sentence means finishing all of it. Florida's Amendment 4 kept that distinction: it excluded murder and felony sexual offenses, and lawmakers later required fines, fees, and restitution to be paid first, because a sentence is not just time served. [The Brennan Center](https://www.brennancenter.org/) notes that hundreds of thousands of Floridians still owe legal financial obligations, and calling those debts a poll tax dodges the fact that victims were ordered that money by a judge. Automatic restoration sounds compassionate until you are the person still waiting on the check the court said you were owed."
+    },
+    {
+      "id": 1065,
+      "topic_id": 3,
+      "side": "against",
+      "author_demo_id": "demo-065",
+      "body": "The Constitution leaves voter qualifications mostly to the states, and that is not a loophole, it is the design. People in different states genuinely disagree about what completing a sentence requires, and a one-size rule from Washington would erase that debate instead of settling it. When Florida voters passed Amendment 4 and when Virginia's governors issued restoration orders, those were state decisions reflecting state values, which is how a federal system is supposed to work. [Pew Research](https://www.pewresearch.org/short-reads/2018/11/15/how-americans-view-some-of-the-voting-policies-approved-at-the-ballot-box/) has found broad but not universal support for restoration, with real disagreement about violent offenses and timing. Automatic nationwide restoration trades that democratic argument for a mandate, and on questions this contested, the argument is the point."
+    },
+    {
+      "id": 1066,
+      "topic_id": 3,
+      "side": "against",
+      "author_demo_id": "demo-066",
+      "body": "Everyone talks about second chances, but almost nobody mentions how fast the second chance gets wasted. The [Bureau of Justice Statistics](https://bjs.ojp.gov/) found that 83% of state prisoners released were rearrested within nine years, which means a huge share of people restored on day one will be back inside before the next presidential election. I am not saying nobody deserves the vote, I am saying timing matters: a waiting period or a clean-record stretch proves the reintegration is real instead of assumed. States that restore rights after parole or probation ends already strike this balance, and their approach respects both the person who stayed straight and the community taking the risk. Automatic restoration at the prison door skips the only evidence that matters, which is what someone does with their freedom."
+    },
+    {
+      "id": 1067,
+      "topic_id": 4,
+      "side": "for",
+      "author_demo_id": "demo-067",
+      "body": "My students learn that everyone pays taxes, and then I read the [ProPublica investigation](https://www.propublica.org/article/the-secret-irs-files-trove-of-never-before-seen-records-reveal-how-the-wealthiest-avoid-income-tax) showing the 25 richest Americans paid an effective federal income tax rate of just 3.4% from 2014 to 2018. The trick is simple: never sell. Borrow against your stock, live off the loans, and let the gains compound untaxed until death wipes the slate through stepped-up basis. The White House proposal answers this directly: a 25% minimum tax on households worth more than $100 million, covering unrealized gains, hitting roughly the top 0.01% and raising an estimated $360 billion over a decade. That is not a tax on teachers with a 401(k). It is a tax on a loophole you need nine figures to use."
+    },
+    {
+      "id": 1068,
+      "topic_id": 4,
+      "side": "for",
+      "author_demo_id": "demo-068",
+      "body": "I pay taxes on every dollar I earn before I ever see it, and I am tired of being told the system cannot ask the same of people with more money than a hospital. Economists Emmanuel Saez and Gabriel Zucman found that in 2018 [the 400 richest families paid a lower total effective tax rate](https://www.nytimes.com/2019/10/06/opinion/income-tax-rate-wealthy.html) than the bottom half of earners, which flips the whole idea of progressive taxation upside down. Unrealized gains are real economic power: they buy yachts through loans, they buy companies, they buy elections, and the tax code pretends they do not exist until a sale the owner can delay forever. A minimum tax on the wealthiest households would not fix every inequity, but it would end the absurdity of a nurse paying a higher rate than a billionaire. If the code can track my overtime down to the penny, it can value a stock portfolio."
+    },
+    {
+      "id": 1069,
+      "topic_id": 4,
+      "side": "for",
+      "author_demo_id": "demo-069",
+      "body": "The unworkable objection ignores how much mark-to-market taxation already exists. Futures traders have their contracts marked to market every year under [Section 1256 of the tax code](https://www.congress.gov/), and nobody calls that the end of commodities markets. The Netherlands taxes an assumed return on savings and investments instead of waiting for a sale, and Americans who renounce citizenship already pay an exit tax on unrealized gains. For households over $100 million, portfolios are mostly publicly traded securities with a price anyone can look up in seconds, so the valuation horror stories about family farms are aimed at the wrong target. We built the plumbing for this decades ago. What is missing is the political will to turn it on for the people who benefit most from it being off."
+    },
+    {
+      "id": 1070,
+      "topic_id": 4,
+      "side": "against",
+      "author_demo_id": "demo-070",
+      "body": "I built my company over 22 years, and on paper it is worth enough that a tax like this would notice me if the threshold ever drifts down, which thresholds always do. For founders, most wealth is shares you cannot sell without losing control of the company your employees depend on, so a tax on unrealized gains means selling pieces of the business every year just to pay the IRS. Startup employees get hit too: engineers holding illiquid options would owe real cash on paper value they cannot touch, forcing them to walk away from the equity they earned. The [Tax Policy Center](https://www.taxpolicycenter.org/) has warned about exactly these liquidity crunches, and they are not theoretical, they are arithmetic. A tax bill should not force a founder to choose between paying Washington and keeping her company."
+    },
+    {
+      "id": 1071,
+      "topic_id": 4,
+      "side": "against",
+      "author_demo_id": "demo-071",
+      "body": "I have watched every tax-only-the-rich promise of my lifetime eventually knock on the middle class door, and this one has the same knock built in. The 16th Amendment allows taxes on income, and the Supreme Court in [Moore v. United States (2024)](https://www.supremecourt.gov/) upheld a tax on already-realized foreign earnings while pointedly leaving the bigger question undecided, which means a tax on gains nobody has received is on shaky constitutional ground. Even if it survives for billionaires today, the machinery it builds, annual federal valuation of everything you own, is ready-made for the next revenue hunt. My 401(k) holds unrealized gains too, and I am not comforted by promises that the line will never move. Lines drawn for revenue always move."
+    },
+    {
+      "id": 1072,
+      "topic_id": 4,
+      "side": "against",
+      "author_demo_id": "demo-072",
+      "body": "My parents own a small apartment building, and I have watched them argue with the county every year about what it is worth, because appraisals are opinions with letterhead. Now imagine the IRS doing that annually for every private business, art collection, and family farm in the country, with penalties if their opinion differs from yours. France tried a wealth tax and [repealed it in 2018](https://www.reuters.com/) after economists tied it to capital flight, and several other European countries walked away from similar experiments for the same reason. Valuation disputes would flood the courts, compliance costs would crush exactly the mid-sized businesses the threshold supposedly spares, and the revenue projections would melt on contact with reality. A tax the government cannot measure fairly is a tax it cannot levy fairly."
+    },
+    {
+      "id": 1073,
+      "topic_id": 23,
+      "side": "for",
+      "author_demo_id": "demo-073",
+      "body": "Every new filmmaking tool gets this funeral. When digital cameras arrived, purists said film was dead; when CGI arrived, they said acting was over, and then performances like Andy Serkis as Gollum got studied in acting classes. The Academy's 2025 rule gets the principle right: generative AI [neither helps nor harms](https://www.oscars.org/news) a film's eligibility, because voters are asked to judge the human authorship at the heart of the work. A director who uses AI to pre-visualize a sequence still makes a thousand creative decisions, just as a cinematographer using a digital camera does. Banning AI films from awards would not protect artistry, it would just freeze the definition of artistry at whatever tools existed in 2022."
+    },
+    {
+      "id": 1074,
+      "topic_id": 23,
+      "side": "for",
+      "author_demo_id": "demo-074",
+      "body": "I am in film school with $40,000 in debt and a laptop, and tools like [Runway](https://runwayml.com/) and OpenAI's Sora are the first thing that has ever made me feel like I could compete with a studio. A period street scene that would cost a major production hundreds of thousands can now be prototyped by a kid in a dorm room, which means the next great director might not need a trust fund or a studio deal. Awards eligibility matters here because recognition is the currency that turns an unknown into a working filmmaker: festivals and prizes are how outsiders get meetings. If the Oscars wall off AI-assisted work, they are not defending craft, they are defending the budgets that already win everything. Let the kid with the laptop enter the race."
+    },
+    {
+      "id": 1075,
+      "topic_id": 23,
+      "side": "for",
+      "author_demo_id": "demo-075",
+      "body": "The Academy already solved the transparency problem, and everyone is ignoring the solution. Its rules now require filmmakers to [disclose AI use](https://www.oscars.org/news), so voters know what they are judging, the same way credits have always told us who did what. With that disclosure in place, the craft categories could become the most exciting part of the night: imagine production designers and visual effects artists competing on how inventively they wield these tools instead of pretending the tools do not exist. Cinematography awards did not die when color film arrived, they got more interesting. Eligibility with disclosure keeps the focus where it belongs, on what the humans chose to make, while dragging the conversation about AI in film into the open where it can actually be judged."
+    },
+    {
+      "id": 1076,
+      "topic_id": 23,
+      "side": "against",
+      "author_demo_id": "demo-076",
+      "body": "I spent two summers as a background actor, and I watched real people lose real weeks of work when productions started fixing crowds in post with digital extras. The 2023 strikes were not abstract: [SAG-AFTRA walked out for 118 days](https://www.sagaftra.org/) and writers for 148, largely over AI replacing human labor, and thousands of working actors still have not recovered. Awards are the industry's loudest statement about what it values, and handing its top honors to films built on the technology that picket lines were drawn against would be a betrayal with a trophy attached. Nobody is saying AI users are villains, but the Oscars should celebrate the human performances, writing, and craft that audiences actually connect with. Some lines are worth drawing, and this is the cheapest one."
+    },
+    {
+      "id": 1077,
+      "topic_id": 23,
+      "side": "against",
+      "author_demo_id": "demo-077",
+      "body": "My illustrations have been scraped into training sets I never agreed to, and now I am supposed to applaud when that same pipeline wins Best Picture. Generative models learned their craft from millions of uncompensated artists, writers, and actors, and the [lawsuits over that training data](https://www.reuters.com/technology/artificial-intelligence/) are still working through the courts. Giving AI-generated films the industry's highest honor would reward the appropriation before the law has even decided whether it was theft. I am not a purist about tools: I use digital brushes every day. But there is a difference between a tool and a machine built on other people's work without permission or pay. Until the people whose art trained these models are compensated, awards should go to films made by people, not composites of them."
+    },
+    {
+      "id": 1078,
+      "topic_id": 23,
+      "side": "against",
+      "author_demo_id": "demo-078",
+      "body": "Awards are supposed to be a fair fight, and AI makes the fight about computing budgets instead of imagination. A major studio can train proprietary models on its own century of footage, hire teams of AI specialists, and generate thousands of variations of every scene, while an independent filmmaker gets whatever the public tools spit out. We have seen this movie before: every democratizing technology in Hollywood, from CGI to streaming, ended up consolidating power in the studios that could afford to do it best. The [2023 strikes](https://apnews.com/hub/entertainment) happened because workers saw this consolidation coming. Keeping AI-generated films out of major awards would not stop the technology, but it would keep the industry's highest honors measuring human creativity rather than corporate compute."
+    },
+    {
+      "id": 1079,
+      "topic_id": 24,
+      "side": "for",
+      "author_demo_id": "demo-079",
+      "body": "I have taught for 14 years, and the phone is the single biggest change in my classroom, bigger than any curriculum rewrite. [UNESCO's 2023 Global Education Monitoring Report](https://www.unesco.org/gem-report/en) found it can take students up to 20 minutes to refocus after a single notification, which means one buzz can erase a third of a class period. Florida's 2023 law banning phones during instructional time was not some authoritarian whim, it was a response to teachers begging for backup. My students are good kids, and they still cannot resist a screen engineered by thousand-person teams to be irresistible. A nationwide ban would do what I cannot do alone: make the classroom a place where attention is the default instead of the exception."
+    },
+    {
+      "id": 1080,
+      "topic_id": 24,
+      "side": "for",
+      "author_demo_id": "demo-080",
+      "body": "I hand out ice packs and bandages, but most of what walks into my office now is anxiety, and the phone is almost always in the story. The [CDC's 2021 Youth Risk Behavior Survey](https://www.cdc.gov/yrbs/) found 57% of teen girls felt persistently sad or hopeless, and bullying, much of it starting or spreading on phones during the school day, is a documented driver. [Common Sense Media](https://www.commonsensemedia.org/) found teens receive a median of 237 notifications a day, a huge share of them during school hours, which is not communication, it is harassment by volume. A school cannot fix a teenager's whole digital life, but it can give them seven hours where the pile-on pauses. I have watched kids exhale when the phone goes in the pouch. That exhale is the policy working."
+    },
+    {
+      "id": 1081,
+      "topic_id": 24,
+      "side": "for",
+      "author_demo_id": "demo-081",
+      "body": "Every objection to a ban melts when you look at how schools actually do it. Lockable pouches from companies like [Yondr](https://www.overyondr.com/) cost a few dollars per student, kids keep the phone on their person, and the school office handles genuine emergencies, which is what offices did for decades before every child had a phone. My daughter's school adopted pouches last year and the change was immediate: lunch got louder, teachers stopped playing phone police, and the emergency calls turned out to be mostly forgotten homework and ride logistics. Parents survived not texting their kids for six hours in 1995, and the office phone still works. This is a solved problem pretending to be a hard one."
+    },
+    {
+      "id": 1082,
+      "topic_id": 24,
+      "side": "against",
+      "author_demo_id": "demo-082",
+      "body": "I am a mother of two, and I will not apologize for wanting to reach my children during the school day. School shootings and lockdowns are not hypotheticals, they are drills my kids do monthly, and in a real emergency the office line jams while a text gets through. [Pew Research](https://www.pewresearch.org/internet/2025/10/08/how-parents-describe-their-kids-tech-use/) has found most parents of teens count the phone's safety benefits as a major reason their child has one, and that instinct does not vanish at the classroom door. A ban also assumes every family has the same safety net, but my neighbor's daughter walks home alone past a busy intersection and texts when she arrives. Schools can restrict use without confiscating the lifeline. My child's safety is not a distraction to be managed."
+    },
+    {
+      "id": 1083,
+      "topic_id": 24,
+      "side": "against",
+      "author_demo_id": "demo-083",
+      "body": "I am a junior, and the adults debating this clearly have not watched a ban fail in real time. My school tried one: teachers spent the first ten minutes of every period collecting phones instead of teaching, and the kids who wanted to cheat just brought a second phone. Meanwhile I use my phone for things the school cannot replace: a translation app for my mom at parent-teacher night, photos of the whiteboard because I process better visually, and the bus tracker that tells me if I missed my ride home. [Pew](https://www.pewresearch.org/internet/2023/12/11/teens-social-media-and-technology-2023/) reports nearly all teens have phone access, but access is not equal, and for some of us the phone is the only computer we own. Punish the misuse, sure. But a blanket ban treats every student like the worst one in the room."
+    },
+    {
+      "id": 1084,
+      "topic_id": 24,
+      "side": "against",
+      "author_demo_id": "demo-084",
+      "body": "A ban treats the symptom and declares victory while the disease clocks out at 3 p.m. The anxiety, the comparison, the doomscrolling, all of it resumes the second the pouch opens, because we have taught kids nothing about managing the device, only that adults can take it away. [UNESCO](https://www.unesco.org/) itself paired its call for restrictions with a demand for better digital literacy, and the second half is the part schools keep skipping. I work in tech, and I can tell you these products are designed to capture attention; willpower lectures delivered to a banned phone do not build resistance, practice does. Teach students to notice manipulation, to set their own limits, to sit with boredom, and you have given them something that works after graduation. A ban just schedules the problem for later."
+    },
+    {
+      "id": 1085,
+      "topic_id": 8,
+      "side": "for",
+      "author_demo_id": "demo-085",
+      "body": "The numbers make the abstract concrete. The 2017 Equifax breach exposed the personal data of [147 million Americans](https://www.ftc.gov/news-events/news/press-releases/2019/07/equifax-pay-575-million-part-settlement-ftc-cfpb-states-alleged-failure-take), followed by a $575 million FTC settlement, and the executives who oversaw the security failures kept their pay while shareholders and consumers absorbed the cost. [Section 304 of Sarbanes-Oxley](https://www.congress.gov/) already claws back CEO and CFO compensation after accounting restatements, because Congress decided some failures are personal, and privacy failures at this scale deserve the same logic. A company fine is a line item; a clawback is a career event. Boards will fund security properly when the people signing the risk memos know their own compensation is on the line, not just the company's."
+    },
+    {
+      "id": 1086,
+      "topic_id": 8,
+      "side": "against",
+      "author_demo_id": "demo-086",
+      "body": "Here is the perverse outcome nobody mentions: personal liability will make breach disclosure slower, not faster. If a director faces personal ruin for a repeat incident, the rational move is to litigate the definition of violation, delay the announcement, and lawyer every forensic report, which is the opposite of what victims need. It will also shrink the talent pool: qualified independent directors will avoid the boards of data-heavy companies, leaving those boards to insiders with less appetite for hard questions. The [SEC's own cyber disclosure rules](https://www.sec.gov/) already push companies toward faster reporting, and personal liability pulls the other way. We want directors who ask uncomfortable questions early. Threatening their homes and savings gets us directors who ask nothing, on the record, ever."
+    },
+    {
+      "id": 1087,
+      "topic_id": 9,
+      "side": "for",
+      "author_demo_id": "demo-087",
+      "body": "Follow the money and the no-audience excuse collapses. [Deloitte projected](https://www2.deloitte.com/) women's elite sports would surpass $1 billion in annual revenue, and the 2024 NCAA women's championship averaged [18.7 million viewers](https://www.espn.com/), outdrawing the men's final that year. The WNBA just posted its most-watched regular season in 24 years. Audiences this size do not appear by magic; they are built by the highlight shows, front pages, and lead segments that tell casual fans something matters. Every milestone buried on page six is a commercial opportunity the outlet then cites as proof nobody cares. Prominent coverage is not charity for women's sports. It is the marketing engine the men's game has enjoyed for a century, finally pointed in both directions."
+    },
+    {
+      "id": 1088,
+      "topic_id": 9,
+      "side": "against",
+      "author_demo_id": "demo-088",
+      "body": "A mandated lead segment is the fastest way to make coverage feel like homework. Young fans, the exact audience women's sports needs, do not watch 11 p.m. highlight shows; they live on TikTok, YouTube, and streaming, where the [WNBA and NWSL are already thriving](https://www.sportsbusinessjournal.com/) without any parity rule. Forcing legacy outlets to match men's placement risks tokenism: a perfunctory 30 seconds at the top of the broadcast that satisfies a quota while the real storytelling stays with the men's leagues. Editorial judgment exists because newsworthiness is real, and audiences smell condescension instantly. The better demand is better coverage everywhere fans actually are, not equal minutes on a format that is aging out."
+    },
+    {
+      "id": 1089,
+      "topic_id": 10,
+      "side": "for",
+      "author_demo_id": "demo-089",
+      "body": "The Academy keeps embarrassing its own majority. Below-the-line craftspeople, editors, sound mixers, costume designers, make up the bulk of Academy membership, yet the telecast treats their awards as bathroom breaks. That is not just rude, it is bad business: international audiences tune in for their countries' craft nominees, the way India showed up in force when RRR's Naatu Naatu won, and those viewers do not care which category airs at 11 p.m. The [2022 pre-taped categories experiment](https://www.thewrap.com/iatse-president-oscars-categories-pretaped/) drew open fury from the guilds whose dues fund the institution. A show that honors film should not rank filmmakers by fame. Give every category its live moment, and trim the montages and musical numbers nobody asked for."
+    },
+    {
+      "id": 1090,
+      "topic_id": 10,
+      "side": "against",
+      "author_demo_id": "demo-090",
+      "body": "The Oscars are a television show before they are a ceremony, and the economics are brutal. Viewership fell from [43.7 million in 2014](https://www.nielsen.com/) to about 19.5 million in 2024, and the broadcast rights and ad dollars that fund the Academy depend on stopping that slide. Producers are not villains for protecting the categories casual viewers tune in for; they are trying to keep the lights on so there is a show at all. But equal live minutes is a false choice. Put the craft categories in dedicated streaming segments with full, unbleeped speeches and real production value, and you might actually serve those artists better than a rushed 90 seconds at 11:40 p.m. Tradition says everything must be live. The audience has already moved on from that tradition."
+    }
+  ],
+  "comments": [
+    {
+      "id": 10101,
+      "case_id": 1061,
+      "author_demo_id": "demo-067",
+      "parent_id": null,
+      "body": "The reentry angle convinced me. We spend billions on programs to reduce recidivism and then withhold one of the cheapest reintegration tools there is: a reason to feel like a citizen. A ballot costs the state almost nothing and tells someone their community still wants them in it.",
+      "stance": "agree"
+    },
+    {
+      "id": 10102,
+      "case_id": 1061,
+      "author_demo_id": "demo-068",
+      "parent_id": 10101,
+      "body": "Feeling like a citizen is nice, but the studies on voting and recidivism show correlation, not proof. People who vote are already the ones getting jobs and staying clean; the ballot did not cause the turnaround. Let us not sell a feel-good story as crime policy.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10103,
+      "case_id": 1062,
+      "author_demo_id": "demo-069",
+      "parent_id": null,
+      "body": "1 in 19. Read that number twice. If any other policy locked out Black adults at that rate, we would call it what it is without hesitation. Automatic restoration does not fix policing or sentencing, but it stops the punishment from reproducing itself at the ballot box forever.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10104,
+      "case_id": 1063,
+      "author_demo_id": "demo-070",
+      "parent_id": null,
+      "body": "The Maine and Vermont example is interesting, but those are two small states with unusual politics. I would want to see how prison voting works somewhere bigger and more politically charged before calling it reassuringly boring everywhere. Still, the burden of proof should be on the ban, not on the right.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10105,
+      "case_id": 1064,
+      "author_demo_id": "demo-071",
+      "parent_id": null,
+      "body": "Restitution is the part everyone skips. A judge ordered that money to a victim, and waving it away because the offender is broke tells the victim their loss ranks below the offender's convenience. Finish the sentence means finish the sentence, all of it.",
+      "stance": "agree"
+    },
+    {
+      "id": 10106,
+      "case_id": 1064,
+      "author_demo_id": "demo-072",
+      "parent_id": 10105,
+      "body": "Most of those fines and fees are not victim restitution, they are court costs, supervision fees, and interest that pile up precisely because the person cannot pay. Florida proved the point: people willing to vote stay barred over small surcharges. That is a poll tax with extra steps, and dressing it up as victim advocacy is dishonest.",
+      "stance": "strongly_disagree"
+    },
+    {
+      "id": 10107,
+      "case_id": 1065,
+      "author_demo_id": "demo-073",
+      "parent_id": null,
+      "body": "States' rights is how we got literacy tests. Some rights are too fundamental to vary by zip code, and the franchise is at the top of that list. Let the states decide just means your citizenship is worth less in Montgomery than in Montpelier.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10108,
+      "case_id": 1066,
+      "author_demo_id": "demo-074",
+      "parent_id": null,
+      "body": "The 83% rearrest figure is the strongest point made on this page. I support restoration, but doing it automatically on release day ignores what we know about the first years after prison. Finish parole, stay clean for a defined period, then the ballot is waiting. That is a second chance with evidence.",
+      "stance": "agree"
+    },
+    {
+      "id": 10109,
+      "case_id": 1062,
+      "author_demo_id": "demo-075",
+      "parent_id": 10103,
+      "body": "I agree the disparity is real and ugly. Where I get stuck is the remedy: automatic restoration helps future voters but does nothing for the policing and sentencing that created the 1-in-19 figure. It feels necessary and insufficient at the same time.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10110,
+      "case_id": 1065,
+      "author_demo_id": "demo-076",
+      "parent_id": null,
+      "body": "The Constitution also left slavery to the states once. Federalism is a process argument, not a moral one, and it has been the shield for every voter suppression scheme in American history. Some questions are too big for let Mississippi decide.",
+      "stance": "strongly_disagree"
+    },
+    {
+      "id": 10111,
+      "case_id": 1067,
+      "author_demo_id": "demo-073",
+      "parent_id": null,
+      "body": "Buy, borrow, die. Three words that explain why my effective tax rate is higher than a billionaire's. The ProPublica figure should be printed on every pay stub in America. If you can live off loans against stock forever, you are earning income the code refuses to see.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10112,
+      "case_id": 1067,
+      "author_demo_id": "demo-074",
+      "parent_id": 10111,
+      "body": "The 3.4% number is wealth growth divided by taxes paid, which is not a tax rate by any definition the code uses. Nobody's rate is measured that way, including yours. If we are going to rewrite the tax code, let us at least be honest about the math we are using.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10113,
+      "case_id": 1068,
+      "author_demo_id": "demo-075",
+      "parent_id": null,
+      "body": "The nurse's point about overtime lands hard. The code tracks my hourly wages to the penny but treats a billionaire's $500 million paper gain as if it does not exist. Unrealized does not mean imaginary: banks accept it as collateral every day.",
+      "stance": "agree"
+    },
+    {
+      "id": 10114,
+      "case_id": 1070,
+      "author_demo_id": "demo-076",
+      "parent_id": null,
+      "body": "Liquidity is a real problem, but the proposal has an answer: payment over several years, and it only touches households over $100 million. Let us argue about the actual proposal instead of a slippery-slope version of it.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10115,
+      "case_id": 1070,
+      "author_demo_id": "demo-077",
+      "parent_id": 10114,
+      "body": "Thresholds always drift downward; the income tax started at 1% on the rich in 1913. And pay over several years just means selling the company slowly instead of quickly. A founder forced to divest to pay tax on value she has not received is still being punished for building something.",
+      "stance": "agree"
+    },
+    {
+      "id": 10116,
+      "case_id": 1071,
+      "author_demo_id": "demo-078",
+      "parent_id": null,
+      "body": "The constitutional question is genuinely unresolved, and Moore deliberately left it open. I am sympathetic to the fairness argument, but building a major revenue program on a tax the Court might strike down is risky legislating. Congress should get a clearer ruling before betting the budget on it.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10117,
+      "case_id": 1072,
+      "author_demo_id": "demo-079",
+      "parent_id": null,
+      "body": "France is the case study everyone ignores. They repealed the wealth tax after watching capital leave, and their revenue estimates never survived contact with appraisers and lawyers. Annual valuation of private businesses is a full-employment act for accountants, not a revenue plan.",
+      "stance": "agree"
+    },
+    {
+      "id": 10118,
+      "case_id": 1069,
+      "author_demo_id": "demo-080",
+      "parent_id": null,
+      "body": "Section 1256 covers liquid futures contracts with daily settlement prices, which is nothing like valuing a private company or an art collection once a year. The Netherlands comparison is worse: the Dutch system taxes an assumed return and their own supreme court just blew it up. These precedents prove less than they seem.",
+      "stance": "strongly_disagree"
+    },
+    {
+      "id": 10119,
+      "case_id": 1071,
+      "author_demo_id": "demo-081",
+      "parent_id": 10116,
+      "body": "Courts do not strike down taxes because they are novel; they strike them down when they violate the text. A minimum tax on economic income has survived every serious challenge so far, and waiting for perfect legal certainty means waiting forever. The Court had its chance in Moore and blinked.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10120,
+      "case_id": 1072,
+      "author_demo_id": "demo-082",
+      "parent_id": 10117,
+      "body": "France's repeal is a fair warning, but France taxed much smaller fortunes at higher rates with no threshold discipline. A $100-million floor with public-security valuation is a different animal. I am skeptical of the revenue projections too, just not convinced France settles it.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10121,
+      "case_id": 1073,
+      "author_demo_id": "demo-079",
+      "parent_id": null,
+      "body": "The Gollum comparison is exactly right. Every effects breakthrough gets called the death of acting until an actor does something undeniable with it. Judge the performance on screen, not the pipeline behind it. The Academy's rule is the only adult position here.",
+      "stance": "agree"
+    },
+    {
+      "id": 10122,
+      "case_id": 1076,
+      "author_demo_id": "demo-080",
+      "parent_id": null,
+      "body": "118 days on a picket line, and now the industry wants to hand its highest honor to the technology people struck against? The strikes were about exactly this: human work being replaced and then celebrated. An Oscar for an AI film would spit on every actor still waiting for the phone to ring.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10123,
+      "case_id": 1076,
+      "author_demo_id": "demo-081",
+      "parent_id": 10122,
+      "body": "The strikes were about consent and compensation for AI use, not a holy war against the technology. Plenty of union members use AI tools daily. Refusing eligibility punishes the filmmakers, including union crews, who worked on those films. The picket line was about pay, not purity.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10124,
+      "case_id": 1074,
+      "author_demo_id": "demo-082",
+      "parent_id": null,
+      "body": "As someone with a camera and no budget, this is personal. The industry gatekeeps through money, and AI is the first real crack in the gate. If awards stay closed to AI-assisted films, the message to kids like me is clear: the tools changed, but the velvet rope did not.",
+      "stance": "agree"
+    },
+    {
+      "id": 10125,
+      "case_id": 1077,
+      "author_demo_id": "demo-083",
+      "parent_id": null,
+      "body": "My art is in those training sets too, scraped without asking. Until there is a compensation system for the artists whose work taught these models, an Oscar for AI film is an award for laundering. Pay the training data, then we can talk about trophies.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10126,
+      "case_id": 1077,
+      "author_demo_id": "demo-084",
+      "parent_id": 10125,
+      "body": "The training-data lawsuits are real and unresolved, which makes this the strongest against argument for me. But I am not sure awards eligibility is the right lever: the courts and Congress decide compensation, not the Academy. Conflating the two risks punishing filmmakers for a legal fight they did not start.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10127,
+      "case_id": 1075,
+      "author_demo_id": "demo-085",
+      "parent_id": null,
+      "body": "Disclosure does not solve anything if voters cannot tell what the AI did. AI was used on a credits crawl tells me nothing about whether the performance I am judging is a person or a composite. Transparency theater is not the same as informed voting.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10128,
+      "case_id": 1078,
+      "author_demo_id": "demo-086",
+      "parent_id": null,
+      "body": "Compute is the new studio system. Whoever has the biggest model and the most proprietary footage wins, which means Disney and Warner Bros., not the kid in the dorm room. Eligibility just moves the existing power imbalance onto shinier hardware.",
+      "stance": "agree"
+    },
+    {
+      "id": 10129,
+      "case_id": 1073,
+      "author_demo_id": "demo-087",
+      "parent_id": 10121,
+      "body": "I buy the tools-don't-define-art argument in principle, but there has to be a line where the human authorship the Academy cites becomes nominal. If one person types prompts and a model generates 90% of the film, is that directing? The rule punts on the only question that matters.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10130,
+      "case_id": 1078,
+      "author_demo_id": "demo-088",
+      "parent_id": 10128,
+      "body": "Studios already win everything: they have the cameras, the crews, the distribution. AI at least gives the dorm-room kid a rendering farm. Keeping AI films out of awards does not humble Disney, it just removes the one category where an outsider's ingenuity might beat a marketing budget.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10131,
+      "case_id": 1079,
+      "author_demo_id": "demo-085",
+      "parent_id": null,
+      "body": "Twenty minutes to refocus after one notification. Multiply that by a school day and it is a miracle anyone learns algebra at all. I am a teacher too, and the phone ban is the first policy in years that made my classroom feel like 2010 again, in the best way.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10132,
+      "case_id": 1079,
+      "author_demo_id": "demo-086",
+      "parent_id": 10131,
+      "body": "The 20-minute figure comes from task-switching research on office workers, not a law of adolescent physics, and UNESCO's report is a literature review, not an experiment. Phones are a problem, but let us not dress up a complicated issue in a single scary number.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10133,
+      "case_id": 1080,
+      "author_demo_id": "demo-087",
+      "parent_id": null,
+      "body": "The school nurse sees what the statistics describe. Kids come in with stomach aches that are really dread about what is happening on their phones during lunch. Seven hours of enforced distance is the only break some of these kids get, and you can see the relief on their faces.",
+      "stance": "agree"
+    },
+    {
+      "id": 10134,
+      "case_id": 1082,
+      "author_demo_id": "demo-088",
+      "parent_id": null,
+      "body": "As a mom, the safety argument ends the debate for me. Lockdowns are real, office lines jam, and I want my daughter able to text me. No test score improvement is worth my child being unreachable in an emergency. Restrict use, fine, but never confiscate the lifeline.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10135,
+      "case_id": 1082,
+      "author_demo_id": "demo-089",
+      "parent_id": 10134,
+      "body": "In an actual lockdown, a classroom of buzzing phones is a safety hazard: sound gives away hiding spots, and panicked kids calling parents jam the networks first responders need. Schools and police both say this. The lifeline instinct is understandable, but it can make emergencies worse.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10136,
+      "case_id": 1081,
+      "author_demo_id": "demo-090",
+      "parent_id": null,
+      "body": "The pouch system clearly works where it is tried, and the cost is trivial. My hesitation is the emergency question: the office handles it assumes offices are staffed and responsive, which is not every school. I would want clear, published emergency protocols before supporting a mandate.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10137,
+      "case_id": 1083,
+      "author_demo_id": "demo-091",
+      "parent_id": null,
+      "body": "The student is right that enforcement eats teaching time. My school's ban turned every teacher into a phone cop and every period started with a negotiation. The kids who needed the ban most were the best at hiding the phone. We punished the compliant and trained the defiant.",
+      "stance": "agree"
+    },
+    {
+      "id": 10138,
+      "case_id": 1084,
+      "author_demo_id": "demo-092",
+      "parent_id": null,
+      "body": "Digital literacy sounds great until you try teaching self-regulation to a 13-year-old whose apps are engineered by the best behavioral scientists on earth. We do not teach kids to manage cigarettes by handing them cigarettes. Sometimes removing the temptation is the lesson.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10139,
+      "case_id": 1084,
+      "author_demo_id": "demo-093",
+      "parent_id": 10138,
+      "body": "Both things can be true: the products are engineered to addict, and kids still need to learn to navigate them eventually. A ban during school plus real digital literacy classes seems like the obvious compromise. Why does this debate always demand a single answer?",
+      "stance": "neutral"
+    },
+    {
+      "id": 10140,
+      "case_id": 1083,
+      "author_demo_id": "demo-094",
+      "parent_id": 10137,
+      "body": "Every rule punishes the compliant by that logic, including speed limits. The translation app and bus tracker are edge cases schools can accommodate with exceptions. The core fact stands: a classroom where 30 kids are half-present is not a classroom, and exceptions do not require abandoning the rule.",
+      "stance": "strongly_disagree"
+    },
+    {
+      "id": 10141,
+      "case_id": 1085,
+      "author_demo_id": "demo-087",
+      "parent_id": null,
+      "body": "147 million people, and the executives kept their bonuses. That single fact radicalized me on this issue. A fine the company pays is just a business expense with better PR. Claw back the pay of the people who signed off on the security budget, and watch how fast the budget grows.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10142,
+      "case_id": 1085,
+      "author_demo_id": "demo-088",
+      "parent_id": 10141,
+      "body": "SOX 304 clawbacks apply to the CEO and CFO after accounting fraud, which is a much narrower trigger than a breach happened on your watch. Breaches can come from zero-days and sophisticated attackers, not just underfunded security. Personal liability for being hacked is a different moral universe than liability for cooking the books.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10143,
+      "case_id": 1086,
+      "author_demo_id": "demo-089",
+      "parent_id": null,
+      "body": "The disclosure-chilling point is underrated. We already struggle to get companies to report breaches quickly; adding personal ruin to the equation gives every general counsel a reason to slow-walk the forensics. Victims need fast disclosure more than they need a director's house.",
+      "stance": "agree"
+    },
+    {
+      "id": 10144,
+      "case_id": 1086,
+      "author_demo_id": "demo-090",
+      "parent_id": 10143,
+      "body": "Companies already slow-walk disclosure to protect the stock price, which is exactly why personal liability might help: it aligns the director's incentives with the victims' instead of the shareholders'. The current system rewards delay. Change who pays for delay, and the delay shortens.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10145,
+      "case_id": 1085,
+      "author_demo_id": "demo-091",
+      "parent_id": null,
+      "body": "I support the principle, but the line-drawing worries me. What counts as a repeat violation: two breaches in five years, or two findings by the same regulator? Without a precise trigger, this becomes a weapon for whichever administration wants to punish a disfavored company.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10146,
+      "case_id": 1086,
+      "author_demo_id": "demo-092",
+      "parent_id": null,
+      "body": "The talent-flight argument assumes directors are doing us a favor by serving, but board seats at data-heavy companies pay hundreds of thousands a year for part-time work. If personal accountability scares off candidates, it scares off the ones who were never going to ask hard questions anyway. Good riddance.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10147,
+      "case_id": 1085,
+      "author_demo_id": "demo-093",
+      "parent_id": 10145,
+      "body": "The trigger question is fair, but it is solvable: define repeat as a second final regulatory finding within five years, with a safe harbor for companies that can show they implemented the prior order's remedies. Precision is a drafting problem, not a reason to abandon the idea.",
+      "stance": "agree"
+    },
+    {
+      "id": 10148,
+      "case_id": 1086,
+      "author_demo_id": "demo-094",
+      "parent_id": 10146,
+      "body": "Good riddance is easy to say until the only people willing to serve are insiders with no independence at all. Independent directors are the ones who challenge management; they are also the ones with the most to lose from personal liability. Drive them out and oversight gets worse, not better.",
+      "stance": "strongly_disagree"
+    },
+    {
+      "id": 10149,
+      "case_id": 1087,
+      "author_demo_id": "demo-089",
+      "parent_id": null,
+      "body": "18.7 million viewers for the women's final, more than the men drew. Every executive who says we show what people watch should have to explain that number. The audience is there; the coverage is the lagging indicator, not the leading one.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10150,
+      "case_id": 1087,
+      "author_demo_id": "demo-090",
+      "parent_id": 10149,
+      "body": "One championship game is not a season. The men's tournament still outdraws the women's across the full event, and networks buy rights based on total inventory, not one night. A single record rating does not prove sustained demand for nightly highlight parity.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10151,
+      "case_id": 1088,
+      "author_demo_id": "demo-091",
+      "parent_id": null,
+      "body": "The platform point is the real story. My daughter has never watched an 11pm highlight show in her life; she follows the WNBA on TikTok and YouTube. Mandating parity on dying formats is fighting the last war. Put the energy into streaming and social, where the actual young audience is.",
+      "stance": "agree"
+    },
+    {
+      "id": 10152,
+      "case_id": 1088,
+      "author_demo_id": "demo-092",
+      "parent_id": 10151,
+      "body": "Streaming is important, but legacy placement still signals what matters to sponsors, advertisers, and casual fans. A lead segment on a major network reaches people who would never seek out women's sports on TikTok. Abandoning traditional prominence cedes the biggest cultural megaphone we have.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10153,
+      "case_id": 1087,
+      "author_demo_id": "demo-093",
+      "parent_id": null,
+      "body": "The money argument is strong, but I wonder about cause and effect. Did coverage build the audience, or did stars like Caitlin Clark build the audience that coverage then followed? Probably both, which suggests the answer is stars plus coverage, not coverage alone.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10154,
+      "case_id": 1088,
+      "author_demo_id": "demo-094",
+      "parent_id": null,
+      "body": "Tokenism is a risk, but it is a strange argument against the proposal: any new coverage pattern looks performative at first. The men's highlights were not born authentic either; they became tradition through repetition. You cannot get to genuine without passing through awkward.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10155,
+      "case_id": 1087,
+      "author_demo_id": "demo-095",
+      "parent_id": 10153,
+      "body": "Stars matter enormously, and that actually supports the coverage argument: Clark became a star partly because ESPN decided her games were worth showing. Unknown players cannot become stars without cameras. Coverage is the machine that manufactures the very stars the networks then claim they were waiting for.",
+      "stance": "agree"
+    },
+    {
+      "id": 10156,
+      "case_id": 1088,
+      "author_demo_id": "demo-096",
+      "parent_id": 10154,
+      "body": "Repetition does not turn condescension into tradition. Audiences can tell when a segment is there by quota, and nothing kills a sport's credibility faster than the sense that it needs charity airtime. Women's sports deserve coverage that is earned and enthusiastic, not coverage that is mandated and resentful.",
+      "stance": "strongly_disagree"
+    },
+    {
+      "id": 10157,
+      "case_id": 1089,
+      "author_demo_id": "demo-091",
+      "parent_id": null,
+      "body": "The Academy's own members are mostly craftspeople, and the show treats them like catering staff. That is not just insulting, it is institutionally insane: you are boring the majority of your own voters. No wonder the ratings are dying; the people who care most are the ones being disrespected.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10158,
+      "case_id": 1089,
+      "author_demo_id": "demo-092",
+      "parent_id": 10157,
+      "body": "Most craft members understand the telecast is a TV product, not a union meeting. The guilds have their own awards shows where craft gets the full spotlight. Demanding the Oscars be something it is not, a four-hour trade ceremony, misunderstands what the broadcast is for.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10159,
+      "case_id": 1090,
+      "author_demo_id": "demo-093",
+      "parent_id": null,
+      "body": "The ratings collapse from over 43 million to under 20 million is the whole argument. The show is bleeding viewers, and every minute spent on a category the audience does not know is a minute closer to cancellation. The streaming-segment idea is the right compromise: honor the craft properly instead of rushing it at midnight.",
+      "stance": "agree"
+    },
+    {
+      "id": 10160,
+      "case_id": 1090,
+      "author_demo_id": "demo-094",
+      "parent_id": 10159,
+      "body": "The ratings slide tracks the decline of all appointment television, not the category mix. Award shows across the board are down; blaming craft categories is convenient but unproven. And shunting craft to streaming tells those artists exactly where they rank: off the main stage.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10161,
+      "case_id": 1089,
+      "author_demo_id": "demo-095",
+      "parent_id": null,
+      "body": "I am torn. The majority of members point is powerful, but so is the reality that my non-industry friends genuinely do not know what a gaffer does. Maybe the answer is better presentation: a great two-minute package on production design could win over viewers instead of boring them.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10162,
+      "case_id": 1090,
+      "author_demo_id": "demo-096",
+      "parent_id": null,
+      "body": "Ad dollars funding the Academy is precisely the problem: the art institution is hostage to Nielsen. If the Oscars exist to celebrate film, then the celebration should not be edited by advertisers. Take the shorter show, the smaller audience, and keep the integrity of honoring everyone.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10163,
+      "case_id": 1089,
+      "author_demo_id": "demo-097",
+      "parent_id": 10161,
+      "body": "The presentation point is the unlock. The craft categories are only boring because producers present them as boring: no context, no clips, just names. Show the audience what a sound designer actually does for 90 seconds and that category becomes must-see TV. The problem was never the categories.",
+      "stance": "agree"
+    },
+    {
+      "id": 10164,
+      "case_id": 1090,
+      "author_demo_id": "demo-098",
+      "parent_id": 10162,
+      "body": "Integrity does not pay for the orchestra, the theater, or the broadcast. A principled four-hour show nobody watches is how you get no show at all, and then nobody gets honored, craft or otherwise. Survival is not selling out; it is the precondition for everything else.",
+      "stance": "strongly_disagree"
+    }
+  ]
+}

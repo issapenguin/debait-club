@@ -1,0 +1,916 @@
+{
+  "cases": [
+    {
+      "author_demo_id": "demo-191",
+      "body": "I lived through the AT&T breakup in 1984, and the fear campaign was identical: prices will rise, service will collapse, innovation will die. What actually happened was long-distance rates fell by roughly 40 percent over the next decade and a wave of competition produced the modern telecom market. Today Google controls about 90 percent of search and paid $26.3 billion in 2021 alone to stay the default on iPhones, a fact that came out in the [Justice Department's trial](https://www.justice.gov/antitrust). When one company can buy the front door to the internet, that is not competition. The [2020 House Judiciary report](https://judiciary.house.gov) found all four giants enjoy monopoly power after a 16-month investigation. Breakups are the American remedy for exactly this situation, and they have worked before.",
+      "id": 1181,
+      "side": "for",
+      "topic_id": 27
+    },
+    {
+      "author_demo_id": "demo-192",
+      "body": "I run a small subscription app with four employees. Apple takes 30 percent of every dollar my customers pay, then sells its own competing service with no such tax. That is not a marketplace, it is a toll booth with a conflict of interest. The Justice Department's [2024 lawsuit](https://www.justice.gov/antitrust) argues Apple illegally maintains its smartphone monopoly in part by degrading rival apps and accessories, and the EU's Digital Markets Act has already forced Apple to allow alternative app stores in Europe. Developers there are shipping updates Apple would never have permitted. If a 30 percent cut enforced by a single gatekeeper is not monopoly rent, the word has no meaning. Break up the gatekeepers and the toll booths fall with them.",
+      "id": 1182,
+      "side": "for",
+      "topic_id": 27
+    },
+    {
+      "author_demo_id": "demo-193",
+      "body": "I worked at a local newspaper that watched its ad revenue get vacuumed up by two companies. Google sits on both sides of the ad auction, running the exchange, the buying tools, and the selling tools, and taking a cut at every step. In April 2025 a federal judge ruled Google illegally monopolized online advertising technology, agreeing with the [Justice Department's ad-tech case](https://www.justice.gov/antitrust). Studies of programmatic advertising have found publishers keep barely half of each ad dollar while intermediaries take the rest. A free press cannot survive when the company grading the auction is also bidding in it. Splitting Google's ad business from its exchange would not kill digital advertising. It would return it to something resembling a market.",
+      "id": 1183,
+      "side": "for",
+      "topic_id": 27
+    },
+    {
+      "author_demo_id": "demo-194",
+      "body": "As a software engineer, I can tell you the integration people love is exactly what breakup proposals would destroy. Google Maps works inside search, Gmail, and Calendar because one company builds all of them. The Justice Department wants to force Google to sell Chrome, but Chrome's [open-source foundation](https://www.chromium.org/) underpins most rival browsers too, including Edge and Brave. Break that apart and you do not get five healthy competitors. You get licensing fights, broken features, and a worse product for the two billion people who use it. The [2020 House report](https://judiciary.house.gov) documented real harms, but structural breakup is the bluntest possible tool. Targeted rules on self-preferencing would fix the abuse without dynamiting products that work.",
+      "id": 1184,
+      "side": "against",
+      "topic_id": 27
+    },
+    {
+      "author_demo_id": "demo-195",
+      "body": "While Washington debates breaking up Google and Meta, Beijing is pouring state money into AI, chips, and quantum computing. America's tech giants are among the few Western companies with the scale to compete with subsidized Chinese champions. Splitting them into smaller pieces would not create competition with China; it would create five smaller companies that each lose to one giant one. Antitrust law exists to protect consumers, and consumers currently get search, maps, video hosting, and social networking for free. Prices have not risen; they are zero. The [Pew Research Center](https://www.pewresearch.org/internet/) has found Americans are divided on whether tech companies need more regulation, not clamoring for breakups. There are real abuses to police, but weakening our own champions during a technology race is self-sabotage dressed up as reform.",
+      "id": 1185,
+      "side": "against",
+      "topic_id": 27
+    },
+    {
+      "author_demo_id": "demo-196",
+      "body": "People forget the last big breakup took over a decade of litigation and the company it targeted, IBM, was already losing its grip by the time the case ended. The Justice Department's IBM case ran 13 years and was dropped in 1982 as without merit, after burning enormous public and private resources. Big Tech markets move far faster than courts. By the time a breakup order survives appeal, the market may have reorganized itself: search is already being disrupted by AI assistants, and TikTok came from nowhere to challenge Meta. A breakup designed for 2020's market could land in 2030 like a museum piece. Faster tools exist. Ban the specific conduct, like default-placement payments and self-preferencing, and enforce it quickly. Structural surgery on a patient that is already changing shape is a gamble with the whole digital economy. The DOJ case against IBM is a cautionary tale in how slowly these cases move: [Stanford](https://cs.stanford.edu/people/eroberts/cs181/projects/corporate-monopolies/government_ibm.html).",
+      "id": 1186,
+      "side": "against",
+      "topic_id": 27
+    },
+    {
+      "author_demo_id": "demo-201",
+      "body": "The numbers ended the amateurism debate before the lawyers did. The NCAA signed tournament TV deals worth billions while the athletes generating the product got cost-of-attendance stipends. The House settlement approved in June 2025 sends about $2.8 billion in back damages to former athletes and lets schools share up to $20.5 million per year directly with players, according to [NCAA announcements](https://www.ncaa.org/). If a university can pay a football coach $10 million a year from revenue the players produce, calling those players 'student-athletes' instead of employees is a legal fiction. Employees get minimum wage, workers' comp, and a union voice. College athletes get concussions and a pat on the back. Classify them as employees and the fiction ends.",
+      "id": 1187,
+      "side": "for",
+      "topic_id": 28
+    },
+    {
+      "author_demo_id": "demo-202",
+      "body": "I was a college soccer player, and my senior year I tore my ACL in a conference semifinal. The school covered the surgery, but the rehab schedule, the lost summer internship, and the chronic knee pain at 30 were mine to keep. Employees get workers' compensation when they are hurt doing their job. College athletes get hurt doing exactly their job and then get told the scholarship was the compensation. The NLRB's general counsel said in a [2021 memo](https://www.nlrb.gov/) that scholarship athletes at private schools meet the legal definition of employees. The Dartmouth men's basketball team voted to unionize in March 2024. Employee status is not about turning campuses into pro franchises. It is about a 20-year-old with a spinal injury not begging for an MRI.",
+      "id": 1188,
+      "side": "for",
+      "topic_id": 28
+    },
+    {
+      "author_demo_id": "demo-203",
+      "body": "Graduate teaching assistants won employee status decades ago, and nobody claimed it destroyed the university. They teach classes, grade papers, and get paychecks, benefits, and unions. A starting quarterback works longer hours, generates more revenue, and faces greater physical risk, yet is told a scholarship is enough. Courts have already moved: the NLRB regional director ruled Dartmouth basketball players are employees, and the [House settlement](https://www.ncaa.org/) effectively conceded players deserve a share of revenue. Employee classification does not mean every swimmer gets rich. It means labor law applies: minimum wage floors, safety standards, and the right to bargain. We do not ask whether the chemistry department makes money before granting TAs workplace rights. Stop asking it about athletes.",
+      "id": 1189,
+      "side": "for",
+      "topic_id": 28
+    },
+    {
+      "author_demo_id": "demo-204",
+      "body": "Only about two dozen athletic departments in Division I turn a profit. The other 300-plus subsidize sports with student fees and university funds. If football and basketball players become employees with salaries and benefits, the math is brutal: schools will cut the sports that lose money. That means swimming, wrestling, gymnastics, track, and most women's sports outside basketball. Title IX requires equal opportunity, but equal employee payrolls across dozens of teams would bankrupt mid-major programs overnight. The [NCAA](https://www.ncaa.org/) reports more than 500,000 athletes compete across its divisions. Employee status might enrich a few thousand stars in revenue sports and eliminate opportunities for hundreds of thousands of others. That trade is not progress.",
+      "id": 1190,
+      "side": "against",
+      "topic_id": 28
+    },
+    {
+      "author_demo_id": "demo-205",
+      "body": "My daughter plays Division III softball. No TV money, no NIL deals, just a sport she loves and a degree she is earning. Classifying athletes as employees turns every roster spot into a labor decision: schools will carry fewer players, cut walk-ons, and treat the third-string catcher as a cost center. The classroom relationship matters too. Professors already navigate awkward dynamics with athletes; making them university employees with HR files deepens the divide between athlete-workers and regular students. NIL rights since 2021 already let stars earn real money, with some quarterbacks signing deals worth millions, as covered by the [Associated Press](https://apnews.com/). Let the market pay the marketable through NIL and revenue sharing. Do not reclassify the entire system and crush the 98 percent who just want to compete and graduate.",
+      "id": 1191,
+      "side": "against",
+      "topic_id": 28
+    },
+    {
+      "author_demo_id": "demo-206",
+      "body": "Employee status sounds simple until you administer it. Are athletes employees of the university, the conference, or the NCAA? Who pays unemployment insurance when a senior graduates? Do transfer portal moves trigger labor disputes? What happens to international athletes whose visas forbid employment? The Dartmouth vote applied to one Ivy League basketball team; scaling that ruling to 500,000 athletes across 1,100 schools with different state labor laws is a compliance nightmare. Workers' comp alone would be staggering in football. And collective bargaining at public universities runs into state laws that vary wildly, some banning public-employee strikes entirely. The [House settlement's](https://www.ncaa.org/) revenue-sharing model already delivers pay without detonating the legal framework. Employee classification promises fairness and delivers a decade of lawsuits.",
+      "id": 1192,
+      "side": "against",
+      "topic_id": 28
+    },
+    {
+      "author_demo_id": "demo-211",
+      "body": "As a cardiac nurse, I dread the Monday after the spring clock change. A 2014 study presented to the American College of Cardiology found a 24 percent spike in heart attacks that day, and a 2020 study in Current Biology found fatal car crashes rise about 6 percent in the week after we spring forward. Our bodies run on circadian rhythm, not legislation, and losing an hour of sleep is a population-level stress test. The [American Academy of Sleep Medicine](https://aasm.org/) formally supports permanent standard time, noting morning light is what anchors healthy sleep. The Senate unanimously passed the Sunshine Protection Act in 2022 to lock the clock, but sleep scientists say permanent daylight time is the wrong half of the choice. Abolish the switching, keep standard time, and stop the twice-yearly health shock.",
+      "id": 1193,
+      "side": "for",
+      "topic_id": 29
+    },
+    {
+      "author_demo_id": "demo-212",
+      "body": "Every November and March, my household spends a week recovering from a government-mandated jet lag. My kids' bedtimes slide, mornings become battles, and teachers report the same fog in every classroom. The original energy-saving argument collapsed years ago: a 2008 Department of Energy study found the extension of daylight time saved about half a percent of electricity, a rounding error. Meanwhile Arizona and Hawaii skip the whole ritual and function perfectly well, as [Reuters](https://www.reuters.com/) coverage of the debate regularly notes. Russia tried permanent daylight time in 2011 and abandoned it after public outcry over dark winter mornings, switching to permanent standard time in 2014. The experiment has been run. The switching helps almost nobody and disrupts everybody. End it.",
+      "id": 1194,
+      "side": "for",
+      "topic_id": 29
+    },
+    {
+      "author_demo_id": "demo-213",
+      "body": "I manage a warehouse with overnight shifts, and the clock changes are a genuine operational hazard. Scheduling software glitches, timecards need manual fixes, and tired forklift drivers are a safety risk nobody should accept for tradition. Federal research on shift work documents that chronic sleep deprivation raises the risk of workplace injury, and the Bureau of Labor Statistics has tracked the growth of non-daytime schedules for years: [CDC/NIOSH](https://stacks.cdc.gov/view/cdc/164868/cdc_164868_DS1.pdf). We voluntarily add a fatigue spike twice a year. Farmers, the group the myth claims this is for, have opposed it for a century because cows do not read clocks. The EU voted back in 2019 to end seasonal clock changes and then never implemented it, which tells you everything about political inertia. One fixed time, year round, and businesses can plan around reality instead of a 100-year-old experiment.",
+      "id": 1195,
+      "side": "for",
+      "topic_id": 29
+    },
+    {
+      "author_demo_id": "demo-214",
+      "body": "Permanent standard time means summer sunsets around 8 instead of 9, and anyone with kids in evening sports knows what that costs. Youth baseball, soccer practice, neighborhood bike rides, all of it runs on after-dinner daylight. The golf industry once estimated an extra month of daylight time was worth hundreds of millions in revenue, and the barbecue and recreation industries say the same. The Senate's Sunshine Protection Act chose permanent daylight time for a reason: people vote with their evenings. [YouGov polling](https://yougov.com/en-us/articles/54237-the-times-they-are-a-changin-but-most-americans-would-rather-they-not) has shown Americans dislike the switching but split on which time to keep, with a tilt toward more evening light. Abolishing the change by locking in standard time trades dark winter mornings for dark summer evenings. That is not obviously a win.",
+      "id": 1196,
+      "side": "against",
+      "topic_id": 29
+    },
+    {
+      "author_demo_id": "demo-215",
+      "body": "Daylight in the evening is a public safety tool. Study after study finds robbery and assault drop when the evening commute happens in daylight rather than darkness. Shifting an hour of light to the morning helps almost nobody: kids are in school and adults are at desks either way. But that same hour in the evening puts joggers, trick-or-treaters, and commuters in visible, safer conditions. Researchers analyzing crime data have estimated permanent daylight time could prevent tens of thousands of robberies a year. The sleep researchers pushing permanent standard time, like the [American Academy of Sleep Medicine](https://aasm.org/), are optimizing for one variable while ignoring how people actually live. If we abolish the switch, keep the daylight where it protects people: the evening.",
+      "id": 1197,
+      "side": "against",
+      "topic_id": 29
+    },
+    {
+      "author_demo_id": "demo-216",
+      "body": "We have tried to fix the clock before and made a mess. In 1974 the U.S. tried year-round daylight time during the energy crisis and parents revolted over children waiting for school buses in the dark; it was repealed within a year. Russia's 2011 experiment with permanent daylight time ended the same way, with a switch to permanent standard time in 2014. Every option has a constituency that hates it, which is why the current compromise survives: we muddle through two transitions a year that most people adjust to within days. The [Associated Press](https://apnews.com/) has covered how the Sunshine Protection Act keeps stalling precisely because nobody agrees on the replacement. Abolishing the switch sounds decisive until you have to pick the time, and then the fight starts over. Sometimes the devil you know is the policy.",
+      "id": 1198,
+      "side": "against",
+      "topic_id": 29
+    },
+    {
+      "author_demo_id": "demo-219",
+      "body": "Enforcement always chases the biggest names, which leaves the long tail of apps quietly selling your location. The FTC's Outlogic order made headlines, but thousands of smaller SDKs and data brokers never see a regulator. Automatic audits flip the incentive: instead of betting you are too small to get caught, every company handling location data knows an independent review is coming. The [FTC's own orders](https://www.ftc.gov/) already impose 20-year audit requirements on caught violators; making the trigger automatic just extends that protection to users who will never be named in a press release. Most people cannot tell which apps sell their movements. An automatic audit can.",
+      "id": 1199,
+      "side": "for",
+      "topic_id": 15
+    },
+    {
+      "author_demo_id": "demo-220",
+      "body": "There are not enough qualified, genuinely independent auditors to review every company that trips an automatic trigger. Demand would spike, prices would follow, and the cost lands on users through higher prices or on startups through another compliance bill they cannot afford. The biggest firms would simply buy up audit capacity, recreating the cozy auditor-client relationship the proposal claims to fix. Meanwhile the actual harm, data already sold to brokers, cannot be unaudited; you cannot unring that bell, as the deletion and ban remedies in the [Outlogic settlement](https://thehackernews.com/2024/01/ftc-bans-outlogic-x-mode-from-selling.html) implicitly admitted. Spend the money on banning the sale of precise location data outright. An audit industry is a jobs program, not a privacy fix.",
+      "id": 1200,
+      "side": "against",
+      "topic_id": 15
+    },
+    {
+      "author_demo_id": "demo-227",
+      "body": "Voluntary principles have a jurisdiction problem: a company can simply route around them. When one country tightens AI or data rules, development shifts to wherever the rules are loosest, and users everywhere live with the consequences. That is regulatory arbitrage, and it is exactly what happened with data havens and tax havens. The [OECD AI Principles](https://www.oecd.org/) are explicitly non-binding, so compliance is a branding choice. Enforceable international rules set a floor nobody can undercut, the way aviation safety standards work through the ICAO. Without a floor, the most responsible companies face the highest costs, which punishes exactly the behavior we want. A binding minimum does not require a world government. It requires countries to agree that some harms should be illegal everywhere.",
+      "id": 1201,
+      "side": "for",
+      "topic_id": 16
+    },
+    {
+      "author_demo_id": "demo-228",
+      "body": "A binding global rule gets written by committee, which means it gets written to the lowest common denominator. The result locks in weak standards and, worse, can preempt stronger national laws: once a global ceiling exists, industry lobbies to treat it as the final word. Voluntary frameworks let leaders go further, and history shows norms often harden into law after the best practices are proven. The [EU's DSA](https://edaa.eu/digital-services-act/enforcement-and-penalties/) can levy 6 percent fines because it sits inside a real legal union with courts; a global equivalent has no such foundation. Better to let ambitious jurisdictions compete upward than to chain everyone to a compromise drafted to satisfy 190 governments.",
+      "id": 1202,
+      "side": "against",
+      "topic_id": 16
+    },
+    {
+      "author_demo_id": "demo-235",
+      "body": "Prime time is where the sponsorship money lives, and sponsorship money is what funds the pipeline everyone says women's cricket needs. Broadcasters charge premium rates for evening slots, brands pay to be near big audiences, and that revenue flows back into production, marketing, and grassroots coverage. Keep milestones buried in afternoon slots and the commercial case stays weak forever: no audience numbers, no sponsor interest, no investment. The 2020 Women's T20 World Cup final drew [86,174 fans at the MCG](https://www.icc-cricket.com/news/australia-lift-fifth-t20-world-cup-title), proof the demand exists when the stage is big enough. Equal prime-time promotion is not charity. It is the commercial flywheel that turns a milestone into a market.",
+      "id": 1203,
+      "side": "for",
+      "topic_id": 17
+    },
+    {
+      "author_demo_id": "demo-236",
+      "body": "Prime-time slots are not sitting empty waiting for an editor's conscience. They are sold years in advance inside broadcast rights packages worth billions, with contractual guarantees about placement and promotion. A mandate for equal prime-time promotion would have leagues and broadcasters litigating what equal means while rights holders sue over breached contracts. The [viewing growth](https://www.sportsbusinessjournal.com/Articles/2026/09/08/study-network-highlight-show-coverage-of-wom) in women's sports is real, and broadcasters are already expanding coverage because audiences are growing, which is how markets should work. Let the next round of rights deals price in the rising demand. Forcing it by rule invites legal chaos for a problem that commercial momentum is already solving.",
+      "id": 1204,
+      "side": "against",
+      "topic_id": 17
+    },
+    {
+      "author_demo_id": "demo-199",
+      "body": "Medals are wonderful, but participation pays the treasury back. Every inactive adult who takes up a funded community sport is less likely to develop the chronic conditions that devour health budgets: heart disease, diabetes, depression. Public health economists have repeatedly found that physical activity programs return several dollars in avoided healthcare costs for each dollar spent. Funding formulas that only reward podiums treat sport as entertainment; formulas that reward participation treat it as preventive medicine. The [UK Sport consultation](https://www.uksport.gov.uk/) showed the public already sees this connection, with a fifth of public respondents backing broader measures. A funding system that ignores health savings is leaving public money on the table.",
+      "id": 1205,
+      "side": "for",
+      "topic_id": 18
+    },
+    {
+      "author_demo_id": "demo-200",
+      "body": "Participation already has its funding streams: school PE budgets, public health grants, community recreation departments, and lottery-funded grassroots programs. Routing elite sports money toward the same goal double counts what other budgets already buy, while starving the one thing only national funding can do, which is produce world-class athletes. Nobody asks the health department to fund Olympic training centers; the sports budget should not be asked to fund what the health department already covers. The existing [consultation data](https://www.uksport.gov.uk/) showed even sector stakeholders split on this, with most backing elite focus for elite money. Keep the streams separate and judge each on its own results instead of blurring every budget into everything.",
+      "id": 1206,
+      "side": "against",
+      "topic_id": 18
+    },
+    {
+      "author_demo_id": "demo-191",
+      "body": "Every unequal bonus schedule is a future lawsuit with legal bills attached. Federations have spent years and millions litigating equal-pay claims that standardized bonuses would have prevented: one schedule, one formula, no discovery phase. The [U.S. Soccer deal](https://www.ussoccer.com/) through 2028 proved identical economic terms are workable, including pooled World Cup prize money. Standardization also ends the annual negotiation circus where each record triggers a fresh argument about what it was worth. Administrators know exactly what a record costs before it happens, sponsors know the story, and athletes know the deal. Paying lawyers to argue about fairness year after year is the most expensive bonus policy of all.",
+      "id": 1207,
+      "side": "for",
+      "topic_id": 19
+    },
+    {
+      "author_demo_id": "demo-192",
+      "body": "Standardization cuts both ways, and its supporters forget the sports where the women's game generates more. In tennis, women's finals have outdrawn men's at some events; in several Olympic cycles, women's teams have been the bigger draw for sponsors. A single standardized schedule would cap those bonuses at the men's level or drag everyone to an average that shortchanges whoever performs better commercially. The [FIFA prize pools](https://pfa.net.au/the-pfa-post/pfa-post-womens-world-cup-prize-money-explained/) differ because the tournaments' revenues differ, and pretending otherwise does not help women athletes. It constrains them. Let each program's bonuses reflect its own economics, and let thriving women's programs pay more than the men when they earn it.",
+      "id": 1208,
+      "side": "against",
+      "topic_id": 19
+    },
+    {
+      "author_demo_id": "demo-199",
+      "body": "Skeptics say AI cannot be inspected, but the supply chain says otherwise. Frontier models require enormous compute, and advanced chips come from a tiny number of suppliers and fabs. That concentration makes verification technically feasible in a way treaties rarely enjoy: you can count data centers, meter power usage, and track chip shipments. The [UN advisory body's](https://sdg.iisd.org/news/secretary-generals-advisory-body-makes-proposals-to-govern-a) recommendations already point toward shared scientific capacity and monitoring. Nuclear inspectors verify enrichment facilities they cannot fully see inside; AI inspectors could verify compute thresholds the same way. An international body with real authority would not need to read every model's weights. It would need the power to audit the handful of facilities where frontier training is physically possible.",
+      "id": 1209,
+      "side": "for",
+      "topic_id": 20
+    },
+    {
+      "author_demo_id": "demo-200",
+      "body": "A body with real authority over AI faces an impossible choice: be toothless or be captured. If inspections are voluntary, the countries racing hardest simply build outside the system, and the body becomes a club for the compliant. If inspections are mandatory, no great power will grant foreign inspectors access to its most strategic technology, so the authority exists only on paper. Either way, the institution ends up serving whoever funds and staffs it, likely the current tech leaders, who then write the thresholds to suit themselves. The [OECD principles](https://www.oecd.org/) stay non-binding precisely because binding commitments on this technology are not credible yet. Build shared safety science first. Authority without credible enforcement is theater, and theater is what gets people hurt.",
+      "id": 1210,
+      "side": "against",
+      "topic_id": 20
+    }
+  ],
+  "comments": [
+    {
+      "author_demo_id": "demo-181",
+      "body": "The AT&T comparison is the one that convinced me. Long-distance prices fell, new carriers appeared, and nobody today wishes we still had one phone company. Monopoly power in search and app distribution looks exactly like 1982 telecom.",
+      "case_id": 1181,
+      "id": 10301,
+      "parent_id": null,
+      "stance": "strongly_agree"
+    },
+    {
+      "author_demo_id": "demo-182",
+      "body": "Standard Oil is the older precedent and it fits too. Rockefeller's successors did fine after 1911, and the spinoffs competed hard. Breakups punish the structure, not success, and shareholders usually come out ahead.",
+      "case_id": 1181,
+      "id": 10302,
+      "parent_id": 10301,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-183",
+      "body": "The integration argument cuts the other way for me. Gmail, Maps, and Calendar work together because one company built them, and splitting them apart punishes users for a crime the product team did not commit. Fix the conduct, not the company.",
+      "case_id": 1184,
+      "id": 10303,
+      "parent_id": null,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-184",
+      "body": "Both sides have a point here. The products genuinely are better integrated, but that integration is also the moat. Targeted bans on self-preferencing might thread the needle without the decade of litigation.",
+      "case_id": 1184,
+      "id": 10304,
+      "parent_id": 10303,
+      "stance": "neutral"
+    },
+    {
+      "author_demo_id": "demo-185",
+      "body": "As someone who ships software for a living, the 30 percent cut is the whole story. I pay Apple nearly a third of my revenue for the privilege of reaching customers on hardware they already bought. No competitive market would sustain that.",
+      "case_id": 1182,
+      "id": 10305,
+      "parent_id": null,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-186",
+      "body": "The China argument is just fear dressed as strategy. American strength never came from protecting monopolies; it came from competition forcing companies to get better. Coddling giants because Beijing exists is how you get lazy giants.",
+      "case_id": 1185,
+      "id": 10306,
+      "parent_id": null,
+      "stance": "strongly_disagree"
+    },
+    {
+      "author_demo_id": "demo-187",
+      "body": "Exactly. And the 'free products' line ignores the price we pay in data and locked-in defaults. Zero dollars is not zero cost when the business model is surveillance.",
+      "case_id": 1185,
+      "id": 10307,
+      "parent_id": 10306,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-188",
+      "body": "The IBM case is the cautionary tale I keep coming back to. Thirteen years of litigation and the market solved the problem first. But conduct remedies have their own record of being evaded, so I am genuinely torn.",
+      "case_id": 1186,
+      "id": 10308,
+      "parent_id": null,
+      "stance": "neutral"
+    },
+    {
+      "author_demo_id": "demo-189",
+      "body": "Local news is dying in plain sight and the ad-tech monopoly is a big reason why. When one company runs the auction and bids in it, publishers cannot win. Splitting the exchange from the ad business is the minimum honest fix.",
+      "case_id": 1183,
+      "id": 10309,
+      "parent_id": null,
+      "stance": "strongly_agree"
+    },
+    {
+      "author_demo_id": "demo-190",
+      "body": "Publishers also spent a decade giving content away free and failing to build subscription products. Google did not force that strategy. The monopoly is real, but the industry's own mistakes deserve some of the blame.",
+      "case_id": 1183,
+      "id": 10310,
+      "parent_id": 10309,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-191",
+      "body": "The coach salary comparison ends the debate for me. When the head coach makes 10 million and the players who fill the stadium get a stipend, 'amateurism' is just a word lawyers use to avoid paying labor.",
+      "case_id": 1187,
+      "id": 10311,
+      "parent_id": null,
+      "stance": "strongly_agree"
+    },
+    {
+      "author_demo_id": "demo-192",
+      "body": "And the 2.8 billion in back damages is basically the courts admitting the old system was wage theft with better branding. Revenue sharing is a start, but employees get a floor that revenue sharing does not guarantee.",
+      "case_id": 1187,
+      "id": 10312,
+      "parent_id": 10311,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-193",
+      "body": "This is my real worry. I swam in college and our program survived on football money. Employee payrolls for 85 scholarship football players would absolutely get non-revenue sports cut, and Title IX cannot conjure money that does not exist.",
+      "case_id": 1190,
+      "id": 10313,
+      "parent_id": null,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-194",
+      "body": "Cuts are a choice, not a law of physics. Schools choose to pay coordinators seven figures and build waterfalls in the locker room. If payroll is tight, start there before touching the swim team.",
+      "case_id": 1190,
+      "id": 10314,
+      "parent_id": 10313,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-195",
+      "body": "The injury angle is everything. I know two former players with chronic pain in their twenties and neither got a dime beyond the surgery. Workers' comp exists precisely for people hurt doing their job.",
+      "case_id": 1188,
+      "id": 10315,
+      "parent_id": null,
+      "stance": "strongly_agree"
+    },
+    {
+      "author_demo_id": "demo-196",
+      "body": "NIL changed the picture more than either side admits. Stars can already earn millions, which was impossible five years ago. Maybe the answer is stronger NIL plus revenue sharing, without reclassifying all 500,000 athletes.",
+      "case_id": 1191,
+      "id": 10316,
+      "parent_id": null,
+      "stance": "neutral"
+    },
+    {
+      "author_demo_id": "demo-197",
+      "body": "Agreed, and the visa point in this case is underrated. Thousands of international athletes literally cannot be employees under current immigration rules. Employee status would end their college sports careers overnight.",
+      "case_id": 1192,
+      "id": 10317,
+      "parent_id": 10320,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-198",
+      "body": "The TA analogy does not hold. Teaching assistants do academic work directly tied to the university's educational mission. Athletics is entertainment attached to a school, which is why the employment question is genuinely harder here.",
+      "case_id": 1189,
+      "id": 10318,
+      "parent_id": null,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-199",
+      "body": "Strongly disagree. A chemistry TA grades papers for the department's benefit; a point guard generates TV revenue for the athletic department's benefit. Both are workers producing value for the institution. The distinction is snobbery.",
+      "case_id": 1189,
+      "id": 10319,
+      "parent_id": 10318,
+      "stance": "strongly_disagree"
+    },
+    {
+      "author_demo_id": "demo-200",
+      "body": "The compliance questions here are the strongest part of the case against. Fifty states, public and private schools, unions, visas, transfers. Whatever the principle, the implementation would be a decade-long mess.",
+      "case_id": 1192,
+      "id": 10320,
+      "parent_id": null,
+      "stance": "neutral"
+    },
+    {
+      "author_demo_id": "demo-201",
+      "body": "The 24 percent heart attack spike is the number that should end this debate. We are talking about a government policy that predictably injures people twice a year. No tradition is worth that.",
+      "case_id": 1193,
+      "id": 10321,
+      "parent_id": null,
+      "stance": "strongly_agree"
+    },
+    {
+      "author_demo_id": "demo-202",
+      "body": "My father had his cardiac episode the Monday after a spring forward, and his doctor mentioned the pattern unprompted. Anecdote is not data, but the data backs the anecdote here.",
+      "case_id": 1193,
+      "id": 10322,
+      "parent_id": 10321,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-203",
+      "body": "Evening light is when my family actually lives. Kids' soccer, grilling, walks after dinner, all of it dies an hour earlier under permanent standard time. The people pushing standard time are optimizing for sleep labs, not real evenings.",
+      "case_id": 1196,
+      "id": 10323,
+      "parent_id": null,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-204",
+      "body": "I feel both sides. Dark winter mornings with kids at bus stops genuinely scare me, but losing summer evenings would hurt too. Maybe the real lesson is that any fixed time makes someone unhappy.",
+      "case_id": 1196,
+      "id": 10324,
+      "parent_id": 10323,
+      "stance": "neutral"
+    },
+    {
+      "author_demo_id": "demo-205",
+      "body": "As a teacher, the week after each change is lost instructional time. Tired kids do not learn, and no lesson plan survives a room full of jet-lagged eight-year-olds. End the switching and give us the week back.",
+      "case_id": 1194,
+      "id": 10325,
+      "parent_id": null,
+      "stance": "strongly_agree"
+    },
+    {
+      "author_demo_id": "demo-206",
+      "body": "I am skeptical of the crime numbers. Crime correlates with temperature, foot traffic, and a dozen other things that change with the seasons. Attributing drops to the clock specifically feels like advocacy dressed as research.",
+      "case_id": 1197,
+      "id": 10326,
+      "parent_id": null,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-207",
+      "body": "The 1974 experiment is the part everyone forgets. We tried year-round daylight time, parents hated the dark school mornings, and it lasted one winter. Whoever picks the replacement time should have to explain why this time is different.",
+      "case_id": 1198,
+      "id": 10327,
+      "parent_id": null,
+      "stance": "neutral"
+    },
+    {
+      "author_demo_id": "demo-208",
+      "body": "I work rotating shifts and the timecard mess described here is real. Our payroll system double-counts the fall-back hour every single year and someone has to fix it by hand. Multiply that by every employer in America.",
+      "case_id": 1195,
+      "id": 10328,
+      "parent_id": null,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-209",
+      "body": "Strongly disagree that this justifies national policy. A payroll software bug is an IT problem, not a reason to reorder time for 330 million people. Fix the software.",
+      "case_id": 1195,
+      "id": 10329,
+      "parent_id": 10328,
+      "stance": "strongly_disagree"
+    },
+    {
+      "author_demo_id": "demo-210",
+      "body": "The temperature objection does not hold up. The studies compare the same weeks across years with and without the shift, which controls for season. Evening light and street safety is a real effect.",
+      "case_id": 1197,
+      "id": 10330,
+      "parent_id": 10326,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-211",
+      "body": "The long tail point is exactly right. Everyone knows the big names, but the flashlight app with 50,000 downloads selling location pings is the one tracking my kid's walk to school. Automatic audits are the only thing that reaches those companies.",
+      "case_id": 1199,
+      "id": 10331,
+      "parent_id": null,
+      "stance": "strongly_agree"
+    },
+    {
+      "author_demo_id": "demo-212",
+      "body": "And small companies are the least likely to have real privacy counsel. An automatic audit forces them to build proper data practices from the start instead of treating compliance as something only giants do.",
+      "case_id": 1199,
+      "id": 10332,
+      "parent_id": 10331,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-213",
+      "body": "The auditor shortage is a genuine bottleneck. We already see it in financial audits, where a handful of firms dominate. Mandate audits for every location violation and you create a seller's market that big tech will simply buy up.",
+      "case_id": 1200,
+      "id": 10333,
+      "parent_id": null,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-214",
+      "body": "Shortages get solved by demand. A guaranteed market for independent auditors would train and certify thousands of them within a few years. That is how every compliance industry was born.",
+      "case_id": 1200,
+      "id": 10334,
+      "parent_id": 10333,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-215",
+      "body": "I like the deterrent effect but worry about checkbox audits. An auditor who depends on repeat business has every incentive to find the paperwork in order. Independence needs real teeth behind it.",
+      "case_id": 1199,
+      "id": 10335,
+      "parent_id": null,
+      "stance": "neutral"
+    },
+    {
+      "author_demo_id": "demo-216",
+      "body": "Strongly disagree that audits are the answer at all. You cannot audit back data that was already sold to brokers. Ban the sale of precise location data outright and the audit question becomes moot.",
+      "case_id": 1200,
+      "id": 10336,
+      "parent_id": null,
+      "stance": "strongly_disagree"
+    },
+    {
+      "author_demo_id": "demo-217",
+      "body": "An outright ban sounds clean but would kill legitimate uses like fraud detection and emergency services. Audits at least distinguish good handling from bad, which a blanket ban never does.",
+      "case_id": 1200,
+      "id": 10337,
+      "parent_id": 10336,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-218",
+      "body": "That is the core tension. Deterrence works if companies believe the audit is real, and belief requires public findings. Publish the results and the checkbox problem shrinks.",
+      "case_id": 1199,
+      "id": 10338,
+      "parent_id": 10335,
+      "stance": "neutral"
+    },
+    {
+      "author_demo_id": "demo-219",
+      "body": "Regulatory arbitrage is the whole game. Companies already shop for the friendliest data regime, and AI labs will do the same with safety rules. A voluntary principle that a lab can dodge by moving servers is not a rule at all.",
+      "case_id": 1201,
+      "id": 10339,
+      "parent_id": null,
+      "stance": "strongly_agree"
+    },
+    {
+      "author_demo_id": "demo-220",
+      "body": "The aviation analogy is apt. Nobody argues each country should have voluntary airplane safety. We agreed on a floor because crashes cross borders, and AI failures will too.",
+      "case_id": 1201,
+      "id": 10340,
+      "parent_id": 10339,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-221",
+      "body": "The lowest-common-denominator risk is real. A global standard negotiated with 190 countries will be weak by design, and then industry will wave it around to block stronger national laws. We have seen this movie with climate accords.",
+      "case_id": 1202,
+      "id": 10341,
+      "parent_id": null,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-222",
+      "body": "Climate accords are actually the counterpoint though. Weak global agreements still created the framework that later got strengthened. A floor that rises over time beats no floor at all.",
+      "case_id": 1202,
+      "id": 10342,
+      "parent_id": 10341,
+      "stance": "neutral"
+    },
+    {
+      "author_demo_id": "demo-223",
+      "body": "I keep going back and forth. Enforcement without a real enforcer is fantasy, but voluntary norms have a decent record of hardening into law once best practices settle. Maybe sequence it: norms now, binding rules later.",
+      "case_id": 1201,
+      "id": 10343,
+      "parent_id": null,
+      "stance": "neutral"
+    },
+    {
+      "author_demo_id": "demo-224",
+      "body": "Strongly disagree with the premise that binding global tech rules are even possible. There is no world government, no global court with teeth here, and pretending otherwise just launders power to whoever writes the draft.",
+      "case_id": 1202,
+      "id": 10344,
+      "parent_id": null,
+      "stance": "strongly_disagree"
+    },
+    {
+      "author_demo_id": "demo-225",
+      "body": "The WTO and ICAO suggest it is not impossible in principle. The problem is political will on tech specifically, not some law of nature. Dismissing the whole idea concedes the field to the least responsible actors.",
+      "case_id": 1202,
+      "id": 10345,
+      "parent_id": 10344,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-226",
+      "body": "Sequencing sounds nice but 'later' never comes without a deadline. Norms harden into law only when someone forces the issue, which is exactly what enforceability does.",
+      "case_id": 1201,
+      "id": 10346,
+      "parent_id": 10343,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-227",
+      "body": "The sponsorship flywheel is the argument that finally makes the commercial case. Brands cannot sponsor audiences that broadcasters hide. Put the milestones in prime time, show the ratings, and the money follows.",
+      "case_id": 1203,
+      "id": 10347,
+      "parent_id": null,
+      "stance": "strongly_agree"
+    },
+    {
+      "author_demo_id": "demo-228",
+      "body": "The MCG final proved the demand is real when the stage matches the moment. 86,174 people did not show up by accident. Imagine what consistent prime-time treatment would build over five years.",
+      "case_id": 1203,
+      "id": 10348,
+      "parent_id": 10347,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-229",
+      "body": "Rights contracts are the boring reality nobody wants to discuss. Prime-time inventory is sold years ahead with legal guarantees. A mandate would spend its first three years in court, which helps nobody.",
+      "case_id": 1204,
+      "id": 10349,
+      "parent_id": null,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-230",
+      "body": "Contracts get renegotiated constantly as markets shift, and rising women's audiences are exactly the kind of shift that gets priced into the next deal. The legal chaos is overstated.",
+      "case_id": 1204,
+      "id": 10350,
+      "parent_id": 10349,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-231",
+      "body": "Both the money argument and the contract argument are true, which is awkward. The flywheel works, but mandates are clumsy. Maybe the pressure should be on sponsors to demand the slots rather than on regulators.",
+      "case_id": 1203,
+      "id": 10351,
+      "parent_id": null,
+      "stance": "neutral"
+    },
+    {
+      "author_demo_id": "demo-232",
+      "body": "Strongly disagree that mandates help here. Forced promotion reads as charity no matter the intent, and charity framing is poison for a sport trying to prove its commercial worth. Earn the slot, do not legislate it.",
+      "case_id": 1204,
+      "id": 10352,
+      "parent_id": null,
+      "stance": "strongly_disagree"
+    },
+    {
+      "author_demo_id": "demo-233",
+      "body": "The 'earn it' framing ignores that the men's game got a century of free promotion to build its audience. Nobody asked men's cricket to earn its slot from zero. Equal treatment now just levels a tilted field.",
+      "case_id": 1204,
+      "id": 10353,
+      "parent_id": 10352,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-234",
+      "body": "Sponsor pressure is an interesting middle path. A few big brands demanding prime-time women's inventory in their media buys could move broadcasters faster than any rule.",
+      "case_id": 1203,
+      "id": 10354,
+      "parent_id": 10351,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-235",
+      "body": "The preventive medicine framing is exactly how treasuries think. Every pound spent keeping people active is pounds not spent on cardiac wards. Funding formulas that ignore that are bad accounting, not high standards.",
+      "case_id": 1205,
+      "id": 10355,
+      "parent_id": null,
+      "stance": "strongly_agree"
+    },
+    {
+      "author_demo_id": "demo-236",
+      "body": "And the pipeline argument works in both directions. Today's casual participant is tomorrow's volunteer coach and next decade's Olympian parent. Participation funding is elite funding with a longer time horizon.",
+      "case_id": 1205,
+      "id": 10356,
+      "parent_id": 10355,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-237",
+      "body": "The double-counting point is underappreciated. Schools, councils, and health agencies already fund participation. Elite money is the only stream that can produce a gold medal, so diluting it means funding everything and achieving nothing.",
+      "case_id": 1206,
+      "id": 10357,
+      "parent_id": null,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-238",
+      "body": "Separate streams make sense in theory, but in practice the grassroots stream is always the first cut in a budget crisis. Tying some elite money to participation might be the only way the grassroots survives.",
+      "case_id": 1206,
+      "id": 10358,
+      "parent_id": 10357,
+      "stance": "neutral"
+    },
+    {
+      "author_demo_id": "demo-239",
+      "body": "Health savings get exaggerated by advocates. The people who take up funded sport are mostly already active; the truly sedentary rarely join programs. The return-on-investment math is softer than it looks.",
+      "case_id": 1205,
+      "id": 10359,
+      "parent_id": null,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-240",
+      "body": "Strongly disagree with mixing the missions at all. Elite sport and public health are different jobs with different measures. A swimmer chasing Olympic trials should not have funding depend on how many beginners joined a learn-to-swim class.",
+      "case_id": 1206,
+      "id": 10360,
+      "parent_id": null,
+      "stance": "strongly_disagree"
+    },
+    {
+      "author_demo_id": "demo-181",
+      "body": "Missions can stay distinct while sharing a funding formula. Nobody is asking the Olympic trials to be a fun run. The question is whether a funding system can value both outcomes without corrupting either.",
+      "case_id": 1206,
+      "id": 10361,
+      "parent_id": 10360,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-182",
+      "body": "The selection effect is a fair critique of the health math. But even if the savings are smaller than claimed, the direction is right, and public money should face some accounting of its public return.",
+      "case_id": 1205,
+      "id": 10362,
+      "parent_id": 10359,
+      "stance": "neutral"
+    },
+    {
+      "author_demo_id": "demo-183",
+      "body": "The legal bill argument is the sleeper here. Federations have burned millions on equal-pay litigation that a clear standard would have avoided. Standardization is cheaper than the lawyers.",
+      "case_id": 1207,
+      "id": 10363,
+      "parent_id": null,
+      "stance": "strongly_agree"
+    },
+    {
+      "author_demo_id": "demo-184",
+      "body": "And it ends the annual circus of negotiating each record's worth in public. Athletes know the deal, accountants know the cost, and everyone can focus on the sport instead of the press release.",
+      "case_id": 1207,
+      "id": 10364,
+      "parent_id": 10363,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-185",
+      "body": "The tennis point is the one standardization fans never answer. When the women's event outdraws the men's, a unisex schedule caps the women. Equality should mean equal opportunity to earn, not identical checks regardless of economics.",
+      "case_id": 1208,
+      "id": 10365,
+      "parent_id": null,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-186",
+      "body": "Tennis is the exception, not the rule, and building policy around the exception is how you stall progress everywhere else. Most federations have a clear revenue gap running one direction.",
+      "case_id": 1208,
+      "id": 10366,
+      "parent_id": 10365,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-187",
+      "body": "I see the appeal of simplicity, but records genuinely differ in commercial value. A world record in the 100 meters is not the same product as a world record in race walking. Some judgment will always be needed.",
+      "case_id": 1207,
+      "id": 10367,
+      "parent_id": null,
+      "stance": "neutral"
+    },
+    {
+      "author_demo_id": "demo-188",
+      "body": "Strongly disagree that one schedule fits all. Sports have different seasons, different sponsors, different audiences. Centralized bonus tables are bureaucracy, and bureaucracy always lags reality.",
+      "case_id": 1208,
+      "id": 10368,
+      "parent_id": null,
+      "stance": "strongly_disagree"
+    },
+    {
+      "author_demo_id": "demo-189",
+      "body": "Bureaucracy is also what guarantees the check arrives. Discretionary bonuses have a long history of shrinking whenever budgets tighten, and they never shrink equally.",
+      "case_id": 1208,
+      "id": 10369,
+      "parent_id": 10368,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-190",
+      "body": "Maybe the compromise is standardized minimums with room above. A floor that guarantees equal treatment, plus discretion for genuinely exceptional commercial cases. Floors are easier to defend than ceilings.",
+      "case_id": 1207,
+      "id": 10370,
+      "parent_id": 10367,
+      "stance": "neutral"
+    },
+    {
+      "author_demo_id": "demo-191",
+      "body": "The chip supply chain point is the strongest technical argument for this whole idea. You cannot hide a gigawatt data center. Compute verification gives inspectors something real to count, unlike model weights.",
+      "case_id": 1209,
+      "id": 10371,
+      "parent_id": null,
+      "stance": "strongly_agree"
+    },
+    {
+      "author_demo_id": "demo-192",
+      "body": "The nuclear analogy holds up well here. Inspectors never see inside every centrifuge either; they verify material flows at chokepoints. Compute is AI's chokepoint, and it is even more concentrated.",
+      "case_id": 1209,
+      "id": 10372,
+      "parent_id": 10371,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-193",
+      "body": "The toothless-or-captured dilemma is the core problem. A voluntary club gets ignored by the racers, and a mandatory regime gets vetoed by the great powers. Either way the institution serves its funders, not the public.",
+      "case_id": 1210,
+      "id": 10373,
+      "parent_id": null,
+      "stance": "agree"
+    },
+    {
+      "author_demo_id": "demo-194",
+      "body": "That assumes static institutions. The IAEA started weak too and gained authority as norms solidified. Starting imperfect does not mean staying toothless forever.",
+      "case_id": 1210,
+      "id": 10374,
+      "parent_id": 10373,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-195",
+      "body": "Compute monitoring is technically plausible but politically fraught. Metering a country's data centers is the kind of surveillance great powers will never accept on themselves, even if they demand it of others.",
+      "case_id": 1209,
+      "id": 10375,
+      "parent_id": null,
+      "stance": "neutral"
+    },
+    {
+      "author_demo_id": "demo-196",
+      "body": "Strongly disagree that authority is even desirable. Centralized control over AI development is a single point of failure and a prize for whoever captures it. Distributed safety research beats one global gatekeeper.",
+      "case_id": 1210,
+      "id": 10376,
+      "parent_id": null,
+      "stance": "strongly_disagree"
+    },
+    {
+      "author_demo_id": "demo-197",
+      "body": "Distributed research is great until a lab somewhere trains something dangerous with no oversight at all. The question is not whether centralization has risks, but whether zero coordination is worse.",
+      "case_id": 1210,
+      "id": 10377,
+      "parent_id": 10376,
+      "stance": "disagree"
+    },
+    {
+      "author_demo_id": "demo-198",
+      "body": "The surveillance objection applies to every arms-control regime ever negotiated, and we still negotiated them. Verification is always intrusive; that is what makes it verification.",
+      "case_id": 1209,
+      "id": 10378,
+      "parent_id": 10375,
+      "stance": "agree"
+    }
+  ],
+  "topics": [
+    {
+      "category": "Politics",
+      "context": "The Justice Department's antitrust cases against Google have revived calls to break up Big Tech, echoing the 2020 House Judiciary report that found Amazon, Apple, Google, and Meta hold monopoly power in digital markets.",
+      "id": 27,
+      "is_featured": false,
+      "proposition": "Should the federal government break up Big Tech companies?",
+      "sources": [
+        {
+          "title": "DOJ Antitrust Division",
+          "url": "https://www.justice.gov/antitrust"
+        },
+        {
+          "title": "House Judiciary Committee",
+          "url": "https://judiciary.house.gov"
+        },
+        {
+          "title": "Reuters technology coverage",
+          "url": "https://www.reuters.com/technology/"
+        },
+        {
+          "title": "Pew Research Center: Internet and Technology",
+          "url": "https://www.pewresearch.org/internet/"
+        }
+      ],
+      "topic_date": "2026-09-23"
+    },
+    {
+      "category": "Sports",
+      "context": "The roughly $2.8 billion House v. NCAA settlement and the Dartmouth men's basketball union vote have forced the question of whether college athletes are employees entitled to salaries and benefits.",
+      "id": 28,
+      "is_featured": false,
+      "proposition": "Should college athletes be classified as employees with salaries and benefits?",
+      "sources": [
+        {
+          "title": "NCAA.org",
+          "url": "https://www.ncaa.org/"
+        },
+        {
+          "title": "Associated Press",
+          "url": "https://apnews.com/"
+        },
+        {
+          "title": "National Labor Relations Board",
+          "url": "https://www.nlrb.gov/"
+        },
+        {
+          "title": "U.S. Bureau of Labor Statistics",
+          "url": "https://www.bls.gov/"
+        }
+      ],
+      "topic_date": "2026-09-23"
+    },
+    {
+      "category": "Lifestyle",
+      "context": "The Senate's Sunshine Protection Act would end clock changes, but sleep researchers argue for permanent standard time instead, pointing to spikes in heart attacks and crashes after the spring shift.",
+      "id": 29,
+      "is_featured": false,
+      "proposition": "Should daylight saving time be abolished permanently?",
+      "sources": [
+        {
+          "title": "American Academy of Sleep Medicine",
+          "url": "https://aasm.org/"
+        },
+        {
+          "title": "Reuters",
+          "url": "https://www.reuters.com/"
+        },
+        {
+          "title": "Associated Press",
+          "url": "https://apnews.com/"
+        }
+      ],
+      "topic_date": "2026-09-23"
+    }
+  ]
+}

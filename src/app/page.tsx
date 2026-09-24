@@ -1,4 +1,5 @@
 import { CATEGORIES } from '@/lib/types';
+import Link from 'next/link';
 import {
   fetchTopics,
   fetchCaseCounts,
@@ -51,6 +52,25 @@ export default async function HomePage() {
         </p>
       </section>
       <HomeTabs tabs={tabs} loggedIn={userId !== null} />
+      {!userId && (
+        <section className="mx-auto mt-10 max-w-3xl text-center">
+          <div className="rounded-2xl border border-sky-200 bg-sky-50 px-6 py-6 dark:border-sky-900/60 dark:bg-sky-950/30">
+            <p className="font-display text-xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
+              Reading is free. Debating is better.
+            </p>
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
+              Join the club to vote on cases, make your own case, and save your
+              favorites. It takes a minute.
+            </p>
+            <Link
+              href="/signup"
+              className="mt-4 inline-block rounded-full bg-neutral-900 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-neutral-700 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300"
+            >
+              Join the club
+            </Link>
+          </div>
+        </section>
+      )}
     </div>
   );
 }

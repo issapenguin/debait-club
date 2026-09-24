@@ -1,0 +1,764 @@
+{
+  "topics": [
+    {
+      "id": 1,
+      "proposition": "Should influencers be legally required to disclose filters and retouching?",
+      "category": "Entertainment",
+      "context": "France passed a 2023 law requiring influencers to disclose retouched or filtered images in paid posts. The UK, US states, and the platforms themselves have debated similar rules amid concerns about body image and deceptive advertising.",
+      "sources": [
+        {
+          "title": "France: influencer law guidance",
+          "url": "https://www.economie.gouv.fr/particuliers/influenceurs"
+        },
+        {
+          "title": "Dove Self-Esteem Project",
+          "url": "https://www.dove.com/us/en/dove-self-esteem-project.html"
+        },
+        {
+          "title": "UK Advertising Standards Authority",
+          "url": "https://www.asa.org.uk"
+        }
+      ],
+      "topic_date": "2026-09-22",
+      "is_featured": false
+    },
+    {
+      "id": 2,
+      "proposition": "Should factory farming be phased out within ten years?",
+      "category": "Lifestyle",
+      "context": "Industrial livestock production faces scrutiny over emissions, animal welfare, and antibiotic resistance. California's Proposition 12 and EU debates over caged farming have tested how far regulation can go.",
+      "sources": [
+        {
+          "title": "FAO: livestock emissions (GLEAM)",
+          "url": "https://www.fao.org/gleam"
+        },
+        {
+          "title": "CDC: antimicrobial resistance",
+          "url": "https://www.cdc.gov/antimicrobial-resistance/"
+        },
+        {
+          "title": "California Dept. of Food and Agriculture: Animal Care Program",
+          "url": "https://www.cdfa.ca.gov/ahfss/AnimalCare/"
+        }
+      ],
+      "topic_date": "2026-09-22",
+      "is_featured": false
+    },
+    {
+      "id": 21,
+      "proposition": "Should the United States adopt a universal healthcare system?",
+      "category": "Politics",
+      "context": "The US spends roughly $4.5 trillion on health care, about 17 percent of GDP, far more than peer nations, while tens of millions remain underinsured. Systems like the UK's NHS and Canadian Medicare offer contrasting models.",
+      "sources": [
+        {
+          "title": "CMS: National Health Expenditure Data",
+          "url": "https://www.cms.gov/data-research/statistics-trends-and-reports/national-health-expenditure-data"
+        },
+        {
+          "title": "KFF: health costs and the uninsured",
+          "url": "https://www.kff.org/uninsured/"
+        },
+        {
+          "title": "Commonwealth Fund: international comparisons",
+          "url": "https://www.commonwealthfund.org"
+        }
+      ],
+      "topic_date": "2026-09-24",
+      "is_featured": true
+    },
+    {
+      "id": 22,
+      "proposition": "Should tipping be abolished in favor of higher base wages for service workers?",
+      "category": "Business",
+      "context": "The federal tipped minimum wage has been $2.13 an hour since 1991. Ballot fights in DC and Chicago and California's full-wage model have made the tip credit a national flashpoint.",
+      "sources": [
+        {
+          "title": "DOL: tipped employees under the FLSA",
+          "url": "https://www.dol.gov/agencies/whd/fact-sheet/15-tipped-employees-under-the-flsa"
+        },
+        {
+          "title": "Ballotpedia: DC Initiative 82 (2022)",
+          "url": "https://ballotpedia.org/Washington,_D.C.,_Initiative_82,_Tip_Credit_Elimination_Initiative_(2022)"
+        },
+        {
+          "title": "Bureau of Labor Statistics",
+          "url": "https://www.bls.gov"
+        }
+      ],
+      "topic_date": "2026-09-24",
+      "is_featured": false
+    }
+  ],
+  "cases": [
+    {
+      "id": 1001,
+      "topic_id": 1,
+      "side": "for",
+      "author_demo_id": "demo-003",
+      "body": "My daughter is fourteen. Last year she asked me whether her nose looked wrong compared to the girls she follows, girls who sell lip gloss with faces that do not exist in nature. France passed a law in June 2023 requiring influencers to label retouched or filtered commercial photos, with fines up to 75,000 euros, and the sky did not fall. The Dove Self-Esteem Project's research has found that a large majority of girls say retouched media damages their body image. [Dove](https://www.dove.com/us/en/dove-self-esteem-project.html). When a post is an ad, the viewer deserves to know the product being sold includes a face the seller does not have. We already require ad labels on sponsored posts. This is the same principle, applied to the image itself."
+    },
+    {
+      "id": 1002,
+      "topic_id": 1,
+      "side": "for",
+      "author_demo_id": "demo-007",
+      "body": "This is not about vanity, it is about fraud. Influencers sell skin creams, teeth whiteners, hair treatments, and diet teas while using the very filters that fake the results. In 2021 the UK's advertising regulator upheld rulings against brands and influencers for misleadingly filtered beauty ads, and France then made disclosure a legal requirement for commercial content in 2023. [ASA](https://aws1.campaignasia.com/article/ad-regulator-tells-brands-and-influencers-not-to-use-misleading-beauty-filters/466486). If a before-and-after photo is secretly an after-and-filter photo, the consumer is being lied to in exactly the way false-advertising law exists to prevent. Nobody is asking creators to post unflattering photos. The ask is one small label: this image was altered. Honest sellers will survive it. The ones who cannot sell without the filter are proving the point."
+    },
+    {
+      "id": 1003,
+      "topic_id": 1,
+      "side": "for",
+      "author_demo_id": "demo-012",
+      "body": "I ran a small skincare line and paid micro-influencers for posts. The dirty secret is that everyone in the industry knows the photos are retouched, and everyone pretends they are not. France's 2023 law covers this with a simple disclosure rule, and compliance has been straightforward: add the label, keep posting. [French economy ministry guidance](https://www.economie.gouv.fr/particuliers/influenceurs). What the rule actually does is level the field. Right now an honest creator who posts real skin loses to the creator with the smoothing filter, and brands reward the lie with bigger checks. Disclosure lets audiences choose with open eyes, and it lets honest creators compete. The platforms already detect filters automatically for their own effects libraries. The technology to flag this exists. We just need the will."
+    },
+    {
+      "id": 1004,
+      "topic_id": 1,
+      "side": "against",
+      "author_demo_id": "demo-019",
+      "body": "Define retouched. Is it the beauty filter, or is it also the ring light, the flattering angle, the professional makeup, the photo taken at golden hour? France's 2023 law tries to draw this line and mostly lands on commercial posts, which sounds tidy until a regulator has to decide whether teeth whitening in Lightroom counts. The UK advertising watchdog has spent years issuing case-by-case rulings because bright lines do not exist here. [ASA](https://aws1.campaignasia.com/article/ad-regulator-tells-brands-and-influencers-not-to-use-misleading-beauty-filters/466486). A law that cannot define its target will be enforced selectively, which means against whoever is unpopular or unlucky. Teach media literacy in schools. Require ad labels for paid content, which we already do. But criminalizing the wrong filter setting is a censor's fantasy of precision applied to something inherently subjective."
+    },
+    {
+      "id": 1005,
+      "topic_id": 1,
+      "side": "against",
+      "author_demo_id": "demo-026",
+      "body": "I am a part-time creator with 40,000 followers, and I edit my own photos between shifts at my actual job. The big agencies pushing for disclosure rules have legal teams and compliance departments. I have a phone and twenty minutes. France's law threatens fines up to 75,000 euros for violations, and even if small creators are rarely the target, the chilling effect is real: I would rather delete a post than guess wrong about whether my color correction counts as retouching. [French economy ministry guidance](https://www.economie.gouv.fr/particuliers/influenceurs). The irony is that disclosure rules protect the biggest players, who can absorb the compliance cost, while raising the barrier for everyone else. If the goal is honesty, the platforms could add automatic filter labels tomorrow for free. A law with fines is the heaviest possible tool for a problem a toggle could solve."
+    },
+    {
+      "id": 1006,
+      "topic_id": 1,
+      "side": "against",
+      "author_demo_id": "demo-031",
+      "body": "My kids know filters exist. They learned it the same way they learned wrestling is staged: from adults talking to them, not from a government label. The CDC's 2023 youth survey found teen girls' persistent sadness at record highs, and social media is part of that story, but slapping a disclaimer on selfies will not fix what is fundamentally a parenting and education gap. [CDC](https://www.cdc.gov/yrbs). France passed its law in 2023, and French teens still live on TikTok. Labels become wallpaper; we have all learned to ignore cookie banners and terms of service. If we want resilient kids, fund counselors, teach them how images are made, and model better habits at home. A law that outsources parenting to a caption is how you get the appearance of action with none of the results."
+    },
+    {
+      "id": 1007,
+      "topic_id": 2,
+      "side": "for",
+      "author_demo_id": "demo-002",
+      "body": "Livestock supply chains account for roughly 14.5 percent of human-caused greenhouse gas emissions, according to the UN Food and Agriculture Organization, a share larger than all the world's cars, planes, and ships combined. [FAO](https://www.fao.org/gleam). A ten-year phaseout is not about ending meat; it is about ending the most concentrated, industrialized way of producing it. We phased out leaded gasoline and ozone-depleting chemicals on similar timelines once the science was clear, and industry adapted faster than the doomsayers predicted. The technology exists: precision fermentation, improved feed additives that cut methane, and higher-welfare systems that already operate at scale in parts of Europe. What is missing is a deadline that forces the transition instead of letting the industry lobby for one more decade of delay."
+    },
+    {
+      "id": 1008,
+      "topic_id": 2,
+      "side": "for",
+      "author_demo_id": "demo-009",
+      "body": "I am an ER nurse, and I have watched patients die from infections that used to be routine to treat. The CDC estimates antibiotic-resistant bacteria cause more than 35,000 deaths a year in the US, and a major driver is the routine use of antibiotics in crowded livestock operations to promote growth and prevent disease. [CDC](https://www.cdc.gov/antimicrobial-resistance/). Factory farms are, functionally, incubators for the next resistant superbug. A ten-year phaseout gives producers time to transition to systems that do not need constant drug dosing to keep animals alive in their own filth. This is not a lifestyle debate about your burger. It is about whether we keep burning through our last effective antibiotics so meat can stay a dollar cheaper."
+    },
+    {
+      "id": 1009,
+      "topic_id": 2,
+      "side": "for",
+      "author_demo_id": "demo-015",
+      "body": "I raise hogs on pasture, 200 head, and I compete against operations with 50,000 animals in confinement that externalize every cost: the manure lagoons, the dead zones, the stench my neighbors downwind from those facilities live with. California voters passed Proposition 12 in 2018 setting minimum space requirements, and the Supreme Court upheld it in 2023. [CDFA](https://www.cdfa.ca.gov/ahfss/AnimalCare/). The market did not collapse. A ten-year phaseout is the only honest version of what Prop 12 started: stop letting the worst actors undercut everyone else by treating animals as machinery. Independent farmers like me would finally compete on quality instead of racing the confinement model to the bottom."
+    },
+    {
+      "id": 1010,
+      "topic_id": 2,
+      "side": "against",
+      "author_demo_id": "demo-022",
+      "body": "I feed four kids on a grocery budget that is already stretched thin, and chicken is the protein that makes the math work. The Bureau of Labor Statistics tracks food prices closely, and meat and eggs remain the most affordable complete proteins per dollar precisely because of scale. [BLS](https://www.bls.gov/charts/consumer-price-index/consumer-price-index-average-price-data.htm). Phasing out factory farming in ten years means the price of that chicken doubles or triples, and no amount of talk about true cost accounting fills my kids' lunchboxes. Wealthy shoppers can already buy pasture-raised everything at Whole Foods. A phaseout is a regressive tax on poor families dressed up as virtue, and the people cheering loudest for it are the ones who will never feel the price."
+    },
+    {
+      "id": 1011,
+      "topic_id": 2,
+      "side": "against",
+      "author_demo_id": "demo-027",
+      "body": "There are 8 billion people on this planet, and the UN projects nearly 10 billion by 2050. Factory farming is ugly, but it is also the reason protein became affordable for the global middle class. The FAO's own data shows demand for animal products rising fastest in developing countries, where a cheap egg can be the difference between adequate nutrition and stunting in children. [FAO](https://www.fao.org/gleam). A ten-year phaseout in the US would not end industrial meat; it would offshore it to countries with weaker environmental and labor standards, exactly as we did with manufacturing. We would get to feel pure while the same farming happens elsewhere, dirtier. If the goal is less suffering and fewer emissions, fund the transition and the technology, but do not ban the system that feeds people before the alternative exists at scale."
+    },
+    {
+      "id": 1012,
+      "topic_id": 2,
+      "side": "against",
+      "author_demo_id": "demo-036",
+      "body": "My county has two employers: the school district and the processing plant. The plant buys from 40 contract growers, and every one of those families borrowed against their land to build barns to the integrator's specs. A ten-year phaseout strands those loans, empties the plant, and turns my town into another hollowed-out main street. The USDA's own rural data shows how concentrated agricultural employment already is in these regions. [USDA](https://www.usda.gov). Nobody in this debate talks about who pays the growers when the contracts vanish. If you want to end factory farming, buy out the barns, retrain the workers, and show me the plan for the towns. Until then, a phaseout in ten years is a slogan written by people who have never driven past a chicken house at dawn."
+    },
+    {
+      "id": 1013,
+      "topic_id": 21,
+      "side": "for",
+      "author_demo_id": "demo-005",
+      "body": "The United States spent about $4.5 trillion on health care in 2022, roughly 17 percent of GDP, nearly double what peer nations spend, and still leaves tens of millions underinsured. [CMS](https://www.cms.gov/data-research/statistics-trends-and-reports/national-health-expenditure-data). I know a teacher who did everything right, had insurance through her district, and still ended up with $90,000 in bills after her husband's cancer because of deductibles, coinsurance, and one out-of-network anesthesiologist. Medical debt is the leading cause of personal bankruptcy in America. Every other wealthy country figured out that you do not let people go broke for getting sick. We pay more for the privilege of worse financial outcomes, and the only people who benefit are the intermediaries skimming between the patient and the doctor."
+    },
+    {
+      "id": 1014,
+      "topic_id": 21,
+      "side": "for",
+      "author_demo_id": "demo-011",
+      "body": "Americans die younger than citizens of every other high-income country. The Commonwealth Fund regularly ranks the US last among peer nations on access, equity, and outcomes despite spending far more per person. [Commonwealth Fund](https://www.commonwealthfund.org). The UK's NHS and Canada's Medicare are not perfect, and their critics love wait-time anecdotes, but no Briton loses their house over a hospital bill and no Canadian gets a surprise $40,000 invoice. A universal system means negotiating drug prices nationally, which is why insulin costs a tenth as much across the border. We already run universal systems for seniors and veterans through Medicare and the VA. The question is not whether government can run health care. It already does, for the most expensive patients, while private insurers profit on the healthy."
+    },
+    {
+      "id": 1015,
+      "topic_id": 21,
+      "side": "for",
+      "author_demo_id": "demo-017",
+      "body": "I run a 30-person company, and health insurance is my second-largest expense after payroll. Every year the broker comes back with a 12 percent increase and I have to choose between worse coverage and smaller raises. The Kaiser Family Foundation's annual survey shows the average family premium through employers now exceeds $25,000 a year. [KFF](https://www.kff.org/private-insurance/annual-family-premiums-for-employer-coverage-rise-7-to-average-25572-in-2024-benchmark-survey-finds-after-also-rising-7-last-year/). Universal coverage would take this albatross off every small business in America. My competitors in Canada and Germany do not spend their Octobers haggling with insurers; they spend it running their companies. American businesses are at a structural disadvantage because we tied health care to employment in the 1940s and never untied it. Decouple the two and watch entrepreneurship rise."
+    },
+    {
+      "id": 1016,
+      "topic_id": 21,
+      "side": "against",
+      "author_demo_id": "demo-029",
+      "body": "Run the math honestly. Universal health care means the $4.5 trillion we spend now gets funded through taxes instead of premiums, and analyses of the major single-payer proposals show middle-class taxes rising by thousands a year. The money does not disappear; it moves to the IRS. And look at what single-payer systems ration: Canada's median wait for specialist treatment stretched past 27 weeks in recent Fraser Institute reports, and the UK's NHS has millions on waiting lists. [Fraser Institute](https://www.fraserinstitute.org). Americans are used to getting an MRI this week, not next spring. You can promise universal coverage, but you cannot promise universal, immediate, free care. Something has to give, and it will be timeliness and choice."
+    },
+    {
+      "id": 1017,
+      "topic_id": 21,
+      "side": "against",
+      "author_demo_id": "demo-038",
+      "body": "The reason the newest cancer drug, the newest surgical robot, the newest mRNA platform comes from America is that our system pays for innovation. The US accounts for a hugely disproportionate share of global medical R&D because companies can earn returns here. Countries with price controls free-ride on American research: they cap what a drug costs while we funded the decade of trials that created it. [OECD](https://www.oecd.org/health/). A government-run system that sets prices by fiat will do what price controls always do: shrink the pipeline. The next Alzheimer's drug or gene therapy will not be developed by a committee optimizing a budget. If you want the cures of 2040, do not strangle the incentives that produce them."
+    },
+    {
+      "id": 1018,
+      "topic_id": 21,
+      "side": "against",
+      "author_demo_id": "demo-043",
+      "body": "I get my care through the VA, the closest thing America has to universal government health care, and I have waited four months for a referral that a private clinic would schedule in a week. The VA does good work and I am grateful, but it is also a preview of scale: a federal bureaucracy managing care for 330 million people. The states are already laboratories here: Massachusetts, Hawaii, and others have near-universal coverage through their own designs. [Census](https://www.census.gov). Let states keep experimenting instead of betting the entire country's health on one federal overhaul that cannot be undone if it fails. Washington struggles to run a website; I do not want it scheduling my surgery."
+    },
+    {
+      "id": 1019,
+      "topic_id": 22,
+      "side": "for",
+      "author_demo_id": "demo-016",
+      "body": "I have been serving for nine years, and my paycheck is a weather report. The federal tipped minimum wage has been $2.13 an hour since 1991, unchanged for over three decades, and everything else depends on the mood of strangers. [DOL](https://www.dol.gov/agencies/whd/fact-sheet/15-tipped-employees-under-the-flsa). Slow Tuesday in February? I make nothing. Research has repeatedly found tipping penalizes Black servers and women, who earn less for the same work because bias rides along with every discretionary dollar. A higher base wage means I can budget, get a car loan, and know what my month looks like. Customers say they tip to reward service, but what they actually reward is whoever matches their idea of friendly. Pay me a wage and let the tip be what it claims to be: optional."
+    },
+    {
+      "id": 1020,
+      "topic_id": 22,
+      "side": "for",
+      "author_demo_id": "demo-023",
+      "body": "Voters are already deciding this. Washington DC passed Initiative 82 in 2022 to phase out the tipped wage, and California never had one: the state requires the full minimum wage before tips, and its restaurant industry did not collapse. [Ballotpedia](https://ballotpedia.org/Washington,_D.C.,_Initiative_82,_Tip_Credit_Elimination_Initiative_(2022)). The evidence from states without a tip credit is that menu prices adjust modestly, employment holds, and workers get stability. The $2.13 wage is a relic from 1991 that forces workers to beg for the rest of their pay. Seven states already prove the alternative works. The question is not whether restaurants can survive paying a real wage. They do, in a third of the country, right now."
+    },
+    {
+      "id": 1021,
+      "topic_id": 22,
+      "side": "for",
+      "author_demo_id": "demo-028",
+      "body": "I managed restaurants for twelve years, and tipping corrupts everything behind the scenes. Servers making $40 an hour on a Friday fight over sections while the line cooks making $16 burn out and quit, because tips legally cannot be shared with the back of house in most setups. The result is constant turnover where it hurts most. When we tried a service-charge model for one summer, applications for kitchen jobs doubled and the servers who stayed liked knowing their slow shifts were covered. The Bureau of Labor Statistics data on food-service turnover tells the same story industry-wide. [BLS](http://bls.gov/opub/ted/job-openings-and-labor-turnover.htm). Tipping does not reward the team that makes the meal. It rewards whoever carries the plate, and the business bleeds talent everywhere else."
+    },
+    {
+      "id": 1022,
+      "topic_id": 22,
+      "side": "against",
+      "author_demo_id": "demo-034",
+      "body": "I make $68,000 a year serving at a mid-range steakhouse, and no higher base wage proposal comes close to replacing that. The activists pushing tip abolition keep talking about the $2.13 wage as if anyone actually takes home $2.13 an hour; with tips I clear $30-plus most nights. When DC started phasing in Initiative 82, plenty of servers opposed it because they did the math. A flat $20 an hour is a pay cut for every good server in a busy restaurant, and the best of us will leave for sales or bartending gigs where performance still pays. You want to help struggling servers? Raise the tipped minimum, enforce wage theft laws, keep the credit. Do not rescue me into a $25,000 pay cut. One DC server wrote about living through the phase-in and reaching the same conclusion. [The 51st](https://51st.news/opinion-initiative-82-was-supposed-to-help-d-c-s-tipped-workers-it-did-the-opposite/)."
+    },
+    {
+      "id": 1023,
+      "topic_id": 22,
+      "side": "against",
+      "author_demo_id": "demo-042",
+      "body": "People think restaurants are rolling in money. The average full-service margin is 3 to 5 percent, and labor is already the biggest cost. Forcing every server onto a full base wage means raising menu prices 20 to 30 percent overnight, and customers who say they hate tipping will absolutely notice a $24 burger becoming $30. The National Restaurant Association's industry data consistently shows how thin these margins are. [restaurant.org](https://restaurant.org). What actually happens: owners cut staff, add QR-code ordering, and the server you wanted to help gets replaced by a kiosk. The tip credit is a compromise that keeps dining affordable and keeps humans employed. Kill it and you will get higher prices, fewer jobs, and the same workers earning less."
+    },
+    {
+      "id": 1024,
+      "topic_id": 22,
+      "side": "against",
+      "author_demo_id": "demo-051",
+      "body": "Here is the uncomfortable truth: tipping is the only performance pay most service workers will ever see, and service got noticeably worse everywhere it faded. When the tip is guaranteed in the wage, the incentive to hustle on a slammed Saturday night evaporates. I have eaten in countries without tipping cultures and the service is fine but indifferent; nobody is refilling your water before you ask. Tips let customers reward great work directly, server to human, with no manager or algorithm in between. If the problem is the $2.13 floor set in 1991, raise the floor. That fixes exploitation without destroying the one mechanism that makes American service famously attentive. The federal rules themselves confirm the $2.13 cash wage and the employer make-up requirement. [DOL Fact Sheet #15](https://www.dol.gov/agencies/whd/fact-sheets/15-tipped-employees-flsa)."
+    },
+    {
+      "id": 1025,
+      "topic_id": 6,
+      "side": "for",
+      "author_demo_id": "demo-008",
+      "body": "Here is the angle the flat-fine crowd misses: the problem is not the first violation, it is the fifth. The GDPR already uses a two-tier system, up to 2 percent of global turnover for lesser breaches and 4 percent for the worst, which gives regulators room to start small and escalate. [GDPR](https://gdpr-info.eu). A revenue-linked scale means a company that fixes its practices after one penalty faces a manageable hit, while a serial offender that treats fines as a subscription fee faces an existential one. Flat fines do the opposite: the giant shrugs, pays, and repeats. If we want fines to change behavior instead of just generating headlines, the penalty has to grow with both the company's size and its rap sheet. Tying the ceiling to global revenue is what makes escalation credible."
+    },
+    {
+      "id": 1026,
+      "topic_id": 6,
+      "side": "against",
+      "author_demo_id": "demo-014",
+      "body": "I run a 25-person software company, and a revenue-based fine regime terrifies me in a way it never will terrify a giant. Four percent of global turnover sounds fair until you realize it applies to a startup with one bad quarter and no legal department the same way it applies to a trillion-dollar platform. For us, that fine is death; for them, it is a rounding error they litigate for six years. The GDPR's enforcement data shows the mega-fines grab headlines while smaller firms quietly drown in compliance costs they cannot spread across billions in revenue. [CMS Law tracker](https://www.cms.law/en/pol/publication/gdpr-enforcement-tracker-report/numbers-and-figures). Revenue linkage was supposed to humble the giants. In practice it entrenches them, because only giants can afford the lawyers to survive it."
+    },
+    {
+      "id": 1027,
+      "topic_id": 7,
+      "side": "for",
+      "author_demo_id": "demo-019",
+      "body": "Location data is not like other data. In Carpenter v. United States, the Supreme Court recognized that a detailed record of someone's movements reveals an all-encompassing picture of their life: the clinic, the protest, the place of worship. [Oyez](https://www.oyez.org/cases/2017/16-402). When a data broker sells that history, the harm already happened; deleting it afterward is like returning a stolen diary after reading it aloud. Payment is the only remedy that acknowledges the violation was personal. The FTC's action against Outlogic, formerly X-Mode, showed brokers were selling raw location tied to ad IDs that could expose visits to sensitive places. [FTC coverage](https://thehackernews.com/2024/01/ftc-bans-outlogic-x-mode-from-selling.html). If companies must pay the people they tracked, the business model of bulk location sale collapses, which is precisely the point."
+    },
+    {
+      "id": 1028,
+      "topic_id": 7,
+      "side": "against",
+      "author_demo_id": "demo-026",
+      "body": "I build apps that use location for legitimate reasons: transit directions, weather alerts, finding a nearby pharmacy. If every misuse allegation triggers automatic payouts, the rational move for a small developer is to strip location features entirely or geo-fence only the biggest markets where legal budgets exist. The FTC's Outlogic settlement chose the smarter path: ban the sale, mandate deletion, require real consent, and put the company under orders. [FTC coverage](https://thehackernews.com/2024/01/ftc-bans-outlogic-x-mode-from-selling.html). Those remedies actually stop the conduct. Automatic checks, by contrast, mostly enrich claims administrators while users get $1.87 and a privacy notice. Punish the brokers who sell, fix the consent screens, and leave the weather app alone."
+    }
+  ],
+  "comments": [
+    {
+      "id": 10001,
+      "case_id": 1001,
+      "author_demo_id": "demo-014",
+      "parent_id": null,
+      "body": "The ad label comparison is the strongest point here. We already accept that paid posts need a tag, so tagging the alteration in the image is not some radical new censorship. It is consistency.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10002,
+      "case_id": 1001,
+      "author_demo_id": "demo-021",
+      "parent_id": 10001,
+      "body": "Exactly. And the platforms know when a filter is applied because they built the filter. This would cost them almost nothing to implement automatically.",
+      "stance": "agree"
+    },
+    {
+      "id": 10003,
+      "case_id": 1004,
+      "author_demo_id": "demo-033",
+      "parent_id": null,
+      "body": "The ring light question is real though. My sister is a photographer and she says retouching starts the moment you choose a lens. Any law will end up punishing amateurs while pros with better equipment sail through unlabeled.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10004,
+      "case_id": 1004,
+      "author_demo_id": "demo-047",
+      "parent_id": 10003,
+      "body": "This is the part supporters keep dodging. A $20,000 camera and studio lighting alters a face more than any phone filter, and none of that gets a label. The rule targets the tool poor creators use.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10005,
+      "case_id": 1002,
+      "author_demo_id": "demo-008",
+      "parent_id": null,
+      "body": "The mascara example sold me. If the ad is literally demonstrating a product's effect, faking the effect is fraud, full stop. That is already illegal in every other medium.",
+      "stance": "agree"
+    },
+    {
+      "id": 10006,
+      "case_id": 1005,
+      "author_demo_id": "demo-052",
+      "parent_id": null,
+      "body": "I see both sides. I want honesty in ads, but I also edit my own photos for fun and I would hate getting a legal threat over a color filter. Maybe limit it strictly to paid product claims and leave personal posts alone.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10007,
+      "case_id": 1005,
+      "author_demo_id": "demo-041",
+      "parent_id": 10006,
+      "body": "But strictly paid product claims are already covered by false advertising law in the US. The FTC can already go after deceptive before-and-afters. We do not need a new filter-specific statute for something the old law reaches.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10008,
+      "case_id": 1003,
+      "author_demo_id": "demo-058",
+      "parent_id": null,
+      "body": "Level the playing field? Please. The big brands will just hire lawyers to certify their posts while small creators self-censor. Every simple disclosure rule lands hardest on the people with the least power.",
+      "stance": "strongly_disagree"
+    },
+    {
+      "id": 10009,
+      "case_id": 1003,
+      "author_demo_id": "demo-044",
+      "parent_id": 10008,
+      "body": "I do not buy that. The French law has been in force since 2023 and I have not seen small creators getting crushed by it. The fear is bigger than the enforcement reality.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10010,
+      "case_id": 1002,
+      "author_demo_id": "demo-060",
+      "parent_id": null,
+      "body": "Honest question for the fraud camp: who decides what counts as misleading? A whitening filter on a teeth-whitening ad is obvious, but most cases will be gray. I am not sure regulators will be better at this than the platforms' own policies.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10011,
+      "case_id": 1007,
+      "author_demo_id": "demo-044",
+      "parent_id": null,
+      "body": "The leaded gasoline comparison is exactly right. Every industry facing a phaseout says it is impossible, and then the deadline arrives and they somehow manage. Deadlines work.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10012,
+      "case_id": 1007,
+      "author_demo_id": "demo-050",
+      "parent_id": 10011,
+      "body": "And the FAO number is doing a lot of quiet work here: 14.5 percent is bigger than all of transport. We obsess over electric cars while ignoring the bigger slice.",
+      "stance": "agree"
+    },
+    {
+      "id": 10013,
+      "case_id": 1010,
+      "author_demo_id": "demo-055",
+      "parent_id": null,
+      "body": "The regressive tax point is the one the phaseout crowd never answers. When eggs spiked a few years ago, my food bank line doubled. Cheap protein is not an abstraction for poor families.",
+      "stance": "agree"
+    },
+    {
+      "id": 10014,
+      "case_id": 1010,
+      "author_demo_id": "demo-001",
+      "parent_id": 10013,
+      "body": "Exactly. Every one of these proposals is written by people who shop at farmers markets. Tell a single mom the chicken is doubling for the planet and watch how fast she stops listening.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10015,
+      "case_id": 1008,
+      "author_demo_id": "demo-013",
+      "parent_id": null,
+      "body": "As a pharmacist, I have to push back: most antibiotic use driving resistance in hospitals comes from human overprescription, not farms. Blaming agriculture lets the medical system off the hook.",
+      "stance": "strongly_disagree"
+    },
+    {
+      "id": 10016,
+      "case_id": 1008,
+      "author_demo_id": "demo-018",
+      "parent_id": 10015,
+      "body": "It is both, though. The CDC tracks agricultural use as a real contributor. Saying hospitals are worse does not make farm overuse fine.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10017,
+      "case_id": 1011,
+      "author_demo_id": "demo-024",
+      "parent_id": null,
+      "body": "The offshoring argument is the strongest against case here, but it cuts both ways: if we regulate and others do not, should we just never regulate anything? That logic would have kept leaded gas forever.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10018,
+      "case_id": 1012,
+      "author_demo_id": "demo-029",
+      "parent_id": null,
+      "body": "The contract grower point hit me. Those farmers are trapped by debt on barns they were told to build. A phaseout without a buyout is just cruelty to rural families.",
+      "stance": "agree"
+    },
+    {
+      "id": 10019,
+      "case_id": 1009,
+      "author_demo_id": "demo-040",
+      "parent_id": null,
+      "body": "Prop 12 is a weird example to celebrate. Pork prices in California rose and producers outside the state just built separate supply chains. It proved the market routes around rules, not that phaseouts work.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10020,
+      "case_id": 1009,
+      "author_demo_id": "demo-046",
+      "parent_id": 10019,
+      "body": "That is a fair criticism of one state's rule, but a national phaseout is a different animal. You cannot route around a federal ban the way you route around California.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10021,
+      "case_id": 1013,
+      "author_demo_id": "demo-006",
+      "parent_id": null,
+      "body": "The out-of-network anesthesiologist detail is what radicalized me. You can do everything right, pick an in-network hospital, and still get destroyed by one person you never chose. That is not a system, it is a trap.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10022,
+      "case_id": 1013,
+      "author_demo_id": "demo-020",
+      "parent_id": 10021,
+      "body": "Same. My appendectomy came with a separate bill from the radiologist I never met. The choice and consumer language around health care is a joke when you are unconscious.",
+      "stance": "agree"
+    },
+    {
+      "id": 10023,
+      "case_id": 1016,
+      "author_demo_id": "demo-025",
+      "parent_id": null,
+      "body": "The tax point never gets a straight answer from the universal care side. Premiums are already a private tax I pay every month. Show me the honest math where my total goes down, not just slogans about the rich paying.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10024,
+      "case_id": 1016,
+      "author_demo_id": "demo-032",
+      "parent_id": 10023,
+      "body": "This is backwards. You already pay the tax, it is just called a premium and a deductible, and it goes up 12 percent a year. I would rather pay the government than a CEO whose bonus depends on denying my claim.",
+      "stance": "strongly_disagree"
+    },
+    {
+      "id": 10025,
+      "case_id": 1014,
+      "author_demo_id": "demo-039",
+      "parent_id": null,
+      "body": "The small business angle does not get enough attention. Tying health care to employment made sense during WWII wage controls. Eighty years later it is just a ball and chain on every company under 500 people.",
+      "stance": "agree"
+    },
+    {
+      "id": 10026,
+      "case_id": 1017,
+      "author_demo_id": "demo-048",
+      "parent_id": null,
+      "body": "I am torn on innovation. The US really does produce most new drugs, but a lot of that research starts with NIH grants, meaning taxpayers already fund the early science. Maybe the profits are privatized more than the risk.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10027,
+      "case_id": 1017,
+      "author_demo_id": "demo-053",
+      "parent_id": 10026,
+      "body": "NIH funds basic science, not the billion-dollar clinical trials that actually bring a drug to market. That last mile is private capital taking real risk, and price caps would kill exactly that investment.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10028,
+      "case_id": 1018,
+      "author_demo_id": "demo-057",
+      "parent_id": null,
+      "body": "The VA point is devastating and nobody answers it. If the government cannot deliver timely care to 9 million veterans with a dedicated system, why would 330 million go better?",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10029,
+      "case_id": 1015,
+      "author_demo_id": "demo-059",
+      "parent_id": null,
+      "body": "The money does not disappear, it moves to the IRS is the most honest sentence in this whole debate. Fine. I will pay the IRS if it means I never see another $90,000 cancer bill.",
+      "stance": "agree"
+    },
+    {
+      "id": 10030,
+      "case_id": 1014,
+      "author_demo_id": "demo-010",
+      "parent_id": 10025,
+      "body": "The small business angle is real, but both sides cherry-pick countries. Canada has waits, Germany has a mixed system people love, Singapore spends little with great outcomes. Maybe there is no single universal model to copy.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10031,
+      "case_id": 1019,
+      "author_demo_id": "demo-004",
+      "parent_id": null,
+      "body": "The car loan line is the whole argument. No bank cares that you usually make good money on Fridays. Wage stability is dignity, and tips cannot provide it.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10032,
+      "case_id": 1019,
+      "author_demo_id": "demo-012",
+      "parent_id": 10031,
+      "body": "And the discrimination research is damning. When pay depends on customer bias, you have built bias into the wage structure. A base wage does not fix racism, but it stops subsidizing it.",
+      "stance": "agree"
+    },
+    {
+      "id": 10033,
+      "case_id": 1022,
+      "author_demo_id": "demo-018",
+      "parent_id": null,
+      "body": "As a server, the $68k number is real and the activists ignore it. I chose this job because busy nights pay like a skilled trade. A flat wage turns it into just another $20-an-hour job I would quit.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10034,
+      "case_id": 1022,
+      "author_demo_id": "demo-025",
+      "parent_id": 10033,
+      "body": "Thank you. Nobody pushing abolition has ever worked a Friday night rush. They want to save us by cutting our pay in half and calling it progress.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10035,
+      "case_id": 1020,
+      "author_demo_id": "demo-033",
+      "parent_id": null,
+      "body": "California is the natural experiment that ends the debate. No tip credit, huge restaurant industry, still standing. If it worked at that scale, the doomsday predictions are just lobbying.",
+      "stance": "agree"
+    },
+    {
+      "id": 10036,
+      "case_id": 1023,
+      "author_demo_id": "demo-037",
+      "parent_id": null,
+      "body": "Both sides assume all restaurants are the same. A busy steakhouse server and a diner waitress on a Tuesday live in different economies. Maybe the answer is raising the floor, not one national rule.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10037,
+      "case_id": 1023,
+      "author_demo_id": "demo-045",
+      "parent_id": 10036,
+      "body": "Raising the floor sounds nice until you realize enforcement is the actual problem. Wage theft in restaurants is rampant and the DOL barely inspects. A higher base wage at least shows up on the pay stub.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10038,
+      "case_id": 1021,
+      "author_demo_id": "demo-049",
+      "parent_id": null,
+      "body": "The back-of-house point is underrated. Cooks make the food and get none of the tip upside. Every kitchen staffing crisis traces back to servers making triple what the line makes.",
+      "stance": "agree"
+    },
+    {
+      "id": 10039,
+      "case_id": 1024,
+      "author_demo_id": "demo-054",
+      "parent_id": null,
+      "body": "The service got worse claim is just vibes. Plenty of no-tip restaurants in New York and San Francisco have excellent service because they hire and train well. Good management beats tip incentives.",
+      "stance": "strongly_disagree"
+    },
+    {
+      "id": 10040,
+      "case_id": 1024,
+      "author_demo_id": "demo-060",
+      "parent_id": 10039,
+      "body": "I have eaten at those places and the service is good, but the prices are 25 percent higher and I am still expected to tip on top half the time. The no-tip restaurant often just means hidden tip.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10041,
+      "case_id": 1025,
+      "author_demo_id": "demo-021",
+      "parent_id": null,
+      "body": "The escalation point is key. A first-time mistake should not be fatal, but the tenth mistake is a business model. Revenue-linked ceilings give regulators a ladder instead of a single hammer.",
+      "stance": "agree"
+    },
+    {
+      "id": 10042,
+      "case_id": 1025,
+      "author_demo_id": "demo-030",
+      "parent_id": 10041,
+      "body": "Exactly. Right now the rational move for a giant is to violate, pay, and repeat, because the fine is always smaller than the profit. Scaling the ceiling with revenue and repeat offenses flips that math.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10043,
+      "case_id": 1026,
+      "author_demo_id": "demo-035",
+      "parent_id": null,
+      "body": "As someone at a mid-size company, the compliance asymmetry is real. We spend a bigger share of revenue on privacy lawyers than any giant does. The fine structure just adds to the moat.",
+      "stance": "agree"
+    },
+    {
+      "id": 10044,
+      "case_id": 1026,
+      "author_demo_id": "demo-041",
+      "parent_id": 10043,
+      "body": "But the GDPR tiers already account for severity, and regulators have discretion. Small companies are not getting 4 percent fines for minor issues. The fear outruns the actual enforcement pattern.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10045,
+      "case_id": 1025,
+      "author_demo_id": "demo-047",
+      "parent_id": 10041,
+      "body": "I like escalation in theory, but who decides what counts as a repeat offense? A company with 50 products will always have something in violation somewhere. You could escalate forever on technicalities.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10046,
+      "case_id": 1026,
+      "author_demo_id": "demo-052",
+      "parent_id": null,
+      "body": "This gets it backwards. Without revenue linkage, fines are just a tax on being small. A $50 million flat fine kills a startup and amuses a giant. Revenue scaling is the only thing that makes punishment proportional.",
+      "stance": "strongly_disagree"
+    },
+    {
+      "id": 10047,
+      "case_id": 1025,
+      "author_demo_id": "demo-056",
+      "parent_id": null,
+      "body": "Fines do not change behavior nearly as much as people think. What changes behavior is personal liability and product bans. We are debating the size of the check while the underlying conduct continues.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10048,
+      "case_id": 1026,
+      "author_demo_id": "demo-002",
+      "parent_id": 10046,
+      "body": "That is a fair challenge, but fines fund the regulators and create the paper trail for bigger actions. It is not either-or: scale the fines and add the personal accountability on top.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10049,
+      "case_id": 1027,
+      "author_demo_id": "demo-003",
+      "parent_id": null,
+      "body": "The stolen diary line nails it. Deletion after the sale is theater. The data was already copied, resold, and merged a dozen times. Only money makes the harm concrete.",
+      "stance": "strongly_agree"
+    },
+    {
+      "id": 10050,
+      "case_id": 1027,
+      "author_demo_id": "demo-011",
+      "parent_id": 10049,
+      "body": "And Carpenter is the right anchor. The Court already said location history is special. The law treating it like a cookie banner violation is the mismatch.",
+      "stance": "agree"
+    },
+    {
+      "id": 10051,
+      "case_id": 1028,
+      "author_demo_id": "demo-017",
+      "parent_id": null,
+      "body": "The weather app point is underappreciated. Blanket payout rules will just mean fewer small apps use location at all, and the giants who can afford compliance get stronger. Same story as always.",
+      "stance": "agree"
+    },
+    {
+      "id": 10052,
+      "case_id": 1028,
+      "author_demo_id": "demo-022",
+      "parent_id": 10051,
+      "body": "If your business model cannot survive without quietly selling location, it should not survive. The small developer defense gets trotted out to protect brokers doing the actual selling.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10053,
+      "case_id": 1027,
+      "author_demo_id": "demo-029",
+      "parent_id": 10049,
+      "body": "I agree the harm is real, but how do you price it? Is my grocery store trip worth the same as someone's clinic visit? A flat payout feels arbitrary and a tiered one feels invasive to administer.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10054,
+      "case_id": 1028,
+      "author_demo_id": "demo-036",
+      "parent_id": null,
+      "body": "The tiny-check cynicism is exactly why payouts matter. Companies count on outrage fading. A hundred million small checks is still a hundred million reasons to stop.",
+      "stance": "strongly_disagree"
+    },
+    {
+      "id": 10055,
+      "case_id": 1027,
+      "author_demo_id": "demo-043",
+      "parent_id": null,
+      "body": "Payment without fixing consent is just a subscription fee for abuse. Outlogic-style bans and deletion orders do more. Make the payout part of a ban, not a substitute for one.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10056,
+      "case_id": 1028,
+      "author_demo_id": "demo-058",
+      "parent_id": 10054,
+      "body": "That seems like the reasonable middle: ban the sale, delete the data, and pay the victims from the penalty. The debate treats it as either-or when regulators can do both.",
+      "stance": "neutral"
+    },
+    {
+      "id": 10057,
+      "case_id": 1006,
+      "author_demo_id": "demo-089",
+      "parent_id": null,
+      "body": "The wrestling comparison nails it. My dad explained advertising tricks to me when I was ten and it stuck far better than any warning label could. Kids learn skepticism from people they trust, not from fine print under a photo.",
+      "stance": "agree"
+    },
+    {
+      "id": 10058,
+      "case_id": 1006,
+      "author_demo_id": "demo-142",
+      "parent_id": null,
+      "body": "Parents cannot be everywhere, and plenty of parents do not understand filters themselves. A simple altered-image tag gives kids a cue to pause, and it costs platforms almost nothing to add. We already label ads; labeling the alteration is the same idea.",
+      "stance": "disagree"
+    },
+    {
+      "id": 10059,
+      "case_id": 1006,
+      "author_demo_id": "demo-203",
+      "parent_id": 10058,
+      "body": "Fair point that a label is cheap, but it has to be designed to survive the scroll. If it is tiny gray text nobody reads, it is decoration. Make it prominent or do not bother.",
+      "stance": "agree"
+    }
+  ]
+}

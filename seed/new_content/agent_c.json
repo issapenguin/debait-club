@@ -1,0 +1,800 @@
+{
+  "topics": [
+    {
+      "id": 5,
+      "proposition": "Should movie theaters make phone-free screenings the default?",
+      "category": "Entertainment",
+      "context": "Alamo Drafthouse built its brand on a strict no-talking, no-texting policy, while concerts and comedy tours increasingly seal phones in locking pouches. With glowing screens ranking among moviegoers' top theater complaints, some argue phone-free should be the default and phone-friendly screenings the exception.",
+      "sources": [
+        {
+          "title": "Alamo Drafthouse: No Talking, No Texting Policy",
+          "url": "https://drafthouse.com/"
+        },
+        {
+          "title": "Yondr: Phone-Free Spaces for Concerts and Shows",
+          "url": "https://www.overyondr.com/"
+        },
+        {
+          "title": "AP News: Movie Box Office Reporting",
+          "url": "https://apnews.com/hub/movies"
+        }
+      ],
+      "topic_date": "2026-09-21",
+      "is_featured": false
+    },
+    {
+      "id": 25,
+      "proposition": "Should sports betting advertisements be banned from live game broadcasts?",
+      "category": "Sports",
+      "context": "Americans legally wagered roughly $120 billion on sports in 2023, and betting ads now saturate game broadcasts. The UK answered similar concerns with a 'whistle-to-whistle' ban on gambling ads during live sport, while US problem-gambling helplines report rising demand.",
+      "sources": [
+        {
+          "title": "American Gaming Association: Commercial Gaming Revenue Data",
+          "url": "https://www.americangaming.org/"
+        },
+        {
+          "title": "Betting and Gaming Council: Whistle-to-Whistle Ban",
+          "url": "https://bettingandgamingcouncil.com/"
+        },
+        {
+          "title": "NCPG National Problem Gambling Helpline",
+          "url": "https://www.ncpgambling.org/help-treatment/national-helpline/"
+        }
+      ],
+      "topic_date": "2026-09-24",
+      "is_featured": false
+    },
+    {
+      "id": 26,
+      "proposition": "Should the standard full-time workweek be cut to four days with no pay cut?",
+      "category": "Business",
+      "context": "The UK's 2022-23 trial across 61 companies found revenue steady and burnout down on a four-day week with no pay cut, echoing Iceland's large-scale public-sector trials and Microsoft Japan's 2019 experiment. Advocates call it the next labor standard; skeptics call it a perk for office workers.",
+      "sources": [
+        {
+          "title": "4 Day Week Global: UK Trial Results",
+          "url": "https://www.4dayweek.com/"
+        },
+        {
+          "title": "Autonomy: Iceland Shorter Working Week Trials",
+          "url": "https://autonomy.work/"
+        },
+        {
+          "title": "Reuters: Four-Day Week Coverage",
+          "url": "https://www.reuters.com/"
+        }
+      ],
+      "topic_date": "2026-09-23",
+      "is_featured": false
+    }
+  ],
+  "cases": [
+    {
+      "id": 1121,
+      "topic_id": 5,
+      "side": "for",
+      "author_demo_id": "demo-121",
+      "body": "One lit phone in a dark theater ruins the movie for two hundred people. That is not a personal choice, it is a shared-space problem, exactly like talking during the film. Alamo Drafthouse proved the market rewards strictness: their famous no-talking, no-texting rule, enforced with ejection, is the core of their brand, and plenty of customers choose them partly because of it ([policy](https://drafthouse.com)). Making phone-free the default, with a few clearly labeled phone-friendly screenings for anyone who needs a device, protects the experience for the majority without banning anyone. Theaters sell immersion you cannot get on a couch. If they will not defend it, streaming will keep winning."
+    },
+    {
+      "id": 1122,
+      "topic_id": 5,
+      "side": "for",
+      "author_demo_id": "demo-122",
+      "body": "I worked concessions all through college, and the number one complaint at the podium was never ticket prices. It was the glow from someone's screen three rows down. Locking pouches already work at scale: comedians like Dave Chappelle and musicians like Jack White have toured with [Yondr pouches](https://www.overyondr.com/), and audiences adapted within a single show. The pouch takes ten seconds at the door and unlocks at stations on the way out, so nobody is truly unreachable in a real emergency. If comedy clubs running two-drink minimums can pull this off night after night, a multiplex can manage it for matinees."
+    },
+    {
+      "id": 1123,
+      "topic_id": 5,
+      "side": "for",
+      "author_demo_id": "demo-123",
+      "body": "Directors mix sound and light for a dark room and your full attention, then one text message nukes everyone's night vision for the rest of the scene. Filmmakers like Christopher Nolan keep shooting on film and begging audiences to see movies in actual theaters; the least we can do is watch them there instead of through a second screen. A default phone-free policy with opt-out screenings is the compromise that respects both the art and the anxious parent: most showings stay sacred, a few stay connected. Cinemas tried being everything to everyone and got outcompeted by the couch. Time to be the one place the phone does not follow you. Venues already do this at scale: [comedians like Dave Chappelle lock phones in Yondr pouches for entire tours](https://www.mic.com/articles/129718/dave-chappelle-has-created-a-no-phone-zone-for-his-performances-here-s-how), and audiences keep coming back."
+    },
+    {
+      "id": 1124,
+      "topic_id": 5,
+      "side": "against",
+      "author_demo_id": "demo-124",
+      "body": "I am the customer theaters claim to want back: a mom who pays for the sitter, the tickets, and the popcorn. But I am also the emergency contact, and my sitter reaches me by phone. Lock my phone in a pouch for two and a half hours and I am not buying the ticket; I am staying home where the baby monitor works. On-call nurses, single parents, anyone waiting on a call about an aging parent, we all do the same math. A default that treats every customer like a teenager sneaking texts will quietly filter out the adults with the most disposable income. Make some screenings phone-free and I will happily pick those. Make all of them phone-free and you will never see me. The venue policies themselves admit the friction: [Yondr's own FAQ](https://www.313presents.com/assets/doc/YONDR_FAQ-85b7c63b07.pdf) has a whole section for guests who are on call or waiting on the babysitter, because even they know the pouch is a dealbreaker for those customers."
+    },
+    {
+      "id": 1125,
+      "topic_id": 5,
+      "side": "against",
+      "author_demo_id": "demo-125",
+      "body": "My phone is a medical device. My continuous glucose monitor sends low-blood-sugar alerts to it, and during a two-hour movie those alerts are the difference between a good night and a medical emergency. Other people rely on phones for captioning apps and assistive listening in theaters whose built-in devices are broken, filthy, or simply missing. A default pouch policy forces disabled and chronically ill customers to out themselves at the door and beg for an exception, every single time. Inclusion should not require a permission slip. Keep phone-free as an option for those who want it, but the default has to assume some of us need our screens to participate safely. Regulators take the alert function seriously: [NICE's technology guidance on Dexcom](https://www.nice.org.uk/advice/mib233/chapter/The-technology) describes urgent-low alerts that cannot be deactivated, because for some users the phone alert is the safety device."
+    },
+    {
+      "id": 1126,
+      "topic_id": 5,
+      "side": "against",
+      "author_demo_id": "demo-126",
+      "body": "Theaters are in no position to add friction. Domestic box office was about $9 billion in 2023 versus $11.4 billion in 2019, and the audience that drifted to streaming is exactly the casual viewer a pouch policy would annoy first. Enforcement is the other problem: ushers already deal with enough, and every confrontation over a glowing screen is a one-star review and a lost regular. Alamo Drafthouse makes strictness work because it is their whole identity; a generic multiplex copying the policy gets the complaints without the brand loyalty. The market already solved this: strict theaters exist for people who want them. A mandated default just shrinks the tent. The tent is already shrinking: [2023's domestic box office finished at $9.05 billion](https://www.thewrap.com/2023-box-office-in-review-a-year-where-filmmakers-flourished-and-franchises-failed/), still 20% below 2019's $11.3 billion, so adding friction for the casual moviegoer is the wrong bet."
+    },
+    {
+      "id": 1127,
+      "topic_id": 25,
+      "side": "for",
+      "author_demo_id": "demo-137",
+      "body": "My players can name three sportsbooks and cannot name their state senator. These ads run during the games kids watch with their families, and they sell betting as part of fandom itself: same-screen odds, celebrity cameos, 'risk-free' bets that are nothing of the kind. Since the 2018 Supreme Court decision opened legal betting nationwide, calls to the national problem-gambling helpline have climbed, and counselors keep saying the same thing, that the ads reach people before the harm does ([helpline](https://www.ncpgambling.org/help-treatment/national-helpline/)). We banned tobacco ads from TV because kids were watching. A whistle-to-whistle ban during live games is the same principle with fifty years of precedent."
+    },
+    {
+      "id": 1128,
+      "topic_id": 25,
+      "side": "for",
+      "author_demo_id": "demo-138",
+      "body": "I counsel gamblers, and nearly every relapse story starts with a trigger: a phone buzz, a bad beat, or an ad in the fourth quarter promising a second chance. Britain tried the moderate version in 2019, a voluntary [whistle-to-whistle ban](https://bettingandgamingcouncil.com) on TV betting ads around live sport, and the industry's own review found children's exposure to those ads fell sharply. That tells you the ads were reaching kids in the first place. Nobody is proposing to ban betting. We are proposing to stop piping it into living rooms at full volume during the family event of the week."
+    },
+    {
+      "id": 1129,
+      "topic_id": 25,
+      "side": "for",
+      "author_demo_id": "demo-139",
+      "body": "Follow the money and the ban argues itself. Networks take gambling ad dollars, then the same networks' pregame shows quote the odds, a closed loop that turns the broadcast into a sportsbook commercial with kickoffs in between. Legal wagering handle hit roughly $120 billion in 2023, per the [American Gaming Association](https://www.americangaming.org), so the industry can afford to find customers without owning the family time slot. And the public pays twice: once in the ads, again in the addiction treatment and bankruptcies that tax-funded programs absorb. Ban the ads from live broadcasts, let the books advertise everywhere else adults actually choose to look, and keep the game a game."
+    },
+    {
+      "id": 1130,
+      "topic_id": 25,
+      "side": "against",
+      "author_demo_id": "demo-140",
+      "body": "I own a sports bar, and I watch what actually fills seats: regulars who bet ten dollars on their team and stay for wings and three more rounds. Those customers exist because betting ads brought them into a legal, regulated market instead of an offshore site or a bookie. Push the ads off TV and the demand does not vanish; it migrates to the gray market, where nobody checks IDs, nobody funds treatment, and nobody pays state taxes. My state earmarks betting tax revenue for schools and problem-gambling programs. Kill the legal funnel and you starve the very programs the ban's supporters say they care about. And the legal funnel is huge: [Nielsen found sportsbooks spent $1.1 billion on ads in 2023](https://www.gamingtoday.com/news/sports-betting-operators-cut-ad-spending-21-percent-2023/), money that flows through regulated channels that generate state tax revenue."
+    },
+    {
+      "id": 1131,
+      "topic_id": 25,
+      "side": "against",
+      "author_demo_id": "demo-141",
+      "body": "Someone has to pay for the games being on TV. The NFL's media deals are worth well over $100 billion, and networks recoup that through advertising, with sportsbooks now among the biggest buyers. Ban the category and the money comes from somewhere: higher cable bills, more games behind extra paywalls, or thinner production. Fans already complain about blackouts and streaming fragmentation; making broadcasts more expensive to produce helps nobody. The honest trade is this: adults seeing ads for a legal product, or adults paying more to watch football. I will take the ads. The deals are staggering: [the NFL finalized media rights worth $10 billion a year](https://www.sportsbusinessjournal.com/Daily/Closing-Bell/2021/03/18/NFL-rights/), $110 billion over 11 years, and that money has to come from somewhere."
+    },
+    {
+      "id": 1132,
+      "topic_id": 25,
+      "side": "against",
+      "author_demo_id": "demo-142",
+      "body": "I am 38, I bet $25 most Sundays, I set a weekly limit in the app, and I have never missed a bill. A broadcast ban treats me like a child because some other adult cannot stop. We do not ban beer commercials because alcoholics exist; we fund treatment and require 'drink responsibly' tags. Do the same here: mandatory deposit limits, real funding for the helpline, honest odds in the ads. Prohibition by timeslot tells adults the government trusts them to vote and serve on juries but not to see a commercial. That is not protection, it is condescension. The tools already exist: [regulators require limit-setting features](https://www.legalsportsreport.com/responsible-gambling/) like deposit, wager, and session-time limits at licensed sportsbooks. Use those; do not ban the ad slot."
+    },
+    {
+      "id": 1133,
+      "topic_id": 26,
+      "side": "for",
+      "author_demo_id": "demo-153",
+      "body": "I work four tens in a hospital, and I am here to say the five-day office week is a habit, not a law of physics. The UK trial put 61 companies and nearly 3,000 workers on reduced hours for full pay, and the results embarrassed the skeptics: sick days fell by roughly two-thirds, burnout dropped, and most companies kept the schedule after the trial ended ([results](https://www.4dayweek.com)). Iceland ran the larger experiment years earlier with 2,500 public workers and found well-being rose while services held steady ([Autonomy](https://autonomy.work)). We automated half the paperwork of 1990 and gave workers none of the dividend. A four-day week just collects it."
+    },
+    {
+      "id": 1134,
+      "topic_id": 26,
+      "side": "for",
+      "author_demo_id": "demo-154",
+      "body": "I run a 14-person marketing firm and we went to four days in 2023. Here is what the think pieces miss: hiring got easier overnight. Candidates pick us over bigger salaries because of Fridays, and turnover fell to nearly zero, which saves me far more than one day of output ever cost. We protect the schedule the boring way: meetings get agendas, Fridays are truly off, and client deadlines did not move. Revenue is up, not down. The five-day week assumes attention is infinite. It is not, and every owner pretending otherwise is paying for it in churn. The data backs it up: [4 Day Week Global's pilot results](https://gpa.net/blogs/global/global-findings-from-four-day-work-week-pilot) showed revenue up across participating companies alongside drops in stress, fatigue, and resignations."
+    },
+    {
+      "id": 1135,
+      "topic_id": 26,
+      "side": "for",
+      "author_demo_id": "demo-155",
+      "body": "The strongest result from the UK trial was not revenue, it was who did the dishes. Researchers found men on the four-day schedule spent significantly more time on childcare and housework, the kind of gender-equity gain that decades of corporate pledges never delivered. My daughter's daycare pickup stopped being a negotiation the week my company piloted Fridays off. Critics call this a perk for laptop workers, and they are half right, which is why the policy conversation should be about overtime rules and staffing, not about denying office workers a proven improvement. A shorter week does not just rest people. It redistributes life. The UK trial measured it: [men spent 27% more time on childcare](https://www.popsci.com/health/four-day-work-week-study-uk/) during the trial, a real shift in who does the care work."
+    },
+    {
+      "id": 1136,
+      "topic_id": 26,
+      "side": "against",
+      "author_demo_id": "demo-156",
+      "body": "My school district tried a four-day week and parents hated it. Not the idea, the logistics: Fridays became a childcare scramble for every family without a flexible job or a grandparent nearby, which is most of my classroom. The research on student outcomes is mixed at best, and shorter weeks often mean longer days that exhaust younger kids. Office trials do not translate to schools, hospitals, or anyone whose job is covering other human beings. A national push for four days would hand affluent knowledge workers a benefit while quietly taxing working parents. Fix staffing and pay first; the calendar is not the crisis. The research backs the logistics worry: [Oregon State's Paul Thompson found math and reading performance dropped](https://berkeleyhighjacket.com/2023/opinion/four-day-school-weeks-are-not-practical/) in non-rural schools on four-day weeks, alongside spikes in absenteeism."
+    },
+    {
+      "id": 1137,
+      "topic_id": 26,
+      "side": "against",
+      "author_demo_id": "demo-157",
+      "body": "I own a restaurant. My staff cannot serve Friday dinner in four days, and I cannot pay five days of wages for four days of covers without raising prices my customers cannot absorb. The famous trials share a flaw: companies volunteered, which means the ones who suspected it would work signed up, and researchers measured the honeymoon period. Nobody ran a randomized trial on a diner, a daycare, or a plumbing company. Until someone shows this working for businesses that cannot compress hours or go remote, 'the standard workweek' is a slogan for about a third of the economy, and the rest of us get the lecture. The margins are brutal: [the National Restaurant Association found](https://restaurant.org/research-and-media/research/restaurant-economic-insights/analysis-commentary/elevated-labor-costs-had-a-significant-impact-on-restaurant-profitability-in-2024/) full-service operators spent a median 36.5% of sales on labor in 2024, and those who let it run higher were far more likely to lose money."
+    },
+    {
+      "id": 1138,
+      "topic_id": 26,
+      "side": "against",
+      "author_demo_id": "demo-158",
+      "body": "I spent forty years watching management fads, and this one has the classic tells: self-selected participants, short timelines, and outcomes measured by the same consultants selling the idea. The UK trial ran six months; nobody knows what happens in year three when competitors who kept five days pull ahead. Microsoft Japan's famous 40% productivity jump in 2019 lasted one month, in August, when half the country is on holiday anyway. I am not against rest. I am against declaring victory from a pilot and legislating it. Let companies experiment, publish honest five-year data, and then we will talk about standards. Even sympathetic reviewers agree on the gap: [What Works Wellbeing's review](https://whatworkswellbeing.org/blog/findings-from-four-day-work-week-trial/) notes the trial had no real counterfactual, since participants volunteered and were compared only to their past selves."
+    },
+    {
+      "id": 1139,
+      "topic_id": 11,
+      "side": "for",
+      "author_demo_id": "demo-169",
+      "body": "I spent three years writing headlines for a living, and I can tell you outrage is not an accident, it is inventory. The accounts that farm it post forty times a day because every furious share pays the same as a thoughtful one. The [Facebook Files reporting](https://www.wsj.com/articles/the-facebook-files-11631713039) showed the company's own researchers found its systems rewarded divisive content, which means the platforms built the slot machine and now act surprised that people pull the lever. A share-pause will not fix the business model, but it raises the cost of the cheapest trick in the book: post first, verify never. Friction targets the supply chain, not the speaker."
+    },
+    {
+      "id": 1140,
+      "topic_id": 11,
+      "side": "against",
+      "author_demo_id": "demo-170",
+      "body": "I run a small-town news site, and my most-shared posts are exactly what your filter would call outrage: a missing teenager, a boil-water notice, a factory closing that puts 200 neighbors out of work. Those posts are emotional because the events are emotional, and a pop-up asking 'are you sure?' injects doubt into urgent community information. Meanwhile the actual rage-bait farms, with their bot networks and engagement pods, will test their way around any prompt within a week. We have watched this movie with spam filters: the professionals adapt, and the collateral damage lands on the local publisher with no compliance department. With [news deserts](https://localnewsinitiative.northwestern.edu/research/state-of-local-news/) spreading, community journalism does not need another algorithmic speed bump."
+    },
+    {
+      "id": 1141,
+      "topic_id": 12,
+      "side": "for",
+      "author_demo_id": "demo-121",
+      "body": "Nobody taught me any of this and I paid for it at nineteen, doomscrolling through everyone else's highlight reel my first semester until my sleep and my grades both cratered. What finally helped was not a lecture, it was a psych elective where we tracked our own usage for two weeks and designed personal rules, like no phone in the bedroom. Schools already do versions of this for nutrition and driver's ed because teenagers are bad at long-term thinking; that is developmental science, not nannying. Nearly half of teens say they are online [almost constantly](https://www.pewresearch.org/internet/2022/08/10/teens-social-media-and-technology-2022/), and we hand them the device with zero instruction. A practical habits class is the least we owe them."
+    },
+    {
+      "id": 1142,
+      "topic_id": 12,
+      "side": "against",
+      "author_demo_id": "demo-122",
+      "body": "I teach juniors, and I promise you a state-mandated 'healthy social media' curriculum becomes a political football by October. One parent's 'managing comparison culture' is another parent's 'the school shaming my daughter's modeling account.' We already watch this fight play out over library books and health class; adding a unit where teachers grade students' relationship with their phones hands every school board a new battlefield. And the evidence that classroom lessons change teen phone habits is thin, because the behavior is driven by peers, not pamphlets. Give counselors more hours and let families handle values. The classroom cannot fix what the cafeteria rewards. It is already happening with other curricula: [school boards have become culture-war battlegrounds](https://www.usatoday.com/story/opinion/columnist/2026/08/21/florida-election-sarasota-schools-democrats-moms-liberty/91389496007/) where debates over books and lessons escalate into ideological fights."
+    },
+    {
+      "id": 1143,
+      "topic_id": 13,
+      "side": "for",
+      "author_demo_id": "demo-131",
+      "body": "I work pediatrics, and the pattern is unmistakable: the kids who sleep badly are the kids whose whole house glows until midnight. Teenagers need eight to ten hours, and evening screen light pushes melatonin later while the group chat keeps the brain buzzing, a combination the [Sleep Foundation](https://www.sleepfoundation.org/teens-and-sleep) flags as a major driver of teen sleep debt. Individual limits fail here because a kid's willpower is competing with every notification the parents are also answering. A shared household wind-down, screens off at ten, the on-call phone waiting in the kitchen, changes the environment instead of testing the child. You cannot out-discipline a slot machine. You can unplug the room."
+    },
+    {
+      "id": 1144,
+      "topic_id": 13,
+      "side": "against",
+      "author_demo_id": "demo-132",
+      "body": "Shared screen-free hours assume a family that eats dinner together at six, and that is not my house. I work rotating warehouse shifts, my ex has the kids half the week, and our 'family time' is a video call with grandma at nine or my son showing me a game clip at midnight after my shift. A rigid household blackout would kill the few connection rituals we have, because our togetherness runs through screens, not around them. Roughly [one in six US workers](https://www.bls.gov/news.release/archives/flex2_09242019.htm) is on a non-daytime schedule, and plenty more juggle gig work and caregiving. Rules built for the 9-to-5 family keep treating the rest of us as edge cases. We are not."
+    },
+    {
+      "id": 1145,
+      "topic_id": 14,
+      "side": "for",
+      "author_demo_id": "demo-141",
+      "body": "I spent thirty years in public health, and every win looked boring up close. Smoking did not fall from 42% of adults in 1965 to around 12% today because of one dramatic intervention; it fell because of quitlines, taxes, warning labels, and a million unglamorous conversations in clinics, per [CDC data](https://www.cdc.gov/tobacco/data-statistics). Digital well-being needs the same plumbing: routine screening questions, referral lists, community programs. None of it exciting, all of it cumulative. The 'too vague' objection was raised about mental-health screening too, and now depression screening is a standard checkup question. Public health is how a society decides a problem is real. Time to decide."
+    },
+    {
+      "id": 1146,
+      "topic_id": 14,
+      "side": "against",
+      "author_demo_id": "demo-142",
+      "body": "I work at a county health department, and everyone should understand what 'routine public-health service' means on the ground: a waiting list. We lost staff during COVID, our clinic runs limited hours, and our nurses already cover three programs each. Adding digital-wellness screening means either new money, which is not coming, or quietly siphoning time from vaccinations and maternal health, which is. It also assumes we know what to do with a positive screen, and for compulsive scrolling we mostly do not; there is no nicotine patch for the feed. [KFF's reporting](https://kffhealthnews.org/public-health/us-public-health-system-underfunded-under-threat-faces-more-cuts-amid-covid-pandemic/) on the hollowed-out public-health workforce is not an argument against caring. It is an argument against assigning new missions to a system running on fumes."
+    }
+  ],
+  "comments": [
+    {
+      "id": 10201,
+      "case_id": 1121,
+      "author_demo_id": "demo-127",
+      "parent_id": null,
+      "stance": "agree",
+      "body": "Alamo is the reason I still go to theaters at all. I drive 40 minutes past two multiplexes to get there because I know nobody's phone will light up. That is the whole business model."
+    },
+    {
+      "id": 10202,
+      "case_id": 1121,
+      "author_demo_id": "demo-128",
+      "parent_id": 10201,
+      "stance": "strongly_agree",
+      "body": "Same. The ejection policy sounds harsh until you watch someone get walked out during previews and feel the entire audience relax. Worth every mile."
+    },
+    {
+      "id": 10203,
+      "case_id": 1124,
+      "author_demo_id": "demo-129",
+      "parent_id": null,
+      "stance": "agree",
+      "body": "The sitter point is the whole ballgame for me. I am not leaving my phone unreachable for three hours with a six-month-old at home. Phone-free screenings as an option, sure. As the default, you have lost my ticket money."
+    },
+    {
+      "id": 10204,
+      "case_id": 1124,
+      "author_demo_id": "demo-130",
+      "parent_id": 10203,
+      "stance": "strongly_disagree",
+      "body": "Labeled or not, flipping the default tells parents like me that we are the problem. Theaters should be courting the sitter-paying crowd, not lecturing it."
+    },
+    {
+      "id": 10205,
+      "case_id": 1125,
+      "author_demo_id": "demo-131",
+      "parent_id": null,
+      "stance": "strongly_agree",
+      "body": "Type 1 diabetic here. My glucose alerts go straight to my phone and I am not explaining my pancreas to a teenager with a flashlight. Hard no on default pouches."
+    },
+    {
+      "id": 10206,
+      "case_id": 1125,
+      "author_demo_id": "demo-132",
+      "parent_id": 10205,
+      "stance": "agree",
+      "body": "The captioning point matters too. My dad uses a captioning app because the theater's devices are always broken or checked out. A pouch default would lock him out of the movie entirely."
+    },
+    {
+      "id": 10207,
+      "case_id": 1122,
+      "author_demo_id": "demo-133",
+      "parent_id": null,
+      "stance": "neutral",
+      "body": "Worked at a theater in college too, and honestly the glow complaints were real but so were the fights. Half the confrontations I saw started because a customer tried to enforce the rule themselves."
+    },
+    {
+      "id": 10208,
+      "case_id": 1122,
+      "author_demo_id": "demo-134",
+      "parent_id": 10207,
+      "stance": "disagree",
+      "body": "That is an argument for staff enforcing a clear rule, not for having no rule. Ushers improvising every night is what causes the fights."
+    },
+    {
+      "id": 10209,
+      "case_id": 1126,
+      "author_demo_id": "demo-135",
+      "parent_id": null,
+      "stance": "agree",
+      "body": "The box office numbers are the part nobody arguing for this wants to face. Theaters need seats filled, and every added hassle is another reason to wait for streaming."
+    },
+    {
+      "id": 10210,
+      "case_id": 1126,
+      "author_demo_id": "demo-136",
+      "parent_id": 10209,
+      "stance": "disagree",
+      "body": "Or the added hassle is why people pay for Alamo instead of the AMC down the street. Friction that protects the product is not the same as friction for its own sake."
+    },
+    {
+      "id": 10211,
+      "case_id": 1127,
+      "author_demo_id": "demo-143",
+      "parent_id": null,
+      "stance": "agree",
+      "body": "Teacher here too. My students have sportsbook apps sitting next to their banking apps. They did not find those on their own; the ads found them during Monday Night Football."
+    },
+    {
+      "id": 10212,
+      "case_id": 1127,
+      "author_demo_id": "demo-144",
+      "parent_id": 10211,
+      "stance": "strongly_agree",
+      "body": "The 'risk-free bet' language is what gets me. There is no such thing, and marketing it to teenagers during a game should embarrass everyone involved."
+    },
+    {
+      "id": 10213,
+      "case_id": 1130,
+      "author_demo_id": "demo-145",
+      "parent_id": null,
+      "stance": "agree",
+      "body": "The offshore point is underrated. My cousin bets through a site based in Costa Rica with zero limits and zero help resources. The legal market is the only one that answers to anyone."
+    },
+    {
+      "id": 10214,
+      "case_id": 1130,
+      "author_demo_id": "demo-146",
+      "parent_id": 10213,
+      "stance": "disagree",
+      "body": "But the ads are not what keeps him legal; the app on his phone is. You can ban broadcast ads without banning the product. Nobody needs a parlay ad during the Super Bowl to find a sportsbook."
+    },
+    {
+      "id": 10215,
+      "case_id": 1132,
+      "author_demo_id": "demo-147",
+      "parent_id": null,
+      "stance": "strongly_disagree",
+      "body": "This is pure nanny-state thinking. I read the odds, I set limits, I lose sometimes. That is adulthood. If we banned every ad for something someone might abuse, TV would be blank."
+    },
+    {
+      "id": 10216,
+      "case_id": 1132,
+      "author_demo_id": "demo-148",
+      "parent_id": 10215,
+      "stance": "disagree",
+      "body": "Nobody is banning your $25 Sundays. A whistle-to-whistle rule just moves the ads out of the game window; you would still see them everywhere else."
+    },
+    {
+      "id": 10217,
+      "case_id": 1128,
+      "author_demo_id": "demo-149",
+      "parent_id": null,
+      "stance": "neutral",
+      "body": "I do not know where I land. My brother is in recovery and the ads genuinely rattle him, but he also says the apps' push notifications are ten times worse than anything on TV."
+    },
+    {
+      "id": 10218,
+      "case_id": 1128,
+      "author_demo_id": "demo-150",
+      "parent_id": 10217,
+      "stance": "agree",
+      "body": "The push notification point actually supports the ban. If the apps are already the worst trigger, why add broadcast TV on top? Fewer triggers is fewer triggers."
+    },
+    {
+      "id": 10219,
+      "case_id": 1129,
+      "author_demo_id": "demo-151",
+      "parent_id": null,
+      "stance": "agree",
+      "body": "The closed-loop point is sharp. The pregame show quotes the spread, the broadcast runs the ad, the app sponsors the halftime report. At some point it is not coverage, it is a funnel."
+    },
+    {
+      "id": 10220,
+      "case_id": 1131,
+      "author_demo_id": "demo-152",
+      "parent_id": null,
+      "stance": "disagree",
+      "body": "'The money has to come from somewhere' is right, but the answer cannot be 'so let gambling fund football.' Pharma ads fund the news too, and we all see how that distorts coverage."
+    },
+    {
+      "id": 10221,
+      "case_id": 1133,
+      "author_demo_id": "demo-159",
+      "parent_id": null,
+      "stance": "strongly_agree",
+      "body": "ER nurse, four twelves here. The five-day crowd has no idea what a real schedule debate looks like, and they are still the ones setting the default for everyone."
+    },
+    {
+      "id": 10222,
+      "case_id": 1133,
+      "author_demo_id": "demo-160",
+      "parent_id": 10221,
+      "stance": "agree",
+      "body": "And nurses prove the compressed schedule works under real pressure. If a hospital floor can hand off patients safely on four tens, an office can survive a quiet Friday."
+    },
+    {
+      "id": 10223,
+      "case_id": 1136,
+      "author_demo_id": "demo-161",
+      "parent_id": null,
+      "stance": "agree",
+      "body": "The Friday childcare scramble is exactly what happened in my district. Two hundred families suddenly needing Friday care, and the only winners were the for-profit centers that doubled their rates."
+    },
+    {
+      "id": 10224,
+      "case_id": 1136,
+      "author_demo_id": "demo-162",
+      "parent_id": 10223,
+      "stance": "disagree",
+      "body": "But that is an argument for funding Friday programs, not for keeping everyone on five days. We do not reject good policy because the transition is inconvenient."
+    },
+    {
+      "id": 10225,
+      "case_id": 1137,
+      "author_demo_id": "demo-163",
+      "parent_id": null,
+      "stance": "strongly_agree",
+      "body": "Restaurant manager here. Every one of these trials is tech and marketing firms. Come run a four-day week on a line cook's schedule and get back to me."
+    },
+    {
+      "id": 10226,
+      "case_id": 1137,
+      "author_demo_id": "demo-164",
+      "parent_id": 10225,
+      "stance": "disagree",
+      "body": "Nobody is proposing line cooks work four tens with no coverage plan. The policy conversation is about overtime thresholds and norms, not forcing every diner onto the same calendar."
+    },
+    {
+      "id": 10227,
+      "case_id": 1138,
+      "author_demo_id": "demo-165",
+      "parent_id": null,
+      "stance": "neutral",
+      "body": "The honest answer is we do not know the long-term effects, and both sides are overstating. Six months of self-reported well-being is not nothing, but it is not settled science either."
+    },
+    {
+      "id": 10228,
+      "case_id": 1138,
+      "author_demo_id": "demo-166",
+      "parent_id": 10227,
+      "stance": "disagree",
+      "body": "We never have perfect long-term data before acting. Smoking policy, seatbelt laws, the weekend itself all started with short-term evidence and conviction."
+    },
+    {
+      "id": 10229,
+      "case_id": 1135,
+      "author_demo_id": "demo-167",
+      "parent_id": null,
+      "stance": "agree",
+      "body": "The dishes finding hit home. My wife and I both went four-day during COVID-era pilots and it was the first time the mental load felt close to shared. That alone is worth something."
+    },
+    {
+      "id": 10230,
+      "case_id": 1135,
+      "author_demo_id": "demo-168",
+      "parent_id": 10229,
+      "stance": "strongly_disagree",
+      "body": "Anecdotes about dishes do not justify restructuring the labor market. Plenty of families split chores fine on five days; this is a marriage problem dressed up as policy."
+    },
+    {
+      "id": 10231,
+      "case_id": 1139,
+      "author_demo_id": "demo-171",
+      "parent_id": null,
+      "stance": "agree",
+      "body": "Former social media manager here. We literally had a spreadsheet column for 'outrage potential' when drafting posts. The incentives are exactly as described."
+    },
+    {
+      "id": 10232,
+      "case_id": 1139,
+      "author_demo_id": "demo-172",
+      "parent_id": 10231,
+      "stance": "strongly_agree",
+      "body": "And the platforms know. Every 'we are just a neutral platform' statement dies the moment you remember the internal research they buried."
+    },
+    {
+      "id": 10233,
+      "case_id": 1140,
+      "author_demo_id": "demo-173",
+      "parent_id": null,
+      "stance": "agree",
+      "body": "Small-town reporter here too. Our boil-water notice got flagged as 'sensitive content' last year and reach tanked. The filter cannot tell urgency from outrage."
+    },
+    {
+      "id": 10234,
+      "case_id": 1140,
+      "author_demo_id": "demo-174",
+      "parent_id": 10233,
+      "stance": "disagree",
+      "body": "But a share-pause is not a takedown. Your readers would still see the notice; they would just tap once more. That is a pretty small price."
+    },
+    {
+      "id": 10235,
+      "case_id": 1139,
+      "author_demo_id": "demo-175",
+      "parent_id": null,
+      "stance": "neutral",
+      "body": "I keep going back and forth. The rage farms are real, but so is the risk that 'friction' becomes whatever the platform's trust and safety team feels like that quarter."
+    },
+    {
+      "id": 10236,
+      "case_id": 1139,
+      "author_demo_id": "demo-176",
+      "parent_id": 10235,
+      "stance": "disagree",
+      "body": "The trust and safety worry is fair, but a plain time-delay is the least abusable tool available. No judgment call, no label, just a pause applied to everyone equally."
+    },
+    {
+      "id": 10237,
+      "case_id": 1140,
+      "author_demo_id": "demo-177",
+      "parent_id": null,
+      "stance": "strongly_disagree",
+      "body": "This is special pleading. Every industry claims a rule will hurt it uniquely. The data on falsehoods outrunning the truth is overwhelming; act on it."
+    },
+    {
+      "id": 10238,
+      "case_id": 1140,
+      "author_demo_id": "demo-178",
+      "parent_id": 10237,
+      "stance": "agree",
+      "body": "It is not special pleading when the collateral damage is the last local paper in a county. The rage farms have lawyers; my newsroom has me."
+    },
+    {
+      "id": 10239,
+      "case_id": 1141,
+      "author_demo_id": "demo-123",
+      "parent_id": null,
+      "stance": "strongly_agree",
+      "body": "College junior here. The screen-time audit assignment in my psych class did more for me than four years of adults saying 'put the phone down.' Practice beats preaching."
+    },
+    {
+      "id": 10240,
+      "case_id": 1141,
+      "author_demo_id": "demo-124",
+      "parent_id": 10239,
+      "stance": "agree",
+      "body": "Same. Designing my own rules made them stick because they were mine. A mandated app limit from my parents lasted about a week."
+    },
+    {
+      "id": 10241,
+      "case_id": 1142,
+      "author_demo_id": "demo-125",
+      "parent_id": null,
+      "stance": "agree",
+      "body": "Teacher here, and the politics point is the one nobody says out loud. Whatever unit we design, half the parents will call it indoctrination and the other half will call it censorship."
+    },
+    {
+      "id": 10242,
+      "case_id": 1142,
+      "author_demo_id": "demo-126",
+      "parent_id": 10241,
+      "stance": "disagree",
+      "body": "Then keep the curriculum skills-only: how feeds rank content, how notifications are engineered. Nobody can honestly call media literacy about algorithms indoctrination."
+    },
+    {
+      "id": 10243,
+      "case_id": 1141,
+      "author_demo_id": "demo-127",
+      "parent_id": null,
+      "stance": "neutral",
+      "body": "I see both sides. My daughter's school did a decent unit on this, but it was one week in health class competing with everything else. Hard to know how much stuck."
+    },
+    {
+      "id": 10244,
+      "case_id": 1141,
+      "author_demo_id": "demo-128",
+      "parent_id": 10243,
+      "stance": "agree",
+      "body": "One week is the real problem. You cannot teach driver's ed in a week either. If we are serious, it needs to be a real unit, not a health-class footnote."
+    },
+    {
+      "id": 10245,
+      "case_id": 1142,
+      "author_demo_id": "demo-129",
+      "parent_id": null,
+      "stance": "strongly_disagree",
+      "body": "The 'classroom cannot fix it' argument could justify never teaching anything hard. Schools teach plenty of things the cafeteria undermines. That is the job."
+    },
+    {
+      "id": 10246,
+      "case_id": 1142,
+      "author_demo_id": "demo-130",
+      "parent_id": 10245,
+      "stance": "disagree",
+      "body": "Teaching algebra is not culture-war territory. Grading kids on their screen habits absolutely would be. The comparison does not hold."
+    },
+    {
+      "id": 10247,
+      "case_id": 1143,
+      "author_demo_id": "demo-133",
+      "parent_id": null,
+      "stance": "agree",
+      "body": "The slot machine line is perfect. I stopped trying to willpower my way past notifications and started charging my phone in the kitchen. Environment beats discipline every time."
+    },
+    {
+      "id": 10248,
+      "case_id": 1143,
+      "author_demo_id": "demo-134",
+      "parent_id": 10247,
+      "stance": "strongly_agree",
+      "body": "Kitchen charging changed our house too. My teenager complained for three days and then started reading again. Three days!"
+    },
+    {
+      "id": 10249,
+      "case_id": 1144,
+      "author_demo_id": "demo-135",
+      "parent_id": null,
+      "stance": "agree",
+      "body": "Night-shift nurse, single mom. Our family video call with grandma happens at 10pm because that is when I am home and awake. A 'shared wind-down at ten' would end the best part of our week."
+    },
+    {
+      "id": 10250,
+      "case_id": 1144,
+      "author_demo_id": "demo-136",
+      "parent_id": 10249,
+      "stance": "disagree",
+      "body": "But the proposal allows exceptions; the case literally keeps the on-call phone in the kitchen. A default with exceptions is not a prison."
+    },
+    {
+      "id": 10251,
+      "case_id": 1143,
+      "author_demo_id": "demo-137",
+      "parent_id": null,
+      "stance": "neutral",
+      "body": "We are a 9-to-5 family and even we could not hold a full blackout. What worked was one rule: no phones at the dinner table. Small, enforceable, done."
+    },
+    {
+      "id": 10252,
+      "case_id": 1143,
+      "author_demo_id": "demo-138",
+      "parent_id": 10251,
+      "stance": "agree",
+      "body": "The dinner-table rule is the realistic version of this. Maybe the debate should not be all-or-nothing hours but one sacred slot a day."
+    },
+    {
+      "id": 10253,
+      "case_id": 1144,
+      "author_demo_id": "demo-139",
+      "parent_id": null,
+      "stance": "strongly_disagree",
+      "body": "Honestly the whole premise drips with condescension toward families that do not look like a sitcom. Not everyone gets a synchronized evening, and that is not a failure."
+    },
+    {
+      "id": 10254,
+      "case_id": 1144,
+      "author_demo_id": "demo-140",
+      "parent_id": 10253,
+      "stance": "disagree",
+      "body": "It is not condescension to point out that synchronized evenings help kids sleep. The case for exceptions is strong, but the sleep science does not disappear because schedules are hard."
+    },
+    {
+      "id": 10255,
+      "case_id": 1145,
+      "author_demo_id": "demo-143",
+      "parent_id": null,
+      "stance": "agree",
+      "body": "The smoking analogy is the strongest argument here. Nobody thinks a single quitline call ends smoking; it is the accumulation of boring infrastructure. That is exactly what is missing for digital habits."
+    },
+    {
+      "id": 10256,
+      "case_id": 1145,
+      "author_demo_id": "demo-144",
+      "parent_id": 10255,
+      "stance": "strongly_agree",
+      "body": "And the mental-health screening precedent seals it. Twenty years ago 'screen every teen for depression' sounded vague and intrusive. Now it is just a checkup."
+    },
+    {
+      "id": 10257,
+      "case_id": 1146,
+      "author_demo_id": "demo-145",
+      "parent_id": null,
+      "stance": "agree",
+      "body": "I do intake at a community clinic. We already screen for food insecurity, housing, domestic violence, and depression in fifteen minutes. Adding another screen means doing all of them worse."
+    },
+    {
+      "id": 10258,
+      "case_id": 1146,
+      "author_demo_id": "demo-146",
+      "parent_id": 10257,
+      "stance": "disagree",
+      "body": "Or the digital questions ride along on the existing workflow for thirty extra seconds. Not every new screen needs a new appointment."
+    },
+    {
+      "id": 10259,
+      "case_id": 1145,
+      "author_demo_id": "demo-147",
+      "parent_id": null,
+      "stance": "neutral",
+      "body": "I like the ambition but worry about the evidence bar. Public health earned its authority with clear outcomes: fewer smokers, fewer deaths. What is the equivalent metric for digital well-being?"
+    },
+    {
+      "id": 10260,
+      "case_id": 1145,
+      "author_demo_id": "demo-148",
+      "parent_id": 10259,
+      "stance": "agree",
+      "body": "Sleep hours and anxiety scores are measurable. We do not need perfect metrics to start; smoking research began with crude surveys too."
+    },
+    {
+      "id": 10261,
+      "case_id": 1146,
+      "author_demo_id": "demo-149",
+      "parent_id": null,
+      "stance": "strongly_disagree",
+      "body": "More bureaucracy is not the answer to a tech problem. The platforms engineered the addiction; making taxpayers fund the cleanup while the profits stay private is backwards."
+    },
+    {
+      "id": 10262,
+      "case_id": 1146,
+      "author_demo_id": "demo-150",
+      "parent_id": 10261,
+      "stance": "disagree",
+      "body": "Making polluters pay is a separate fight. We can tax or fine platforms AND build support services. Refusing the services until the companies pay up just leaves families stranded."
+    },
+    {
+      "id": 10263,
+      "case_id": 1123,
+      "author_demo_id": "demo-045",
+      "parent_id": null,
+      "stance": "strongly_agree",
+      "body": "The compromise framing is exactly right. A default with opt-out screenings means nobody loses anything, and the people who most need quiet finally get it. Theaters already tier screenings by age and format, so this is not some alien concept."
+    },
+    {
+      "id": 10264,
+      "case_id": 1123,
+      "author_demo_id": "demo-088",
+      "parent_id": null,
+      "stance": "disagree",
+      "body": "I want to agree, but enforcement is where this dies. One glowing screen in a dark theater ruins the scene for fifty people, and ushers will not confront every offender. The policy only works if the consequence is real, like Alamo's ejection rule."
+    },
+    {
+      "id": 10265,
+      "case_id": 1123,
+      "author_demo_id": "demo-157",
+      "parent_id": 10264,
+      "stance": "agree",
+      "body": "Alamo proves enforcement can work when it is the brand. The problem is a generic multiplex adopting the rule without the culture. Maybe the answer is certification: theaters that want the phone-free label have to actually enforce it."
+    },
+    {
+      "id": 10266,
+      "case_id": 1134,
+      "author_demo_id": "demo-067",
+      "parent_id": null,
+      "stance": "agree",
+      "body": "The hiring point is underrated. In a tight labor market, Fridays off beats a 5% raise for a lot of candidates, and it costs the company nothing in cash. That is a recruiting edge you cannot buy any other way."
+    },
+    {
+      "id": 10267,
+      "case_id": 1134,
+      "author_demo_id": "demo-191",
+      "parent_id": null,
+      "stance": "neutral",
+      "body": "It worked for a 14-person marketing firm, and I believe them. But the generalizability question is real. The trials keep showing office and knowledge work, and I have yet to see a convincing version for shift work."
+    },
+    {
+      "id": 10268,
+      "case_id": 1134,
+      "author_demo_id": "demo-033",
+      "parent_id": 10267,
+      "stance": "disagree",
+      "body": "That is the core problem with the whole debate. Both sides keep generalizing from their own workplace. The honest policy is sector by sector, not one national standard."
+    }
+  ]
+}

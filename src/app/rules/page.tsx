@@ -7,6 +7,10 @@ export const metadata: Metadata = {
 
 const RULES: { title: string; body: string }[] = [
   {
+    title: '13 and up only',
+    body: 'You must be at least 13 years old to join Debait Club. Signup requires a birth date, and accounts found to belong to under-13s will be removed.',
+  },
+  {
     title: 'Attack the case, never the person',
     body: 'Disagree as fiercely as you like with what someone wrote. The moment it becomes about who they are instead of what they said, you have lost the debate and broken the rules.',
   },
@@ -27,8 +31,8 @@ const RULES: { title: string; body: string }[] = [
     body: 'Cases should make a claim and back it with reasoning or evidence. "You are wrong" is not a case. Links in [text](url) format are encouraged.',
   },
   {
-    title: 'Stay PG-13',
-    body: 'You only get 1 f-bomb, so choose wisely. Beyond that, keep the language clean enough for a bright thirteen-year-old — which, given the signup rules, might literally be reading.',
+    title: 'Keep it clean',
+    body: 'No profanity, period. Strong language is blocked automatically, and repeat offenders lose posting privileges. Keep it clean enough for a bright thirteen-year-old — which, given the signup rules, might literally be reading.',
   },
   {
     title: 'Own your words',

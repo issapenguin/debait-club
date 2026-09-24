@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { fetchCaseDetail, getCurrentUserId } from '@/lib/data';
 import { formatDate, renderRichText } from '@/lib/format';
@@ -6,6 +7,29 @@ import { CaseCard } from '@/components/CaseCard';
 import { CommentThread } from '@/components/CommentThread';
 
 export const dynamic = 'force-dynamic';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const userId = await getCurrentUserId();
+  const detail = await fetchCaseDetail(Number(id), userId);
+  if (!detail) return {};
+  const { caseRow, topic } = detail;
+  const snippet = caseRow.body.slice(0, 160).replace(/\s+/g, ' ').trim();
+  const description = `${caseRow.side === 'for' ? 'FOR' : 'AGAINST'}: ${snippet}… Debate "${topic.proposition}" on Debait Club.`;
+  return {
+    title: topic.proposition,
+    description,
+    openGraph: {
+      title: `${topic.proposition} — Debait Club`,
+      description,
+      url: `https://www.debait.club/case/${id}`,
+    },
+  };
+}
 
 export default async function CasePage({
   params,

@@ -106,9 +106,13 @@ create policy "public read" on public.comments for select using (true);
 drop policy if exists "public read" on public.votes;
 create policy "public read" on public.votes for select using (true);
 drop policy if exists "public read" on public.reports;
-create policy "public read" on public.reports for select using (true);
+drop policy if exists "reporters read own reports" on public.reports;
+create policy "reporters read own reports" on public.reports
+  for select using (reporter_id = auth.uid());
 drop policy if exists "public read" on public.saved_items;
-create policy "public read" on public.saved_items for select using (true);
+drop policy if exists "users read own saved items" on public.saved_items;
+create policy "users read own saved items" on public.saved_items
+  for select using (user_id = auth.uid());
 
 -- Profiles: a signed-in user can create and edit only their own row.
 drop policy if exists "users manage own profile" on public.profiles;
@@ -118,7 +122,7 @@ create policy "users manage own profile" on public.profiles
 -- Cases: authenticated users may post; authors may edit/delete their own.
 drop policy if exists "authenticated post cases" on public.cases;
 create policy "authenticated post cases" on public.cases
-  for insert with check (auth.role() = 'authenticated');
+  for insert with check (auth.role() = 'authenticated' and author_id = auth.uid());
 drop policy if exists "authors manage own cases" on public.cases;
 create policy "authors manage own cases" on public.cases
   for update using (author_id = auth.uid()) with check (author_id = auth.uid());
@@ -129,7 +133,7 @@ create policy "authors delete own cases" on public.cases
 -- Comments: same shape as cases.
 drop policy if exists "authenticated post comments" on public.comments;
 create policy "authenticated post comments" on public.comments
-  for insert with check (auth.role() = 'authenticated');
+  for insert with check (auth.role() = 'authenticated' and author_id = auth.uid());
 drop policy if exists "authors manage own comments" on public.comments;
 create policy "authors manage own comments" on public.comments
   for update using (author_id = auth.uid()) with check (author_id = auth.uid());

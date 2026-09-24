@@ -36,6 +36,13 @@ export async function POST(request: Request) {
       { status: 400 }
     );
   }
+  const cleanDisplay = display_name.trim().slice(0, 80);
+  if (cleanDisplay.toLowerCase() === cleanUsername) {
+    return NextResponse.json(
+      { error: 'Your display name and username need to be different.' },
+      { status: 400 }
+    );
+  }
   if (!email || typeof email !== 'string') {
     return NextResponse.json({ error: 'Please enter a valid email.' }, { status: 400 });
   }
@@ -67,7 +74,7 @@ export async function POST(request: Request) {
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
-    options: { data: { username: cleanUsername, display_name: display_name.trim().slice(0, 80) } },
+    options: { data: { username: cleanUsername, display_name: cleanDisplay } },
   });
   if (error || !data.user) {
     return NextResponse.json({ error: error?.message ?? 'Sign-up failed.' }, { status: 400 });
@@ -77,7 +84,7 @@ export async function POST(request: Request) {
   const { error: profileError } = await service.from('profiles').insert({
     id: data.user.id,
     username: cleanUsername,
-    display_name: display_name.trim().slice(0, 80),
+    display_name: cleanDisplay,
   });
   if (profileError) {
     // Auth user exists but profile insert failed (e.g. race) — surface clearly.

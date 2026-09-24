@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Fraunces, Inter } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/Header';
@@ -16,9 +16,63 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Debait Club — Change your mind daily',
+  metadataBase: new URL('https://www.debait.club'),
+  title: {
+    default: 'Debait Club — Change your mind daily',
+    template: '%s — Debait Club',
+  },
   description:
-    'A daily debate club. One topic per category, every day. Make your case, hear the other side, and stay open to changing your mind.',
+    'A daily debate club. One fresh topic per category, every day. Read the FOR and AGAINST cases, vote, join the discussion, and stay open to changing your mind.',
+  keywords: [
+    'debate',
+    'daily debate',
+    'debate club',
+    'opposing views',
+    'change your mind',
+    'politics debate',
+    'sports debate',
+    'civil discourse',
+  ],
+  authors: [{ name: 'Debait Club' }],
+  creator: 'Debait Club',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://www.debait.club',
+    siteName: 'Debait Club',
+    title: 'Debait Club — Change your mind daily',
+    description:
+      'One fresh debate topic per category, every day. Read both sides. Make your case. Change your mind.',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Debait Club — Change your mind daily',
+    description:
+      'One fresh debate topic per category, every day. Read both sides. Make your case. Change your mind.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://www.debait.club',
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+  ],
+};
+
+const JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Debait Club',
+  url: 'https://www.debait.club',
+  description:
+    'A daily debate club. One fresh topic per category, every day. Read the FOR and AGAINST cases, vote, and stay open to changing your mind.',
 };
 
 const THEME_INIT = `(function(){try{var t=localStorage.getItem('debait-theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark');}}catch(e){}})();`;
@@ -28,6 +82,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning className="h-full">
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+        />
       </head>
       <body
         className={`${fraunces.variable} ${inter.variable} flex min-h-full flex-col bg-white font-sans text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100`}
