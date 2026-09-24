@@ -7,7 +7,7 @@ import { SUBMISSION_CATEGORIES } from '@/lib/types';
 const inputClass =
   'w-full rounded-xl border border-neutral-200 bg-white px-4 py-2.5 text-sm text-neutral-900 outline-none focus:border-sky-500 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100';
 
-export function SubmissionForm() {
+export function SubmissionForm({ redirectTo }: { redirectTo?: string }) {
   const router = useRouter();
   const [question, setQuestion] = useState('');
   const [context, setContext] = useState('');
@@ -42,7 +42,11 @@ export function SubmissionForm() {
       setLinks('');
       setCategory('');
       setNotice('Submitted. The club votes all week — rally your d-coins.');
-      router.refresh();
+      if (redirectTo) {
+        router.push(redirectTo);
+      } else {
+        router.refresh();
+      }
     } finally {
       setBusy(false);
     }

@@ -85,6 +85,7 @@ export const SUBMISSION_CATEGORIES = [
   'Lifestyle',
   'Politics',
   'Sports',
+  'Other',
 ] as const;
 
 export type SubmissionSort = 'top' | 'new' | 'trending';

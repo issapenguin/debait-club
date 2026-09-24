@@ -13,7 +13,7 @@ const NAV = [
   { href: '/champions', label: 'Champions' },
   { href: '/archive', label: 'Archive' },
   { href: '/rules', label: 'Rules' },
-  { href: '/submit', label: 'Got a topic?' },
+  { href: '/submit', label: 'Future Topics' },
   { href: '/history', label: 'History' },
 ];
 

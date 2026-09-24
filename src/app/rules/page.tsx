@@ -20,7 +20,7 @@ const RULES: { title: string; body: string }[] = [
   },
   {
     title: 'No harassment',
-    body: 'No dogpiling, no following someone across threads to heckle them, no threats, no posting private personal information. If someone asks you to drop it, drop it.',
+    body: 'No dogpiling, no following someone across threads to heckle them, no threats, no posting private personal information.',
   },
   {
     title: 'No spam',

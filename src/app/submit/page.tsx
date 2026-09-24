@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { SubmissionBoard } from '@/components/SubmissionBoard';
-import { SubmissionForm } from '@/components/SubmissionForm';
 import { CoinIcon } from '@/components/CoinIcon';
 import { fetchSubmissionLeaders, fetchSubmissions, getCurrentUserId } from '@/lib/data';
 import { weekOf } from '@/lib/types';
@@ -9,9 +8,9 @@ import type { Metadata } from 'next';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'Submit a topic — Debait Club',
+  title: 'Future Topics — Debait Club',
   description:
-    'Propose next week\u2019s debates. Submit a question with context and links, flair it, and let the club vote with d-coins.',
+    'Vote on next week\u2019s debates with d-coins, or propose your own topic. The top-voted member submissions become next week\u2019s debates.',
 };
 
 const STEPS = [
@@ -55,11 +54,11 @@ export default async function SubmitPage() {
   return (
     <div className="mx-auto max-w-3xl pt-10">
       <h1 className="font-display text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl dark:text-neutral-50">
-        Submit a topic
+        Future Topics
       </h1>
       <p className="mt-2 text-[15px] text-neutral-500 dark:text-neutral-400">
-        Shape next week\u2019s debates. The best member-submitted questions, as voted
-        by the club, become next week\u2019s featured and category topics.
+        Vote next week&apos;s debates into existence. Every upvote is a d-coin —
+        spend yours on the questions you most want to argue about.
       </p>
 
       <div className="mt-6 grid gap-3 sm:grid-cols-3">
@@ -79,10 +78,25 @@ export default async function SubmitPage() {
         ))}
       </div>
 
+      <section className="mt-10" aria-label="Vote on future topics">
+        <div className="mb-4 flex items-center gap-3">
+          <CoinIcon className="h-8 w-8" />
+          <div>
+            <h2 className="font-display text-2xl font-semibold text-neutral-900 dark:text-neutral-50">
+              Vote for next week&apos;s debates
+            </h2>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400">
+              Tap the coin to upvote. Rankings update live.
+            </p>
+          </div>
+        </div>
+        <SubmissionBoard initialSubmissions={initial} initialWeek={week} loggedIn={userId !== null} />
+      </section>
+
       {leaderCards.length > 0 && (
-        <section className="mt-8" aria-label="This week's leaders">
+        <section className="mt-10" aria-label="This week's leaders">
           <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-neutral-500">
-            This week\u2019s leaders
+            This week&apos;s leaders
           </h2>
           <div className="space-y-2">
             {leaderCards.map((l) => (
@@ -108,32 +122,23 @@ export default async function SubmitPage() {
         </section>
       )}
 
-      <section className="mt-8 rounded-2xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900" aria-label="Submission form">
-        <h2 className="mb-4 font-display text-xl font-semibold text-neutral-900 dark:text-neutral-50">
+      <section
+        className="mt-10 rounded-2xl border-2 border-dashed border-sky-300 bg-sky-50 p-6 text-center sm:p-8 dark:border-sky-800 dark:bg-sky-950/20"
+        aria-label="Submit your own topic"
+      >
+        <h2 className="font-display text-xl font-semibold text-neutral-900 dark:text-neutral-50">
+          Have a topic in mind?
+        </h2>
+        <p className="mx-auto mt-2 max-w-md text-sm text-neutral-600 dark:text-neutral-300">
+          Propose your own debate question. If the club likes it, you&apos;ll see
+          it argued right here next week.
+        </p>
+        <Link
+          href="/submit/new"
+          className="mt-4 inline-block rounded-full bg-sky-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-500"
+        >
           Propose a debate
-        </h2>
-        {userId ? (
-          <SubmissionForm />
-        ) : (
-          <div className="text-center">
-            <p className="text-sm text-neutral-600 dark:text-neutral-300">
-              Join the club to submit topics and vote with d-coins.
-            </p>
-            <Link
-              href="/signup"
-              className="mt-4 inline-block rounded-full bg-neutral-900 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-neutral-700 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-300"
-            >
-              Join the club
-            </Link>
-          </div>
-        )}
-      </section>
-
-      <section className="mt-10" aria-label="Member-submitted topics">
-        <h2 className="mb-4 font-display text-xl font-semibold text-neutral-900 dark:text-neutral-50">
-          Live ranking
-        </h2>
-        <SubmissionBoard initialSubmissions={initial} initialWeek={week} loggedIn={userId !== null} />
+        </Link>
       </section>
     </div>
   );
