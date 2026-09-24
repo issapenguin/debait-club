@@ -64,8 +64,8 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-5xl items-center gap-2 px-4">
         <Link href="/" className="flex items-center gap-2 text-neutral-900 dark:text-neutral-50" aria-label="Debait Club home">
           <Logo className="h-8 w-8" />
-          <span className="font-display text-xl font-semibold tracking-tight">
-            Debait Club
+          <span className="font-display text-xl font-semibold lowercase tracking-tight">
+            debait club
           </span>
         </Link>
         <nav className="ml-6 hidden items-center gap-1 sm:flex" aria-label="Primary">
