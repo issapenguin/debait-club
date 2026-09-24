@@ -36,7 +36,7 @@ const RULES: { title: string; body: string }[] = [
   },
   {
     title: 'Keep it clean',
-    body: 'No profanity, period. Strong language is blocked automatically, and repeat offenders lose posting privileges. Keep it clean enough for a bright thirteen-year-old — which, given the signup rules, might literally be reading.',
+    body: 'No profanity, period. Strong language is blocked automatically, and repeat offenders lose posting privileges. Learning should be for everyone.',
   },
   {
     title: 'Own your words',
