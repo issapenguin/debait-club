@@ -1,12 +1,14 @@
 import Link from 'next/link';
-import { fetchTopics, fetchCaseCounts } from '@/lib/data';
+import { fetchTopics, fetchCaseCounts, fetchTopicLeanings } from '@/lib/data';
 import { formatDate } from '@/lib/format';
+import { LeaningTag } from '@/components/LeaningTag';
 
 export const dynamic = 'force-dynamic';
 
 export default async function ArchivePage() {
   const topics = await fetchTopics();
   const counts = await fetchCaseCounts(topics.map((t) => t.id));
+  const leanings = await fetchTopicLeanings(topics.map((t) => t.id));
 
   return (
     <div className="mx-auto max-w-3xl pt-10">
@@ -40,6 +42,7 @@ export default async function ArchivePage() {
                     Featured
                   </span>
                 )}
+                <LeaningTag leaning={leanings.get(t.id) ?? 'neutral'} />
                 <span className="ml-auto text-neutral-400">
                   {(counts.get(t.id) ?? 0)} {(counts.get(t.id) ?? 0) === 1 ? 'case' : 'cases'}
                 </span>

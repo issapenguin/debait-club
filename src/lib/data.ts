@@ -1,5 +1,6 @@
 // Shared server-side data fetching for pages and API routes.
 import { getServerClient, getSessionUser, getServiceClient } from './supabase/server';
+import { computeLeaning, type Leaning } from './leaning';
 import type {
   CaseRow,
   CommentRow,
@@ -40,6 +41,33 @@ export async function fetchCaseCounts(topicIds: number[]): Promise<Map<number, n
     counts.set(row.topic_id, (counts.get(row.topic_id) ?? 0) + 1);
   }
   return counts;
+}
+
+/** Per-topic club leaning from total d-coins on for vs. against cases. */
+export async function fetchTopicLeanings(
+  topicIds: number[]
+): Promise<Map<number, Leaning>> {
+  const leanings = new Map<number, Leaning>();
+  if (topicIds.length === 0) return leanings;
+  const supabase = await getServerClient();
+  if (!supabase) return leanings;
+  const { data } = await supabase
+    .from('cases')
+    .select('topic_id, side, score')
+    .in('topic_id', topicIds);
+  const sums = new Map<number, { for: number; against: number }>();
+  for (const row of (data ?? []) as {
+    topic_id: number;
+    side: string;
+    score: number;
+  }[]) {
+    const s = sums.get(row.topic_id) ?? { for: 0, against: 0 };
+    if (row.side === 'for') s.for += row.score;
+    else s.against += row.score;
+    sums.set(row.topic_id, s);
+  }
+  for (const [id, s] of sums) leanings.set(id, computeLeaning(s.for, s.against));
+  return leanings;
 }
 
 export interface TabSelection {

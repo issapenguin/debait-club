@@ -3,9 +3,11 @@
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import type { CaseRow, Topic } from '@/lib/types';
+import { computeLeaning } from '@/lib/leaning';
 import { formatDate } from '@/lib/format';
 import { CaseCard } from './CaseCard';
 import { CaseComposer } from './CaseComposer';
+import { LeaningTag } from './LeaningTag';
 import { SortControl, type SortMode } from './SortControl';
 
 function sortCases(cases: CaseRow[], mode: SortMode): CaseRow[] {
@@ -41,6 +43,16 @@ export function TopicView({
     [cases, sort]
   );
 
+  const { leaning, forVotes, againstVotes } = useMemo(() => {
+    let f = 0;
+    let a = 0;
+    for (const c of cases) {
+      if (c.side === 'for') f += c.score;
+      else a += c.score;
+    }
+    return { leaning: computeLeaning(f, a), forVotes: f, againstVotes: a };
+  }, [cases]);
+
   return (
     <div>
       <div className="flex flex-wrap items-center gap-2 text-sm">
@@ -64,6 +76,17 @@ export function TopicView({
           {topic.context}
         </p>
       )}
+
+      <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 rounded-2xl border border-neutral-200 bg-neutral-50 px-4 py-3 dark:border-neutral-800 dark:bg-neutral-900/60">
+        <span className="text-xs font-bold uppercase tracking-wider text-neutral-400">
+          The club is leaning
+        </span>
+        <LeaningTag leaning={leaning} size="lg" />
+        <span className="text-xs tabular-nums text-neutral-400">
+          {forVotes.toLocaleString()} for · {againstVotes.toLocaleString()}{' '}
+          against d-coins
+        </span>
+      </div>
 
       {topic.sources.length > 0 && (
         <div className="mt-4">
