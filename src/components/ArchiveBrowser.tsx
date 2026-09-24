@@ -131,7 +131,10 @@ export function ArchiveBrowser({
                     Featured
                   </span>
                 )}
-                <LeaningTag leaning={(leanings[t.id] ?? 'neutral') as Leaning} />
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="text-neutral-400">Club Leaning:</span>
+                  <LeaningTag leaning={(leanings[t.id] ?? 'neutral') as Leaning} />
+                </span>
                 <span className="ml-auto text-neutral-400">
                   {(counts[t.id] ?? 0)} {(counts[t.id] ?? 0) === 1 ? 'case' : 'cases'}
                 </span>

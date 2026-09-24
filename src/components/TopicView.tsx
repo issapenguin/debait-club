@@ -8,6 +8,7 @@ import { formatDate } from '@/lib/format';
 import { CaseCard } from './CaseCard';
 import { CaseComposer } from './CaseComposer';
 import { LeaningTag } from './LeaningTag';
+import { CoinIcon } from './CoinIcon';
 import { SortControl, type SortMode } from './SortControl';
 
 function sortCases(cases: CaseRow[], mode: SortMode): CaseRow[] {
@@ -82,9 +83,16 @@ export function TopicView({
           The club is leaning
         </span>
         <LeaningTag leaning={leaning} size="lg" />
-        <span className="text-xs tabular-nums text-neutral-400">
-          {forVotes.toLocaleString()} for · {againstVotes.toLocaleString()}{' '}
-          against d-coins
+        <span className="flex items-center gap-1.5 text-sm font-semibold text-emerald-700 dark:text-emerald-400">
+          <CoinIcon className="h-4 w-4" />
+          <span className="tabular-nums">{forVotes.toLocaleString()}</span>
+          <span className="font-normal text-neutral-400">for</span>
+        </span>
+        <span className="text-neutral-300 dark:text-neutral-600" aria-hidden="true">·</span>
+        <span className="flex items-center gap-1.5 text-sm font-semibold text-rose-700 dark:text-rose-400">
+          <CoinIcon className="h-4 w-4" />
+          <span className="tabular-nums">{againstVotes.toLocaleString()}</span>
+          <span className="font-normal text-neutral-400">against</span>
         </span>
       </div>
 
