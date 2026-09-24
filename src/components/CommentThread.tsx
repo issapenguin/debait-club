@@ -1,0 +1,151 @@
+'use client';
+
+import { useState } from 'react';
+import Link from 'next/link';
+import type { CommentRow } from '@/lib/types';
+import { renderRichText, timeAgo } from '@/lib/format';
+import { StanceTag } from './StanceTag';
+import { UpvoteButton } from './UpvoteButton';
+import { ItemMenu } from './ItemMenu';
+import { CommentComposer } from './CommentComposer';
+import { SortControl, type SortMode } from './SortControl';
+
+function CommentNode({
+  comment,
+  caseId,
+  loggedIn,
+  depth,
+}: {
+  comment: CommentRow;
+  caseId: number;
+  loggedIn: boolean;
+  depth: number;
+}) {
+  const [replying, setReplying] = useState(false);
+
+  return (
+    <div className={depth > 0 ? 'ml-4 border-l-2 border-neutral-100 pl-4 sm:ml-6 dark:border-neutral-800' : ''}>
+      <div className="rounded-2xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900">
+        <div className="flex flex-wrap items-center gap-2">
+          {comment.author ? (
+            <Link
+              href={`/profile/${comment.author.username}`}
+              className="text-sm font-semibold text-neutral-800 hover:text-sky-600 dark:text-neutral-100 dark:hover:text-sky-400"
+            >
+              @{comment.author.username}
+            </Link>
+          ) : (
+            <span className="text-sm text-neutral-400">deleted user</span>
+          )}
+          <StanceTag stance={comment.stance} />
+          <span className="text-xs text-neutral-400">{timeAgo(comment.created_at)}</span>
+          <div className="ml-auto">
+            <ItemMenu
+              targetType="comment"
+              targetId={comment.id}
+              initialSaved={comment.saved}
+              loggedIn={loggedIn}
+            />
+          </div>
+        </div>
+        <p className="mt-2 whitespace-pre-wrap text-[15px] leading-relaxed text-neutral-800 dark:text-neutral-100">
+          {renderRichText(comment.body)}
+        </p>
+        <div className="mt-3 flex items-center gap-2">
+          <UpvoteButton
+            targetType="comment"
+            targetId={comment.id}
+            initialVoted={comment.voted}
+            initialScore={comment.score}
+            loggedIn={loggedIn}
+            compact
+          />
+          <button
+            type="button"
+            onClick={() => setReplying((r) => !r)}
+            className="inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-xs font-semibold text-neutral-500 transition hover:bg-neutral-100 hover:text-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-100"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-3.5 w-3.5" aria-hidden="true">
+              <path d="M9 17l-5-5 5-5M4 12h9a7 7 0 0 1 7 7v1" />
+            </svg>
+            Reply
+          </button>
+        </div>
+        {replying && (
+          <div className="mt-3">
+            <CommentComposer
+              caseId={caseId}
+              parentId={comment.id}
+              loggedIn={loggedIn}
+              autoFocus
+              placeholder={`Reply to @${comment.author?.username ?? 'user'}…`}
+              onPosted={() => setReplying(false)}
+            />
+          </div>
+        )}
+      </div>
+      {comment.replies.length > 0 && (
+        <div className="mt-3 space-y-3">
+          {comment.replies.map((reply) => (
+            <CommentNode
+              key={reply.id}
+              comment={reply}
+              caseId={caseId}
+              loggedIn={loggedIn}
+              depth={depth + 1}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function sortComments(comments: CommentRow[], mode: SortMode): CommentRow[] {
+  const copy = [...comments];
+  if (mode === 'top') {
+    copy.sort((a, b) => b.score - a.score || b.id - a.id);
+  } else {
+    copy.sort((a, b) => b.created_at.localeCompare(a.created_at) || b.id - a.id);
+  }
+  return copy.map((c) => ({ ...c, replies: sortComments(c.replies, mode) }));
+}
+
+/** Threaded comment list with its own Top | New sort control. */
+export function CommentThread({
+  caseId,
+  comments,
+  loggedIn,
+}: {
+  caseId: number;
+  comments: CommentRow[];
+  loggedIn: boolean;
+}) {
+  const [sort, setSort] = useState<SortMode>('top');
+  const sorted = sortComments(comments, sort);
+  const total = comments.reduce((n, c) => n + 1 + c.replies.length, 0);
+
+  return (
+    <section aria-label="Comments" className="mt-10">
+      <div className="flex items-center justify-between">
+        <h2 className="font-display text-xl font-semibold text-neutral-900 dark:text-neutral-50">
+          Discussion {total > 0 && <span className="text-neutral-400">({total})</span>}
+        </h2>
+        <SortControl value={sort} onChange={setSort} />
+      </div>
+      <div className="mt-4">
+        <CommentComposer caseId={caseId} loggedIn={loggedIn} />
+      </div>
+      <div className="mt-6 space-y-4">
+        {sorted.map((c) => (
+          <CommentNode key={c.id} comment={c} caseId={caseId} loggedIn={loggedIn} depth={0} />
+        ))}
+        {sorted.length === 0 && (
+          <p className="text-sm italic text-neutral-400">
+            No comments yet — start the discussion.
+          </p>
+        )}
+      </div>
+    </section>
+  );
+}

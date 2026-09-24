@@ -1,0 +1,84 @@
+{
+ "comments": [
+  {
+   "author_demo_id": "demo-090",
+   "author_username": "tinyyak",
+   "body": "The enforcement point matters. A body without inspection powers is a newsletter with a flag.",
+   "case_id": 57,
+   "id": 1,
+   "parent_id": null,
+   "score": 12,
+   "stance": "agree"
+  },
+  {
+   "author_demo_id": "demo-091",
+   "author_username": "raccoonaccount",
+   "body": "Who decides which systems are frontier systems? That boundary will move faster than any treaty text.",
+   "case_id": 57,
+   "id": 2,
+   "parent_id": null,
+   "score": 19,
+   "stance": "neutral"
+  },
+  {
+   "author_demo_id": "demo-092",
+   "author_username": "goldfinch.fm",
+   "body": "Global oversight sounds fair until countries with opposite values have to agree on what human control means.",
+   "case_id": 57,
+   "id": 3,
+   "parent_id": null,
+   "score": 26,
+   "stance": "disagree"
+  },
+  {
+   "author_demo_id": "demo-093",
+   "author_username": "urbanalpaca",
+   "body": "We already coordinate on aviation and nuclear risk. High-consequence software should not be uniquely exempt.",
+   "case_id": 57,
+   "id": 4,
+   "parent_id": null,
+   "score": 33,
+   "stance": "strongly_agree"
+  },
+  {
+   "author_demo_id": "demo-094",
+   "author_username": "snailmailfan",
+   "body": "Exactly. The mandate needs audits and incident reporting, not just annual meetings.",
+   "case_id": 57,
+   "id": 5,
+   "parent_id": 1,
+   "score": 40,
+   "stance": "agree"
+  },
+  {
+   "author_demo_id": "demo-095",
+   "author_username": "cat_on_a_hotwifi",
+   "body": "That analogy breaks down: models diffuse globally and are much easier to reproduce than reactors.",
+   "case_id": 57,
+   "id": 6,
+   "parent_id": 4,
+   "score": 47,
+   "stance": "disagree"
+  },
+  {
+   "author_demo_id": "demo-096",
+   "author_username": "threecrows",
+   "body": "Could a narrow first step cover only cross-border incident reporting? That seems more achievable.",
+   "case_id": 57,
+   "id": 7,
+   "parent_id": 3,
+   "score": 54,
+   "stance": "neutral"
+  },
+  {
+   "author_demo_id": "demo-097",
+   "author_username": "beagleagle",
+   "body": "A sunset clause would help. Renew the powers only if the body can show measurable risk reduction.",
+   "case_id": 57,
+   "id": 8,
+   "parent_id": 2,
+   "score": 61,
+   "stance": "agree"
+  }
+ ]
+}

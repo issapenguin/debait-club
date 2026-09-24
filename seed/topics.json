@@ -1,0 +1,883 @@
+{
+ "topics": [
+  {
+   "cases": [],
+   "category": "Technology",
+   "context": "Ahead of UNGA 81, the Stimson Center noted that UN Secretary-General António Guterres named 'runaway artificial intelligence' among three existential threats facing humanity. With advanced AI development concentrated in a small number of companies and countries, the debate is whether a new international institution is needed to keep powerful systems under meaningful human control, or whether existing national regulators and voluntary frameworks are enough.",
+   "id": 1,
+   "is_featured": false,
+   "proposition": "A new international body should be established to oversee AI development and ensure it remains under human control.",
+   "sources": [
+    {
+     "title": "9 Issues to Watch at UNGA 81 • Stimson Center",
+     "url": "https://www.stimson.org/2026/9-issues-to-watch-at-unga-81/"
+    },
+    {
+     "title": "UN advisory body proposals for global AI governance",
+     "url": "https://sdg.iisd.org/news/secretary-generals-advisory-body-makes-proposals-to-govern-ai-for-humanity/"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [],
+   "category": "Education",
+   "context": "The Tech Tactics in Education Fall 2026 virtual conference, scheduled for September 23, 2026, includes a track titled \"AI's Intersection with Students,\" seeking proposals on practical classroom applications of AI. As generative tools spread through schools, educators are weighing clear responsible-use guidelines against concerns about academic integrity, equity of access, and student data privacy.",
+   "id": 2,
+   "is_featured": false,
+   "proposition": "Schools should integrate generative AI tools into teaching, learning, and student support with clear responsible-use guidelines.",
+   "sources": [
+    {
+     "title": "Call for Speakers Now Open for Tech Tactics in Education Fall 2026 -- THE Journal",
+     "url": "https://thejournal.com/articles/2026/06/08/call-for-speakers-now-open-for-tech-tactics-in-education-fall-2026.aspx"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [],
+   "category": "Sports",
+   "context": "School assembly headlines for September 23, 2026 report that Smriti Mandhana became the first cricketer to score 11,000 runs in women's internationals, and that India's women's cricket team won its first Asian Games gold by beating Sri Lanka by 147 runs.",
+   "id": 3,
+   "is_featured": false,
+   "proposition": "Women's cricket milestones should receive the same level of media coverage and institutional recognition as men's achievements.",
+   "sources": [
+    {
+     "title": "School Assembly News Headlines (September 23, 2026)",
+     "url": "https://www.jagranjosh.com/articles/school-assembly-news-headlines-september-23-2026-president-murmu-presents-national-film-awards-smriti-mandhanas-11k-milestone-nmc-mbbs-seat-matrix-other-news-1800016876-1"
+    },
+    {
+     "title": "ICC report on the 2020 Women’s T20 final",
+     "url": "https://www.icc-cricket.com/news/australia-lift-fifth-t20-world-cup-title"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [],
+   "category": "Current events",
+   "context": "International headlines for September 23, 2026 include reports that Google was fined 403 million euros by Ireland over unlawful tracking of users' location data. The case has renewed debate over whether regulators should impose substantial, headline-scale fines on technology companies that track users unlawfully, or whether penalties should focus on remediation and proportional deterrence.",
+   "id": 4,
+   "is_featured": false,
+   "proposition": "Regulators should impose substantial fines on technology companies that unlawfully track users' location data.",
+   "sources": [
+    {
+     "title": "School Assembly News Headlines (September 23, 2026)",
+     "url": "https://www.jagranjosh.com/articles/school-assembly-news-headlines-september-23-2026-president-murmu-presents-national-film-awards-smriti-mandhanas-11k-milestone-nmc-mbbs-seat-matrix-other-news-1800016876-1"
+    },
+    {
+     "title": "Outlogic location-data settlement",
+     "url": "https://thehackernews.com/2024/01/ftc-bans-outlogic-x-mode-from-selling.html"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [],
+   "category": "Culture",
+   "context": "The Sustainable Media Center announced a September 23, 2026 New York City discussion on 'AI Across Generations,' featuring a researcher who examines social media's effects on identity and well-being. The event reflects a broader question facing schools and communities: whether structured programs can help young people navigate social media's influence on how they see themselves.",
+   "id": 5,
+   "is_featured": false,
+   "proposition": "Schools and communities should offer structured programs to help young people manage social media's effects on identity and well-being.",
+   "sources": [
+    {
+     "title": "Sustainable Media Center Announces September 23 New York City Discussion on AI Across Generations",
+     "url": "https://ces.einnews.com/pr_news/939998472/sustainable-media-center-announces-september-23-new-york-city-discussion-on-ai-across-generations"
+    },
+    {
+     "title": "Youth social-media usage and risk figures",
+     "url": "https://www.beckersbehavioralhealth.com/behavioral-health-mental-health/surgeon-general-issues-mental-health-advisory-for-teens-social-media/"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [
+    {
+     "author_demo_id": "demo-004",
+     "author_username": "n8cole",
+     "body": "A huge headline fine can look tough while doing little for the people whose data was used. The €1.2 billion Meta penalty in the [enforcement tracker](https://cms.law/en/pol/publication/gdpr-enforcement-tracker-report/numbers-and-figures) is striking, but a revenue formula alone does not fund restitution or prove practices changed. I would rather require deletion, independent audits, and direct compensation, with fines added when those remedies are ignored.",
+     "id": 4,
+     "score": 122,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-003",
+     "author_username": "dev_patel",
+     "body": "Turnover tells us how big a company is, not how badly it behaved. A narrow retention mistake and a deliberate sale of sensitive records should not start from the same revenue-based threat. The [GDPR data](https://cms.law/en/pol/publication/gdpr-enforcement-tracker-report/numbers-and-figures) also show a few regulators dominate the largest cases, so legal exposure can depend heavily on venue. Base penalties on people harmed, sensitivity, duration, and repeat conduct instead.",
+     "id": 3,
+     "score": 84,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-001",
+     "author_username": "mari.v",
+     "body": "Flat fines punish scale backwards. A $50 million penalty can close a small company and barely register at a platform earning tens of billions. The [GDPR tracker](https://cms.law/en/pol/publication/gdpr-enforcement-tracker-report/numbers-and-figures) records about €6.11 billion across 2,685 fines through March 2026, including Meta's €1.2 billion penalty. Revenue is not a perfect proxy for harm, but it makes the maximum credible. Courts can still weigh intent and damage within that range.",
+     "id": 1,
+     "score": 220,
+     "side": "for"
+    },
+    {
+     "author_demo_id": "demo-002",
+     "author_username": "julesfromqueens",
+     "body": "The point is to change decisions before a violation happens. If the ceiling is fixed, a finance team can price it into the launch. A percentage of worldwide turnover tells every board that privacy risk scales with the business benefiting from the data. U.S. proposals have also considered a [4% of revenue cap](https://www.clearyenforcementwatch.com/2019/06/legislators-propose-differing-approaches-to-federalizing-corporate-responsibility-for-data-breaches/), which suggests this is not uniquely European thinking.",
+     "id": 2,
+     "score": 46,
+     "side": "for"
+    }
+   ],
+   "category": "Business",
+   "context": "The GDPR can set its most serious penalties as a percentage of worldwide turnover, so the same violation costs a global platform more than a small firm. That approach has produced billion-euro penalties, but it also raises questions about proportionality, deterrence, and whether fines become just another cost passed to customers.",
+   "id": 6,
+   "is_featured": false,
+   "proposition": "Should privacy fines be tied to a technology company’s global revenue?",
+   "sources": [
+    {
+     "title": "CMS GDPR Enforcement Tracker",
+     "url": "https://cms.law/en/pol/publication/gdpr-enforcement-tracker-report/numbers-and-figures"
+    },
+    {
+     "title": "Cleary Enforcement Watch on U.S. proposals",
+     "url": "https://www.clearyenforcementwatch.com/2019/06/legislators-propose-differing-approaches-to-federalizing-corporate-responsibility-for-data-breaches/"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [
+    {
+     "author_demo_id": "demo-008",
+     "author_username": "tasha_b",
+     "body": "Not every location violation creates the same risk. A poorly worded consent screen is different from selling identifiable visits to a shelter. A flat payout could encourage nuisance claims while underpaying the worst cases. Regulators should keep the ability to choose refunds, as they did in the [$245 million Epic order](https://9to5mac.com/2023/03/15/ftc-finalizes-epic-games-245m-penalty-over-tricking-users-heres-how-to-get-your-refund/), rather than make one remedy mandatory.",
+     "id": 8,
+     "score": 96,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-007",
+     "author_username": "mike404",
+     "body": "Automatic checks to everyone sound fair until most payments are tiny and the claims process consumes the fund. In the [Outlogic settlement](https://thehackernews.com/2024/01/ftc-bans-outlogic-x-mode-from-selling.html), the strongest remedies were a sales ban, deletion, consent, and a privacy program. Those measures attack the data pipeline itself. Compensation should be reserved for people who can show concrete loss or unusually sensitive exposure.",
+     "id": 7,
+     "score": 58,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-005",
+     "author_username": "samir.k",
+     "body": "Deletion stops future use, but it does not repay someone whose movements were already sold. In the [Outlogic case](https://thehackernews.com/2024/01/ftc-bans-outlogic-x-mode-from-selling.html), the FTC said raw location data tied to mobile advertising IDs could expose visits to clinics, houses of worship, and domestic-abuse shelters. A statutory payment would give companies a reason to minimize collection before the harm becomes impossible to reverse.",
+     "id": 5,
+     "score": 160,
+     "side": "for"
+    },
+    {
+     "author_demo_id": "demo-006",
+     "author_username": "ellie_reads",
+     "body": "Consumer compensation is administratively possible. The FTC's [Epic Games order](https://9to5mac.com/2023/03/15/ftc-finalizes-epic-games-245m-penalty-over-tricking-users-heres-how-to-get-your-refund/) created a $245 million refund pool, the agency's largest gaming refund. Location cases will need a different formula, perhaps a base amount plus more for sensitive places, but “hard to calculate” should not mean the entire value of misuse stays with the company.",
+     "id": 6,
+     "score": 20,
+     "side": "for"
+    }
+   ],
+   "category": "Business",
+   "context": "Precise location histories can reveal visits to clinics, places of worship, and shelters. Regulators have ordered data deletion and sales bans, while other consumer-protection cases show that large-scale refunds are possible; the unresolved question is when misuse should automatically create a right to payment.",
+   "id": 7,
+   "is_featured": false,
+   "proposition": "Should companies be required to pay customers when they misuse location data?",
+   "sources": [
+    {
+     "title": "Outlogic location-data settlement",
+     "url": "https://thehackernews.com/2024/01/ftc-bans-outlogic-x-mode-from-selling.html"
+    },
+    {
+     "title": "FTC Epic Games refund order",
+     "url": "https://9to5mac.com/2023/03/15/ftc-finalizes-epic-games-245m-penalty-over-tricking-users-heres-how-to-get-your-refund/"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [
+    {
+     "author_demo_id": "demo-012",
+     "author_username": "a.kim",
+     "body": "Accountability needs a clean line of responsibility. “The board” can mean ten people with different committees, information, and votes. Treating every repeat incident as personal failure ignores sophisticated attacks and inherited systems. The better move is mandatory board reporting, named privacy officers, and public remediation milestones, consistent with privacy's rise as a [governance issue](https://www.nasdaq.com/articles/data-privacy%3A-a-business-imperative-for-boards-leaders-that-may-contribute-to-market).",
+     "id": 12,
+     "score": 70,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-011",
+     "author_username": "jo_onfilm",
+     "body": "Directors oversee systems; they do not configure every database. Threatening prison or personal ruin for negligence, as one proposal summarized by [Cleary](https://www.clearyenforcementwatch.com/2019/06/legislators-propose-differing-approaches-to-federalizing-corporate-responsibility-for-data-breaches/) contemplated, could drive qualified people away and reward defensive paperwork over security. Use clawbacks for proven misconduct and reserve personal penalties for fraud, concealment, or deliberate lawbreaking.",
+     "id": 11,
+     "score": 32,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-010",
+     "author_username": "carmen.dc",
+     "body": "Boards already certify financial controls because investors cannot personally inspect the books. Personal data deserves a comparable duty. With [privacy laws in roughly 150 countries](https://www.nasdaq.com/articles/data-privacy%3A-a-business-imperative-for-boards-leaders-that-may-contribute-to-market), this is no longer a side issue for the IT department. Liability should attach only after notice, a repeat failure, and proof that a director ignored a documented risk.",
+     "id": 10,
+     "score": 172,
+     "side": "for"
+    },
+    {
+     "author_demo_id": "demo-009",
+     "author_username": "renzo",
+     "body": "A company fine is ultimately paid by shareholders, customers, and employees. Repeated violations mean oversight failed, so the people signing off on risk should not be insulated forever. One U.S. proposal described by [Cleary](https://www.clearyenforcementwatch.com/2019/06/legislators-propose-differing-approaches-to-federalizing-corporate-responsibility-for-data-breaches/) would require annual officer certifications and punish knowingly false ones. That is narrower than blaming directors for every breach and targets dishonesty at the top.",
+     "id": 9,
+     "score": 134,
+     "side": "for"
+    }
+   ],
+   "category": "Business",
+   "context": "Most privacy penalties are paid by the corporation even when failures recur under the same leadership. Some U.S. proposals would require senior officers to certify compliance and expose false certifications to personal penalties, while governance groups argue privacy is now a core board-level risk.",
+   "id": 8,
+   "is_featured": false,
+   "proposition": "Should corporate boards face personal accountability for repeated privacy violations?",
+   "sources": [
+    {
+     "title": "Cleary Enforcement Watch on executive liability proposals",
+     "url": "https://www.clearyenforcementwatch.com/2019/06/legislators-propose-differing-approaches-to-federalizing-corporate-responsibility-for-data-breaches/"
+    },
+    {
+     "title": "Nasdaq on board-level privacy governance",
+     "url": "https://www.nasdaq.com/articles/data-privacy%3A-a-business-imperative-for-boards-leaders-that-may-contribute-to-market"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [
+    {
+     "author_demo_id": "demo-015",
+     "author_username": "imani_w",
+     "body": "“As prominently” sounds objective until an editor has six live events and two minutes. Coverage should follow the importance of the event to that outlet's audience, not a parity rule. The [same study](https://journals.sagepub.com/doi/full/10.1177/21674795261480698) found women's basketball made up 75.4% of women's coverage, which shows that simply increasing the total can still leave most sports invisible.",
+     "id": 15,
+     "score": 184,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-016",
+     "author_username": "becca.lee",
+     "body": "The real bottleneck is access, scheduling, and production, not just the order of highlights. A quota can produce obligatory clips without building regular fandom. Use the encouraging [newsletter and social numbers](https://www.sportsbusinessjournal.com/Articles/2026/09/08/study-network-highlight-show-coverage-of-womens-sports-remains-below-10/?issueId=5BWCXLBKUBC2HCUOLTOQTIPQ3I&utm_source=sbj&utm_medium=twitter&utm_term=4e3cc973-0b50-4b80-be2a-99915f2ba00c) to identify which stories resonate, then invest in reporters and rights packages that create sustained coverage rather than ceremonial equality.",
+     "id": 16,
+     "score": 44,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-014",
+     "author_username": "nolanp",
+     "body": "This does not require identical minutes for every league. It means a record, championship, or historic first gets the same editorial test regardless of gender. The [2024 sample](https://www.sportsbusinessjournal.com/Articles/2026/09/08/study-network-highlight-show-coverage-of-womens-sports-remains-below-10/?issueId=5BWCXLBKUBC2HCUOLTOQTIPQ3I&utm_source=sbj&utm_medium=twitter&utm_term=4e3cc973-0b50-4b80-be2a-99915f2ba00c) found 21.7% women's coverage in newsletters and 28.2% on social, far above television's 9.2%. Digital editors already see the appetite; flagship shows should catch up.",
+     "id": 14,
+     "score": 146,
+     "side": "for"
+    },
+    {
+     "author_demo_id": "demo-013",
+     "author_username": "rhea27",
+     "body": "Prominence helps create the audience that networks later cite as justification. A [35-year study](https://journals.sagepub.com/doi/full/10.1177/21674795261480698) found women's sports received 9.2% of sampled TV highlight airtime in 2024, barely above 8.7% in 1999, even as the 2023 NCAA women's final averaged nearly 10 million viewers. Put genuine milestones in the lead block and let performance, not old habits, decide what sticks.",
+     "id": 13,
+     "score": 108,
+     "side": "for"
+    }
+   ],
+   "category": "Entertainment",
+   "context": "Audience demand for women’s sports has grown, but a 35-year peer-reviewed study found that women received only 9.2% of sampled television sports-news airtime in 2024. Digital and social coverage was substantially higher, suggesting that editorial choices and distribution habits, not interest alone, shape what audiences see.",
+   "id": 9,
+   "is_featured": false,
+   "proposition": "Should major media outlets cover women’s sports milestones as prominently as men’s?",
+   "sources": [
+    {
+     "title": "2026 peer-reviewed longitudinal coverage study",
+     "url": "https://journals.sagepub.com/doi/full/10.1177/21674795261480698"
+    },
+    {
+     "title": "Sports Business Journal study summary",
+     "url": "https://www.sportsbusinessjournal.com/Articles/2026/09/08/study-network-highlight-show-coverage-of-womens-sports-remains-below-10/?issueId=5BWCXLBKUBC2HCUOLTOQTIPQ3I&utm_source=sbj&utm_medium=twitter&utm_term=4e3cc973-0b50-4b80-be2a-99915f2ba00c"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [
+    {
+     "author_demo_id": "demo-019",
+     "author_username": "teo91",
+     "body": "Equal recognition does not require equal live minutes. A three-hour show has to serve viewers who mainly tune in for a handful of races. The Academy said the general public focuses on six top categories, as reported in [GamesRadar](https://www.gamesradar.com/oscars-2022-categories-cut-live-broadcast/). Give every craft winner a polished digital segment and meaningful acceptance time, but let the live broadcast reflect broader interest.",
+     "id": 19,
+     "score": 158,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-020",
+     "author_username": "cass.m",
+     "body": "A strict equality rule creates odd comparisons. Best Picture has ten nominees and closes the night; a short-film category has a different audience and storytelling role. The 2022 experiment was clumsy, but the answer is not a stopwatch. Producers should publish the criteria, guarantee every award appears, and rotate deeper craft features through the show.",
+     "id": 20,
+     "score": 23,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-018",
+     "author_username": "lizzieq",
+     "body": "A broadcast can be shorter without ranking artists by fame. Trim scripted banter, repeated promos, and reaction shots before cutting the people who built the work. The [IATSE response](https://www.thewrap.com/iatse-president-oscars-categories-pretaped/) noted that five of the eight shifted categories represented its members. Equal airtime is a simple rule that prevents every ratings panic from landing on the least famous workers.",
+     "id": 18,
+     "score": 120,
+     "side": "for"
+    },
+    {
+     "author_demo_id": "demo-017",
+     "author_username": "omar_nyc",
+     "body": "Editing, sound, costumes, score, and production design are not supporting paperwork. They are the movie. In 2022, [eight categories were moved out of the live Oscars broadcast](https://www.gamesradar.com/oscars-2022-categories-cut-live-broadcast/), including editing and sound. Giving craft winners equal live time would tell viewers how films are actually made and stop treating crews as expendable when ratings dip.",
+     "id": 17,
+     "score": 82,
+     "side": "for"
+    }
+   ],
+   "category": "Entertainment",
+   "context": "The 2022 Oscars presented eight craft categories before the live broadcast and edited them into the show, a response to ratings pressure that drew backlash from film workers. The dispute pits a shorter, celebrity-led telecast against equal recognition for the disciplines that make a film possible.",
+   "id": 10,
+   "is_featured": false,
+   "proposition": "Should awards shows reserve equal airtime for craft categories and acting awards?",
+   "sources": [
+    {
+     "title": "GamesRadar on the eight shifted Oscar categories",
+     "url": "https://www.gamesradar.com/oscars-2022-categories-cut-live-broadcast/"
+    },
+    {
+     "title": "TheWrap on IATSE's response",
+     "url": "https://www.thewrap.com/iatse-president-oscars-categories-pretaped/"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [
+    {
+     "author_demo_id": "demo-024",
+     "author_username": "nia.jpg",
+     "body": "“Outrage-driven” is a subjective label, and platforms will apply it unevenly. Whistleblowing, breaking news, and firsthand video often arrive emotionally charged. The [MIT findings](https://www.newscientist.com/article/2163226-fake-news-travels-six-times-faster-than-the-truth-on-twitter/?utm_source=rakuten&utm_medium=affiliate&utm_campaign=2116208:Skimlinks.com&utm_content=10&ranMID=47192&ranEAID=TnL5HPStwNw-mRPuQpVDeS58Qps3fXTikQ) show a real speed problem, but the safer fix is to limit algorithmic amplification until claims are corroborated, rather than inserting a judgmental gate before ordinary sharing.",
+     "id": 24,
+     "score": 170,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-023",
+     "author_username": "matt_in_mn",
+     "body": "Prompts work in a test partly because they are new. Once the same box appears every day, people tap through it like a cookie banner. The [Twitter experiment](https://www.digitaltrends.com/social-media/twitter-retweet-experiment-results/) measured article opens, not whether people understood the article or stopped sharing false claims. Better context labels and slower recommendation systems would address distribution without nagging every user.",
+     "id": 23,
+     "score": 132,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-022",
+     "author_username": "vivs",
+     "body": "Virality rewards novelty and anger before accuracy has time to catch up. A study of about 126,000 cascades found falsehoods were [70% more likely to be retweeted](https://www.newscientist.com/article/2163226-fake-news-travels-six-times-faster-than-the-truth-on-twitter/?utm_source=rakuten&utm_medium=affiliate&utm_campaign=2116208:Skimlinks.com&utm_content=10&ranMID=47192&ranEAID=TnL5HPStwNw-mRPuQpVDeS58Qps3fXTikQ) and took truth roughly six times longer to reach 1,500 people. Friction should be strongest on unopened links that are suddenly accelerating, not on every post.",
+     "id": 22,
+     "score": 94,
+     "side": "for"
+    },
+    {
+     "author_demo_id": "demo-021",
+     "author_username": "rohanb",
+     "body": "A pause is not censorship. It is the digital equivalent of asking whether you read the article before forwarding it. Twitter's test led people to [open articles 40% more often](https://www.digitaltrends.com/social-media/twitter-retweet-experiment-results/) and increased opens before retweeting by 33%. Platforms already optimize every pixel for speed; asking for one moment of attention is a modest correction.",
+     "id": 21,
+     "score": 56,
+     "side": "for"
+    }
+   ],
+   "category": "Entertainment",
+   "context": "Small design prompts can slow impulsive sharing without removing a post. Twitter reported that its “read before you retweet” test increased article opens, while research on rumor cascades found false stories spread faster and farther than true ones; critics question whether prompts remain effective once users get used to them.",
+   "id": 11,
+   "is_featured": false,
+   "proposition": "Should entertainment platforms add stronger friction before users share outrage-driven content?",
+   "sources": [
+    {
+     "title": "Twitter read-before-retweet experiment",
+     "url": "https://www.digitaltrends.com/social-media/twitter-retweet-experiment-results/"
+    },
+    {
+     "title": "New Scientist on the MIT rumor study",
+     "url": "https://www.newscientist.com/article/2163226-fake-news-travels-six-times-faster-than-the-truth-on-twitter/?utm_source=rakuten&utm_medium=affiliate&utm_campaign=2116208:Skimlinks.com&utm_content=10&ranMID=47192&ranEAID=TnL5HPStwNw-mRPuQpVDeS58Qps3fXTikQ"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [
+    {
+     "author_demo_id": "demo-028",
+     "author_username": "camden44",
+     "body": "A universal class can easily pathologize normal teen behavior or turn into surveillance. The same research reports that [58% of adolescents feel more accepted and 80% more connected to friends](https://www.beckersbehavioralhealth.com/behavioral-health-mental-health/surgeon-general-issues-mental-health-advisory-for-teens-social-media/) through social media. Schools should offer opt-in workshops and support, but habits need to fit the child, the family, and the community.",
+     "id": 28,
+     "score": 144,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-027",
+     "author_username": "priya_says",
+     "body": "Schools are being asked to repair every product failure. Teachers already face crowded curricula and are not mental-health clinicians. The [Surgeon General's guidance](https://edsource.org/updates/surgeon-general-warns-social-media-may-harm-youth) puts responsibilities on platforms, families, researchers, and policymakers too. Require safer defaults and fund counselors instead of assigning another unit that will become outdated before the textbook arrives.",
+     "id": 27,
+     "score": 106,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-026",
+     "author_username": "antonio.v",
+     "body": "This should be practical, not a fear lecture. The Surgeon General's [advisory](https://edsource.org/updates/surgeon-general-warns-social-media-may-harm-youth) recommends device-free meals and in-person gatherings, while other data show social media can also support belonging. Students could audit their notifications, practice verifying claims, and set one boundary they choose. That respects autonomy while giving them tools.",
+     "id": 26,
+     "score": 68,
+     "side": "for"
+    },
+    {
+     "author_demo_id": "demo-025",
+     "author_username": "kelsey_rose",
+     "body": "Schools teach nutrition, consent, and media literacy because every family cannot supply the same guidance. Social media is now just as universal: [up to 95% of teens use it](https://www.beckersbehavioralhealth.com/behavioral-health-mental-health/surgeon-general-issues-mental-health-advisory-for-teens-social-media/), more than a third almost constantly. A short recurring curriculum could cover comparison traps, privacy, persuasive design, conflict, and when to ask for help, without telling students what apps to use.",
+     "id": 25,
+     "score": 35,
+     "side": "for"
+    }
+   ],
+   "category": "Lifestyle",
+   "context": "The U.S. Surgeon General warned that social media can pose a profound risk to youth mental health, while also noting that many adolescents find connection and acceptance online. With social platforms used by an estimated 95% of teens, the policy question is whether practical digital habits belong in school curricula or primarily at home.",
+   "id": 12,
+   "is_featured": false,
+   "proposition": "Should schools teach practical habits for managing social media’s effects on identity and well-being?",
+   "sources": [
+    {
+     "title": "EdSource on the Surgeon General advisory",
+     "url": "https://edsource.org/updates/surgeon-general-warns-social-media-may-harm-youth"
+    },
+    {
+     "title": "Youth social-media usage and risk figures",
+     "url": "https://www.beckersbehavioralhealth.com/behavioral-health-mental-health/surgeon-general-issues-mental-health-advisory-for-teens-social-media/"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [
+    {
+     "author_demo_id": "demo-032",
+     "author_username": "noah.g",
+     "body": "A fixed household blackout can make the phone more desirable and turn family time into enforcement time. Only [34% of teens said they enjoy social media “a lot”](https://www.commonsensemedia.org/press-releases/two-years-into-the-pandemic-media-use-has-increased-17-among-tweens-and-teens), despite 84% using it, which suggests many already have mixed feelings. Collaborative, person-specific boundaries may teach self-regulation better than a rule that disappears at college.",
+     "id": 32,
+     "score": 118,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-031",
+     "author_username": "drewactually",
+     "body": "Equal rules are not always fair. A parent answering a work emergency, a teen doing homework, and a child watching cartoons have different purposes and responsibilities. The [screen-time census](https://www.commonsensemedia.org/press-releases/two-years-into-the-pandemic-media-use-has-increased-17-among-tweens-and-teens) excludes schoolwork for exactly that reason. Set individual goals around sleep, behavior, and obligations instead of treating every illuminated rectangle alike.",
+     "id": 31,
+     "score": 80,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-029",
+     "author_username": "ari_l",
+     "body": "Shared hours fix the hypocrisy problem. A teenager will not take “put your phone away” seriously while every adult scrolls at dinner. Common Sense found entertainment use averaging [5 hours 33 minutes for tweens and 8 hours 39 minutes for teens](https://www.commonsensemedia.org/press-releases/two-years-into-the-pandemic-media-use-has-increased-17-among-tweens-and-teens), before schoolwork. One device-free meal or hour makes connection a household practice, not a punishment.",
+     "id": 29,
+     "score": 182,
+     "side": "for"
+    },
+    {
+     "author_demo_id": "demo-030",
+     "author_username": "jenna_b",
+     "body": "The rule can have exceptions for on-call work, accessibility, or a deadline. What matters is a predictable default. The Surgeon General specifically recommended [device-free mealtimes and gatherings](https://edsource.org/updates/surgeon-general-warns-social-media-may-harm-youth). Families can choose the window together and revisit it monthly, which is more transparent than parents policing each person's minute count.",
+     "id": 30,
+     "score": 47,
+     "side": "for"
+    }
+   ],
+   "category": "Lifestyle",
+   "context": "Common Sense Media found entertainment screen use rose 17% for both tweens and teens from 2019 to 2021, excluding schoolwork. Shared device-free periods may make rules feel fair and protect family time, but work schedules, homework, accessibility needs, and age differences can make one household rule difficult.",
+   "id": 13,
+   "is_featured": false,
+   "proposition": "Should families set shared screen-free hours rather than individual limits?",
+   "sources": [
+    {
+     "title": "Common Sense Media screen-time census",
+     "url": "https://www.commonsensemedia.org/press-releases/two-years-into-the-pandemic-media-use-has-increased-17-among-tweens-and-teens"
+    },
+    {
+     "title": "Surgeon General family guidance",
+     "url": "https://edsource.org/updates/surgeon-general-warns-social-media-may-harm-youth"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [
+    {
+     "author_demo_id": "demo-036",
+     "author_username": "sebas_t",
+     "body": "Public-health framing can invite moral panic and expensive programs before outcomes are clear. The [2026 well-being findings](https://dig.watch/updates/social-media-linked-to-declining-well-being-among-young-people) are strongest for problematic or very heavy use, not every teenager online. Start with voluntary tools, platform accountability, and rigorous trials. Make routine screening standard only when it improves health without shaming normal behavior.",
+     "id": 36,
+     "score": 92,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-035",
+     "author_username": "leahwrites",
+     "body": "“Digital well-being” is too broad for a routine service. Heavy homework use, gaming with friends, doomscrolling, and cyberbullying need different responses. The [WHO page](https://www.who.int/westernpacific/newsroom/events/overview/item/2026/04/16/western-pacific-events/mental-health-and-digital-use-for-youth) lists associations with several harms, but association does not tell a clinician which screen behavior caused a symptom. Fund targeted care for sleep, anxiety, and abuse instead.",
+     "id": 35,
+     "score": 59,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-033",
+     "author_username": "syd_212",
+     "body": "Routine does not mean dramatic. A pediatrician can ask about sleep, harassment, compulsive use, and family conflict in two minutes, then offer help when something is off. The [WHO's 2026 guidance](https://www.who.int/westernpacific/newsroom/events/overview/item/2026/04/16/western-pacific-events/mental-health-and-digital-use-for-youth) calls for youth-centered solutions across health, education, and digital systems. That is prevention, not a diagnosis for owning a phone.",
+     "id": 33,
+     "score": 156,
+     "side": "for"
+    },
+    {
+     "author_demo_id": "demo-034",
+     "author_username": "mina_m",
+     "body": "Access should not depend on a parent knowing which specialist to call. A 43-country analysis covering more than 330,000 young people linked problematic use with poorer well-being, according to the [World Happiness Report summary](https://dig.watch/updates/social-media-linked-to-declining-well-being-among-young-people). Public-health programs can offer evidence-based literacy and counseling while researchers keep refining who benefits most.",
+     "id": 34,
+     "score": 21,
+     "side": "for"
+    }
+   ],
+   "category": "Lifestyle",
+   "context": "The WHO now links harmful or excessive digital use with anxiety, depression, sleep problems, cyberbullying, and harmful-content exposure, and recommends coordinated responses across health, education, and digital systems. Routine screening or counseling could widen access, but the evidence base and risk of medicalizing everyday technology use remain contested.",
+   "id": 14,
+   "is_featured": false,
+   "proposition": "Should digital well-being support be treated like a routine public-health service?",
+   "sources": [
+    {
+     "title": "WHO: mental health and digital use for youth",
+     "url": "https://www.who.int/westernpacific/newsroom/events/overview/item/2026/04/16/western-pacific-events/mental-health-and-digital-use-for-youth"
+    },
+    {
+     "title": "World Happiness Report 2026 summary",
+     "url": "https://dig.watch/updates/social-media-linked-to-declining-well-being-among-young-people"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [
+    {
+     "author_demo_id": "demo-040",
+     "author_username": "tori_n",
+     "body": "Independence on paper does not guarantee useful scrutiny. Companies choose and pay many auditors, and a standard checklist can miss how data really moves. Before making audits automatic, define auditor conflicts, publish meaningful findings, and allow shorter terms for prompt self-reporting. Otherwise we create compliance theater at a cost smaller firms cannot absorb.",
+     "id": 40,
+     "score": 71,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-039",
+     "author_username": "marcusdc",
+     "body": "Automatic remedies ignore the facts. A one-time vendor configuration error should not trigger the same 20-year burden as deliberate sale of clinic visits. The [Outlogic order](https://thehackernews.com/2024/01/ftc-bans-outlogic-x-mode-from-selling.html) required deletion, consent, a sensitive-location list, and a privacy program tailored to the conduct. Regulators need room to choose the remedy that closes the actual gap.",
+     "id": 39,
+     "score": 33,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-038",
+     "author_username": "zoe.etc",
+     "body": "Consistency matters. Marriott's order followed breaches affecting more than 344 million customers and imposed [20 years of obligations](https://www.debevoisedatablog.com/2025/01/30/ftcs-consent-order-against-marriott-expectations-for-reasonable-security/), while location-data cases can receive a different mix of remedies. A statute could require an initial audit for every violation, then scale the frequency and duration to severity and repeat conduct.",
+     "id": 38,
+     "score": 168,
+     "side": "for"
+    },
+    {
+     "author_demo_id": "demo-037",
+     "author_username": "kevinish",
+     "body": "A regulator cannot verify a fix from a press release. The FTC has required companies to obtain [independent audits every other year for 20 years](https://WWW.FTC.GOV/news-events/news/press-releases/2011/06/ftc-approves-final-orders-settling-charges-companies-failed-protect-consumers-personal-information) in security orders. Location data is sensitive and easy to copy, so an automatic audit after a proven violation gives the public a baseline guarantee that deletion, consent, and retention controls actually work.",
+     "id": 37,
+     "score": 130,
+     "side": "for"
+    }
+   ],
+   "category": "Politics",
+   "context": "U.S. privacy settlements often require an outside assessment every other year for 20 years, but those obligations are negotiated after an investigation. Making audits automatic after a proven location-privacy violation could create consistency, while also imposing the same long-term remedy on incidents of very different scale and intent.",
+   "id": 15,
+   "is_featured": false,
+   "proposition": "Should location privacy violations trigger automatic independent audits?",
+   "sources": [
+    {
+     "title": "FTC independent-audit consent orders",
+     "url": "https://WWW.FTC.GOV/news-events/news/press-releases/2011/06/ftc-approves-final-orders-settling-charges-companies-failed-protect-consumers-personal-information"
+    },
+    {
+     "title": "Marriott privacy and security consent order analysis",
+     "url": "https://www.debevoisedatablog.com/2025/01/30/ftcs-consent-order-against-marriott-expectations-for-reasonable-security/"
+    },
+    {
+     "title": "Outlogic location-data settlement",
+     "url": "https://thehackernews.com/2024/01/ftc-bans-outlogic-x-mode-from-selling.html"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [
+    {
+     "author_demo_id": "demo-043",
+     "author_username": "nadia_x",
+     "body": "There is no neutral global regulator waiting to take the job. Governments disagree on speech, privacy, surveillance, and due process. An enforceable body could give authoritarian states leverage over tools used elsewhere. The [UN AI proposals](https://sdg.iisd.org/news/secretary-generals-advisory-body-makes-proposals-to-govern-ai-for-humanity/) focus on science, standards, capacity, and coordination for a reason: consensus is more realistic there than on binding sanctions.",
+     "id": 43,
+     "score": 180,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-044",
+     "author_username": "benji87",
+     "body": "The DSA shows enforcement is possible within a political and legal union, not across the whole world. Its [6% fine and suspension powers](https://edaa.eu/digital-services-act/enforcement-and-penalties/) rest on EU courts and institutions. International rules should stay interoperable and voluntary while national regulators enforce their own laws, then cooperate on evidence and cross-border cases.",
+     "id": 44,
+     "score": 45,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-042",
+     "author_username": "han_soloish",
+     "body": "Technology supply chains ignore national borders, but victims and regulators are stuck inside them. The [OECD AI Principles](https://www.cuatrecasas.com/en/spain/intellectual-property/art/oecd-updates-ai-principles) are explicitly non-binding, so adherence can become branding. A treaty with minimum standards would stop companies shopping for the weakest jurisdiction while still allowing countries to adopt stronger protections.",
+     "id": 42,
+     "score": 142,
+     "side": "for"
+    },
+    {
+     "author_demo_id": "demo-041",
+     "author_username": "javi_r",
+     "body": "Voluntary principles work best for actors already inclined to behave. The DSA can impose [fines up to 6% of global turnover](https://edaa.eu/digital-services-act/enforcement-and-penalties/) and daily penalties for continued noncompliance. That gives a rule weight across borders. Start with narrow duties such as incident reporting, researcher access, and child-safety risk assessments, then let independent courts review enforcement.",
+     "id": 41,
+     "score": 104,
+     "side": "for"
+    }
+   ],
+   "category": "Politics",
+   "context": "The EU’s Digital Services Act can impose fines of up to 6% of global annual turnover and, in extreme cases, seek a temporary service suspension. Global frameworks such as the OECD AI Principles remain non-binding, leaving states to decide whether cross-border technology risks require common enforcement or flexible national approaches.",
+   "id": 16,
+   "is_featured": false,
+   "proposition": "Should international technology rules be enforceable rather than voluntary?",
+   "sources": [
+    {
+     "title": "Digital Services Act enforcement and penalties",
+     "url": "https://edaa.eu/digital-services-act/enforcement-and-penalties/"
+    },
+    {
+     "title": "OECD AI Principles update",
+     "url": "https://www.cuatrecasas.com/en/spain/intellectual-property/art/oecd-updates-ai-principles"
+    },
+    {
+     "title": "UN proposals for global AI governance",
+     "url": "https://sdg.iisd.org/news/secretary-generals-advisory-body-makes-proposals-to-govern-ai-for-humanity/"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [
+    {
+     "author_demo_id": "demo-047",
+     "author_username": "caleb_v",
+     "body": "A record deserves coverage, but “equal prime time” cannot ignore time zones, opponents, rights packages, and local demand. The [86,174 MCG crowd](https://www.icc-cricket.com/news/australia-lift-fifth-t20-world-cup-title) was a final on International Women's Day with Australia playing at home. Broadcasters should use that success as evidence for better slots, not as proof every milestone fits the same window.",
+     "id": 47,
+     "score": 154,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-048",
+     "author_username": "mayaonmain",
+     "body": "Promotion is only one piece. Fans also need free-to-air access, consistent scheduling, knowledgeable commentary, and a season they can follow. A single equal-time rule might produce splashy clips while ordinary matches stay hard to find. Invest against the full [viewing-growth trend](https://mykhel.com/cricket/icc-women-s-t20-world-cup-final-86-174-fans-turn-up-at-mcg-create-record-in-women-s-cricket-139548.html) and judge networks on season-long reach, not one promo count.",
+     "id": 48,
+     "score": 19,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-046",
+     "author_username": "isha_here",
+     "body": "The audience-growth case is stronger than the old assumptions. The tournament generated [701 million ICC video views](https://mykhel.com/cricket/icc-women-s-t20-world-cup-final-86-174-fans-turn-up-at-mcg-create-record-in-women-s-cricket-139548.html), and Australian viewing minutes had risen 1,600% since 2018. Equal promotion does not promise equal ratings every night. It gives extraordinary achievements a fair chance to reach people who would watch if they knew.",
+     "id": 46,
+     "score": 116,
+     "side": "for"
+    },
+    {
+     "author_demo_id": "demo-045",
+     "author_username": "sloane.p",
+     "body": "Prime time is how a milestone becomes shared culture. The 2020 Women's T20 World Cup final drew [86,174 people to the MCG](https://www.icc-cricket.com/news/australia-lift-fifth-t20-world-cup-title), a record for women's cricket. That audience did not appear after years of being hidden; it followed serious promotion, a major venue, and a favorable slot. Give record chases and finals the same promotional muscle.",
+     "id": 45,
+     "score": 83,
+     "side": "for"
+    }
+   ],
+   "category": "Sports",
+   "context": "The 2020 Women’s T20 World Cup final drew 86,174 spectators at the Melbourne Cricket Ground, setting a women’s cricket attendance record, and the tournament generated hundreds of millions of digital views. Supporters see proof that prominent scheduling builds demand; broadcasters point to different rights values and established audience patterns.",
+   "id": 17,
+   "is_featured": false,
+   "proposition": "Should women’s international cricket milestones receive equal prime-time promotion?",
+   "sources": [
+    {
+     "title": "ICC report on the 2020 Women’s T20 final",
+     "url": "https://www.icc-cricket.com/news/australia-lift-fifth-t20-world-cup-title"
+    },
+    {
+     "title": "Tournament attendance and audience growth figures",
+     "url": "https://mykhel.com/cricket/icc-women-s-t20-world-cup-final-86-174-fans-turn-up-at-mcg-create-record-in-women-s-cricket-139548.html"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [
+    {
+     "author_demo_id": "demo-052",
+     "author_username": "isaacm",
+     "body": "Participation is easy to announce and hard to attribute. A federation can count free trials, one-day events, or duplicate registrations without creating lasting activity. Medal results are imperfect but independently visible. Keep the elite formula focused, then create a separate participation fund with retention and health metrics so a popular sport does not automatically crowd out a smaller medal program.",
+     "id": 52,
+     "score": 166,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-051",
+     "author_username": "nora.k",
+     "body": "Elite and grassroots funding have different jobs. UK Sport exists to convert limited high-performance money into medals; local participation belongs with schools, councils, and community agencies. In its consultation, [72% of sector stakeholders](https://www.uksport.gov.uk/~/media/87f1e4d9387b45b3adcf51e6cda97c2d.ashx?la=en) backed the medal focus. Blending missions risks doing both badly and makes accountability fuzzy.",
+     "id": 51,
+     "score": 128,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-050",
+     "author_username": "luke_from_atl",
+     "body": "A medal-first formula can become circular: funded sports win more, while cut sports lose coaches and facilities, then look less promising next cycle. After 11 governing bodies lost funding, they called it a [“two-class” system](http://cladglobal.com/news?codeid=332796). Score participation carefully by age, disability, retention, and underserved communities so organizations cannot pad one registration number.",
+     "id": 50,
+     "score": 95,
+     "side": "for"
+    },
+    {
+     "author_demo_id": "demo-049",
+     "author_username": "dani.cho",
+     "body": "Public money should buy public value, not only podium moments. Participation can improve health, strengthen local clubs, and create the next generation of athletes. In a UK Sport consultation, [10% of sector respondents and 20% of the public](https://www.uksport.gov.uk/~/media/87f1e4d9387b45b3adcf51e6cda97c2d.ashx?la=en) wanted investment aimed at youth, grassroots, and mass participation. Give growth equal weight and sports will have to build a base, not just a medal pipeline.",
+     "id": 49,
+     "score": 57,
+     "side": "for"
+    }
+   ],
+   "category": "Sports",
+   "context": "Elite-funding systems often direct public money toward sports most likely to win medals, a strategy associated with podium success but also with cuts to less competitive programs. UK Sport consultations show substantial support for medal focus alongside calls to recognize grassroots participation and broader public-health returns.",
+   "id": 18,
+   "is_featured": false,
+   "proposition": "Should national sports funding reward participation growth as much as medal results?",
+   "sources": [
+    {
+     "title": "UK Sport future-strategy consultation",
+     "url": "https://www.uksport.gov.uk/~/media/87f1e4d9387b45b3adcf51e6cda97c2d.ashx?la=en"
+    },
+    {
+     "title": "National governing bodies challenge medal-only funding",
+     "url": "http://cladglobal.com/news?codeid=332796"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [
+    {
+     "author_demo_id": "demo-056",
+     "author_username": "fatima.a",
+     "body": "Bonuses come from finite budgets. If tournaments generate very different payouts, identical awards can mean fewer camps, coaches, or development places elsewhere. The [FIFA prize pools](https://pfa.net.au/the-pfa-post/pfa-post-womens-world-cup-prize-money-explained/) remain four to one. Set a fair minimum and transparent revenue share for each team, then negotiate record incentives with athletes instead of pretending every financial context is the same.",
+     "id": 56,
+     "score": 140,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-055",
+     "author_username": "roryrory",
+     "body": "Records are not standardized across sports, eras, or competition levels. A federation would spend more time litigating equivalence than rewarding excellence. U.S. Soccer's [pooled prize-money deal](https://www.iowapublicradio.org/news-from-npr/news-from-npr/2022-05-18/the-u-s-mens-and-womens-soccer-teams-will-be-paid-equally-under-a-new-deal) came through collective bargaining between two specific teams. That model is stronger than a universal rule imposed on every national program.",
+     "id": 55,
+     "score": 107,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-054",
+     "author_username": "em.j",
+     "body": "Revenue differences are real, but they partly reflect decades of unequal investment. FIFA offered [$110 million for the 2023 Women's World Cup versus $440 million for the 2022 men's event](https://pfa.net.au/the-pfa-post/pfa-post-womens-world-cup-prize-money-explained/). Federations cannot fix that gap alone, but equal record bonuses are small, legible, and within their control. Base them on the sporting achievement, not projected ad sales.",
+     "id": 54,
+     "score": 69,
+     "side": "for"
+    },
+    {
+     "author_demo_id": "demo-053",
+     "author_username": "gabi_305",
+     "body": "A national team bonus expresses what the federation values. If equivalent records trigger different checks, the organization is saying one achievement matters less. U.S. Soccer showed a workable route by signing [identical economic terms through 2028](https://www.iowapublicradio.org/news-from-npr/news-from-npr/2022-05-18/the-u-s-mens-and-womens-soccer-teams-will-be-paid-equally-under-a-new-deal) and pooling World Cup prize money. Standardize the schedule, publish it, and let athletes know the target before competition.",
+     "id": 53,
+     "score": 31,
+     "side": "for"
+    }
+   ],
+   "category": "Sports",
+   "context": "U.S. Soccer’s 2022 labor agreements pooled men’s and women’s World Cup prize money, creating identical economic terms through 2028. FIFA’s tournament pools remain far apart, however, and federations vary in revenue, bargaining structures, and the records they recognize.",
+   "id": 19,
+   "is_featured": false,
+   "proposition": "Should record-setting athletes receive standardized bonuses across men’s and women’s teams?",
+   "sources": [
+    {
+     "title": "NPR on U.S. Soccer’s equal-pay agreement",
+     "url": "https://www.iowapublicradio.org/news-from-npr/news-from-npr/2022-05-18/the-u-s-mens-and-womens-soccer-teams-will-be-paid-equally-under-a-new-deal"
+    },
+    {
+     "title": "Professional Footballers Australia prize-money analysis",
+     "url": "https://pfa.net.au/the-pfa-post/pfa-post-womens-world-cup-prize-money-explained/"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  },
+  {
+   "cases": [
+    {
+     "author_demo_id": "demo-060",
+     "author_username": "zainabz",
+     "body": "AI changes faster than treaties. A binding body could freeze today's model thresholds and give incumbents a compliance moat. The [OECD principles](https://www.cuatrecasas.com/en/spain/intellectual-property/art/oecd-updates-ai-principles) are non-binding, but that flexibility lets governments adapt them to local law. Use international groups for shared research and incident databases; keep licensing and penalties with accountable domestic institutions.",
+     "id": 60,
+     "score": 119,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-059",
+     "author_username": "willhikes",
+     "body": "An “IAEA for AI” sounds precise until countries must agree on what counts as frontier, who may inspect private systems, and how to protect trade secrets. The UN body's [39 members from 33 countries](https://sdg.iisd.org/news/secretary-generals-advisory-body-makes-proposals-to-govern-ai-for-humanity/) could recommend science and standards, but enforcement would be dominated by the states with the most leverage. Build national capacity before creating a remote regulator.",
+     "id": 59,
+     "score": 81,
+     "side": "against"
+    },
+    {
+     "author_demo_id": "demo-057",
+     "author_username": "coletrain",
+     "body": "Frontier models can be deployed globally before any one regulator understands the failure. The UN advisory body found only [7 of 193 member states participate in all seven major AI initiatives](https://sdg.iisd.org/news/secretary-generals-advisory-body-makes-proposals-to-govern-ai-for-humanity/), while 118 participate in none. A narrow international body could coordinate evaluations, incident reporting, and inspections for the largest training runs without regulating ordinary software.",
+     "id": 57,
+     "score": 178,
+     "side": "for"
+    },
+    {
+     "author_demo_id": "demo-058",
+     "author_username": "ana_lu",
+     "body": "Nuclear and aviation systems have international institutions because failures cross borders. AI needs a technical floor that does not depend on where a company is headquartered. The [UN report's seven recommendations](https://sdg.iisd.org/news/secretary-generals-advisory-body-makes-proposals-to-govern-ai-for-humanity/) are a useful start, but they are non-binding. Authority over shared tests and disclosure would turn coordination into evidence governments can act on.",
+     "id": 58,
+     "score": 43,
+     "side": "for"
+    }
+   ],
+   "category": "Politics",
+   "context": "The UN’s 2024 “Governing AI for Humanity” report proposed a scientific panel, standards exchange, capacity network, fund, data framework, and small AI office, but no binding enforcement power. With advanced development concentrated in a few companies and countries, the debate is whether governments should grant a global institution authority over audits, incidents, or licensing.",
+   "id": 20,
+   "is_featured": true,
+   "proposition": "Should countries create an international body with real authority to oversee frontier AI?",
+   "sources": [
+    {
+     "title": "UN advisory body proposals for global AI governance",
+     "url": "https://sdg.iisd.org/news/secretary-generals-advisory-body-makes-proposals-to-govern-ai-for-humanity/"
+    },
+    {
+     "title": "OECD AI Principles update",
+     "url": "https://www.cuatrecasas.com/en/spain/intellectual-property/art/oecd-updates-ai-principles"
+    }
+   ],
+   "topic_date": "2026-09-23"
+  }
+ ]
+}
