@@ -89,3 +89,44 @@ export const CATEGORIES = [
   'Politics',
   'Sports',
 ] as const;
+
+/** Flairs allowed on member-submitted topics (Featured is curator-only). */
+export const SUBMISSION_CATEGORIES = [
+  'Business',
+  'Entertainment',
+  'Lifestyle',
+  'Politics',
+  'Sports',
+] as const;
+
+export type SubmissionSort = 'top' | 'new' | 'trending';
+
+export interface TopicSubmission {
+  id: number;
+  author_id: string | null;
+  question: string;
+  context: string;
+  links: string[];
+  category: string;
+  week_of: string;
+  score: number;
+  view_count: number;
+  created_at: string;
+  author: Pick<Profile, 'username' | 'display_name'> | null;
+  voted: boolean;
+}
+
+/** Monday (UTC) of the week containing `d`, as YYYY-MM-DD. Weeks run Mon 00:00 → Sun 23:59 UTC. */
+export function weekOf(d: Date = new Date()): string {
+  const dt = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
+  const diff = (dt.getUTCDay() + 6) % 7; // days since Monday
+  dt.setUTCDate(dt.getUTCDate() - diff);
+  return dt.toISOString().slice(0, 10);
+}
+
+/** Adds/subtracts whole weeks from a YYYY-MM-DD week string. */
+export function shiftWeek(week: string, delta: number): string {
+  const dt = new Date(`${week}T00:00:00Z`);
+  dt.setUTCDate(dt.getUTCDate() + delta * 7);
+  return dt.toISOString().slice(0, 10);
+}

@@ -8,9 +8,10 @@ const BASE = 'https://www.debait.club';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [
-    { url: BASE, lastModified: now, changeFrequency: 'daily', priority: 1 },
-    { url: `${BASE}/archive`, lastModified: now, changeFrequency: 'daily', priority: 0.8 },
-    { url: `${BASE}/champions`, lastModified: now, changeFrequency: 'daily', priority: 0.7 },
+    { url: BASE, lastModified: now, changeFrequency: 'weekly', priority: 1 },
+    { url: `${BASE}/archive`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE}/champions`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${BASE}/submit`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE}/rules`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE}/signup`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
   ];
@@ -26,7 +27,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       entries.push({
         url: `${BASE}/topic/${t.id}`,
         lastModified: new Date(t.topic_date),
-        changeFrequency: 'daily',
+        changeFrequency: 'weekly',
         priority: 0.9,
       });
     }

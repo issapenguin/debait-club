@@ -48,7 +48,7 @@ export default async function HomePage() {
           them. We expect that.”
         </blockquote>
         <p className="mt-3 text-sm font-medium uppercase tracking-[0.2em] text-neutral-400">
-          One topic per category. Every day.
+          One topic per category. Every week.
         </p>
       </section>
       <HomeTabs tabs={tabs} loggedIn={userId !== null} />

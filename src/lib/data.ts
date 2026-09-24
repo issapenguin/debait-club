@@ -1,6 +1,13 @@
 // Shared server-side data fetching for pages and API routes.
 import { getServerClient, getSessionUser, getServiceClient } from './supabase/server';
-import type { CaseRow, CommentRow, Profile, Topic } from './types';
+import type {
+  CaseRow,
+  CommentRow,
+  Profile,
+  SubmissionSort,
+  Topic,
+  TopicSubmission,
+} from './types';
 
 export async function getCurrentUserId(): Promise<string | null> {
   const user = await getSessionUser();
@@ -209,17 +216,117 @@ export interface Champion {
   points: number;
 }
 
+// ---------------------------------------------------------------------------
+// Topic submissions
+// ---------------------------------------------------------------------------
+
+// Reddit-style "hot" ranking, mirroring reddit's algorithm: log-scaled vote
+// count plus a time term, so a submission gaining d-coins quickly outranks an
+// older one with the same total. Epoch and divisor match reddit's own values.
+const REDDIT_EPOCH = 1134028003; // 2005-12-08T07:46:43Z
+const HOT_DIVISOR = 45000;
+
+export function hotScore(score: number, createdAt: string): number {
+  const order = Math.log10(Math.max(score, 1));
+  const seconds = Date.parse(createdAt) / 1000 - REDDIT_EPOCH;
+  return order + seconds / HOT_DIVISOR;
+}
+
+export interface SubmissionQuery {
+  week: string;
+  sort: SubmissionSort;
+  category?: string;
+  limit?: number;
+}
+
+export async function fetchSubmissions(
+  query: SubmissionQuery,
+  userId: string | null
+): Promise<TopicSubmission[]> {
+  const supabase = await getServerClient();
+  if (!supabase) return [];
+  const { data, error } = await supabase
+    .from('topic_submissions')
+    .select('*, author:profiles(username, display_name)')
+    .eq('week_of', query.week)
+    .order('created_at', { ascending: false })
+    .limit(query.limit ?? 500);
+  if (error || !data) return [];
+
+  let rows = (data as (Omit<
+    TopicSubmission,
+    'author' | 'voted'
+  > & { author: AuthorRef | null })[]).filter(
+    (r) => !query.category || r.category === query.category
+  );
+
+  if (query.sort === 'top') {
+    rows = [...rows].sort(
+      (a, b) => b.score - a.score || +new Date(b.created_at) - +new Date(a.created_at)
+    );
+  } else if (query.sort === 'trending') {
+    rows = [...rows].sort(
+      (a, b) => hotScore(b.score, b.created_at) - hotScore(a.score, a.created_at)
+    );
+  }
+
+  const ids = rows.map((r) => r.id);
+  let votedSet = new Set<number>();
+  if (userId && ids.length > 0) {
+    const { data: votes } = await supabase
+      .from('submission_votes')
+      .select('submission_id')
+      .eq('voter_id', userId)
+      .in('submission_id', ids);
+    votedSet = new Set(((votes ?? []) as { submission_id: number }[]).map((v) => v.submission_id));
+  }
+
+  return rows.map((r) => ({
+    ...r,
+    links: Array.isArray(r.links) ? r.links : [],
+    voted: votedSet.has(r.id),
+  }));
+}
+
+export interface SubmissionLeaders {
+  overall: TopicSubmission | null;
+  byCategory: Record<string, TopicSubmission | null>;
+}
+
+/** This week's leaders: top-voted overall and top-voted per category. */
+export async function fetchSubmissionLeaders(
+  week: string,
+  userId: string | null
+): Promise<SubmissionLeaders> {
+  const top = await fetchSubmissions({ week, sort: 'top', limit: 500 }, userId);
+  const overall = top[0] ?? null;
+  const byCategory: Record<string, TopicSubmission | null> = {};
+  for (const cat of ['Business', 'Entertainment', 'Lifestyle', 'Politics', 'Sports']) {
+    byCategory[cat] = top.find((s) => s.category === cat) ?? null;
+  }
+  return { overall, byCategory };
+}
+
 export async function fetchChampions(limit = 50): Promise<Champion[]> {
   const supabase = await getServerClient();
   if (!supabase) return [];
-  const [{ data: caseScores }, { data: commentScores }, { data: profiles }] =
-    await Promise.all([
-      supabase.from('cases').select('author_id, score'),
-      supabase.from('comments').select('author_id, score'),
-      supabase.from('profiles').select('id, username, display_name'),
-    ]);
+  const [
+    { data: caseScores },
+    { data: commentScores },
+    { data: submissionScores },
+    { data: profiles },
+  ] = await Promise.all([
+    supabase.from('cases').select('author_id, score'),
+    supabase.from('comments').select('author_id, score'),
+    supabase.from('topic_submissions').select('author_id, score'),
+    supabase.from('profiles').select('id, username, display_name'),
+  ]);
   const points = new Map<string, number>();
-  for (const row of [...((caseScores ?? []) as { author_id: string | null; score: number }[]), ...((commentScores ?? []) as { author_id: string | null; score: number }[])]) {
+  for (const row of [
+    ...((caseScores ?? []) as { author_id: string | null; score: number }[]),
+    ...((commentScores ?? []) as { author_id: string | null; score: number }[]),
+    ...((submissionScores ?? []) as { author_id: string | null; score: number }[]),
+  ]) {
     if (!row.author_id) continue;
     points.set(row.author_id, (points.get(row.author_id) ?? 0) + (row.score ?? 0));
   }

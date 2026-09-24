@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { fetchChampions } from '@/lib/data';
+import { CoinIcon } from '@/components/CoinIcon';
 
 export const dynamic = 'force-dynamic';
 
@@ -14,8 +15,9 @@ export default async function ChampionsPage() {
         Champions
       </h1>
       <p className="mt-2 text-[15px] text-neutral-500 dark:text-neutral-400">
-        Ranked by total points — the sum of upvotes earned across every case and
-        comment a member has posted. Make strong cases, change minds, climb the board.
+        Ranked by total d-coins — the sum of upvotes earned across every case,
+        comment, and topic submission a member has posted. Make strong cases,
+        change minds, climb the board.
       </p>
 
       {champions.length === 0 ? (
@@ -52,11 +54,12 @@ export default async function ChampionsPage() {
                 </Link>
                 <p className="truncate text-sm text-neutral-500">@{c.username}</p>
               </div>
-              <span className="ml-auto text-right">
+              <span className="ml-auto flex items-center gap-1.5 text-right">
+                <CoinIcon className="h-5 w-5" />
                 <span className="font-display text-xl font-semibold text-neutral-900 dark:text-neutral-50">
                   {c.points.toLocaleString()}
                 </span>{' '}
-                <span className="text-sm text-neutral-400">pts</span>
+                <span className="text-sm text-neutral-400">d-coins</span>
               </span>
             </li>
           ))}

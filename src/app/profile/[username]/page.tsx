@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getServerClient, getSessionUser } from '@/lib/supabase/server';
 import { EditBio } from '@/components/EditBio';
 import { StanceTag } from '@/components/StanceTag';
+import { CoinIcon } from '@/components/CoinIcon';
 import { formatDate, renderRichText, timeAgo } from '@/lib/format';
 import type { Profile } from '@/lib/types';
 
@@ -15,6 +16,14 @@ interface ProfileCase {
   score: number;
   created_at: string;
   topic: { id: number; proposition: string; category: string; topic_date: string } | null;
+}
+
+interface ProfileSubmission {
+  id: number;
+  question: string;
+  category: string;
+  score: number;
+  created_at: string;
 }
 
 interface ProfileComment {
@@ -40,6 +49,7 @@ export default async function ProfilePage({
   let profile: Profile | null = null;
   let cases: ProfileCase[] = [];
   let comments: ProfileComment[] = [];
+  let submissions: ProfileSubmission[] = [];
 
   if (supabase) {
     const { data } = await supabase
@@ -50,22 +60,30 @@ export default async function ProfilePage({
     profile = (data as Profile | null) ?? null;
 
     if (profile) {
-      const [{ data: caseData }, { data: commentData }] = await Promise.all([
-        supabase
-          .from('cases')
-          .select('id, side, body, score, created_at, topic:topics(id, proposition, category, topic_date)')
-          .eq('author_id', profile.id)
-          .order('created_at', { ascending: false })
-          .limit(50),
-        supabase
-          .from('comments')
-          .select('id, body, stance, score, created_at, case:cases(id, topic:topics(id, proposition, category, topic_date))')
-          .eq('author_id', profile.id)
-          .order('created_at', { ascending: false })
-          .limit(50),
-      ]);
+      const [{ data: caseData }, { data: commentData }, { data: submissionData }] =
+        await Promise.all([
+          supabase
+            .from('cases')
+            .select('id, side, body, score, created_at, topic:topics(id, proposition, category, topic_date)')
+            .eq('author_id', profile.id)
+            .order('created_at', { ascending: false })
+            .limit(50),
+          supabase
+            .from('comments')
+            .select('id, body, stance, score, created_at, case:cases(id, topic:topics(id, proposition, category, topic_date))')
+            .eq('author_id', profile.id)
+            .order('created_at', { ascending: false })
+            .limit(50),
+          supabase
+            .from('topic_submissions')
+            .select('id, question, category, score, created_at')
+            .eq('author_id', profile.id)
+            .order('created_at', { ascending: false })
+            .limit(50),
+        ]);
       cases = (caseData ?? []) as unknown as ProfileCase[];
       comments = (commentData ?? []) as unknown as ProfileComment[];
+      submissions = (submissionData ?? []) as unknown as ProfileSubmission[];
     }
   }
 
@@ -74,7 +92,9 @@ export default async function ProfilePage({
   const user = await getSessionUser();
   const isOwner = user?.id === profile.id;
   const points =
-    cases.reduce((n, c) => n + c.score, 0) + comments.reduce((n, c) => n + c.score, 0);
+    cases.reduce((n, c) => n + c.score, 0) +
+    comments.reduce((n, c) => n + c.score, 0) +
+    submissions.reduce((n, s) => n + s.score, 0);
 
   return (
     <div className="mx-auto max-w-3xl pt-10">
@@ -88,11 +108,12 @@ export default async function ProfilePage({
           </h1>
           <p className="text-sm text-neutral-500">@{profile.username}</p>
         </div>
-        <span className="ml-auto text-right">
+        <span className="ml-auto flex items-center gap-1.5 text-right">
+          <CoinIcon className="h-6 w-6" />
           <span className="font-display text-2xl font-semibold text-neutral-900 dark:text-neutral-50">
             {points.toLocaleString()}
           </span>{' '}
-          <span className="text-sm text-neutral-400">pts</span>
+          <span className="text-sm text-neutral-400">d-coins</span>
         </span>
       </div>
 
@@ -136,7 +157,10 @@ export default async function ProfilePage({
                       <span className="text-neutral-400">{formatDate(c.topic.topic_date)}</span>
                     </>
                   )}
-                  <span className="ml-auto font-semibold text-neutral-500">{c.score} pts</span>
+                  <span className="ml-auto flex items-center gap-1 font-semibold text-neutral-500">
+                    <CoinIcon className="h-3.5 w-3.5" />
+                    {c.score}
+                  </span>
                 </div>
                 {c.topic && (
                   <p className="font-display mt-2 font-semibold text-neutral-900 dark:text-neutral-50">
@@ -169,8 +193,9 @@ export default async function ProfilePage({
                 <div className="flex flex-wrap items-center gap-2">
                   <StanceTag stance={c.stance} />
                   <span className="text-xs text-neutral-400">{timeAgo(c.created_at)}</span>
-                  <span className="ml-auto text-xs font-semibold text-neutral-500">
-                    {c.score} pts
+                  <span className="ml-auto flex items-center gap-1 text-xs font-semibold text-neutral-500">
+                    <CoinIcon className="h-3.5 w-3.5" />
+                    {c.score}
                   </span>
                 </div>
                 <p className="mt-2 line-clamp-2 whitespace-pre-wrap text-sm text-neutral-700 dark:text-neutral-200">
@@ -185,6 +210,38 @@ export default async function ProfilePage({
                     </span>
                   </p>
                 )}
+              </Link>
+            ))}
+          </div>
+        )}
+      </section>
+      <section className="mt-10" aria-label="Topic submissions by this user">
+        <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-neutral-500">
+          Submitted topics ({submissions.length})
+        </h2>
+        {submissions.length === 0 ? (
+          <p className="text-sm italic text-neutral-400">No submissions yet.</p>
+        ) : (
+          <div className="space-y-3">
+            {submissions.map((s) => (
+              <Link
+                key={s.id}
+                href="/submit"
+                className="block rounded-2xl border border-neutral-200 bg-white p-4 transition hover:border-neutral-300 hover:shadow-sm dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-neutral-700"
+              >
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="rounded-full bg-sky-100 px-2 py-0.5 text-xs font-bold text-sky-800 dark:bg-sky-900/50 dark:text-sky-300">
+                    {s.category}
+                  </span>
+                  <span className="text-xs text-neutral-400">{timeAgo(s.created_at)}</span>
+                  <span className="ml-auto flex items-center gap-1 text-xs font-semibold text-neutral-500">
+                    <CoinIcon className="h-3.5 w-3.5" />
+                    {s.score}
+                  </span>
+                </div>
+                <p className="mt-2 font-display font-semibold text-neutral-900 dark:text-neutral-50">
+                  {s.question}
+                </p>
               </Link>
             ))}
           </div>

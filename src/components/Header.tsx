@@ -13,6 +13,7 @@ const NAV = [
   { href: '/archive', label: 'Archive' },
   { href: '/rules', label: 'Rules' },
   { href: '/saved', label: 'Saved' },
+  { href: '/submit', label: 'Submit' },
 ];
 
 interface SessionInfo {

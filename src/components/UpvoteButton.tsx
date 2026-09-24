@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { CoinIcon } from './CoinIcon';
 import type { TargetType } from '@/lib/types';
 
 export function UpvoteButton({
@@ -58,8 +59,8 @@ export function UpvoteButton({
       onClick={toggle}
       disabled={busy}
       aria-pressed={voted}
-      aria-label={voted ? 'Remove your upvote' : 'Upvote'}
-      title={voted ? 'Remove your upvote' : 'Upvote'}
+      aria-label={voted ? 'Take back your d-coin' : 'Give a d-coin'}
+      title={voted ? 'Take back your d-coin' : 'Give a d-coin'}
       className={`inline-flex items-center gap-1.5 rounded-full border font-semibold transition ${
         compact ? 'px-2 py-0.5 text-xs' : 'px-3 py-1 text-sm'
       } ${
@@ -68,18 +69,7 @@ export function UpvoteButton({
           : 'border-neutral-200 text-neutral-600 hover:border-sky-400 hover:text-sky-600 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-sky-500 dark:hover:text-sky-400'
       }`}
     >
-      <svg
-        viewBox="0 0 24 24"
-        fill={voted ? 'currentColor' : 'none'}
-        stroke="currentColor"
-        strokeWidth={2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className={compact ? 'h-3.5 w-3.5' : 'h-4 w-4'}
-        aria-hidden="true"
-      >
-        <path d="M7 10v11H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h3zm0 0l4-7a2 2 0 0 1 3.6 1.2L13 9h7a2 2 0 0 1 2 2.4l-1.5 7A2 2 0 0 1 17.5 20H7" />
-      </svg>
+      <CoinIcon className={compact ? 'h-3.5 w-3.5' : 'h-4 w-4'} />
       <span>{score}</span>
     </button>
   );

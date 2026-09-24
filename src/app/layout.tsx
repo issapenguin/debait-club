@@ -18,14 +18,14 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.debait.club'),
   title: {
-    default: 'Debait Club — Change your mind daily',
+    default: 'Debait Club — Change your mind weekly',
     template: '%s — Debait Club',
   },
   description:
-    'A daily debate club. One fresh topic per category, every day. Read the FOR and AGAINST cases, vote, join the discussion, and stay open to changing your mind.',
+    'A weekly debate club. One fresh topic per category, every week. Read the FOR and AGAINST cases, vote, join the discussion, and stay open to changing your mind.',
   keywords: [
     'debate',
-    'daily debate',
+    'weekly debate',
     'debate club',
     'opposing views',
     'change your mind',
@@ -40,15 +40,15 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.debait.club',
     siteName: 'Debait Club',
-    title: 'Debait Club — Change your mind daily',
+    title: 'Debait Club — Change your mind weekly',
     description:
-      'One fresh debate topic per category, every day. Read both sides. Make your case. Change your mind.',
+      'One fresh debate topic per category, every week. Read both sides. Make your case. Change your mind.',
   },
   twitter: {
     card: 'summary',
-    title: 'Debait Club — Change your mind daily',
+    title: 'Debait Club — Change your mind weekly',
     description:
-      'One fresh debate topic per category, every day. Read both sides. Make your case. Change your mind.',
+      'One fresh debate topic per category, every week. Read both sides. Make your case. Change your mind.',
   },
   robots: {
     index: true,
@@ -72,7 +72,7 @@ const JSON_LD = {
   name: 'Debait Club',
   url: 'https://www.debait.club',
   description:
-    'A daily debate club. One fresh topic per category, every day. Read the FOR and AGAINST cases, vote, and stay open to changing your mind.',
+    'A weekly debate club. One fresh topic per category, every week. Read the FOR and AGAINST cases, vote, and stay open to changing your mind.',
 };
 
 const THEME_INIT = `(function(){try{var t=localStorage.getItem('debait-theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark');}}catch(e){}})();`;

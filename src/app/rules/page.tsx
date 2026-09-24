@@ -31,6 +31,10 @@ const RULES: { title: string; body: string }[] = [
     body: 'Cases should make a claim and back it with reasoning or evidence. "You are wrong" is not a case. Links in [text](url) format are encouraged.',
   },
   {
+    title: 'Propose debates properly',
+    body: 'Topic submissions need all three: a real debate question, context for why it matters, and at least one relevant link — plus a category flair. The club votes all week with d-coins; the leaders are considered for next week\u2019s debates.',
+  },
+  {
     title: 'Keep it clean',
     body: 'No profanity, period. Strong language is blocked automatically, and repeat offenders lose posting privileges. Keep it clean enough for a bright thirteen-year-old — which, given the signup rules, might literally be reading.',
   },
