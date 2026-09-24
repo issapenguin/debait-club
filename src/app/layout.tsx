@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from 'next';
 import { Fraunces, Inter } from 'next/font/google';
+import Link from 'next/link';
 import './globals.css';
 import { Header } from '@/components/Header';
+import { DailyQuote } from '@/components/DailyQuote';
 
 const fraunces = Fraunces({
   variable: '--font-fraunces',
@@ -94,10 +96,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 pb-16">{children}</main>
         <footer className="border-t border-neutral-200 py-8 dark:border-neutral-800">
           <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-4 text-sm text-neutral-500 dark:text-neutral-400">
-            <p className="font-display text-base font-semibold text-neutral-700 dark:text-neutral-200">
-              Debait Club
-            </p>
-            <p className="italic">You should be open to changing your mind. We expect that.</p>
+            <Link
+              href="/contact"
+              className="font-display text-base font-semibold text-neutral-700 hover:underline dark:text-neutral-200"
+            >
+              Contact Us
+            </Link>
+            <DailyQuote />
           </div>
         </footer>
       </body>

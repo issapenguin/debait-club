@@ -48,7 +48,7 @@ export default async function AdminPage() {
     return n ?? 0;
   }
 
-  const [userCount, caseCount, commentCount, voteCount, submissionCount, openReportCount] =
+  const [userCount, caseCount, commentCount, voteCount, submissionCount, openReportCount, messageCount] =
     await Promise.all([
       count('profiles'),
       count('cases'),
@@ -56,6 +56,7 @@ export default async function AdminPage() {
       count('votes'),
       count('topic_submissions'),
       count('reports', { status: 'open' }),
+      count('contact_messages'),
     ]);
 
   // Recent signups, enriched with email + confirmation status from Auth.
@@ -128,6 +129,23 @@ export default async function AdminPage() {
     }
   }
 
+  // Recent contact-form messages.
+  const { data: contactMessages } = await service
+    .from('contact_messages')
+    .select('id, email, display_name, username, subject, message, email_sent, created_at')
+    .order('created_at', { ascending: false })
+    .limit(20);
+  const messageList = (contactMessages ?? []) as {
+    id: number;
+    email: string;
+    display_name: string | null;
+    username: string | null;
+    subject: string;
+    message: string;
+    email_sent: boolean;
+    created_at: string;
+  }[];
+
   const stats: [string, number][] = [
     ['Users', userCount],
     ['Cases', caseCount],
@@ -135,6 +153,7 @@ export default async function AdminPage() {
     ['D-coin votes', voteCount],
     ['Topic submissions', submissionCount],
     ['Open reports', openReportCount],
+    ['Messages', messageCount],
   ];
 
   return (
@@ -230,6 +249,48 @@ export default async function AdminPage() {
                 </div>
               );
             })}
+          </div>
+        )}
+      </section>
+
+      <section className="mt-10" aria-label="Contact messages">
+        <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-neutral-500">
+          Contact messages
+        </h2>
+        {messageList.length === 0 ? (
+          <p className="text-sm italic text-neutral-400">No messages yet.</p>
+        ) : (
+          <div className="space-y-3">
+            {messageList.map((m) => (
+              <div
+                key={m.id}
+                className="rounded-2xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900"
+              >
+                <div className="flex flex-wrap items-center gap-2 text-xs text-neutral-500 dark:text-neutral-400">
+                  <span className="font-semibold text-neutral-700 dark:text-neutral-200">
+                    {m.display_name ?? m.username ?? 'Anonymous'}
+                    {m.username ? ` @${m.username}` : ''}
+                  </span>
+                  <span>{m.email}</span>
+                  <span>{timeAgo(m.created_at)}</span>
+                  <span
+                    className={
+                      m.email_sent
+                        ? 'text-green-700 dark:text-green-400'
+                        : 'text-amber-600 dark:text-amber-400'
+                    }
+                  >
+                    {m.email_sent ? 'emailed' : 'stored only'}
+                  </span>
+                </div>
+                <p className="mt-2 text-sm font-semibold text-neutral-800 dark:text-neutral-100">
+                  {m.subject}
+                </p>
+                <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+                  {m.message}
+                </p>
+              </div>
+            ))}
           </div>
         )}
       </section>

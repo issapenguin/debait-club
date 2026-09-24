@@ -101,6 +101,19 @@ create table if not exists public.admin_users (
   created_at timestamptz default now()
 );
 
+-- Contact form submissions. Anyone may insert; only the service role reads.
+create table if not exists public.contact_messages (
+  id bigint generated always as identity primary key,
+  user_id uuid references public.profiles(id) on delete set null,
+  email text not null,
+  display_name text,
+  username text,
+  subject text not null,
+  message text not null,
+  email_sent boolean not null default false,
+  created_at timestamptz not null default now()
+);
+
 -- ---------------------------------------------------------------- indexes --
 
 create index if not exists cases_topic_id_idx on public.cases (topic_id);
@@ -116,6 +129,7 @@ create index if not exists topic_submissions_author_idx on public.topic_submissi
 create index if not exists topic_submissions_category_idx on public.topic_submissions (category);
 create index if not exists submission_votes_submission_idx on public.submission_votes (submission_id);
 create index if not exists submission_votes_voter_idx on public.submission_votes (voter_id);
+create index if not exists contact_messages_created_idx on public.contact_messages (created_at desc);
 
 -- -------------------------------------------------------------------- RLS ---
 
@@ -129,6 +143,7 @@ alter table public.saved_items enable row level security;
 alter table public.topic_submissions enable row level security;
 alter table public.submission_votes enable row level security;
 alter table public.admin_users enable row level security;
+alter table public.contact_messages enable row level security;
 
 -- Public read on everything.
 drop policy if exists "public read" on public.profiles;
@@ -227,3 +242,10 @@ create policy "voters retract own submission votes" on public.submission_votes
 drop policy if exists "users read own admin row" on public.admin_users;
 create policy "users read own admin row" on public.admin_users
   for select using (user_id = auth.uid());
+
+-- Contact messages: anyone can submit; no select/update/delete policies, so
+-- only the service role can read them (surfaced on the private admin page).
+drop policy if exists "anyone can submit contact" on public.contact_messages;
+create policy "anyone can submit contact"
+  on public.contact_messages for insert
+  with check (true);

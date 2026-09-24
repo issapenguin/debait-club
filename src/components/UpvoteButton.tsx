@@ -69,6 +69,18 @@ export function UpvoteButton({
           : 'border-neutral-200 text-neutral-600 hover:border-sky-400 hover:text-sky-600 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-sky-500 dark:hover:text-sky-400'
       }`}
     >
+      <svg
+        viewBox="0 0 16 16"
+        className={compact ? 'h-3 w-3' : 'h-3.5 w-3.5'}
+        aria-hidden="true"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M3 10l5-5 5 5" />
+      </svg>
       <CoinIcon className={compact ? 'h-3.5 w-3.5' : 'h-4 w-4'} />
       <span>{score}</span>
     </button>
