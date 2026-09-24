@@ -5,7 +5,7 @@ import { EditBio } from '@/components/EditBio';
 import { StanceTag } from '@/components/StanceTag';
 import { CoinIcon } from '@/components/CoinIcon';
 import { formatDate, renderRichText, timeAgo } from '@/lib/format';
-import type { Profile } from '@/lib/types';
+import type { Profile, Stance } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
 
@@ -29,7 +29,7 @@ interface ProfileSubmission {
 interface ProfileComment {
   id: number;
   body: string;
-  stance: 'strongly_agree' | 'agree' | 'neutral' | 'disagree' | 'strongly_disagree';
+  stance: Stance;
   score: number;
   created_at: string;
   case: {

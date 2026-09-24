@@ -40,7 +40,7 @@ create table if not exists public.comments (
   author_id uuid references public.profiles(id) on delete set null,
   parent_id bigint references public.comments(id) on delete cascade,
   body text not null,
-  stance text check (stance in ('strongly_agree', 'agree', 'neutral', 'disagree', 'strongly_disagree')),
+  stance text check (stance in ('for', 'neutral', 'against')),
   score int default 0,
   created_at timestamptz default now()
 );

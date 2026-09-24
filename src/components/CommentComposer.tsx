@@ -71,7 +71,8 @@ export function CommentComposer({
 
   return (
     <div className="rounded-xl border border-neutral-200 bg-white p-3 dark:border-neutral-800 dark:bg-neutral-900">
-      <div className="mb-2 flex flex-wrap gap-1.5" role="group" aria-label="Your stance">
+      <div className="mb-2 flex flex-wrap items-center gap-1.5" role="group" aria-label="Your position on the topic">
+        <span className="mr-1 text-xs font-medium text-neutral-400">Your position:</span>
         {STANCES.map((s) => (
           <button
             key={s}

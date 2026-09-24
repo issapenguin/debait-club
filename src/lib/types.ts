@@ -1,12 +1,7 @@
 // Shared domain types for Debait Club.
 
 export type Side = 'for' | 'against';
-export type Stance =
-  | 'strongly_agree'
-  | 'agree'
-  | 'neutral'
-  | 'disagree'
-  | 'strongly_disagree';
+export type Stance = 'for' | 'neutral' | 'against';
 export type TargetType = 'case' | 'comment';
 
 export interface Profile {
@@ -64,20 +59,12 @@ export interface CommentRow {
 }
 
 export const STANCE_LABELS: Record<Stance, string> = {
-  strongly_agree: 'Strongly agree',
-  agree: 'Agree',
+  for: 'For',
   neutral: 'Neutral',
-  disagree: 'Disagree',
-  strongly_disagree: 'Strongly disagree',
+  against: 'Against',
 };
 
-export const STANCES: Stance[] = [
-  'strongly_agree',
-  'agree',
-  'neutral',
-  'disagree',
-  'strongly_disagree',
-];
+export const STANCES: Stance[] = ['for', 'neutral', 'against'];
 
 export const MAX_BODY_LENGTH = 1680;
 
