@@ -44,8 +44,8 @@ export default async function HomePage() {
     <div>
       <section className="mx-auto max-w-3xl py-8 text-center sm:py-10">
         <blockquote className="font-display text-sm font-medium leading-relaxed tracking-tight text-neutral-900 md:whitespace-nowrap dark:text-neutral-50">
-          “You have your views. We accept that. You should be open to changing
-          them. We expect that.”
+          You have your views. We accept that. You should be open to changing
+          them. We expect that.
         </blockquote>
         <p className="mt-3 text-sm font-medium uppercase tracking-[0.2em] text-neutral-400">
           One topic per category. Every week.

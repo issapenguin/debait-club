@@ -72,7 +72,7 @@ export function Header() {
             debait club
           </span>
         </Link>
-        <nav className="ml-6 hidden items-center gap-1 sm:flex" aria-label="Primary">
+        <nav className="hidden flex-1 items-center justify-center gap-1 sm:flex" aria-label="Primary">
           {NAV.map((item) => {
             const active = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
             return (
