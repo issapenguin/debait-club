@@ -57,8 +57,7 @@ export default async function SubmitPage() {
         Future Topics
       </h1>
       <p className="mt-2 text-[15px] text-neutral-500 dark:text-neutral-400">
-        Vote next week&apos;s debates into existence. Every upvote is a d-coin —
-        spend yours on the questions you most want to argue about.
+        You decide what we debate next week. Vote on topics below or submit your own.
       </p>
 
       <div className="mt-6 grid gap-3 sm:grid-cols-3">
