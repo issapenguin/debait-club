@@ -15,6 +15,7 @@ export function ItemMenu({
   loggedIn,
   showShare = false,
   shareUrl,
+  canDelete = false,
 }: {
   targetType: TargetType;
   targetId: number;
@@ -22,11 +23,15 @@ export function ItemMenu({
   loggedIn: boolean;
   showShare?: boolean;
   shareUrl?: string;
+  /** Show a Delete option (author-only actions call this). */
+  canDelete?: boolean;
 }) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [saved, setSaved] = useState(initialSaved);
   const [reporting, setReporting] = useState(false);
+  const [confirmingDelete, setConfirmingDelete] = useState(false);
+  const [deleting, setDeleting] = useState(false);
   const [reason, setReason] = useState('');
   const [reportState, setReportState] = useState<'idle' | 'sending' | 'done' | 'error'>('idle');
   const [shareNote, setShareNote] = useState('');
@@ -88,8 +93,7 @@ export function ItemMenu({
 
   const submitReport = async () => {
     if (!requireLogin()) return;
-    setReportState('sending');
-    const res = await fetch('/api/report', {
+    setReportState('sending');    const res = await fetch('/api/report', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ target_type: targetType, target_id: targetId, reason }),
@@ -109,6 +113,23 @@ export function ItemMenu({
     }
   };
 
+  const doDelete = async () => {
+    setDeleting(true);
+    try {
+      const res = await fetch(`/api/comments?id=${targetId}`, { method: 'DELETE' });
+      if (res.status === 401) {
+        router.push('/login');
+        return;
+      }
+      if (!res.ok) return;
+      setOpen(false);
+      setConfirmingDelete(false);
+      router.refresh();
+    } finally {
+      setDeleting(false);
+    }
+  };
+
   return (
     <div ref={ref} className="relative" onClick={(e) => e.stopPropagation()}>
       <button
@@ -116,6 +137,7 @@ export function ItemMenu({
         onClick={() => {
           setOpen((o) => !o);
           setReporting(false);
+          setConfirmingDelete(false);
           setReportState('idle');
         }}
         aria-label="More actions"
@@ -135,7 +157,33 @@ export function ItemMenu({
       )}
       {open && (
         <div className="absolute right-0 z-30 w-52 overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-lg dark:border-neutral-700 dark:bg-neutral-900">
-          {!reporting ? (
+          {confirmingDelete ? (
+            <div className="p-3">
+              <p className="mb-1 text-sm font-semibold text-neutral-800 dark:text-neutral-100">
+                Delete this comment?
+              </p>
+              <p className="mb-3 text-xs text-neutral-500 dark:text-neutral-400">
+                This can&apos;t be undone. Any replies to it will be removed too.
+              </p>
+              <div className="flex justify-end gap-2">
+                <button
+                  type="button"
+                  onClick={() => setConfirmingDelete(false)}
+                  className="rounded-full px-3 py-1 text-sm text-neutral-500 hover:text-neutral-800 dark:hover:text-neutral-200"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  onClick={doDelete}
+                  disabled={deleting}
+                  className="rounded-full bg-red-600 px-3 py-1 text-sm font-semibold text-white transition hover:bg-red-700 disabled:opacity-50"
+                >
+                  {deleting ? 'Deleting…' : 'Delete'}
+                </button>
+              </div>
+            </div>
+          ) : !reporting ? (
             <div className="py-1">
               <button
                 type="button"
@@ -169,6 +217,18 @@ export function ItemMenu({
                 </svg>
                 Report
               </button>
+              {canDelete && (
+                <button
+                  type="button"
+                  onClick={() => setConfirmingDelete(true)}
+                  className="flex w-full items-center gap-2 px-4 py-2 text-left text-sm font-medium text-red-600 hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-950/40"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4" aria-hidden="true">
+                    <path d="M4 7h16M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2m3 0-1 13a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1L6 7" />
+                  </svg>
+                  Delete
+                </button>
+              )}
             </div>
           ) : (
             <div className="p-3">

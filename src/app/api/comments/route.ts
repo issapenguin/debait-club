@@ -53,3 +53,43 @@ export async function POST(request: Request) {
   }
   return NextResponse.json({ ok: true, id: data.id });
 }
+
+// DELETE /api/comments?id=123 — the author deletes their own comment.
+export async function DELETE(request: Request) {
+  const authed = await requireAuth();
+  if ('response' in authed) return authed.response;
+  const { userId, service } = authed.ctx;
+
+  const id = Number(new URL(request.url).searchParams.get('id'));
+  if (!Number.isFinite(id)) return badRequest('A valid comment is required.');
+
+  const { data: comment } = await service
+    .from('comments')
+    .select('id, author_id')
+    .eq('id', id)
+    .maybeSingle();
+  if (!comment) {
+    return NextResponse.json({ error: 'Comment not found.' }, { status: 404 });
+  }
+  if (comment.author_id !== userId) {
+    return NextResponse.json(
+      { error: 'You can only delete your own comments.' },
+      { status: 403 }
+    );
+  }
+
+  // votes and saved_items reference targets without a foreign key, so clean
+  // them explicitly; replies cascade automatically.
+  await service.from('votes').delete().eq('target_type', 'comment').eq('target_id', id);
+  await service
+    .from('saved_items')
+    .delete()
+    .eq('target_type', 'comment')
+    .eq('target_id', id);
+  const { error } = await service.from('comments').delete().eq('id', id);
+  if (error) {
+    console.error('comment delete failed', error);
+    return NextResponse.json({ error: 'Could not delete your comment.' }, { status: 500 });
+  }
+  return NextResponse.json({ ok: true });
+}

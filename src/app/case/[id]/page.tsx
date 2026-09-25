@@ -71,7 +71,7 @@ export default async function CasePage({
         <CaseCard caseRow={caseRow} loggedIn={userId !== null} />
       </div>
 
-      <CommentThread caseId={caseRow.id} comments={comments} loggedIn={userId !== null} />
+      <CommentThread caseId={caseRow.id} comments={comments} loggedIn={userId !== null} currentUserId={userId} />
     </div>
   );
 }

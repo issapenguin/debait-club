@@ -19,7 +19,7 @@ interface HistoryComment extends CommentRow {
   } | null;
 }
 
-function HistoryCommentCard({ comment }: { comment: HistoryComment }) {
+function HistoryCommentCard({ comment, canDelete }: { comment: HistoryComment; canDelete: boolean }) {
   const topic = comment.case?.topic;
   return (
     <div className="rounded-2xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900">
@@ -37,6 +37,7 @@ function HistoryCommentCard({ comment }: { comment: HistoryComment }) {
             targetId={comment.id}
             initialSaved={comment.saved}
             loggedIn
+            canDelete={canDelete}
           />
         </div>
       </div>
@@ -176,7 +177,7 @@ export default async function HistoryPage() {
                   <CaseCard key={`saved-case-${c.id}`} caseRow={c} loggedIn />
                 ))}
                 {savedComments.map((c) => (
-                  <HistoryCommentCard key={`saved-comment-${c.id}`} comment={c} />
+                  <HistoryCommentCard key={`saved-comment-${c.id}`} comment={c} canDelete={c.author_id === user.id} />
                 ))}
               </div>
             </section>
@@ -191,7 +192,7 @@ export default async function HistoryPage() {
                   <CaseCard key={`voted-case-${c.id}`} caseRow={c} loggedIn />
                 ))}
                 {upvotedComments.map((c) => (
-                  <HistoryCommentCard key={`voted-comment-${c.id}`} comment={c} />
+                  <HistoryCommentCard key={`voted-comment-${c.id}`} comment={c} canDelete={c.author_id === user.id} />
                 ))}
               </div>
             </section>

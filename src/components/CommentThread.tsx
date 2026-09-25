@@ -17,11 +17,13 @@ function CommentNode({
   comment,
   caseId,
   loggedIn,
+  currentUserId,
   depth,
 }: {
   comment: CommentRow;
   caseId: number;
   loggedIn: boolean;
+  currentUserId: string | null;
   depth: number;
 }) {
   const [replying, setReplying] = useState(false);
@@ -66,6 +68,7 @@ function CommentNode({
               targetId={comment.id}
               initialSaved={comment.saved}
               loggedIn={loggedIn}
+              canDelete={currentUserId !== null && comment.author_id === currentUserId}
             />
           </div>
         </div>
@@ -119,6 +122,7 @@ function CommentNode({
               comment={reply}
               caseId={caseId}
               loggedIn={loggedIn}
+              currentUserId={currentUserId}
               depth={depth + 1}
             />
           ))}
@@ -146,10 +150,12 @@ export function CommentThread({
   caseId,
   comments,
   loggedIn,
+  currentUserId,
 }: {
   caseId: number;
   comments: CommentRow[];
   loggedIn: boolean;
+  currentUserId: string | null;
 }) {
   const [sort, setSort] = useState<SortMode>('top');
   const sorted = sortComments(comments, sort);
@@ -168,7 +174,7 @@ export function CommentThread({
       </div>
       <div className="mt-6 space-y-4">
         {sorted.map((c) => (
-          <CommentNode key={c.id} comment={c} caseId={caseId} loggedIn={loggedIn} depth={0} />
+          <CommentNode key={c.id} comment={c} caseId={caseId} loggedIn={loggedIn} currentUserId={currentUserId} depth={0} />
         ))}
         {sorted.length === 0 && (
           <p className="text-sm italic text-neutral-400">
