@@ -16,11 +16,11 @@ export const metadata: Metadata = {
 const STEPS = [
   {
     title: 'Propose it',
-    body: 'Submit a debate question with context and at least one link — all three required — and give it a category.',
+    body: 'Submit a debate question with helpful context, a category, and at least one reference link to a reputable source (e.g. article, paper, study).',
   },
   {
     title: 'The club votes',
-    body: 'Members vote all week. Every upvote is a d-coin, and the live ranking below shows who is winning.',
+    body: 'Members vote all week. The live ranking below shows which topics the club wants to debate most.',
   },
   {
     title: 'Winners get debated',

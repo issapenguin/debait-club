@@ -65,7 +65,7 @@ export function SubmissionForm({ redirectTo }: { redirectTo?: string }) {
           maxLength={300}
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
-          placeholder="e.g. Should cities ban cars from downtown cores?"
+          placeholder="e.g. Should pineapple belong on pizza?"
           className={inputClass}
         />
       </div>

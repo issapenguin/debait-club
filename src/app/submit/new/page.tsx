@@ -26,9 +26,10 @@ export default async function SubmitNewPage() {
         Propose a debate
       </h1>
       <p className="mt-2 text-[15px] text-neutral-500 dark:text-neutral-400">
-        Submit a debate question with context and at least one link — all three
-        required — and give it a category. Members vote all week; the
-        top-voted submissions are considered for next week&apos;s debates.
+        Submit a debate question with helpful context, a category, and at least one
+        reference link to a reputable source (e.g. article, paper, study). Members
+        vote all week; the top-voted submissions are considered for next
+        week&apos;s debates.
       </p>
 
       <section
