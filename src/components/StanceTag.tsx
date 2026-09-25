@@ -11,7 +11,7 @@ const STANCE_STYLES: Record<Stance, string> = {
 export function StanceTag({ stance }: { stance: Stance }) {
   return (
     <span
-      className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-semibold ${STANCE_STYLES[stance]}`}
+      className={`inline-flex items-center whitespace-nowrap rounded-full px-2 py-0.5 text-xs font-semibold ${STANCE_STYLES[stance]}`}
     >
       {STANCE_LABELS[stance]}
     </span>

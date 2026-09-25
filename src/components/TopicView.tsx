@@ -83,16 +83,18 @@ export function TopicView({
           The club is leaning
         </span>
         <LeaningTag leaning={leaning} size="lg" />
-        <span className="flex items-center gap-1.5 text-sm font-semibold text-emerald-700 dark:text-emerald-400">
-          <CoinIcon className="h-4 w-4" />
-          <span className="tabular-nums">{forVotes.toLocaleString()}</span>
-          <span className="font-normal text-neutral-400">for</span>
-        </span>
-        <span className="text-neutral-300 dark:text-neutral-600" aria-hidden="true">·</span>
-        <span className="flex items-center gap-1.5 text-sm font-semibold text-rose-700 dark:text-rose-400">
-          <CoinIcon className="h-4 w-4" />
-          <span className="tabular-nums">{againstVotes.toLocaleString()}</span>
-          <span className="font-normal text-neutral-400">against</span>
+        <span className="flex items-center gap-x-3">
+          <span className="flex items-center gap-1.5 text-sm font-semibold text-emerald-700 dark:text-emerald-400">
+            <CoinIcon className="h-4 w-4" />
+            <span className="tabular-nums">{forVotes.toLocaleString()}</span>
+            <span className="font-normal text-neutral-400">for</span>
+          </span>
+          <span className="text-neutral-300 dark:text-neutral-600" aria-hidden="true">·</span>
+          <span className="flex items-center gap-1.5 text-sm font-semibold text-rose-700 dark:text-rose-400">
+            <CoinIcon className="h-4 w-4" />
+            <span className="tabular-nums">{againstVotes.toLocaleString()}</span>
+            <span className="font-normal text-neutral-400">against</span>
+          </span>
         </span>
       </div>
 

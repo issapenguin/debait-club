@@ -21,7 +21,7 @@ export function LeaningTag({
   return (
     <span
       title={`The club is leaning: ${label}`}
-      className={`inline-flex items-center rounded-full font-semibold ${LEANING_STYLES[leaning]} ${
+      className={`inline-flex items-center whitespace-nowrap rounded-full font-semibold ${LEANING_STYLES[leaning]} ${
         size === 'lg' ? 'px-3.5 py-1.5 text-sm' : 'px-2.5 py-0.5 text-xs'
       }`}
     >
