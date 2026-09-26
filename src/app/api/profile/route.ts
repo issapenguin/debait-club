@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { requireAuth, badRequest } from '../_helpers';
+import { isFounder } from '@/lib/founder';
 
 export const dynamic = 'force-dynamic';
 
@@ -28,11 +29,14 @@ export async function PUT(request: Request) {
       // arbitrary URLs, no path traversal.
       const expectedPrefix = `${SUPABASE_URL}/storage/v1/object/public/avatars/${userId}/`;
       const cleanUrl = avatar_url.split('?')[0];
+      const isGif = /\.gif$/i.test(cleanUrl);
       if (
         !SUPABASE_URL ||
         !avatar_url.startsWith(expectedPrefix) ||
         cleanUrl.includes('..') ||
-        !/\.(jpg|jpeg|png|webp)$/i.test(cleanUrl)
+        !/\.(jpg|jpeg|png|webp|gif)$/i.test(cleanUrl) ||
+        // Animated avatars are founder-only — nobody else can set a GIF.
+        (isGif && !isFounder(userId))
       ) {
         return badRequest('Invalid picture.');
       }

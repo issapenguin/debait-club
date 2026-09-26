@@ -5,7 +5,8 @@ import { useRouter } from 'next/navigation';
 import { getBrowserClient } from '@/lib/supabase/client';
 import { Avatar } from './Avatar';
 
-const ACCEPTED_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
+const BASE_ACCEPTED_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
+const GIF_TYPE = 'image/gif';
 const MAX_BYTES = 2 * 1024 * 1024; // 2 MB
 const AVATAR_PX = 512;
 
@@ -56,10 +57,13 @@ export function AvatarEditor({
   userId,
   username,
   initialUrl,
+  canUseGif = false,
 }: {
   userId: string;
   username: string;
   initialUrl: string | null;
+  /** Founder-only: animated GIF avatars. Nobody else is offered or allowed one. */
+  canUseGif?: boolean;
 }) {
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
@@ -68,6 +72,15 @@ export function AvatarEditor({
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const [showRules, setShowRules] = useState(false);
+
+  const acceptedTypes = canUseGif ? [...BASE_ACCEPTED_TYPES, GIF_TYPE] : BASE_ACCEPTED_TYPES;
+  const pictureRules = canUseGif
+    ? [
+        'JPG, PNG, WebP, or GIF (animated) only, max 2 MB. Still pictures are cropped to a square automatically; GIFs are kept as-is.',
+        'Your picture is public — everyone in the club can see it.',
+        'House Rules apply: no offensive, hateful, or explicit imagery. Offending pictures are removed.',
+      ]
+    : PICTURE_RULES;
 
   useEffect(() => {
     if (!open) return;
@@ -93,8 +106,10 @@ export function AvatarEditor({
   const onPick = async (file: File | undefined) => {
     setError('');
     if (!file) return;
-    if (!ACCEPTED_TYPES.includes(file.type)) {
-      setError('Please choose a JPG, PNG, or WebP image.');
+    if (!acceptedTypes.includes(file.type)) {
+      setError(
+        canUseGif ? 'Please choose a JPG, PNG, WebP, or GIF image.' : 'Please choose a JPG, PNG, or WebP image.'
+      );
       return;
     }
     if (file.size > MAX_BYTES) {
@@ -105,12 +120,14 @@ export function AvatarEditor({
     try {
       const supabase = getBrowserClient();
       if (!supabase) throw new Error('Could not reach the server.');
-      const img = await loadImage(file);
-      const blob = await renderSquare(img);
-      const path = `${userId}/avatar.jpg`;
+      // GIFs are uploaded untouched so the animation survives; everything
+      // else is center-cropped and re-rendered as a JPEG.
+      const isGif = canUseGif && file.type === GIF_TYPE;
+      const blob = isGif ? file : await renderSquare(await loadImage(file));
+      const path = `${userId}/${isGif ? 'avatar.gif' : 'avatar.jpg'}`;
       const { error: upErr } = await supabase.storage
         .from('avatars')
-        .upload(path, blob, { contentType: 'image/jpeg', upsert: true });
+        .upload(path, blob, { contentType: isGif ? GIF_TYPE : 'image/jpeg', upsert: true });
       if (upErr) throw new Error('Upload failed — please try again.');
       const { data } = supabase.storage.from('avatars').getPublicUrl(path);
       const publicUrl = `${data.publicUrl}?v=${Date.now()}`;
@@ -133,7 +150,7 @@ export function AvatarEditor({
     try {
       const supabase = getBrowserClient();
       if (!supabase) throw new Error('Could not reach the server.');
-      await supabase.storage.from('avatars').remove([`${userId}/avatar.jpg`]);
+      await supabase.storage.from('avatars').remove([`${userId}/avatar.jpg`, `${userId}/avatar.gif`]);
       await saveUrl(null);
       setUrl(null);
       setShowRules(false);
@@ -225,7 +242,7 @@ export function AvatarEditor({
 
             {showRules && (
               <ul className="mt-3 list-disc space-y-1 rounded-2xl bg-neutral-50 p-4 pl-9 text-[13px] leading-relaxed text-neutral-500 dark:bg-neutral-800/60 dark:text-neutral-400">
-                {PICTURE_RULES.map((rule) => (
+                {pictureRules.map((rule) => (
                   <li key={rule}>{rule}</li>
                 ))}
               </ul>
@@ -248,7 +265,7 @@ export function AvatarEditor({
       <input
         ref={inputRef}
         type="file"
-        accept="image/jpeg,image/png,image/webp"
+        accept={canUseGif ? 'image/jpeg,image/png,image/webp,image/gif' : 'image/jpeg,image/png,image/webp'}
         className="hidden"
         onChange={(e) => onPick(e.target.files?.[0])}
       />

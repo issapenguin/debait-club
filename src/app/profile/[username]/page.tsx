@@ -106,7 +106,12 @@ export default async function ProfilePage({
     <div className="mx-auto max-w-3xl pt-10">
       <div className="flex items-start gap-5">
         {isOwner ? (
-          <AvatarEditor userId={profile.id} username={profile.username} initialUrl={profile.avatar_url} />
+          <AvatarEditor
+            userId={profile.id}
+            username={profile.username}
+            initialUrl={profile.avatar_url}
+            canUseGif={isFounder(profile.id)}
+          />
         ) : (
           <Avatar url={profile.avatar_url} username={profile.username} className="h-20 w-20 text-3xl" />
         )}
