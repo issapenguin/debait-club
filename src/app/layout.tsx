@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       'One fresh debate topic per category, every week. Read both sides. Make your case. Change your mind.',
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Debait Club — Change your mind weekly',
     description:
       'One fresh debate topic per category, every week. Read both sides. Make your case. Change your mind.',

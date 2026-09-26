@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { getServerClient } from '@/lib/supabase/server';
 import { fetchCasesForTopic, getCurrentUserId } from '@/lib/data';
 import { TopicView } from '@/components/TopicView';
+import { JsonLd } from '@/components/JsonLd';
 import type { Topic } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
@@ -28,6 +29,9 @@ export async function generateMetadata({
   return {
     title: topic.proposition,
     description,
+    alternates: {
+      canonical: `https://www.debait.club/topic/${id}`,
+    },
     openGraph: {
       title: `${topic.proposition} — Debait Club`,
       description,
@@ -56,8 +60,28 @@ export default async function TopicPage({
   const userId = await getCurrentUserId();
   const cases = await fetchCasesForTopic(topicId, userId);
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'DiscussionForumPosting',
+    headline: topic.proposition,
+    text: topic.context ?? topic.proposition,
+    url: `https://www.debait.club/topic/${topicId}`,
+    datePublished: topic.topic_date,
+    author: {
+      '@type': 'Organization',
+      name: 'Debait Club',
+      url: 'https://www.debait.club',
+    },
+    interactionStatistic: {
+      '@type': 'InteractionCounter',
+      interactionType: 'https://schema.org/CommentAction',
+      userInteractionCount: cases.length,
+    },
+  };
+
   return (
     <div className="pt-8">
+      <JsonLd data={jsonLd} />
       <TopicView topic={topic} cases={cases} loggedIn={userId !== null} showArchiveLink currentUserId={userId} />
     </div>
   );

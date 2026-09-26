@@ -5,6 +5,7 @@ import { fetchCaseDetail, getCurrentUserId } from '@/lib/data';
 import { formatDate, renderRichText } from '@/lib/format';
 import { CaseCard } from '@/components/CaseCard';
 import { CommentThread } from '@/components/CommentThread';
+import { JsonLd } from '@/components/JsonLd';
 
 export const dynamic = 'force-dynamic';
 
@@ -25,6 +26,9 @@ export async function generateMetadata({
   return {
     title: topic.proposition,
     description,
+    alternates: {
+      canonical: `https://www.debait.club/case/${id}`,
+    },
     openGraph: {
       title: `${topic.proposition} — Debait Club`,
       description,
@@ -48,8 +52,28 @@ export default async function CasePage({
 
   const { caseRow, topic, comments } = detail;
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'DiscussionForumPosting',
+    headline: `${topic.proposition} — ${caseRow.side === 'for' ? 'FOR' : 'AGAINST'} case`,
+    articleBody: caseRow.is_deleted ? 'This case was archived.' : caseRow.body,
+    url: `https://www.debait.club/case/${caseId}`,
+    datePublished: caseRow.created_at,
+    author: {
+      '@type': 'Organization',
+      name: 'Debait Club',
+      url: 'https://www.debait.club',
+    },
+    interactionStatistic: {
+      '@type': 'InteractionCounter',
+      interactionType: 'https://schema.org/CommentAction',
+      userInteractionCount: comments.length,
+    },
+  };
+
   return (
     <div className="mx-auto max-w-3xl pt-8">
+      <JsonLd data={jsonLd} />
       <Link
         href={`/topic/${topic.id}`}
         className="text-sm text-sky-600 hover:underline dark:text-sky-400"
