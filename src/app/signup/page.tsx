@@ -62,7 +62,8 @@ function SignupForm() {
         </p>
         <p className="mx-auto mt-3 max-w-sm text-[15px] text-neutral-600 dark:text-neutral-300">
           Check your email to confirm your account, then log in to start
-          debating.
+          debating. Can&apos;t find it? Check your spam folder — mail from a
+          brand-new domain sometimes lands there.
         </p>
         <Link
           href="/login"
