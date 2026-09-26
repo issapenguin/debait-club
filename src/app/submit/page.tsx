@@ -89,7 +89,7 @@ export default async function SubmitPage() {
             </p>
           </div>
         </div>
-        <SubmissionBoard initialSubmissions={initial} initialWeek={week} loggedIn={userId !== null} />
+        <SubmissionBoard initialSubmissions={initial} initialWeek={week} loggedIn={userId !== null} currentUserId={userId} />
       </section>
 
       {leaderCards.length > 0 && (

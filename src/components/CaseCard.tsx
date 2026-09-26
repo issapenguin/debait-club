@@ -12,9 +12,11 @@ import { ChampionBadge } from './ChampionBadge';
 export function CaseCard({
   caseRow,
   loggedIn,
+  currentUserId = null,
 }: {
   caseRow: CaseRow;
   loggedIn: boolean;
+  currentUserId?: string | null;
 }) {
   const router = useRouter();
   const isFor = caseRow.side === 'for';
@@ -65,7 +67,11 @@ export function CaseCard({
       </div>
 
       <p className="mt-3 whitespace-pre-wrap text-[15px] leading-relaxed text-neutral-800 dark:text-neutral-100">
-        {renderRichText(caseRow.body)}
+        {caseRow.is_deleted ? (
+          <span className="italic text-neutral-400 dark:text-neutral-500">archived</span>
+        ) : (
+          renderRichText(caseRow.body)
+        )}
       </p>
 
       <div className="mt-4 flex items-center gap-3" onClick={(e) => e.stopPropagation()}>
@@ -75,6 +81,8 @@ export function CaseCard({
           initialVoted={caseRow.voted}
           initialScore={caseRow.score}
           loggedIn={loggedIn}
+          isOwn={currentUserId !== null && caseRow.author_id === currentUserId}
+          isDeleted={caseRow.is_deleted}
         />
         <span className="inline-flex items-center gap-1.5 text-sm text-neutral-500 dark:text-neutral-400">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-4 w-4" aria-hidden="true">

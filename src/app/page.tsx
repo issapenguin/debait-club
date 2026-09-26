@@ -51,7 +51,7 @@ export default async function HomePage() {
           One topic per category. Every week.
         </p>
       </section>
-      <HomeTabs tabs={tabs} loggedIn={userId !== null} />
+      <HomeTabs tabs={tabs} loggedIn={userId !== null} currentUserId={userId} />
       {!userId && (
         <section className="mx-auto mt-10 max-w-3xl text-center">
           <div className="rounded-2xl border border-sky-200 bg-sky-50 px-6 py-6 dark:border-sky-900/60 dark:bg-sky-950/30">

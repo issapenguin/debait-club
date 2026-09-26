@@ -35,7 +35,7 @@ export function ReportActions({ reportId }: { reportId: number }) {
         onClick={() =>
           run(
             removeReportedContent,
-            'Remove the reported case or comment? This cannot be undone.'
+            'Archive the reported case or comment? It will show as archived. This cannot be undone.'
           )
         }
         className="rounded-full bg-red-600 px-3 py-1 text-xs font-semibold text-white hover:bg-red-700 disabled:opacity-50"

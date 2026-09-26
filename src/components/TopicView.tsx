@@ -27,11 +27,13 @@ export function TopicView({
   cases,
   loggedIn,
   showArchiveLink = false,
+  currentUserId = null,
 }: {
   topic: Topic;
   cases: CaseRow[];
   loggedIn: boolean;
   showArchiveLink?: boolean;
+  currentUserId?: string | null;
 }) {
   const [sort, setSort] = useState<SortMode>('top');
 
@@ -136,7 +138,7 @@ export function TopicView({
           <div className="space-y-4">
             <CaseComposer topicId={topic.id} side="for" loggedIn={loggedIn} />
             {forCases.map((c) => (
-              <CaseCard key={c.id} caseRow={c} loggedIn={loggedIn} />
+              <CaseCard key={c.id} caseRow={c} loggedIn={loggedIn} currentUserId={currentUserId} />
             ))}
             {forCases.length === 0 && (
               <p className="text-sm italic text-neutral-400">
@@ -154,7 +156,7 @@ export function TopicView({
           <div className="space-y-4">
             <CaseComposer topicId={topic.id} side="against" loggedIn={loggedIn} />
             {againstCases.map((c) => (
-              <CaseCard key={c.id} caseRow={c} loggedIn={loggedIn} />
+              <CaseCard key={c.id} caseRow={c} loggedIn={loggedIn} currentUserId={currentUserId} />
             ))}
             {againstCases.length === 0 && (
               <p className="text-sm italic text-neutral-400">

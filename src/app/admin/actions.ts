@@ -33,8 +33,9 @@ export async function dismissReport(reportId: number) {
 }
 
 /**
- * Delete the reported case or comment plus its orphan votes/saves,
- * and mark the report actioned.
+ * Archive the reported case or comment and mark the report actioned.
+ * Soft delete: the row stays (votes, replies, and saved references intact)
+ * so threads stay whole and lifetime d-coin tallies are preserved.
  */
 export async function removeReportedContent(reportId: number) {
   const service = await requireAdmin();
@@ -50,22 +51,11 @@ export async function removeReportedContent(reportId: number) {
   const targetId = report.target_id as number;
   const table = targetType === 'case' ? 'cases' : 'comments';
 
-  // votes and saved_items reference targets without a foreign key, so clean
-  // them explicitly; comments/cases cascade to replies automatically.
-  const { error: votesError } = await service
-    .from('votes')
-    .delete()
-    .eq('target_type', targetType)
-    .eq('target_id', targetId);
-  if (votesError) throw new Error('Could not remove the content.');
-  const { error: savesError } = await service
-    .from('saved_items')
-    .delete()
-    .eq('target_type', targetType)
-    .eq('target_id', targetId);
-  if (savesError) throw new Error('Could not remove the content.');
-  const { error: deleteError } = await service.from(table).delete().eq('id', targetId);
-  if (deleteError) throw new Error('Could not remove the content.');
+  const { error: archiveError } = await service
+    .from(table)
+    .update({ is_deleted: true })
+    .eq('id', targetId);
+  if (archiveError) throw new Error('Could not remove the content.');
 
   await service.from('reports').update({ status: 'actioned' }).eq('id', reportId);
   revalidatePath('/admin');

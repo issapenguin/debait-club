@@ -29,10 +29,12 @@ export function SubmissionBoard({
   initialSubmissions,
   initialWeek,
   loggedIn,
+  currentUserId = null,
 }: {
   initialSubmissions: TopicSubmission[];
   initialWeek: string;
   loggedIn: boolean;
+  currentUserId?: string | null;
 }) {
   const [submissions, setSubmissions] = useState<TopicSubmission[]>(initialSubmissions);
   const [week, setWeek] = useState(initialWeek);
@@ -151,7 +153,7 @@ export function SubmissionBoard({
       ) : (
         <ol className="mt-4 space-y-3">
           {submissions.map((s, i) => (
-            <SubmissionCard key={s.id} submission={s} rank={i + 1} loggedIn={loggedIn} />
+            <SubmissionCard key={s.id} submission={s} rank={i + 1} loggedIn={loggedIn} currentUserId={currentUserId} />
           ))}
         </ol>
       )}

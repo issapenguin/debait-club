@@ -18,7 +18,9 @@ export async function generateMetadata({
   const detail = await fetchCaseDetail(Number(id), userId);
   if (!detail) return {};
   const { caseRow, topic } = detail;
-  const snippet = caseRow.body.slice(0, 160).replace(/\s+/g, ' ').trim();
+  const snippet = caseRow.is_deleted
+    ? 'archived'
+    : caseRow.body.slice(0, 160).replace(/\s+/g, ' ').trim();
   const description = `${caseRow.side === 'for' ? 'FOR' : 'AGAINST'}: ${snippet}… Debate "${topic.proposition}" on Debait Club.`;
   return {
     title: topic.proposition,
@@ -68,7 +70,7 @@ export default async function CasePage({
       </p>
 
       <div className="mt-6">
-        <CaseCard caseRow={caseRow} loggedIn={userId !== null} />
+        <CaseCard caseRow={caseRow} loggedIn={userId !== null} currentUserId={userId} />
       </div>
 
       <CommentThread caseId={caseRow.id} comments={comments} loggedIn={userId !== null} currentUserId={userId} />

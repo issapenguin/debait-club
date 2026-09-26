@@ -37,6 +37,8 @@ export interface CaseRow {
   author_id: string | null;
   body: string;
   score: number;
+  /** Soft-deleted content stays in the thread; the UI renders "archived". */
+  is_deleted: boolean;
   created_at: string;
   author: Pick<Profile, 'username' | 'display_name' | 'avatar_url' | 'champion_badge'> | null;
   comment_count: number;
@@ -52,6 +54,8 @@ export interface CommentRow {
   body: string;
   stance: Stance;
   score: number;
+  /** Soft-deleted content stays in the thread; the UI renders "archived". */
+  is_deleted: boolean;
   created_at: string;
   author: Pick<Profile, 'username' | 'display_name' | 'avatar_url' | 'champion_badge'> | null;
   voted: boolean;

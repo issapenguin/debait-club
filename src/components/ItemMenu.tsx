@@ -163,7 +163,8 @@ export function ItemMenu({
                 Delete this comment?
               </p>
               <p className="mb-3 text-xs text-neutral-500 dark:text-neutral-400">
-                This can&apos;t be undone. Any replies to it will be removed too.
+                This can&apos;t be undone. Your comment will show as archived,
+                and any replies to it will stay.
               </p>
               <div className="flex justify-end gap-2">
                 <button

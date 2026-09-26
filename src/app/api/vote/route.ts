@@ -17,7 +17,11 @@ export async function POST(request: Request) {
   if (!Number.isFinite(targetId)) return badRequest('A valid target is required.');
 
   const table = target_type === 'case' ? 'cases' : 'comments';
-  const { data: target } = await service.from(table).select('id').eq('id', targetId).maybeSingle();
+  const { data: target } = await service
+    .from(table)
+    .select('id, author_id, is_deleted')
+    .eq('id', targetId)
+    .maybeSingle();
   if (!target) return badRequest('That item does not exist.');
 
   const { data: existing } = await service
@@ -28,15 +32,32 @@ export async function POST(request: Request) {
     .eq('target_id', targetId)
     .maybeSingle();
 
-  let voted: boolean;
+  // Retracting an existing upvote is always allowed (even on archived or
+  // own content); only casting a new upvote is restricted.
   if (existing) {
     await service.from('votes').delete().eq('id', existing.id);
-    voted = false;
-  } else {
-    const { error: voteError } = await service.from('votes').insert({ voter_id: userId, target_type, target_id: targetId });
-    if (voteError) console.error('votes insert failed', voteError);
-    voted = true;
+    const { count } = await service
+      .from('votes')
+      .select('id', { count: 'exact', head: true })
+      .eq('target_type', target_type)
+      .eq('target_id', targetId);
+    const score = count ?? 0;
+    await service.from(table).update({ score }).eq('id', targetId);
+    return NextResponse.json({ ok: true, voted: false, score });
   }
+
+  if ((target as { is_deleted?: boolean }).is_deleted) {
+    return badRequest('That content has been archived and can no longer be upvoted.');
+  }
+  if (target.author_id === userId) {
+    return NextResponse.json(
+      { error: "You can't upvote your own content." },
+      { status: 403 }
+    );
+  }
+
+  const { error: voteError } = await service.from('votes').insert({ voter_id: userId, target_type, target_id: targetId });
+  if (voteError) console.error('votes insert failed', voteError);
 
   // Recompute the denormalized score from the vote count.
   const { count } = await service
@@ -47,5 +68,5 @@ export async function POST(request: Request) {
   const score = count ?? 0;
   await service.from(table).update({ score }).eq('id', targetId);
 
-  return NextResponse.json({ ok: true, voted, score });
+  return NextResponse.json({ ok: true, voted: true, score });
 }

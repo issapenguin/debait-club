@@ -19,7 +19,7 @@ interface HistoryComment extends CommentRow {
   } | null;
 }
 
-function HistoryCommentCard({ comment, canDelete }: { comment: HistoryComment; canDelete: boolean }) {
+function HistoryCommentCard({ comment, canDelete, isOwn }: { comment: HistoryComment; canDelete: boolean; isOwn: boolean }) {
   const topic = comment.case?.topic;
   return (
     <div className="rounded-2xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900">
@@ -42,7 +42,11 @@ function HistoryCommentCard({ comment, canDelete }: { comment: HistoryComment; c
         </div>
       </div>
       <p className="mt-2 whitespace-pre-wrap text-[15px] leading-relaxed text-neutral-800 dark:text-neutral-100">
-        {renderRichText(comment.body)}
+        {comment.is_deleted ? (
+          <span className="italic text-neutral-400 dark:text-neutral-500">archived</span>
+        ) : (
+          renderRichText(comment.body)
+        )}
       </p>
       <div className="mt-3 flex items-center gap-3">
         <UpvoteButton
@@ -52,6 +56,8 @@ function HistoryCommentCard({ comment, canDelete }: { comment: HistoryComment; c
           initialScore={comment.score}
           loggedIn
           compact
+          isOwn={isOwn}
+          isDeleted={comment.is_deleted}
         />
         {topic && (
           <Link
@@ -174,10 +180,10 @@ export default async function HistoryPage() {
               </h2>
               <div className="space-y-4">
                 {savedCases.map((c) => (
-                  <CaseCard key={`saved-case-${c.id}`} caseRow={c} loggedIn />
+                  <CaseCard key={`saved-case-${c.id}`} caseRow={c} loggedIn currentUserId={user.id} />
                 ))}
                 {savedComments.map((c) => (
-                  <HistoryCommentCard key={`saved-comment-${c.id}`} comment={c} canDelete={c.author_id === user.id} />
+                  <HistoryCommentCard key={`saved-comment-${c.id}`} comment={c} canDelete={c.author_id === user.id && !c.is_deleted} isOwn={c.author_id === user.id} />
                 ))}
               </div>
             </section>
@@ -189,10 +195,10 @@ export default async function HistoryPage() {
               </h2>
               <div className="space-y-4">
                 {upvotedCases.map((c) => (
-                  <CaseCard key={`voted-case-${c.id}`} caseRow={c} loggedIn />
+                  <CaseCard key={`voted-case-${c.id}`} caseRow={c} loggedIn currentUserId={user.id} />
                 ))}
                 {upvotedComments.map((c) => (
-                  <HistoryCommentCard key={`voted-comment-${c.id}`} comment={c} canDelete={c.author_id === user.id} />
+                  <HistoryCommentCard key={`voted-comment-${c.id}`} comment={c} canDelete={c.author_id === user.id && !c.is_deleted} isOwn={c.author_id === user.id} />
                 ))}
               </div>
             </section>

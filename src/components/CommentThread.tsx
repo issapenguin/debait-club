@@ -68,7 +68,11 @@ function CommentNode({
               targetId={comment.id}
               initialSaved={comment.saved}
               loggedIn={loggedIn}
-              canDelete={currentUserId !== null && comment.author_id === currentUserId}
+              canDelete={
+                currentUserId !== null &&
+                comment.author_id === currentUserId &&
+                !comment.is_deleted
+              }
             />
           </div>
         </div>
@@ -79,7 +83,11 @@ function CommentNode({
               : 'text-neutral-800 dark:text-neutral-100'
           }`}
         >
-          {renderRichText(comment.body)}
+          {comment.is_deleted ? (
+            <span className="italic text-neutral-400 dark:text-neutral-500">archived</span>
+          ) : (
+            renderRichText(comment.body)
+          )}
         </p>
         <div className="mt-3 flex items-center gap-2">
           <UpvoteButton
@@ -89,6 +97,8 @@ function CommentNode({
             initialScore={comment.score}
             loggedIn={loggedIn}
             compact
+            isOwn={currentUserId !== null && comment.author_id === currentUserId}
+            isDeleted={comment.is_deleted}
           />
           <button
             type="button"

@@ -58,7 +58,7 @@ export default async function TopicPage({
 
   return (
     <div className="pt-8">
-      <TopicView topic={topic} cases={cases} loggedIn={userId !== null} showArchiveLink />
+      <TopicView topic={topic} cases={cases} loggedIn={userId !== null} showArchiveLink currentUserId={userId} />
     </div>
   );
 }

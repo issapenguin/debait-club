@@ -18,6 +18,7 @@ interface ProfileCase {
   side: string;
   body: string;
   score: number;
+  is_deleted: boolean;
   created_at: string;
   topic: { id: number; proposition: string; category: string; topic_date: string } | null;
 }
@@ -35,6 +36,7 @@ interface ProfileComment {
   body: string;
   stance: Stance;
   score: number;
+  is_deleted: boolean;
   created_at: string;
   case: {
     id: number;
@@ -68,13 +70,13 @@ export default async function ProfilePage({
         await Promise.all([
           supabase
             .from('cases')
-            .select('id, side, body, score, created_at, topic:topics(id, proposition, category, topic_date)')
+            .select('id, side, body, score, is_deleted, created_at, topic:topics(id, proposition, category, topic_date)')
             .eq('author_id', profile.id)
             .order('created_at', { ascending: false })
             .limit(50),
           supabase
             .from('comments')
-            .select('id, body, stance, score, created_at, case:cases(id, topic:topics(id, proposition, category, topic_date))')
+            .select('id, body, stance, score, is_deleted, created_at, case:cases(id, topic:topics(id, proposition, category, topic_date))')
             .eq('author_id', profile.id)
             .order('created_at', { ascending: false })
             .limit(50),
@@ -180,7 +182,11 @@ export default async function ProfilePage({
                   </p>
                 )}
                 <p className="mt-1 line-clamp-2 text-sm text-neutral-600 dark:text-neutral-300">
-                  {c.body}
+                  {c.is_deleted ? (
+                    <span className="italic text-neutral-400 dark:text-neutral-500">archived</span>
+                  ) : (
+                    c.body
+                  )}
                 </p>
               </Link>
             ))}
@@ -211,7 +217,11 @@ export default async function ProfilePage({
                   </span>
                 </div>
                 <p className="mt-2 line-clamp-2 whitespace-pre-wrap text-sm text-neutral-700 dark:text-neutral-200">
-                  {renderRichText(c.body)}
+                  {c.is_deleted ? (
+                    <span className="italic text-neutral-400 dark:text-neutral-500">archived</span>
+                  ) : (
+                    renderRichText(c.body)
+                  )}
                 </p>
                 {c.case?.topic && (
                   <p className="mt-2 text-xs text-neutral-400">

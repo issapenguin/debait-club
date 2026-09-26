@@ -13,9 +13,11 @@ export interface TabData {
 export function HomeTabs({
   tabs,
   loggedIn,
+  currentUserId = null,
 }: {
   tabs: Partial<Record<(typeof CATEGORIES)[number], TabData | null>>;
   loggedIn: boolean;
+  currentUserId?: string | null;
 }) {
   const available = CATEGORIES.filter((c) => tabs[c]);
   const [active, setActive] = useState<(typeof CATEGORIES)[number]>(
@@ -56,7 +58,7 @@ export function HomeTabs({
       </div>
       <div className="pt-6" role="tabpanel">
         {current ? (
-          <TopicView topic={current.topic} cases={current.cases} loggedIn={loggedIn} showArchiveLink />
+          <TopicView topic={current.topic} cases={current.cases} loggedIn={loggedIn} showArchiveLink currentUserId={currentUserId} />
         ) : (
           <p className="py-12 text-center text-sm italic text-neutral-400">
             No debate posted in this category yet. Check back tomorrow.

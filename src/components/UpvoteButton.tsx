@@ -12,6 +12,8 @@ export function UpvoteButton({
   initialScore,
   loggedIn,
   compact = false,
+  isOwn = false,
+  isDeleted = false,
 }: {
   targetType: TargetType;
   targetId: number;
@@ -19,11 +21,17 @@ export function UpvoteButton({
   initialScore: number;
   loggedIn: boolean;
   compact?: boolean;
+  /** The viewer wrote this content: no self-upvotes. */
+  isOwn?: boolean;
+  /** Content was archived: upvotes are frozen. */
+  isDeleted?: boolean;
 }) {
   const router = useRouter();
   const [voted, setVoted] = useState(initialVoted);
   const [score, setScore] = useState(initialScore);
   const [busy, setBusy] = useState(false);
+
+  const disabledByRule = isOwn || isDeleted;
 
   const toggle = async (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -31,7 +39,7 @@ export function UpvoteButton({
       router.push('/login');
       return;
     }
-    if (busy) return;
+    if (busy || disabledByRule) return;
     setBusy(true);
     try {
       const res = await fetch('/api/vote', {
@@ -53,20 +61,30 @@ export function UpvoteButton({
     }
   };
 
+  const label = disabledByRule
+    ? isOwn
+      ? "You can't upvote your own content"
+      : 'This content was archived'
+    : voted
+      ? 'Take back your d-coin'
+      : 'Give a d-coin';
+
   return (
     <button
       type="button"
       onClick={toggle}
-      disabled={busy}
+      disabled={busy || disabledByRule}
       aria-pressed={voted}
-      aria-label={voted ? 'Take back your d-coin' : 'Give a d-coin'}
-      title={voted ? 'Take back your d-coin' : 'Give a d-coin'}
+      aria-label={label}
+      title={label}
       className={`inline-flex items-center gap-1.5 rounded-full border font-semibold transition ${
         compact ? 'px-2 py-0.5 text-xs' : 'px-3 py-1 text-sm'
       } ${
-        voted
-          ? 'border-sky-600 bg-sky-600 text-white hover:bg-sky-700 dark:border-sky-500 dark:bg-sky-500 dark:hover:bg-sky-400'
-          : 'border-neutral-200 text-neutral-600 hover:border-sky-400 hover:text-sky-600 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-sky-500 dark:hover:text-sky-400'
+        disabledByRule
+          ? 'cursor-not-allowed border-neutral-200 text-neutral-300 opacity-60 dark:border-neutral-800 dark:text-neutral-600'
+          : voted
+            ? 'border-sky-600 bg-sky-600 text-white hover:bg-sky-700 dark:border-sky-500 dark:bg-sky-500 dark:hover:bg-sky-400'
+            : 'border-neutral-200 text-neutral-600 hover:border-sky-400 hover:text-sky-600 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-sky-500 dark:hover:text-sky-400'
       }`}
     >
       <svg

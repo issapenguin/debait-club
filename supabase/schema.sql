@@ -31,6 +31,7 @@ create table if not exists public.cases (
   author_id uuid references public.profiles(id) on delete set null,
   body text not null check (char_length(body) <= 1680),
   score int default 0,
+  is_deleted boolean not null default false,
   created_at timestamptz default now()
 );
 
@@ -42,6 +43,7 @@ create table if not exists public.comments (
   body text not null,
   stance text check (stance in ('for', 'neutral', 'against')),
   score int default 0,
+  is_deleted boolean not null default false,
   created_at timestamptz default now()
 );
 
@@ -118,8 +120,10 @@ create table if not exists public.contact_messages (
 
 create index if not exists cases_topic_id_idx on public.cases (topic_id);
 create index if not exists cases_author_id_idx on public.cases (author_id);
+create index if not exists cases_is_deleted_idx on public.cases (is_deleted);
 create index if not exists comments_case_id_idx on public.comments (case_id);
 create index if not exists comments_author_id_idx on public.comments (author_id);
+create index if not exists comments_is_deleted_idx on public.comments (is_deleted);
 create index if not exists votes_target_idx on public.votes (target_type, target_id);
 create index if not exists votes_voter_idx on public.votes (voter_id);
 create index if not exists saved_items_user_idx on public.saved_items (user_id);

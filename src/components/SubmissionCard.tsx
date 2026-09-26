@@ -12,10 +12,12 @@ export function SubmissionCard({
   submission,
   rank,
   loggedIn,
+  currentUserId = null,
 }: {
   submission: TopicSubmission;
   rank: number;
   loggedIn: boolean;
+  currentUserId?: string | null;
 }) {
   const router = useRouter();
   const [expanded, setExpanded] = useState(false);
@@ -23,6 +25,7 @@ export function SubmissionCard({
   const [score, setScore] = useState(submission.score);
   const [busy, setBusy] = useState(false);
   const [viewPinged, setViewPinged] = useState(false);
+  const isOwn = currentUserId !== null && submission.author_id === currentUserId;
 
   const toggleExpand = () => {
     const next = !expanded;
@@ -44,6 +47,7 @@ export function SubmissionCard({
       return;
     }
     if (busy) return;
+    if (isOwn) return;
     setBusy(true);
     try {
       const res = await fetch('/api/submissions/vote', {
@@ -132,14 +136,16 @@ export function SubmissionCard({
             <button
               type="button"
               onClick={toggleVote}
-              disabled={busy}
+              disabled={busy || isOwn}
               aria-pressed={voted}
-              aria-label={voted ? 'Take back your d-coin' : 'Give a d-coin'}
-              title={voted ? 'Take back your d-coin' : 'Give a d-coin'}
+              aria-label={isOwn ? "You can't upvote your own submission" : voted ? 'Take back your d-coin' : 'Give a d-coin'}
+              title={isOwn ? "You can't upvote your own submission" : voted ? 'Take back your d-coin' : 'Give a d-coin'}
               className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-sm font-semibold transition ${
-                voted
-                  ? 'border-sky-600 bg-sky-600 text-white hover:bg-sky-700 dark:border-sky-500 dark:bg-sky-500 dark:hover:bg-sky-400'
-                  : 'border-neutral-200 text-neutral-600 hover:border-sky-400 hover:text-sky-600 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-sky-500 dark:hover:text-sky-400'
+                isOwn
+                  ? 'cursor-not-allowed border-neutral-200 text-neutral-300 opacity-60 dark:border-neutral-800 dark:text-neutral-600'
+                  : voted
+                    ? 'border-sky-600 bg-sky-600 text-white hover:bg-sky-700 dark:border-sky-500 dark:bg-sky-500 dark:hover:bg-sky-400'
+                    : 'border-neutral-200 text-neutral-600 hover:border-sky-400 hover:text-sky-600 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-sky-500 dark:hover:text-sky-400'
               }`}
             >
               <CoinIcon className="h-4 w-4" />

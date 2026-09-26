@@ -15,7 +15,7 @@ export async function POST(request: Request) {
 
   const { data: target } = await service
     .from('topic_submissions')
-    .select('id')
+    .select('id, author_id')
     .eq('id', submissionId)
     .maybeSingle();
   if (!target) return badRequest('That submission does not exist.');
@@ -27,16 +27,29 @@ export async function POST(request: Request) {
     .eq('submission_id', submissionId)
     .maybeSingle();
 
-  let voted: boolean;
+  // Retracting an existing upvote is always allowed; only casting a new
+  // upvote is restricted.
   if (existing) {
     await service.from('submission_votes').delete().eq('id', (existing as { id: number }).id);
-    voted = false;
-  } else {
-    await service
+    const { count } = await service
       .from('submission_votes')
-      .insert({ voter_id: userId, submission_id: submissionId });
-    voted = true;
+      .select('id', { count: 'exact', head: true })
+      .eq('submission_id', submissionId);
+    const score = count ?? 0;
+    await service.from('topic_submissions').update({ score }).eq('id', submissionId);
+    return NextResponse.json({ ok: true, voted: false, score });
   }
+
+  if (target.author_id === userId) {
+    return NextResponse.json(
+      { error: "You can't upvote your own submission." },
+      { status: 403 }
+    );
+  }
+
+  await service
+    .from('submission_votes')
+    .insert({ voter_id: userId, submission_id: submissionId });
 
   // Recompute the denormalized score from the vote count.
   const { count } = await service
@@ -46,5 +59,5 @@ export async function POST(request: Request) {
   const score = count ?? 0;
   await service.from('topic_submissions').update({ score }).eq('id', submissionId);
 
-  return NextResponse.json({ ok: true, voted, score });
+  return NextResponse.json({ ok: true, voted: true, score });
 }
