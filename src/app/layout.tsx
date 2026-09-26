@@ -4,6 +4,7 @@ import Link from 'next/link';
 import './globals.css';
 import { Header } from '@/components/Header';
 import { DailyQuote } from '@/components/DailyQuote';
+import { PageViewTracker } from '@/components/PageViewTracker';
 
 const fraunces = Fraunces({
   variable: '--font-fraunces',
@@ -92,6 +93,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         className={`${fraunces.variable} ${inter.variable} flex min-h-full flex-col bg-white font-sans text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100`}
       >
+        <PageViewTracker />
         <Header />
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 pb-16">{children}</main>
         <footer className="border-t border-neutral-200 py-8 dark:border-neutral-800">
