@@ -37,11 +37,13 @@ export async function POST(request: Request) {
       apikey: SUPABASE_ANON_KEY,
       Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
       'Content-Type': 'application/json',
-      Prefer: 'return=minimal',
+      Prefer: 'return=representation',
     },
     body: JSON.stringify({ path, referrer: ref }),
   });
 
   if (!res.ok) return NextResponse.json({ ok: false }, { status: 502 });
-  return NextResponse.json({ ok: true });
+  const rows = (await res.json().catch(() => [])) as { id?: unknown }[];
+  const id = typeof rows?.[0]?.id === 'number' ? rows[0].id : null;
+  return NextResponse.json({ ok: true, id });
 }

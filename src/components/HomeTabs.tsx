@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { CATEGORIES, type CaseRow, type Topic } from '@/lib/types';
+import { startView } from '@/lib/viewTracker';
 import { TopicView } from './TopicView';
 
 export interface TabData {
@@ -23,6 +24,12 @@ export function HomeTabs({
   const [active, setActive] = useState<(typeof CATEGORIES)[number]>(
     tabs['Featured'] ? 'Featured' : (available[0] ?? 'Featured')
   );
+  const selectTab = (cat: (typeof CATEGORIES)[number]) => {
+    setActive(cat);
+    // Category tabs switch client-side without changing the URL; log the tab
+    // as its own view so tab engagement is visible in page-view stats.
+    startView(`/?tab=${cat.toLowerCase()}`);
+  };
   const current = tabs[active];
 
   return (
@@ -42,7 +49,7 @@ export function HomeTabs({
               role="tab"
               aria-selected={isActive}
               disabled={!data}
-              onClick={() => setActive(cat)}
+              onClick={() => selectTab(cat)}
               className={`whitespace-nowrap px-4 py-2.5 text-sm font-semibold transition ${
                 isActive
                   ? 'border-b-2 border-sky-600 text-sky-700 dark:border-sky-400 dark:text-sky-300'
