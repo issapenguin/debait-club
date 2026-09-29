@@ -37,6 +37,11 @@ export async function generateMetadata({
       description,
       url: `https://www.debait.club/topic/${id}`,
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${topic.proposition} — Debait Club`,
+      description,
+    },
   };
 }
 

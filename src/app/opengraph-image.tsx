@@ -1,23 +1,22 @@
 import { ImageResponse } from 'next/og';
+import { readFile } from 'fs/promises';
+import { join } from 'path';
 
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
-// Render on demand: the display font is fetched from Google Fonts at
-// request time, which isn't available during the static build.
+// Render on demand: the topic list behind the homepage card changes weekly.
 export const dynamic = 'force-dynamic';
 
-async function loadFraunces(): Promise<ArrayBuffer | null> {
-  try {
-    const css = await fetch(
-      'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&display=swap',
-      { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; DebaitClub/1.0)' } },
-    ).then((r) => r.text());
-    const url = css.match(/url\((https:[^)]+?\.woff2)\)/)?.[1];
-    if (!url) return null;
-    return await fetch(url).then((r) => r.arrayBuffer());
-  } catch {
-    return null;
-  }
+// The display font is bundled in the repo so the image never depends on a
+// runtime fetch to Google Fonts (a failed fetch used to 500 the route).
+async function loadFraunces(): Promise<ArrayBuffer> {
+  const buf = await readFile(
+    join(process.cwd(), 'src/app/fonts/fraunces-semibold.ttf'),
+  );
+  return buf.buffer.slice(
+    buf.byteOffset,
+    buf.byteOffset + buf.byteLength,
+  ) as ArrayBuffer;
 }
 
 export default async function OgImage() {
@@ -87,9 +86,7 @@ export default async function OgImage() {
     ),
     {
       ...size,
-      fonts: fontData
-        ? [{ name: 'Fraunces', data: fontData, weight: 600 as const, style: 'normal' as const }]
-        : [],
+      fonts: [{ name: 'Fraunces', data: fontData, weight: 600 as const, style: 'normal' as const }],
     },
   );
 }
