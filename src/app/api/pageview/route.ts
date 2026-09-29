@@ -5,7 +5,9 @@ export const dynamic = 'force-dynamic';
 
 // POST /api/pageview { path, referrer? } — logs one page view. The
 // page_views table's RLS allows anon inserts; path/referrer are validated
-// here and again by check constraints in the migration.
+// here and again by check constraints in the migration. The user agent is
+// taken from the request header (not the body) and stored for bot
+// identification; it is not exposed through the public read view.
 export async function POST(request: Request) {
   const body = (await request.json().catch(() => ({}))) as {
     path?: unknown;
@@ -25,6 +27,7 @@ export async function POST(request: Request) {
     typeof referrer === 'string' && referrer.length > 0
       ? referrer.slice(0, 1000)
       : null;
+  const ua = request.headers.get('user-agent')?.slice(0, 2000) ?? null;
 
   if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
     // Analytics is optional: no-op when Supabase isn't configured.
@@ -39,7 +42,7 @@ export async function POST(request: Request) {
       'Content-Type': 'application/json',
       Prefer: 'return=representation',
     },
-    body: JSON.stringify({ path, referrer: ref }),
+    body: JSON.stringify({ path, referrer: ref, user_agent: ua }),
   });
 
   if (!res.ok) return NextResponse.json({ ok: false }, { status: 502 });
