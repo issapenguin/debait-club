@@ -9,6 +9,7 @@ import { CaseCard } from './CaseCard';
 import { CaseComposer } from './CaseComposer';
 import { LeaningTag } from './LeaningTag';
 import { CoinIcon } from './CoinIcon';
+import { ShareButtons } from './ShareButtons';
 import { SortControl, type SortMode } from './SortControl';
 
 function sortCases(cases: CaseRow[], mode: SortMode): CaseRow[] {
@@ -73,6 +74,10 @@ export function TopicView({
       <h1 className="font-display mt-4 text-3xl font-semibold leading-tight tracking-tight text-neutral-900 sm:text-4xl dark:text-neutral-50">
         {topic.proposition}
       </h1>
+
+      <div className="mt-3">
+        <ShareButtons topicId={topic.id} proposition={topic.proposition} />
+      </div>
 
       {topic.context && (
         <p className="mt-3 text-[15px] italic leading-relaxed text-neutral-500 dark:text-neutral-400">
