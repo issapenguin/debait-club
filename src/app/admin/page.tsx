@@ -5,6 +5,7 @@ import { timeAgo } from '@/lib/format';
 import { ReportActions } from './ReportActions';
 import { ContentEditor } from './ContentEditor';
 import { ProfileEditor } from './ProfileEditor';
+import { SEEDED_PROFILE_IDS } from '@/lib/seeded-profiles';
 
 export const dynamic = 'force-dynamic';
 
@@ -60,6 +61,17 @@ export default async function AdminPage() {
       count('reports', { status: 'open' }),
       count('contact_messages'),
     ]);
+
+  // Every editable profile (the seeded accounts + the owner's own), so the
+  // admin can rename them without hunting through search. Real signups are
+  // intentionally not listed here.
+  const { data: allProfiles } = await service
+    .from('profiles')
+    .select('id, username, display_name, created_at')
+    .order('username', { ascending: true });
+  const editableProfiles = (allProfiles ?? []).filter((p: { id: string }) =>
+    SEEDED_PROFILE_IDS.has(p.id)
+  ) as { id: string; username: string; display_name: string | null; created_at: string }[];
 
   // Recent signups, enriched with email + confirmation status from Auth.
   const { data: recentProfiles } = await service
@@ -272,7 +284,14 @@ export default async function AdminPage() {
         <p className="mb-3 text-sm text-neutral-500 dark:text-neutral-400">
           Search for a user to change their username or display name.
         </p>
-        <ProfileEditor />
+        <ProfileEditor
+          profiles={editableProfiles.map((p) => ({
+            id: p.id,
+            username: p.username,
+            displayName: p.display_name,
+            createdAt: p.created_at,
+          }))}
+        />
       </section>
 
       <section className="mt-10" aria-label="Contact messages">
@@ -363,6 +382,27 @@ export default async function AdminPage() {
               })}
             </tbody>
           </table>
+        </div>
+      </section>
+
+      <section className="mt-10" aria-label="Editable users">
+        <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-neutral-500">
+          Editable users ({editableProfiles.length})
+        </h2>
+        <p className="mb-3 text-sm text-neutral-500 dark:text-neutral-400">
+          Your accounts and the seeded accounts. Click one to load it in the Profile editor
+          above. Real signups are not listed.
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {editableProfiles.map((p) => (
+            <Link
+              key={p.id}
+              href={`/admin?user=${p.id}`}
+              className="rounded-full border border-neutral-300 px-3 py-1 text-xs font-semibold text-neutral-600 hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800"
+            >
+              {p.display_name ?? p.username} <span className="text-neutral-400">@{p.username}</span>
+            </Link>
+          ))}
         </div>
       </section>
     </div>

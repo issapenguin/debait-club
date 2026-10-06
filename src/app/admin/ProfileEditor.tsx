@@ -1,9 +1,10 @@
 'use client';
 
-import { useState, useTransition } from 'react';
+import { useEffect, useRef, useState, useTransition } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { searchProfiles, updateProfile, type AdminProfile } from './actions';
 
-export function ProfileEditor() {
+export function ProfileEditor({ profiles }: { profiles: AdminProfile[] }) {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<AdminProfile[]>([]);
   const [selected, setSelected] = useState<AdminProfile | null>(null);
@@ -12,6 +13,25 @@ export function ProfileEditor() {
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
+  const rootRef = useRef<HTMLDivElement>(null);
+  const searchParams = useSearchParams();
+
+  // Clicking a user in the "Editable users" list links here with ?user=<id>;
+  // load that profile into the editor and scroll it into view.
+  useEffect(() => {
+    const id = searchParams.get('user');
+    if (!id) return;
+    const p = profiles.find((x) => x.id === id);
+    if (p) {
+      setSelected(p);
+      setUsername(p.username);
+      setDisplayName(p.displayName ?? '');
+      setError(null);
+      setNotice(null);
+      rootRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
 
   function search() {
     if (query.trim().length < 2) {
@@ -64,7 +84,10 @@ export function ProfileEditor() {
     'rounded-full border border-neutral-300 bg-transparent px-3 py-1 text-sm text-neutral-800 placeholder:text-neutral-400 dark:border-neutral-700 dark:text-neutral-100';
 
   return (
-    <div className="rounded-2xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900">
+    <div
+      ref={rootRef}
+      className="scroll-mt-24 rounded-2xl border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-neutral-900"
+    >
       <div className="flex flex-wrap items-center gap-2">
         <input
           value={query}
