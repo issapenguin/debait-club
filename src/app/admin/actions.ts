@@ -60,3 +60,80 @@ export async function removeReportedContent(reportId: number) {
   await service.from('reports').update({ status: 'actioned' }).eq('id', reportId);
   revalidatePath('/admin');
 }
+
+export interface AdminContentItem {
+  id: number;
+  type: 'case' | 'comment';
+  body: string;
+  sideOrStance: string;
+  authorUsername: string | null;
+  isDeleted: boolean;
+  createdAt: string;
+}
+
+/** Look up any case or comment by ID for admin editing. */
+export async function lookupContent(
+  type: 'case' | 'comment',
+  id: number
+): Promise<AdminContentItem | null> {
+  const service = await requireAdmin();
+  const table = type === 'case' ? 'cases' : 'comments';
+  const { data, error } = await service
+    .from(table)
+    .select('id, body, is_deleted, created_at, author:profiles(username)')
+    .eq('id', id)
+    .maybeSingle();
+  if (error || !data) return null;
+  const row = data as unknown as {
+    id: number;
+    body: string;
+    is_deleted: boolean;
+    created_at: string;
+    author: { username: string } | { username: string }[] | null;
+  };
+  // Fetch side/stance separately since column name differs by table.
+  const { data: extra } = await service
+    .from(table)
+    .select(type === 'case' ? 'side' : 'stance')
+    .eq('id', id)
+    .maybeSingle();
+  const author = Array.isArray(row.author) ? row.author[0] : row.author;
+  return {
+    id: row.id,
+    type,
+    body: row.body,
+    sideOrStance: (extra as { side?: string; stance?: string } | null)?.side ??
+      (extra as { side?: string; stance?: string } | null)?.stance ?? '',
+    authorUsername: author?.username ?? null,
+    isDeleted: row.is_deleted,
+    createdAt: row.created_at,
+  };
+}
+
+/** Update the body text of any case or comment (admin only). */
+export async function updateContentBody(
+  type: 'case' | 'comment',
+  id: number,
+  body: string
+): Promise<void> {
+  const service = await requireAdmin();
+  const trimmed = body.trim();
+  if (!trimmed) throw new Error('Body cannot be empty.');
+  if (trimmed.length > 10000) throw new Error('Body is too long.');
+  const table = type === 'case' ? 'cases' : 'comments';
+  const { error } = await service.from(table).update({ body: trimmed }).eq('id', id);
+  if (error) throw new Error('Could not update the content.');
+  revalidatePath('/admin');
+}
+
+/** Archive any case or comment directly (admin only, no report needed). */
+export async function archiveContent(
+  type: 'case' | 'comment',
+  id: number
+): Promise<void> {
+  const service = await requireAdmin();
+  const table = type === 'case' ? 'cases' : 'comments';
+  const { error } = await service.from(table).update({ is_deleted: true }).eq('id', id);
+  if (error) throw new Error('Could not archive the content.');
+  revalidatePath('/admin');
+}

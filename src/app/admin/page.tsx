@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getServerClient, getServiceClient, getSessionUser } from '@/lib/supabase/server';
 import { timeAgo } from '@/lib/format';
 import { ReportActions } from './ReportActions';
+import { ContentEditor } from './ContentEditor';
 
 export const dynamic = 'force-dynamic';
 
@@ -251,6 +252,16 @@ export default async function AdminPage() {
             })}
           </div>
         )}
+      </section>
+
+      <section className="mt-10" aria-label="Content editor">
+        <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-neutral-500">
+          Content editor
+        </h2>
+        <p className="mb-3 text-sm text-neutral-500 dark:text-neutral-400">
+          Look up any case or comment by ID to edit its text or archive it.
+        </p>
+        <ContentEditor />
       </section>
 
       <section className="mt-10" aria-label="Contact messages">
