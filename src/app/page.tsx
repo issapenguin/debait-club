@@ -4,6 +4,7 @@ import {
   fetchTopics,
   fetchCaseCounts,
   fetchCasesForTopic,
+  fetchCommentLeaningTotals,
   pickTabTopics,
   getCurrentUserId,
 } from '@/lib/data';
@@ -32,7 +33,8 @@ export default async function HomePage() {
       wanted.map(async ({ tab, topicId }) => {
         const topic = topics.find((t) => t.id === topicId)!;
         const cases = await fetchCasesForTopic(topicId, userId);
-        return { tab, data: { topic, cases } as TabData };
+        const commentTotals = await fetchCommentLeaningTotals(topicId);
+        return { tab, data: { topic, cases, commentTotals } as TabData };
       })
     );
     for (const { tab, data } of fetched) {

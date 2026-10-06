@@ -8,6 +8,7 @@ import { TopicView } from './TopicView';
 export interface TabData {
   topic: Topic;
   cases: CaseRow[];
+  commentTotals: { forVotes: number; againstVotes: number };
 }
 
 /** Home-page topic tabs. Exactly one topic per tab, switched client-side. */
@@ -65,7 +66,7 @@ export function HomeTabs({
       </div>
       <div className="pt-6" role="tabpanel">
         {current ? (
-          <TopicView topic={current.topic} cases={current.cases} loggedIn={loggedIn} showArchiveLink currentUserId={currentUserId} />
+          <TopicView topic={current.topic} cases={current.cases} commentTotals={current.commentTotals} loggedIn={loggedIn} showArchiveLink currentUserId={currentUserId} />
         ) : (
           <p className="py-12 text-center text-sm italic text-neutral-400">
             No debate posted in this category yet. Check back tomorrow.

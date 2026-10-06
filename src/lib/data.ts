@@ -44,7 +44,7 @@ export async function fetchCaseCounts(topicIds: number[]): Promise<Map<number, n
   return counts;
 }
 
-/** Per-topic club leaning from total d-coins on for vs. against cases. */
+/** Per-topic club leaning from total d-coins on for vs. against cases and comments. */
 export async function fetchTopicLeanings(
   topicIds: number[]
 ): Promise<Map<number, Leaning>> {
@@ -57,15 +57,45 @@ export async function fetchTopicLeanings(
     .select('topic_id, side, score')
     .in('topic_id', topicIds);
   const sums = new Map<number, { for: number; against: number }>();
+  const caseTopic = new Map<number, number>(); // case_id -> topic_id
   for (const row of (data ?? []) as {
     topic_id: number;
     side: string;
     score: number;
+    id?: number;
   }[]) {
     const s = sums.get(row.topic_id) ?? { for: 0, against: 0 };
     if (row.side === 'for') s.for += row.score;
     else s.against += row.score;
     sums.set(row.topic_id, s);
+  }
+  // Comment votes also count toward the tally, by comment stance.
+  const { data: caseRows } = await supabase
+    .from('cases')
+    .select('id, topic_id')
+    .in('topic_id', topicIds);
+  for (const r of (caseRows ?? []) as { id: number; topic_id: number }[]) {
+    caseTopic.set(r.id, r.topic_id);
+  }
+  const caseIds = [...caseTopic.keys()];
+  if (caseIds.length > 0) {
+    const { data: commentRows } = await supabase
+      .from('comments')
+      .select('case_id, stance, score')
+      .in('case_id', caseIds)
+      .eq('is_deleted', false);
+    for (const c of (commentRows ?? []) as {
+      case_id: number;
+      stance: string;
+      score: number;
+    }[]) {
+      const tid = caseTopic.get(c.case_id);
+      if (tid === undefined) continue;
+      const s = sums.get(tid) ?? { for: 0, against: 0 };
+      if (c.stance === 'for') s.for += c.score;
+      else if (c.stance === 'against') s.against += c.score;
+      sums.set(tid, s);
+    }
   }
   for (const [id, s] of sums) leanings.set(id, computeLeaning(s.for, s.against));
   return leanings;
@@ -171,6 +201,37 @@ export async function fetchCasesForTopic(
       saved: saved.has(c.id),
     })
   );
+}
+
+/** Per-topic for/against d-coin totals from comment upvotes (by stance). */
+export interface CommentLeaningTotals {
+  forVotes: number;
+  againstVotes: number;
+}
+
+export async function fetchCommentLeaningTotals(
+  topicId: number
+): Promise<CommentLeaningTotals> {
+  const supabase = await getServerClient();
+  if (!supabase) return { forVotes: 0, againstVotes: 0 };
+  const { data: cases } = await supabase
+    .from('cases')
+    .select('id')
+    .eq('topic_id', topicId);
+  const ids = (cases ?? []).map((c: { id: number }) => c.id);
+  if (ids.length === 0) return { forVotes: 0, againstVotes: 0 };
+  const { data } = await supabase
+    .from('comments')
+    .select('stance, score')
+    .in('case_id', ids)
+    .eq('is_deleted', false);
+  let forVotes = 0;
+  let againstVotes = 0;
+  for (const c of (data ?? []) as { stance: string; score: number }[]) {
+    if (c.stance === 'for') forVotes += c.score;
+    else if (c.stance === 'against') againstVotes += c.score;
+  }
+  return { forVotes, againstVotes };
 }
 
 export interface CaseDetail {

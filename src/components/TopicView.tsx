@@ -26,12 +26,14 @@ function sortCases(cases: CaseRow[], mode: SortMode): CaseRow[] {
 export function TopicView({
   topic,
   cases,
+  commentTotals,
   loggedIn,
   showArchiveLink = false,
   currentUserId = null,
 }: {
   topic: Topic;
   cases: CaseRow[];
+  commentTotals?: { forVotes: number; againstVotes: number };
   loggedIn: boolean;
   showArchiveLink?: boolean;
   currentUserId?: string | null;
@@ -54,8 +56,13 @@ export function TopicView({
       if (c.side === 'for') f += c.score;
       else a += c.score;
     }
+    // Comment upvotes count toward the club tally too, by comment stance.
+    if (commentTotals) {
+      f += commentTotals.forVotes;
+      a += commentTotals.againstVotes;
+    }
     return { leaning: computeLeaning(f, a), forVotes: f, againstVotes: a };
-  }, [cases]);
+  }, [cases, commentTotals]);
 
   return (
     <div>

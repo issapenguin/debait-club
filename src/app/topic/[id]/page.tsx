@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { getServerClient } from '@/lib/supabase/server';
-import { fetchCasesForTopic, getCurrentUserId } from '@/lib/data';
+import { fetchCasesForTopic, fetchCommentLeaningTotals, getCurrentUserId } from '@/lib/data';
 import { TopicView } from '@/components/TopicView';
 import { JsonLd } from '@/components/JsonLd';
 import type { Topic } from '@/lib/types';
@@ -64,6 +64,7 @@ export default async function TopicPage({
 
   const userId = await getCurrentUserId();
   const cases = await fetchCasesForTopic(topicId, userId);
+  const commentTotals = await fetchCommentLeaningTotals(topicId);
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -87,7 +88,7 @@ export default async function TopicPage({
   return (
     <div className="pt-8">
       <JsonLd data={jsonLd} />
-      <TopicView topic={topic} cases={cases} loggedIn={userId !== null} showArchiveLink currentUserId={userId} />
+      <TopicView topic={topic} cases={cases} commentTotals={commentTotals} loggedIn={userId !== null} showArchiveLink currentUserId={userId} />
     </div>
   );
 }
