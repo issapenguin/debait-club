@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { fetchChampions, ensureChampionSnapshot } from '@/lib/data';
 import { CoinIcon } from '@/components/CoinIcon';
 import { Avatar } from '@/components/Avatar';
-import { ChampionBadge, TopDebaiterPill } from '@/components/ChampionBadge';
+import { ChampionBadge, ChampionPill } from '@/components/ChampionBadge';
 import { TrophyIcon } from '@/components/TrophyIcon';
 
 export const dynamic = 'force-dynamic';
@@ -19,26 +19,23 @@ export default async function ChampionsPage() {
         Debait Club Champions
       </h1>
       <p className="mt-2 text-[15px] text-neutral-500 dark:text-neutral-400">
-        Congratulations to our current thought leaders. The top 3 hold
-        trophies, and everyone in the top 50 wears the Top Debaiter badge.
-        Badges follow the live board, so they move as the standings do. Make
-        strong cases, change minds, climb the board.
+        Congratulations to our current thought leaders. #1 is the Master
+        Debaiter, #2 and #3 are Debait Champions, and everyone in the top 50
+        is a Top Debaiter. Badges follow the live board, so they move as
+        the standings do. Make strong cases, change minds, climb the board.
       </p>
       <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 rounded-2xl border border-neutral-200 bg-white px-4 py-3 text-xs text-neutral-500 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-400">
         <span className="font-semibold uppercase tracking-wide text-neutral-400 dark:text-neutral-500">
           The board right now
         </span>
         <span className="flex items-center gap-1.5">
-          <TrophyIcon tone="gold" className="h-4 w-4" /> #1
+          <TrophyIcon tone="gold" className="h-4 w-4" /> <ChampionPill tier="gold" /> #1
         </span>
         <span className="flex items-center gap-1.5">
-          <TrophyIcon tone="silver" className="h-4 w-4" /> #2
+          <TrophyIcon tone="silver" className="h-4 w-4" /> <ChampionPill tier="silver" /> #2-3
         </span>
         <span className="flex items-center gap-1.5">
-          <TrophyIcon tone="bronze" className="h-4 w-4" /> #3
-        </span>
-        <span className="flex items-center gap-1.5">
-          <TopDebaiterPill /> ranks 4-50
+          <ChampionPill tier="debaiter" /> ranks 4-50
         </span>
       </div>
 
