@@ -453,9 +453,10 @@ export async function fetchChampions(limit = 50): Promise<Champion[]> {
 
 /**
  * Weekly champion snapshot. Records the current top 100 in
- * champion_history and upgrades permanent profile badges:
- * gold (ever #1), silver (ever #2), bronze (ever #3),
- * champion (ever top 100). Badges are never revoked.
+ * champion_history and syncs profile badges to the CURRENT board:
+ * gold (#1), silver (#2), bronze (#3), debaiter (top 50). Badges are
+ * not permanent — falling off the top 50 removes the badge until the
+ * user climbs back.
  *
  * Runs lazily (at most ~weekly) whenever the champions board is viewed, so
  * no cron infrastructure is needed. Safe to call often; failures are silent
@@ -490,19 +491,30 @@ export async function ensureChampionSnapshot(): Promise<void> {
     if (insertError) return;
 
     const tierFor = (rank: number) =>
-      rank === 1 ? 'gold' : rank === 2 ? 'silver' : rank === 3 ? 'bronze' : 'champion';
-    const tierRank: Record<string, number> = {
-      champion: 1,
-      bronze: 2,
-      silver: 3,
-      gold: 4,
-    };
-    for (const [i, c] of standings.entries()) {
-      const tier = tierFor(i + 1);
-      const current = c.champion_badge;
-      if (!current || (tierRank[tier] ?? 0) > (tierRank[current] ?? 0)) {
-        await service.from('profiles').update({ champion_badge: tier }).eq('id', c.id);
+      rank === 1 ? 'gold' : rank === 2 ? 'silver' : rank === 3 ? 'bronze' : 'debaiter';
+    // Sync badges to the current board: top 3 hold trophies, the rest of
+    // the top 50 are Top Debaiters, and anyone off the board is cleared.
+    const desired = new Map(
+      standings.slice(0, 50).map((c, i) => [c.id, tierFor(i + 1)])
+    );
+    const { data: badged } = await service
+      .from('profiles')
+      .select('id, champion_badge')
+      .not('champion_badge', 'is', null);
+    for (const row of (badged ?? []) as { id: string; champion_badge: string | null }[]) {
+      const want = desired.get(row.id);
+      if (want) {
+        if (row.champion_badge !== want) {
+          await service.from('profiles').update({ champion_badge: want }).eq('id', row.id);
+        }
+        desired.delete(row.id);
+      } else {
+        await service.from('profiles').update({ champion_badge: null }).eq('id', row.id);
       }
+    }
+    // Current top-50 users who had no badge yet.
+    for (const [id, tier] of desired) {
+      await service.from('profiles').update({ champion_badge: tier }).eq('id', id);
     }
   } catch {
     // The badges migration may not be applied yet; never break the page.
