@@ -94,8 +94,9 @@ export function pickTabTopics(
   const byCategory: Record<string, Topic | null> = {};
   for (const cat of ['Business', 'Entertainment', 'Lifestyle', 'Politics', 'Sports']) {
     const inCat = sorted.filter((t) => t.category === cat);
+    // Tabs follow the latest published slate, not case activity.
     byCategory[cat] =
-      inCat.find((t) => (caseCounts.get(t.id) ?? 0) > 0) ?? inCat[0] ?? null;
+      inCat.find((t) => t.topic_date === latestDate) ?? inCat[0] ?? null;
   }
   return { featured, byCategory };
 }
