@@ -4,6 +4,7 @@ import { getServerClient, getServiceClient, getSessionUser } from '@/lib/supabas
 import { timeAgo } from '@/lib/format';
 import { ReportActions } from './ReportActions';
 import { ContentEditor } from './ContentEditor';
+import { ProfileEditor } from './ProfileEditor';
 
 export const dynamic = 'force-dynamic';
 
@@ -262,6 +263,16 @@ export default async function AdminPage() {
           Look up any case or comment by ID to edit its text or archive it.
         </p>
         <ContentEditor />
+      </section>
+
+      <section className="mt-10" aria-label="Profile editor">
+        <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-neutral-500">
+          Profile editor
+        </h2>
+        <p className="mb-3 text-sm text-neutral-500 dark:text-neutral-400">
+          Search for a user to change their username or display name.
+        </p>
+        <ProfileEditor />
       </section>
 
       <section className="mt-10" aria-label="Contact messages">

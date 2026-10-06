@@ -139,3 +139,65 @@ export async function archiveContent(
   // Revalidate everything so the removal is visible instantly for all visitors.
   revalidatePath('/', 'layout');
 }
+
+export interface AdminProfile {
+  id: string;
+  username: string;
+  displayName: string | null;
+  createdAt: string;
+}
+
+/** Search profiles by username or display name (admin only). */
+export async function searchProfiles(query: string): Promise<AdminProfile[]> {
+  const service = await requireAdmin();
+  const q = query.trim();
+  if (q.length < 2) return [];
+  const like = `%${q.replace(/[%_]/g, '')}%`;
+  const { data, error } = await service
+    .from('profiles')
+    .select('id, username, display_name, created_at')
+    .or(`username.ilike.${like},display_name.ilike.${like}`)
+    .order('created_at', { ascending: false })
+    .limit(12);
+  if (error) throw new Error('Search failed.');
+  return (data ?? []).map((p) => ({
+    id: p.id as string,
+    username: p.username as string,
+    displayName: (p.display_name as string | null) ?? null,
+    createdAt: p.created_at as string,
+  }));
+}
+
+/** Update a profile's username and display name (admin only). */
+export async function updateProfile(
+  id: string,
+  username: string,
+  displayName: string
+): Promise<void> {
+  const service = await requireAdmin();
+  const cleanUsername = username.trim().toLowerCase();
+  if (!/^[a-z0-9._]{3,24}$/.test(cleanUsername)) {
+    throw new Error(
+      'Username must be 3-24 characters: lowercase letters, numbers, dots, underscores.'
+    );
+  }
+  const cleanDisplay = displayName.trim();
+  if (!cleanDisplay) throw new Error('Display name cannot be empty.');
+  if (cleanDisplay.length > 50) throw new Error('Display name is too long.');
+
+  const { data: existing } = await service
+    .from('profiles')
+    .select('id')
+    .eq('username', cleanUsername)
+    .neq('id', id)
+    .maybeSingle();
+  if (existing) throw new Error(`Username @${cleanUsername} is already taken.`);
+
+  const { error } = await service
+    .from('profiles')
+    .update({ username: cleanUsername, display_name: cleanDisplay })
+    .eq('id', id);
+  if (error) throw new Error('Could not update the profile.');
+  // Revalidate everything so the rename is visible instantly everywhere.
+  revalidatePath('/', 'layout');
+}
