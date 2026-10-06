@@ -54,17 +54,20 @@ export function renderRichText(text: string): ReactNode[] {
 }
 
 export function timeAgo(iso: string): string {
-  const seconds = Math.floor((Date.now() - new Date(iso).getTime()) / 1000);
-  if (seconds < 60) return 'just now';
-  const minutes = Math.floor(seconds / 60);
-  if (minutes < 60) return `${minutes}m ago`;
-  const hours = Math.floor(minutes / 60);
-  if (hours < 24) return `${hours}h ago`;
-  const days = Math.floor(hours / 24);
-  if (days < 30) return `${days}d ago`;
+  // Day granularity only: "today", "1 day ago", "2 days ago", etc.
+  // No hour/minute precision (per Rahul 2026-10-06).
+  const now = new Date();
+  const then = new Date(iso);
+  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const startOfThen = new Date(then.getFullYear(), then.getMonth(), then.getDate());
+  const days = Math.round((startOfToday.getTime() - startOfThen.getTime()) / 86400000);
+  if (days <= 0) return 'today';
+  if (days === 1) return '1 day ago';
+  if (days < 30) return `${days} days ago`;
   const months = Math.floor(days / 30);
-  if (months < 12) return `${months}mo ago`;
-  return `${Math.floor(months / 12)}y ago`;
+  if (months < 12) return months === 1 ? '1 month ago' : `${months} months ago`;
+  const years = Math.floor(months / 12);
+  return years === 1 ? '1 year ago' : `${years} years ago`;
 }
 
 export function formatDate(isoDate: string): string {
