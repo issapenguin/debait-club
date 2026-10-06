@@ -123,7 +123,8 @@ export async function updateContentBody(
   const table = type === 'case' ? 'cases' : 'comments';
   const { error } = await service.from(table).update({ body: trimmed }).eq('id', id);
   if (error) throw new Error('Could not update the content.');
-  revalidatePath('/admin');
+  // Revalidate everything so the edit is visible instantly for all visitors.
+  revalidatePath('/', 'layout');
 }
 
 /** Archive any case or comment directly (admin only, no report needed). */
@@ -135,5 +136,6 @@ export async function archiveContent(
   const table = type === 'case' ? 'cases' : 'comments';
   const { error } = await service.from(table).update({ is_deleted: true }).eq('id', id);
   if (error) throw new Error('Could not archive the content.');
-  revalidatePath('/admin');
+  // Revalidate everything so the removal is visible instantly for all visitors.
+  revalidatePath('/', 'layout');
 }
