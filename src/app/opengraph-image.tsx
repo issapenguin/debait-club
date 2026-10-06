@@ -19,8 +19,18 @@ async function loadFraunces(): Promise<ArrayBuffer> {
   ) as ArrayBuffer;
 }
 
+// The fishhook logo as a data-URI SVG (light fill for the dark card).
+async function loadLogo(): Promise<string> {
+  const svg = await readFile(join(process.cwd(), 'src/app/icon.svg'), 'utf8');
+  const match = svg.match(/<path d="([^"]+)"/);
+  const d = match?.[1] ?? '';
+  const light = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill="#fafafa" d="${d}"/></svg>`;
+  return `data:image/svg+xml;base64,${Buffer.from(light).toString('base64')}`;
+}
+
 export default async function OgImage() {
   const fontData = await loadFraunces();
+  const logoSrc = await loadLogo();
 
   return new ImageResponse(
     (
@@ -38,13 +48,22 @@ export default async function OgImage() {
       >
         <div
           style={{
-            fontSize: 28,
-            letterSpacing: 8,
-            color: '#a3a3a3',
-            fontFamily: 'Inter, sans-serif',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 18,
           }}
         >
-          DEBAIT CLUB
+          <img src={logoSrc} width={34} height={44} alt="" />
+          <div
+            style={{
+              fontSize: 28,
+              letterSpacing: 8,
+              color: '#a3a3a3',
+              fontFamily: 'Inter, sans-serif',
+            }}
+          >
+            DEBAIT CLUB
+          </div>
         </div>
         <div
           style={{
@@ -54,7 +73,7 @@ export default async function OgImage() {
             color: '#fafafa',
           }}
         >
-          Change your mind weekly.
+          State your case.
         </div>
         <div
           style={{
@@ -70,7 +89,7 @@ export default async function OgImage() {
               fontFamily: 'Inter, sans-serif',
             }}
           >
-            Read both sides. Make your case.
+            Nothing is black and white.
           </div>
           <div
             style={{

@@ -21,7 +21,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.debait.club'),
   title: {
-    default: 'Debait Club — Change your mind weekly',
+    default: 'Debait Club — See both sides',
     template: '%s — Debait Club',
   },
   description:
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.debait.club',
     siteName: 'Debait Club',
-    title: 'Debait Club — Change your mind weekly',
+    title: 'Debait Club — See both sides',
     description:
       'One fresh debate topic per category, every week. Read both sides. Make your case. Change your mind.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Debait Club — Change your mind weekly',
+    title: 'Debait Club — See both sides',
     description:
       'One fresh debate topic per category, every week. Read both sides. Make your case. Change your mind.',
   },
